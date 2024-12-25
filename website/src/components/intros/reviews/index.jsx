@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
+import PageHeading from "@/components/anim/TextAnims/PageHeading";
 
 const stats = [
     {
@@ -98,11 +99,7 @@ export default function ReviewsIntro () {
                     animate='enter'
                     variants={introText}
                 >
-                    <h1>PROHLÉDNĚ TĚ SI, <br />
-                        CO O NÁS ŘÍKAJÍ NAŠI<br />
-                        KLIENTI. <span>SPOKOJENOST </span><br />
-                        KLIENTA JE NAŠI PŘEDNOSTÍ
-                    </h1>
+                    <PageHeading text="BUDUJEME PRO LIDI <br/> STABILNÍ A KVALITNÍ <br/> FINANČNÍ PORADENSTVÍ <br/> UŽ PŘES <span>JEDNU DEKÁDU</span>" />
                 </motion.div>
                 
                 <div className="cover"/>

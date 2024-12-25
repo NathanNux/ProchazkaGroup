@@ -4,6 +4,8 @@ import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import ReviewModem from "../ReviewModem";
+import ReviewsSearch from "./ReviewsSearch";
 
 
 const reviews = [
@@ -103,6 +105,24 @@ export default function ReviewsList() {
     const [ isOpen, setIsOpen ] = useState(false)
     const [visibleItems, setVisibleItems] = useState(6);
     const [ activeFilter, setActiveFilter ] = useState('všechno')
+    const [searchQuery, setSearchQuery] = useState("")
+
+  // Update searchReviews function
+    const searchReviews = (reviews) => {
+        return reviews.filter(review => {
+        const searchLower = searchQuery.toLowerCase()
+        
+        const matchesFilter = activeFilter === 'všechno' || 
+            review.hastag.toLowerCase() === activeFilter.toLowerCase()
+        
+        const matchesSearch = !searchQuery ||
+            review.hastag.toLowerCase().includes(searchLower) ||
+            review.advisorName?.toLowerCase().includes(searchLower) ||
+            review.city?.toLowerCase().includes(searchLower)
+        
+        return matchesFilter && matchesSearch
+        })
+    }
 
     const showMore = () => {
         setVisibleItems(prevCount => prevCount + 6);
@@ -170,7 +190,7 @@ export default function ReviewsList() {
                     </div>
                     
                     <div className="searchBar">
-                        <p>Hledat podle jména poradce</p>
+                        {/* <ReviewsSearch onSearch={setSearchQuery} /> */}
                         <Image src='' alt='search_icon' width={35} height={35}/>
                     </div>
                 </div>

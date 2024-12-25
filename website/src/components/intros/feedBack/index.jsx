@@ -1,3 +1,4 @@
+import PageHeading from "@/components/anim/TextAnims/PageHeading";
 import FeedbackForm from "@/components/forms/feedback";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
@@ -16,10 +17,7 @@ export default function FeedbackIntro() {
             </div>
             <div className="Cover">
                 <div className="MainText">
-                    <h2>NA COKOLIV, CO SE ZEPTÁTE, <br />
-                        <span>EXISTUJE 100% JISTÁ ODPOVĚĎ. </span> <br />
-                        MY VÁM BĚHEM PÁR MOMENTŮ <br /> ODPOVÍME <span>S JEDNÍM ŘEŠENÍM.</span>
-                    </h2>
+                    <PageHeading text={'NA COKOLIV, CO SE ZEPTÁTE,<br/><span>EXISTUJE 100% JISTÁ ODPOVĚĎ. </span> <br/>MY VÁM BĚHEM PÁR MOMENTŮ <br/> ODPOVÍME <span>S JEDNÍM ŘEŠENÍM.</span>'}/>
                 </div>
                 <div className="Header">
                     <div className="Header__text">

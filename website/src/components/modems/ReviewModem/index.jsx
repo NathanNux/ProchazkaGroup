@@ -1,5 +1,6 @@
-import RoundButton from "@/components/Sticky/buttons/RoundButton"
-import SVGButton from "@/components/Sticky/buttons/SvgButton"
+
+import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
+import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
