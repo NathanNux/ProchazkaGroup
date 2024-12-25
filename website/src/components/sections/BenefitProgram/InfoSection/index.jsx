@@ -1,3 +1,4 @@
+import SubText from "@/components/anim/TextAnims/SubText";
 import { motion, useTransform } from "framer-motion"
 import Image from "next/image";
 import { forwardRef,} from "react";
@@ -73,7 +74,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.2
                                 }}
                             >
-                                <h2>DÁVÁME ZPĚT, ABYCHOM SPOLEČNĚ VYBUDOVALI VÍCE NEŽ JEN FINANČNÍ ÚSPĚCH</h2>
+                                <SubText className={'heading'} text="DÁVÁME ZPĚT, ABYCHOM SPOLEČNĚ VYBUDOVALI VÍCE NEŽ JEN FINANČNÍ ÚSPĚCH" />
                                 <p>
                                     Proč to děláme: Už 12 let tvoříme hodnoty, ne jen zisky. Když s vámi
                                     spolupracujeme, nejde o to, abychom &#39;dostali zaplaceno.&#39; Je to
@@ -90,7 +91,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>BUĎTE HRDINOU OSTATNÍCH A ZÁROVEŇ MĚŇTE ŽIVOT SOBĚ. </h2>
+                                <SubText className={'heading'} text="BUĎTE HRDINOU OSTATNÍCH A ZÁROVEŇ MĚŇTE ŽIVOT SOBĚ." />
                                 <p>
                                     Realita: Není to jen o tom, abyste měli něco jen pro sebe — jde o to zvedat i ostatní, a stát se tím, co jim změní život a vyléčí je finančně.
                                     Zamyslete se nad tím—co je mocnější než vědět, že vaše činy pomáhají ostatním, zatímco i Vy máte něco pro sebe?
@@ -107,7 +108,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>VAŠE ÚSPĚCHY, NAŠE POSLÁNÍ - PŘÍBĚH, KTERÝ PÍŠEME SPOLU</h2>
+                                <SubText className={'heading'} text="VAŠE ÚSPĚCHY, NAŠE POSLÁNÍ - PŘÍBĚH, KTERÝ PÍŠEME SPOLU" />
                                 <p>
                                   Jak fungujeme: neplatíte nám nic předem. Naše &#39;odměna&#39; není jen plan na konci měsíce, ale naše opravdová odměna je vaše důvěra a výsledky, které společně dosáhneme. Každé doporučení, každá úspěšná spolupráce posiluje naši misi měnit životy skrze finanční svobodu. Chceme, aby tahle spolupráce měla smysl.
                                 </p>                            
@@ -120,9 +121,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>STAČÍ JEDEN KROK A ZAČNETE SBÍRAT REÁLNÉ ODMĚNY.
-                                    ŽÁDNÉ KRAVINY. NENÍ ČAS OTÁLET, ZMĚNA ZAČÍNÁ TEĎ
-                                </h2>
+                                <SubText className={'heading'} text="STAČÍ JEDEN KROK A ZAČNETE<br/> SBÍRAT REÁLNÉ ODMĚNY.<br/>ŽÁDNÉ KRAVINY. NENÍ ČAS OTÁLET,<br/>ZMĚNA ZAČÍNÁ TEĎ" />
                                 <p>Co kdyby každý krok, který uděláte, nejen ovlivnil váš život, ale také otevřel dveře někomu jinému? Když přivádíte lidi, doslova měníte životy. Doslova.
                                     Jste to vy, kdo otevírá nové možnosti pro ostatní, zatímco za svůj dopad získáváte odměny — Není tohle skvělé?
                                 </p> 
@@ -135,9 +134,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>NABÍZÍME OKAMŽITÉ ODMĚNY, KTERÉ MŮŽETE OPRAVDU VYUŽÍT
-                                    — NE JEN BODY NA KARTIČKU
-                                </h2>
+                                <SubText className={'heading'} text="NABÍZÍME OKAMŽITÉ ODMĚNY, KTERÉ<br/>MŮŽETE OPRAVDU VYUŽÍT — NE JEN<br/>BODY NA KARTIČKU" />
                                 <p>Tento program je první svého druhu. Nejde o obyčejné body, věrnostní karty nebo nudné benefity. 
                                     Je to o reálných odměnách, které můžete použít ihned, co je dostanete, IHNED.
                                 </p> 
@@ -153,8 +150,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                     <div  className="cover"/>
                     <Image  src='/assets/backgroundSection.png' alt='background__section' fill={true}/>
                     <div className="mainHeader">
-                        <h2>JDE O VYTVOŘENÍ NĚČEHO, CO VYDRŽÍ GENERACE—VĚTŠÍ NEŽ MY, VĚTŠÍ NEŽ VY,
-                            VYTVOŘÍME TRVALÝ DOPAD</h2>
+                        <SubText className={'heading'} text={'JDE O VYTVOŘENÍ NĚČEHO, CO VYDRŽÍ GENERACE—VĚTŠÍ NEŽ MY, VĚTŠÍ NEŽ VY, VYTVOŘÍME<br/> TRVALÝ DOPAD'}/>
                     </div>
                     <div className="subHeader">
                         <h3>01</h3>

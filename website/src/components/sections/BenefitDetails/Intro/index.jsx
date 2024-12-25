@@ -1,4 +1,5 @@
 import RollingText from "@/components/anim/TextAnims/RollingText";
+import SubText from "@/components/anim/TextAnims/SubText";
 import { motion } from "framer-motion";
 
 const rects = [
@@ -131,7 +132,7 @@ export default function Intro() {
                                     className="content"
                                     variants={textVariants}
                                 >
-                                    <p>{content}</p>
+                                    <SubText text={content}/>
                                 </motion.div>
                             </motion.div>
                         )

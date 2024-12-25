@@ -1,3 +1,4 @@
+import MainText from "@/components/anim/TextAnims/MainText";
 import Image from "next/image";
 
 export default function Content() {
@@ -11,10 +12,7 @@ export default function Content() {
             </div>
 
             <div className="main__text">
-                <h2>VYHRÁVÁTE SLUŽBY I Z LOKÁLNÍCH OBCHODŮ, KTERÉ  DO TOHO 
-                    JDOU S NÁMI. VÁŠ VLIV POROSTE
-                    A VYTVÁŘÍ VLNY, KTERÉ BUDEME CÍTIT V NAŠEM MĚSTĚ JEŠTĚ DLOUHO.
-                </h2>
+                <MainText initialColor={'#fff'} text={'VYHRÁVÁTE SLUŽBY I Z LOKÁLNÍCH<br />OBCHODŮ, KTERÉ  DO TOHO JDOU S NÁMI.<br />VÁŠ VLIV POROSTE A VYTVÁŘÍ VLNY,<br />KTERÉ BUDEME CÍTIT V<br />NAŠEM MĚSTĚ JEŠTĚ DLOUHO.'}/>
                 <div className="devider"/>
             </div>
 

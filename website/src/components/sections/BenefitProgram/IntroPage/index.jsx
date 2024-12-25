@@ -1,4 +1,5 @@
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
+import PageHeading from "@/components/anim/TextAnims/PageHeading";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -35,7 +36,7 @@ export default function IntroPageBenefit() {
             <Image src="/background/benefit.png" alt="Benefit Program Intro Page" fill={true} />
             <div className="cover"/>
             <div className="text">
-                <h1 className="heading"><span>BENEFIT </span>PROGRAM</h1>
+                <PageHeading text="BENEFIT PROGRAM"/>
                 <div className="Logo">
                     <ONViewLogo />
                 </div>

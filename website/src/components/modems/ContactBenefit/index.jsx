@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
 import ContactModem from "../ContactModem"
+import SubText from "@/components/anim/TextAnims/SubText"
 
 const people = [
     {
@@ -275,9 +276,7 @@ export default function ContactBenefit() {
 
             <div className="Contact__CTA">
                 <div className="Contact__CTA__Header">
-                    <h3>
-                        JE TO NA VÁS... FINANČNÍ NEZÁVISLOST,<br /> NEBO DALŠÍ ROKY NA MÍSTĚ? PŘIDEJTE <br /> SE K NAŠIM 3000+ KLIENTŮM, KTEŘÍ UŽ <br /> DÁVNO ZAČALI VYHRÁVAT.
-                    </h3>
+                    <SubText text={'JE TO NA VÁS... FINANČNÍ NEZÁVISLOST,<br/> NEBO DALŠÍ ROKY NA MÍSTĚ? PŘIDEJTE <br/> SE K NAŠIM 3000+ KLIENTŮM, KTEŘÍ UŽ <br/> DÁVNO ZAČALI VYHRÁVAT.'} />
                 </div>
 
                 <div className="Contact__CTA__buttons">

@@ -8,7 +8,7 @@ const textExplosionHover = (initialColor, firstLoad, isHighlighted) => ({
         color: isHighlighted ? '#00F0FF' : initialColor
     },
     enter: (i) => {
-        const baseDelay = firstLoad ? 5.9 + i[0] : 2 + i[0];
+        const baseDelay = firstLoad ? 5.9 + i[0] : 1 + i[0];
         return {
             scale: [1, 1.3, 1], 
             opacity: 1,

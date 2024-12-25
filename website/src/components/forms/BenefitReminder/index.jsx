@@ -1,3 +1,4 @@
+import MainText from "@/components/anim/TextAnims/MainText"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
@@ -97,7 +98,7 @@ export default function BenefitReminder() {
         <section className="BenefitReminder"> 
             <div className="BenefitReminder__Header">
                 <div className="Main__text">
-                    <h2>NEPŘEDSTAVUJETE JIM JENOM TENHLE PROGRAM — OTEVÍRÁTE JIM DVEŘE K LEPŠÍ BUDOUCNOSTI SPOLEČNĚ S NÁMI.</h2>
+                    <MainText initialColor={"#050A10"} text='NEPŘEDSTAVUJETE JIM JENOM TENTO<br />PROGRAM — OTEVÍRÁTE JIM DVEŘE K<br />LEPŠÍ BUDOUCNOSTI<br />SPOLEČNĚ S NÁMI.'/>
                 </div>
                 <div className="Header">
                     <div className="Header__wrapper">
