@@ -1,5 +1,7 @@
 import CustomImage from "@/components/ui/stickyImage";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
+import MainText from "@/components/anim/TextAnims/MainText";
+import SubText from "@/components/anim/TextAnims/SubText";
 
 
 export default function About() {
@@ -18,10 +20,10 @@ export default function About() {
                     <p>Náš tým roste a zraje s jediným cílem:<br/> přinášet vám výsledky, a splnit naši misi.</p>
                 </div>
                 <div className="Main__text">
-                    <p>SKRZE FINANČNÍ SEKTOR UMOŽŇUJEME VYVÍJET NOVÉ ÚSPĚŠNÉ PŘÍBĚHY, A TO NEJEN TY VAŠE. SPOLEČNĚ MĚNÍME KAŽDODENNÍ SNY VE SKUTEČNOST.</p>
+                    <MainText initialColor={'#050A10'} text={'SKRZE FINANČNÍ SEKTOR UMOŽŇUJEME <br />VYVÍJET NOVÉ ÚSPĚŠNÉ PŘÍBĚHY, <br />A TO NEJEN TY VAŠE.<br />SPOLEČNĚ MĚNÍME KAŽDODENNÍ SNY VE SKUTEČNOST.'}/>
                 </div>
                 <div className="Button__container">
-                    <p className="add__Text">Každý den přicházíme s řešeními, která našim klientům otevírají nové možnosti, a vytváříme hodnotu, která přetrvává.</p>
+                    <SubText className={'add__Text'} text={'Každý den přicházíme s řešeními, kteránašim klientům otevírají nové možnosti, a vytváříme hodnotu, která přetrvává.'}/>
                     <div className="button">
                         <RoundButton href="#" text="náš tým"/>
                     </div>

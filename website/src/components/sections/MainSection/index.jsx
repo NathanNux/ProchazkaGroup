@@ -7,7 +7,7 @@ import Sales from "./Sales";
 
 export default function MainPageSection() {
     return(
-        <section style={{ backgroundColor: '#fff', overflow: 'hidden' }}>
+        <section style={{ backgroundColor: '#fff' }}>
             <Benefit />
             <About />
             <Blog />

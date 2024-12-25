@@ -5,13 +5,6 @@ import { Fragment, useRef } from "react";
 const lerp = (start, end, t) => start + t * (end - start);
 
 const AnimatedWord = ({ char, progress, animationOffset, initialColor, isHighlighted }) => {
-    // Define overlapping range by using animation offset for each character
-    
-    // anims with just one color and scale
-    // const scale = useTransform(progress, [animationOffset + 0.1, animationOffset + 0.3, animationOffset + 0.5], [1, 1.2, 1]);
-    // const color = useTransform(progress, [animationOffset + 0.1, animationOffset + 0.3, animationOffset + 0.5], [initialColor, '#00F0FF', initialColor]);
-
-    // anims with multiple colors and scale
     const scale = useTransform(
         progress,
         [
@@ -100,13 +93,11 @@ const getCharsWithBrAndSpans = ({ text, initialColor, progress }) => {
     );
 };
 
-export default function MainTextV3() {
+export default function MainText({text, initialColor}) {
     const ref = useRef(null);
-    const text = "Lorem ipsum dolor sit amet,<br /> consectetur <span>adipiscing</span> elit,";
-    const initialColor = '#fff';
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start 0.5", "start -0.4"]
+        offset: ["start 1.1", "start start"]
     });
 
     return (
