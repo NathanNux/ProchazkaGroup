@@ -23,18 +23,29 @@
         z-index: 2;
 
         .QNA__MainText{
-            width: 60%;
+            width: 65%;
             height: 100%;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
             position: relative;
 
-            h3{
+            .MainTextV3__Main{
                 width: 100%;
-                font-size: 4rem;
-                font-weight: 300;
-                text-transform: uppercase;
+                height: 100%;
+                
+                .MainText__Container{
+                    p{
+                        margin: 0;
+                        text-transform: uppercase;
+                        span{
+                            font-size: 4rem;
+                        }
+                        .highlighted {
+                            color: #00F0FF;
+                        }
+                    }
+                }
             }
         }
 

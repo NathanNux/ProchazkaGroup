@@ -1,4 +1,6 @@
 import LoopAnim from "@/components/anim/LoopAnims/GraphAnim";
+import MainText from "@/components/anim/TextAnims/MainText";
+import SubText from "@/components/anim/TextAnims/SubText";
 import { useOnWindowResize } from "@/hooks/useOnWindowResize";
 import { AreaChart } from "@tremor/react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -67,9 +69,7 @@ export default function TheWay() {
     return (
         <section className="GraphTheWay" ref={sectionRef}>
             <div className="Graph__header">
-                <h2>
-                    naše stystémy garantují váš úspěch, udělali jsme je<br /> tak hloupě lehké, že není šance neusmět. 
-                </h2>
+                <MainText text={' naše stystémy garantují váš úspěch, udělali jsme je<br /> tak hloupě lehké, že není šance neusmět.'} initialColor={'#fff'}/>
                 <div className="devider"/>
             </div>
             <div className="sticky__wrapper">
@@ -137,9 +137,7 @@ export default function TheWay() {
                                         <h3>
                                             {number}
                                         </h3>
-                                        <p>
-                                            {text}
-                                        </p>
+                                        <SubText text={text}/>
                                     </div>
                                 )
                             })}
@@ -164,10 +162,7 @@ export default function TheWay() {
                     </div> 
                     <div className="text__content">
                         <div className="main__text">
-                            <p>
-                                PRVNÍ KROK? PŘIJĎTE NA SCHŮZKU. MY SE POSTARÁME O ZBYTEK – ŽÁDNÉ VELKÉ OBĚTI,  <br />
-                                JEN SKUTEČNÝ PLÁN A KROK PO KROKU K VELKÉ ZMĚNĚ VPŘED - JEDNODUŠE
-                            </p>
+                            <SubText text={'první krok? přijďte na schůzku. my se postaráme o zbytek – žádné velké oběti,<br/> jen skutečný plán a krok po kroku k<br/> velké změně vpřed - jednoduše'}/>
                             <div className="divider"/>
                             <div className="divider"/>
                         </div>

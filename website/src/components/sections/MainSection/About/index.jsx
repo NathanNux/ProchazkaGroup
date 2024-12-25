@@ -20,7 +20,7 @@ export default function About() {
                     <p>Náš tým roste a zraje s jediným cílem:<br/> přinášet vám výsledky, a splnit naši misi.</p>
                 </div>
                 <div className="Main__text">
-                    <MainText initialColor={'#050A10'} text={'SKRZE FINANČNÍ SEKTOR UMOŽŇUJEME <br />VYVÍJET NOVÉ ÚSPĚŠNÉ PŘÍBĚHY, <br />A TO NEJEN TY VAŠE.<br />SPOLEČNĚ MĚNÍME KAŽDODENNÍ SNY VE SKUTEČNOST.'}/>
+                    <MainText initialColor={'#050A10'} text={'SKRZE FINANČNÍ SEKTOR UMOŽŇUJEME<br />VYVÍJET NOVÉ ÚSPĚŠNÉ PŘÍBĚHY, <br />A TO NEJEN TY VAŠE.<br />SPOLEČNĚ MĚNÍME KAŽDODENNÍ SNY VE SKUTEČNOST.'}/>
                 </div>
                 <div className="Button__container">
                     <SubText className={'add__Text'} text={'Každý den přicházíme s řešeními, kteránašim klientům otevírají nové možnosti, a vytváříme hodnotu, která přetrvává.'}/>

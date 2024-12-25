@@ -1,21 +1,24 @@
 .Reality{
     width: 100vw;
     height: 100vh;
-    padding: 10vh 5vw;
+    padding: 10vh 0;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
+    gap: 2.5vw;
     overflow: hidden;
+    background-color: #04444C;
+    color: #fff;
 
     .Graph__container{
         height: 100%;
-        width: 50%;
+        width: 60%;
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
+        padding-left: 5vw;
         .header__text{
             width: 100%;
             height: 10%;

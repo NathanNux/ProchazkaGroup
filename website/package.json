@@ -14,6 +14,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@tremor/react": "^3.18.6",
     "autoprefixer": "^10.4.20",
+    "babel-plugin-react-compiler": "^19.0.0-beta-b2e8e9c-20241220",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "lenis": "^1.1.18",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@headlessui/tailwindcss": "^0.2.1",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.1.2"
   }

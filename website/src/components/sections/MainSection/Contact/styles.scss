@@ -429,9 +429,10 @@
             justify-content: flex-end;
             align-items: flex-end;
             
-            h3{
+            p{
                 position: absolute;
-                width: 120%;
+                text-transform: uppercase;
+                width: 105%;
                 top: 15%;
                 left: 0;
                 text-align: left;
@@ -470,11 +471,9 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background-color: #fff;
                     width: 60%;
                     height: 100%;
                     border-radius: 25px;
-                    z-index: 110;
                 }
             }
         }

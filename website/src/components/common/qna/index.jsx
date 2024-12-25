@@ -1,3 +1,4 @@
+import MainText from "@/components/anim/TextAnims/MainText"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
@@ -58,10 +59,7 @@ export default function QNA() {
         <section className="QNA">
             <div className="QNA__Intro">
                 <div className="QNA__MainText">
-                    <h3>
-                        MÁTE NĚJAKÝ DOTAZ? 
-                        NĚKTERÉ Z NICH JSME UŽ ZODPOVĚZELI.
-                    </h3>
+                    <MainText initialColor={'#050A10'} text="MÁTE NĚJAKÝ DOTAZ? NĚKTERÉ Z NICH JSME UŽ ZODPOVĚZELI." />
                 </div>
                 <div className="QNA__Header">
                     <div className="QNA__Header__container">

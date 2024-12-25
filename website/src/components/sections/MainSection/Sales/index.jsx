@@ -1,4 +1,6 @@
+import MainText from "@/components/anim/TextAnims/MainText";
 import RollingText from "@/components/anim/TextAnims/RollingText";
+import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
 
@@ -15,10 +17,7 @@ export default function Sales() {
                     <div className="divider"/>
                 </div>
                 <div className="Main__Text">
-                    <h4><span>VYJEDNALI JSME</span> PRO NAŠE KLIENTY SLEVY A SKVĚLÉ NABÍDKY 
-                        TAKY <span>MIMO NAŠÍ OBLAST</span>, ABYSTE 
-                        <span>UŠETŘILI I U KAŽDODENNÍCH POTŘEB</span>. 
-                    </h4>
+                    <MainText initialColor={'#050A10'} text={'<span>VYJEDNALI JSME</span> PRO NAŠE KLIENTY<br />SLEVY A SKVĚLÉ NABÍDKY TAKY MIMO NAŠÍ OBLAST, ABYSTE UŠETŘILI<br />I U KAŽDODENNÍCH POTŘEB'}/>
                 </div>
                 <div className="Button__container">
                     <div className="button">
@@ -31,7 +30,7 @@ export default function Sales() {
                 <CustomImage altText='Sales-image' src='/assets/reviewsBackground.png'/>
             </div>
             <div className="Logo__container">
-                <h2>NAŠI PARTNEŘI:</h2>
+                <SubText className={'subtext'} text={'BYLI JSME ZMÍNĚNI:'}/>
                 <RollingText text='Ξ' baseVelocity={5} textsCount='25'/>
             </div>
         </div>

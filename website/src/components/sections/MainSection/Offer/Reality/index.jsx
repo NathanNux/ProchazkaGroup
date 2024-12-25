@@ -1,6 +1,7 @@
+import SubText from "@/components/anim/TextAnims/SubText"
 import { useOnWindowResize } from "@/hooks/useOnWindowResize"
+import { AreaChart } from "@tremor/react"
 import { useState } from "react"
-import { AreaChart } from "@tremor/react";
 
 const dataR = [
     {
@@ -50,7 +51,7 @@ export default function Reality() {
             <div className="Graph__container">
                 <div className="header__text">
                     <h3>δ |</h3>
-                    <p>Představte si, že každá rodina na tomhle grafu, <span>[kde jsou reální lidé]</span> má a bude mít neskutečný stres, dilema a radost života jim úplně zmizí. Opravdu chcete zapadnout mezi ně? </p>
+                    <SubText text='Představte si, že každá rodina na tomhle grafu, [kde jsou reální lidé] má a bude mít neskutečný stres, dilema a radost života jim úplně zmizí. Opravdu chcete zapadnout mezi ně?'/>
                 </div>
                 <div className="graph__wrapper">
                     <AreaChart
@@ -68,6 +69,8 @@ export default function Reality() {
                         showXAxis={true}
                         startEndOnly={isMobile}
                         fill='solid'
+                        showTooltip={true}
+                        enableLegendSlider={true}
                     />
                 </div>
                 <div className="addText">

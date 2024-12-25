@@ -1,3 +1,5 @@
+import MainText from "@/components/anim/TextAnims/MainText"
+
 const cards = [
     {
         number: '6 let',
@@ -23,10 +25,7 @@ export default function Requirements () {
                     <div className="devider"/>
                 </div>
                 <div className="Main__text">
-                    <p>
-                        JEDINÉ, CO OD VÁS CHCEME, JE VAŠE ČIRÁ POZORNOST A ODHODLÁNÍ.  
-                        <br />A MY VÁM DÁME PRVOTŘÍDNÍ SERVIS<br />BEZ HLOUPÉ NÁMAHY.
-                    </p>
+                    <MainText initialColor={'#050A10'} text={'JEDINÉ, CO OD VÁS CHCEME, JE VAŠE ČIRÁ POZORNOST A ODHODLÁNÍ. <br />A MY VÁM DÁME PRVOTŘÍDNÍ SERVIS<br />BEZ HLOUPÉ NÁMAHY.'}/>
                 </div>
             </div>
 

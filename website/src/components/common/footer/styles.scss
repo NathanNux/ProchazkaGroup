@@ -25,16 +25,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            h2{
-                width: 90%;
-                font-size: 3.5rem;
-                font-weight: 400;
-                text-transform: uppercase;
-                margin: 0;
-                color: #fff;
-
-                span{
-                    color: #00F0FF;
+            .MainTextV3__Main{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+                .MainText__Container{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    p{
+                        margin: 0;
+                        text-transform: uppercase;
+                        span{
+                            font-size: 4rem;
+                        }
+                        .highlighted {
+                            color: #00F0FF;
+                        }
+                    }
                 }
             }
         }
@@ -143,6 +160,16 @@
                     right: 5%;
                     transform: translateY(-50%);
                     z-index: 5;
+                    .Round__button_container{
+                        width: 150px;
+                        height: 150px;
+                        a{
+                            p{
+                                line-height: 1.2;
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
                 }
 
                 .devider{
@@ -220,17 +247,26 @@
                             font-size: 1.4rem;
                             width: 100%;
                             
+                            // Remove default focus highlight
+                            -webkit-tap-highlight-color: transparent;
+                            -webkit-focus-ring-color: transparent;
+                            
+                            &:focus {
+                                outline: none;
+                                -webkit-focus-ring-color: transparent;
+                                box-shadow: none;
+                            }
+                            
+                            // Remove default iOS styling
+                            -webkit-appearance: none;
+                            
                             &::placeholder {
                                 color: #fff;
                                 opacity: 0.6;
                                 font-size: 1.2rem;
                             }
                             
-                            &:focus {
-                                outline: none;
-                            }
-                            
-                            // Remove autofill background
+                            // Remove webkit autofill styling
                             &:-webkit-autofill,
                             &:-webkit-autofill:hover,
                             &:-webkit-autofill:focus {

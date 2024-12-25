@@ -3,21 +3,6 @@ import { useOnWindowResize } from "@/hooks/useOnWindowResize";
 import { AreaChart } from "@tremor/react";
 import { useState } from "react";
 
-const values = [
-    {
-        number: '01',
-        text: 'Za to, že se v životě nepohnete z místa'
-    },
-    {
-        number: "02",
-        text: "Za to, že platíte každý rok daně téměř za vše"
-    },
-    {
-        number: "03",
-        text: "Za to, že máte skvělé zdraví, volný čas a vztahy"
-    }
-]
-
 const chartData = [
     {
       date: "2020",

@@ -1,3 +1,4 @@
+import MainText from "@/components/anim/TextAnims/MainText";
 import CustomImage from "@/components/ui/stickyImage";
 
 export default function BecomeAclient() {
@@ -8,13 +9,7 @@ export default function BecomeAclient() {
             </div>
             
             <div className="Texts">
-                <p>
-                    STAŇTE SE SOUČÁSTÍ NAŠÍ VIZE A PROLOMTE S NÁMI TO MULTIGENERAČNÍ FINANČNÍ PROKLETÍ
-                </p>
-                <p>
-                    JSME TU, KDYKOLIV SE ROZHODNETE
-                    – S NÁMI VÁŠ FINANČNÍ ÚSPĚCH ZARUČUJEME.
-                </p>
+                <MainText initialColor={'#050A10'} text={'STAŇTE SE SOUČÁSTÍ NAŠÍ VIZE<br />A PROLOMTE S NÁMI TO <br /> MULTIGENERAČNÍ PROKLETÍ <br /> <br />JSME TU, KDYKOLIV SE ROZHODNETE <br /> – S NÁMI VÁŠ FINANČNÍ ÚSPĚCH <br /> ZARUČUJEME.'}/>
                 <div className="divider"/>
                 <div className="divider"/>
                 <div className="divider"/>

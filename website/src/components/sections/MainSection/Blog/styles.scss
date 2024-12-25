@@ -1,6 +1,6 @@
 .Blog{
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -10,7 +10,7 @@
     .image__container{
         position: absolute;
         left: 5%;
-        top: 10%;
+        top: 20%;
         width: 40%;
         height: 50%;
 
@@ -18,7 +18,7 @@
 
     .Content__wrapper{
         width: 60%;
-        height: 80%;
+        height: 100%;
         display: flex;
         position: relative;
         flex-direction: column;
@@ -87,27 +87,26 @@
 
         .main__Text{
             width: 100%;
-            height: 80%;
+            height: 40%;
             position: relative;
             display: flex;
             justify-content: flex-end;
-            align-items: flex-start;
+            align-items: center;
 
             .devider{
                 position: absolute;
-                top: 40%;
+                bottom: -30%;
                 right: -10%;
                 width: 200%;
                 height: 2px;
                 background-color: #5E758D;
             }
-            p{
-                font-size: 3rem;
-                font-weight: 400;
-                margin: 0;
-                text-align: left;
+            .MainTextV3__Main{
+                width: 100%;
+                height: 100%;
+
                 span{
-                    color: #00F0FF
+                    font-size: 3rem;
                 }
             }
         }

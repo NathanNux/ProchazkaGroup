@@ -1,4 +1,5 @@
 
+import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
 import { AnimatePresence, motion } from "framer-motion";
@@ -159,9 +160,7 @@ export default function Testimonials () {
                         Přečtěte si slova našich<br/> spokojených klientů
                     </p>
                 </div>
-                <p className="Testimonials__headerText">
-                    Realita je jednoduchá – buď budete dále ztrácet peníze, nebo uděláte změnu dnes. Čekání stojí více, než si připouštíte. 
-                </p>
+                <SubText className={'Testimonials__headerText'} text={'Realita je jednoduchá – buď budete dále ztrácet peníze, nebo uděláte změnu dnes. Čekání stojí více, než si připouštíte.'}/>
             </div>
             <div className="button__container">
                 <div className="button">

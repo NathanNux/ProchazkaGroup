@@ -1,6 +1,9 @@
 
+import SubText from "@/components/anim/TextAnims/SubText"
+import ContactModem from "@/components/modems/ContactModem"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
+import CustomImage from "@/components/ui/stickyImage"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
@@ -296,18 +299,19 @@ export default function Contact() {
 
             <div className="Contact__CTA">
                 <div className="Contact__CTA__Header">
-                    <h3>
-                        JE TO NA VÁS... FINANČNÍ NEZÁVISLOST,<br /> NEBO DALŠÍ ROKY NA MÍSTĚ? PŘIDEJTE <br /> SE K NAŠIM 3000+ KLIENTŮM, KTEŘÍ UŽ <br /> DÁVNO ZAČALI VYHRÁVAT.
-                    </h3>
+                    <SubText text={'Je to na vás... Finanční nezávislost,<br/>nebo další roky na místě? Přidejte<br/>se k našim 3000+ klientům, kteří už<br/>dávno začali vyhrávat.'}/>
                 </div>
 
                 <div className="map__container">
                     <div className="header">
                         <p>Kde nás najdete | mapa</p>
+
                         <Image src='/svg/mapIcon.svg' alt="map_icon" width={40} height={40}/>
                     </div>
                     <div className="map">
-                        <div className="map_sim"/>
+                        <div className="map_sim">
+                            <CustomImage src='/svg/house.webp' altText='map'/>
+                        </div>
                     </div>
                 </div>
             </div>

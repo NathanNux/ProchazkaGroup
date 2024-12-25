@@ -111,13 +111,16 @@
             justify-content: flex-end;
             padding-right: 5vw;
 
-            p{
+            .MainTextV3__Main{
                 width: 100%;
-                font-size: 3rem;
-                font-weight: 400;
-                margin: 0;
-                text-align: right;
-                text-transform: uppercase;
+                height: 50%;
+    
+                p{
+                    text-align: right;
+                    span{
+                        font-size: 3rem;
+                    }
+                }
             }
 
         }
@@ -135,7 +138,7 @@
                 margin: 0;
                 padding-top: 0.5rem;
                 font-size: 1.2rem;
-                width: 75%;
+                width: 100%;
             }
         }
 

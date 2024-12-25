@@ -1,33 +1,35 @@
+import MainText from "@/components/anim/TextAnims/MainText";
 import StatNumberVariable from "@/components/anim/TextAnims/StatNumber";
+import SubText from "@/components/anim/TextAnims/SubText";
 import Image from "next/image";
 
 const deals = [
     {
         number: '01',
-        content: 'Ušetříme Vám min. 500,- hned po první schůzce,'
+        content: 'Ušetříme Vám min. 500,- hned<br/>po první schůzce,'
     },
     {
         number: '02',
-        content: 'Hned druhý den začneme, do 5 dnů vyřešíme a zavoláme'
+        content: 'Hned druhý den začneme, do<br/>5 dnů vyřešíme a zavoláme'
     },
     {
         number: '03',
-        content: 'Nevyžadujeme žádné dlouhodobé smlouvy'
+        content: 'Nevyžadujeme žádné skryté<br/>smlouvy'
     }
 ]
 
 const quarentees = [
     {
         number: '01',
-        content: 'A když ne, dáme 500,- Vám ve slevách, nebo v hotovosti'
+        content: 'A když ne, dáme 500,- Vám<br/>ve slevách, nebo v hotovosti'
     },
     {
         number: '02',
-        content: 'Zpoždění? dáme vám naši limitovanou slevu k tomu'
+        content: 'Zpoždění? dáme vám naši<br/>limitovanou slevu k tomu'
     },
     {
         number: '03',
-        content: 'Ale jsme upřímní s naši pomocí, takže choďte na čas.'
+        content: 'Ale jsme upřímní s naši<br/>pomocí, takže choďte na čas.'
     }
 ]
 
@@ -87,9 +89,7 @@ export default function OurDeal() {
                 </div>
 
                 <div className="mainText">
-                    <p>
-                        VEŘÍME PEVNĚ V NAŠE SLUŽBY AŽ DO TAKOVÉHO EXTRÉMU, ŽE VÁM MŮŽEME GARANTOVAT PENÍZE ZPĚT, KDYŽ NEDODRŽÍME NAŠE SLOVO.
-                    </p>
+                    <MainText initialColor={'#050A10'} text={'VEŘÍME PEVNĚ V NAŠE SLUŽBY AŽ DO TAKOVÉHO EXTRÉMU, ŽE VÁM<br /> MŮŽEME GARANTOVAT PENÍZE ZPĚT, KDYŽ NEDODRŽÍME NAŠE SLOVO.'}/>
                 </div>
             </div>
             <div className="Quarentees__wrapper">
@@ -102,9 +102,7 @@ export default function OurDeal() {
                                 <h3>
                                     {number}
                                 </h3>
-                                <p>
-                                    {content}
-                                </p>
+                                <SubText text={content}/>
                             </div>
                         )
                     })}
@@ -119,9 +117,7 @@ export default function OurDeal() {
                                 <h3>
                                     {number}
                                 </h3>
-                                <p>
-                                    {content}
-                                </p>
+                                <SubText text={content}/>
                             </div>
                         )
                     })}  

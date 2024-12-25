@@ -1,6 +1,8 @@
 import RollingText from "@/components/anim/TextAnims/RollingText";
 import CustomImage from "@/components/ui/stickyImage";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
+import MainText from "@/components/anim/TextAnims/MainText";
+import SubText from "@/components/anim/TextAnims/SubText";
 
 
 export default function Blog () {
@@ -25,16 +27,13 @@ export default function Blog () {
                     <div className="devider"/>
                 </div>
                 <div className="main__Text">
-                    <p>
-                        <span>10 NEPŘÍJEMNÝCH VĚCÍ </span>[ZDARMA], KTERÉ VÁM <span>VÁŠ BANKÉŘ URČITĚ ZATAJIL</span> A TAKY NIKDY NEŘEKNE. 
-                        PROJDĚTE SI JE HNED TEĎ.
-                    </p>
+                    <MainText initialColor={'#050A10'} text={'10 NEPŘÍJEMNÝCH VĚCÍ [ZDARMA], KTERÉ VÁM VÁŠ BANKÉŘ URČITĚ ZATAJIL A TAKY NIKDY NEŘEKNE. PROJDĚTE SI JE HNED TEĎ.'}/>
                     <div className="devider"/>
                 </div>
             </div>
             <div className="logos__wrapper">
                 <div className="header">
-                    <p>BYLI JSME ZMÍNĚNI:</p>
+                    <SubText text={'BYLI JSME ZMÍNĚNI:'}/>
                 </div>
                 <div className="devider__wrapper"/>
                 <RollingText text='Ξ' baseVelocity={5} textsCount='25'/>

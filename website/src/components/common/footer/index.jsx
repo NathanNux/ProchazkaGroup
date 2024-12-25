@@ -1,4 +1,5 @@
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
+import MainText from "@/components/anim/TextAnims/MainText";
 import MyButton from "@/components/ui/stickyButtons/buttons/MyButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import Link from "next/link";
@@ -31,11 +32,7 @@ export default function Footer() {
         <section className="Footer">
             <div className="Footer__Header">
                 <div className="MainText">
-                    <h2>
-                        JSME ODHOLÁNI VÁM ZLEHČIT <br /> <span>FINAČNÍ ASPEKT ŽIVOTA. </span>
-                        <br />KDYKOLIV JSTE PŘIPRAVENI, <br />
-                        <span> MY JSME TAKY.</span>
-                    </h2>
+                    <MainText initialColor={'#fff'} text={'JSME ODHOLÁNI VÁM ZLEHČIT <br /> <span>FINAČNÍ ASPEKT ŽIVOTA. </span> <br />KDYKOLIV JSTE PŘIPRAVENI, <br /><span> MY JSME TAKY.</span>'}/>
                 </div>
                 <div className="Logo">
                     <ONViewLogo />

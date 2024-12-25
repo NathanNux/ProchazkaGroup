@@ -47,27 +47,41 @@ const AnimatedWord = ({ char, progress, animationOffset, initialColor, isHighlig
     );
 };
 
+const parseText = (text) => {
+    return text.split(/(<br \/>|<span>.*?<\/span>)/).filter(Boolean).map(segment => {
+        if (segment === '<br />') {
+            return { type: 'break' };
+        } else if (segment.startsWith('<span>')) {
+            return {
+                type: 'text',
+                content: segment.replace(/<\/?span>/g, ''),
+                highlighted: true
+            };
+        }
+        return { type: 'text', content: segment, highlighted: false };
+    });
+};
+
 const getCharsWithBrAndSpans = ({ text, initialColor, progress }) => {
-    const lines = text.split('<br />');
+    const segments = parseText(text);
     let allChars = [];
-    const groupSize = 1;
+    let charIndex = 0;
 
-    lines.forEach((line, i) => {
-        const spans = line.split(/<span>|<\/span>/);
-        spans.forEach((span, j) => {
-            const chars = span.split('');
-            chars.forEach((char, k) => {
-                allChars.push({ char, isHighlighted: j % 2 === 1 });
-            });
-        });
-
-        if (i < lines.length - 1) {
+    segments.forEach((segment, i) => {
+        if (segment.type === 'break') {
             allChars.push({ char: '<br />', isHighlighted: false });
+        } else {
+            segment.content.split('').forEach(char => {
+                allChars.push({ 
+                    char, 
+                    isHighlighted: segment.highlighted 
+                });
+                charIndex++;
+            });
         }
     });
 
     const totalChars = allChars.length;
-    // Calculate animation offsets for each character to create staggered overlaps
     const animationOffsets = allChars.map((_, i) => lerp(0, 1, i / totalChars) * 0.2);
 
     return (
@@ -92,7 +106,6 @@ const getCharsWithBrAndSpans = ({ text, initialColor, progress }) => {
         </>
     );
 };
-
 export default function MainText({text, initialColor}) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({

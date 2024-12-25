@@ -1,3 +1,6 @@
+import MainText from "@/components/anim/TextAnims/MainText"
+import SubText from "@/components/anim/TextAnims/SubText"
+
 const cards = [
     {
         number: '01',
@@ -22,18 +25,14 @@ export default function Benefits() {
                     <p>Budujeme finanční portfolia se sny těch, kteří věří v úspěch.</p>
                 </div>
                 <div className="subtext"> 
-                    <p>Vaše finanční problémy nejsou jen čísla.<br /> Jsou to roky vašeho života, které můžete zachránit.</p>
+                    <MainText initialColor={'#050A10'} text={'Vaše finanční problémy nejsou jen čísla.<br /> Jsou to roky vašeho života, které můžete zachránit.'}/>
                 </div>
                 <div className="story"
                     // WIP: this of how to animate this, maybe as absolute positioned small button "The Real Story"
                     style={{ display: 'flex'}}
                 >
                     <h4>δ |</h4>
-                    <p>
-                        Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani své špatné situace způsobené nezodpovědnými návyky. <br/> <br/> 
-                        Společně jsme vytvořili plán, který nejen zlepšil jejich situaci, ale změnil jejich pohled na budoucnost. <br/> <br/> 
-                        Dnes už řeší jen to, jak investovat své úspory a využít svůj volný čas s rodinou. Zní to dobře, že jo?
-                    </p>
+                    <SubText text={'Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani<br/> své špatné situace způsobené nezodpovědnými návyky. <br/> <br/>Společně jsme vytvořili plán, který nejen zlepšil jejich situaci,<br/> ale změnil jejich pohled na budoucnost. <br/> <br/>Dnes už řeší jen to, jak investovat své úspory a využít svůj volný <br/> čas s rodinou. Zní to dobře, že jo?'}/>
                 </div>
             </div>
             <div className="cards__container">
