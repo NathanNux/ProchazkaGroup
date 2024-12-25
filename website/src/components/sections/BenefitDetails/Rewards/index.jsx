@@ -11,6 +11,8 @@ export default function BenefitRewards() {
     const isSnapping = useRef(false);
     const isVisible = useRef(false);
 
+    const snapActive = useRef(false);
+
     const { scrollYProgress } = useScroll({
         target: sectionScroll,
     });
@@ -169,7 +171,7 @@ export default function BenefitRewards() {
 
     // Scroll handling with useCallback
     const handleScroll = useCallback(() => {
-        if (!isVisible.current || isSnapping.current || !peakPoints || peakPoints.length === 0) return;
+        if (!sectionScroll?.current || !isVisible.current || isSnapping.current || !snapActive.current || !peakPoints || peakPoints.length === 0) return;
         
         clearTimeout(scrollTimeout.current);
         scrollTimeout.current = setTimeout(() => {
@@ -226,21 +228,53 @@ export default function BenefitRewards() {
     useLayoutEffect(() => {
         const element = sectionScroll.current;
         if (!element) return;
-
+    
         const observer = new IntersectionObserver(
             (entries) => {
                 const [entry] = entries;
-                isVisible.current = entry.isIntersecting; // Update the ref value
+                
+                // Get element position relative to viewport
+                const elementTop = entry.boundingClientRect.top;
+                const elementBottom = entry.boundingClientRect.bottom;
+                const windowHeight = window.innerHeight;
+                
+                // Set thresholds at 10% from top and bottom
+                const topThreshold = windowHeight * 0.1;
+                const bottomThreshold = windowHeight * 0.9;
+                
+                // Check if element is within threshold zone
+                const isWithinThreshold = 
+                    elementTop <= topThreshold && 
+                    elementBottom >= bottomThreshold;
+    
+                // Update refs
+                isVisible.current = entry.isIntersecting;
+                snapActive.current = isWithinThreshold;
             },
-            { threshold: [0, 0.125, 0.25, 0.5, 0.75, 1] }
+            { 
+                rootMargin: "-10% 0px -10% 0px",
+                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+            }
         );
-
+    
         observer.observe(element);
-        window.addEventListener("scroll", handleScroll, { passive: true });
-
+    
+        // Optimize scroll handler
+        let scrollTimeout;
+        const handleScrollDebounced = () => {
+            if (scrollTimeout) window.cancelAnimationFrame(scrollTimeout);
+            
+            scrollTimeout = window.requestAnimationFrame(() => {
+                handleScroll();
+            });
+        };
+    
+        window.addEventListener("scroll", handleScrollDebounced, { passive: true });
+    
         return () => {
             observer.unobserve(element);
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", handleScrollDebounced);
+            window.cancelAnimationFrame(scrollTimeout);
             clearTimeout(scrollTimeout.current);
         };
     }, [handleScroll]);

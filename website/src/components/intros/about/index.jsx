@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
+import MainText from "@/components/anim/TextAnims/MainText";
+import PageHeading from "@/components/anim/TextAnims/PageHeading";
+import SubText from "@/components/anim/TextAnims/SubText";
 
 const draw = {
     initial: { pathLength: 0, opacity: 0 },
@@ -119,10 +122,7 @@ export default function AboutInto( ){
                     <div className="cover"/>
                     <Image src='/assets/aboutBackground.png' alt="background-photo" fill={true}/>
                     <div className="mainHeader">
-                        <h1>
-                        JSME TU                  PRO VÁS 
-                        UŽ PŘES <span>JEDNU DEKÁDU</span>
-                        </h1>
+                        <PageHeading text="JSME TU PRO VÁS UŽ PŘES <span>JEDNU DEKÁDU</span>"/>
                     </div>
                     <motion.div className="ImageFixed"
                         style={{
@@ -164,17 +164,12 @@ export default function AboutInto( ){
                                         <div className="devider"/>
                                     </div>
                                     <div className="MainText">
-                                        <p>LOREM IPSUM DOLOR 
-                                            SIT AMET, CONSECTETUR 
-                                            ADIPISCING ELIT.
-                                        </p>
+                                        <MainText initialColor={'#fff'} text="LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT."/>
                                         <div className="devider"/>
                                     </div>
                                     <div className="subText">
                                         <div className="subText__text">
-                                            <p>
-                                                Ať už sníte o vlastním bydlení, cestování po světě nebo jen chcete mít klidný spánek, my Vám pomůžeme toho dosáhnout.
-                                            </p>
+                                            <SubText text={'Ať už sníte o vlastním bydlení,<br/>cestování po světě nebo jen<br/>chcete mít klidný spánek,<br/>my Vám pomůžeme toho dosáhnout.'}/>
                                         </div>
                                         
                                         <div className="devider"/>

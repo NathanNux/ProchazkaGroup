@@ -21,6 +21,9 @@ export default function AboutTeam() {
     const isSnapping = useRef(false);
     const isVisible = useRef(false);
 
+    const snapActive = useRef(false);
+
+
     const { scrollYProgress } = useScroll({
         target: sectionScroll,
     });
@@ -180,20 +183,20 @@ export default function AboutTeam() {
     ]
     // Enhanced snap detection and animation
     const handleScroll = useCallback(() => {
-        if (!isVisible.current || isSnapping.current || !peakPoints || peakPoints.length === 0) return;
+        if (!sectionScroll?.current || !isVisible.current || isSnapping.current || !snapActive.current || !peakPoints || peakPoints.length === 0) return;
         
         clearTimeout(scrollTimeout.current);
         scrollTimeout.current = setTimeout(() => {
             const element = sectionScroll.current;
             if (!element) return;
-
+    
             const rect = element.getBoundingClientRect();
             const sectionScrollProgress = -rect.top / (rect.height - window.innerHeight);
             
             let closestPeak = peakPoints[0];
             let closestIndex = 0;
             let minDistance = Math.abs(sectionScrollProgress - peakPoints[0]);
-
+    
             peakPoints.forEach((peak, index) => {
                 const distance = Math.abs(sectionScrollProgress - peak);
                 if (distance < minDistance) {
@@ -202,19 +205,21 @@ export default function AboutTeam() {
                     closestIndex = index;
                 }
             });
-
-            const snapThreshold = 0.05 / points;
+    
+            // Reduced threshold for more responsive snapping
+            const snapThreshold = 0.03 / points; 
+            
             if (minDistance > snapThreshold) {
                 isSnapping.current = true;
                 setActiveIndex(closestIndex);
-
+    
                 const targetScroll = window.scrollY + (closestPeak - sectionScrollProgress) * (rect.height - window.innerHeight);
-
+    
                 animate(window.scrollY, targetScroll, {
                     type: "spring",
-                    stiffness: 400,
-                    damping: 40,
-                    mass: 0.5,
+                    stiffness: 300, // Reduced stiffness for smoother animation
+                    damping: 30, // Reduced damping
+                    mass: 0.8, // Increased mass for more stability
                     bounce: 0,
                     onComplete: () => {
                         isSnapping.current = false;
@@ -225,30 +230,60 @@ export default function AboutTeam() {
                             behavior: 'auto'
                         });
                     },
-                    velocity: scrollYProgress.getVelocity(),
+                    velocity: scrollYProgress.getVelocity() * 0.5, // Reduced velocity influence
                 });
             }
-        }, 50);
+        }, 30); // Reduced timeout for faster response
     }, [peakPoints, points, scrollYProgress]);
 
     useLayoutEffect(() => {
         const element = sectionScroll.current;
         if (!element) return;
-
+    
         const observer = new IntersectionObserver(
             (entries) => {
                 const [entry] = entries;
+                
+                // Use clientY instead of boundingRect for more reliable position detection
+                const elementTop = entry.boundingClientRect.top;
+                const elementBottom = entry.boundingClientRect.bottom;
+                const windowHeight = window.innerHeight;
+                
+                // Expand the active zone to improve reliability
+                const topThreshold = windowHeight * 0.1; // 10% from top
+                const bottomThreshold = windowHeight * 0.9; // 90% from top
+                
+                const isWithinThreshold = 
+                    elementTop <= topThreshold && 
+                    elementBottom >= bottomThreshold;
+    
                 isVisible.current = entry.isIntersecting;
+                snapActive.current = isWithinThreshold;
             },
-            { threshold: [0, 0.125, 0.25, 0.5, 0.75, 1] }
+            { 
+                rootMargin: "-10% 0px -10% 0px", // Tighter margin
+                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] // More granular thresholds
+            }
         );
-
+    
         observer.observe(element);
-        window.addEventListener("scroll", handleScroll, { passive: true });
-
+    
+        // Debounced scroll handler
+        let scrollTimeout;
+        const handleScrollDebounced = () => {
+            if (scrollTimeout) window.cancelAnimationFrame(scrollTimeout);
+            
+            scrollTimeout = window.requestAnimationFrame(() => {
+                handleScroll();
+            });
+        };
+    
+        window.addEventListener("scroll", handleScrollDebounced, { passive: true });
+    
         return () => {
             observer.unobserve(element);
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", handleScrollDebounced);
+            window.cancelAnimationFrame(scrollTimeout);
             clearTimeout(scrollTimeout.current);
         };
     }, [handleScroll]);
