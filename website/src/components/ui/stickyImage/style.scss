@@ -1,0 +1,35 @@
+.magnetic{
+    z-index: 70; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2
+    .Custom__image__container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        height: calc(30vw * 0.6);
+        z-index: 100;
+        border-radius: 10%;
+        cursor: pointer;
+        .Custom__image__Bounds{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-content: center;
+            z-index: 4;
+            // I need to expand the border only when I hover over it
+            &:hover{
+                scale: 2;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+    }
+}

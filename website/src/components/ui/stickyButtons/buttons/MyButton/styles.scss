@@ -1,0 +1,94 @@
+.magnetic{
+    z-index: 70; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2
+    .My__button_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        width: 200px;
+        height: 50px;
+        z-index: 100;
+        margin: 25px;
+        cursor: pointer;
+        .My__button_Bounds{
+            position: fixed;
+            transform: translate(50%, 50%);
+            width: 200px;
+            height: 50px;
+            z-index: 4;
+            border-radius: 50px;
+            // I need to expand the border only when I hover over it
+            &:hover{
+                scale: 2;
+                width: 150px;
+                height: 75px;
+            }
+        }
+        .logo {
+            background-color: #050A10;
+            border: #00F0FF 2.5px solid;
+            border-radius: 50px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 0 35px;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 4;
+            margin: 0;
+    
+            p {
+            margin: 0;
+            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+    
+            .name {
+                display: flex;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-left: 5px;
+                transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    
+                p {
+                    position: relative;
+                    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    
+                    &:nth-of-type(2) {
+                    padding-left: 0.3em;
+                    }
+    
+                    &:nth-of-type(3) {
+                    position: absolute;
+                    left: 105px;
+                    padding-left: 0.8em;
+                    }
+                }
+            }
+    
+            &:hover {
+                .name {
+                    padding-right: 5px;
+    
+                    .codeBy {
+                        transform: translateX(-100%);
+                    }
+    
+                    .dennis {
+                        transform: translateX(-55px);
+                    }
+    
+                    .snellenberg {
+                        transform: translateX(-65px);
+                    }
+                }
+            }
+        }
+    }
+}

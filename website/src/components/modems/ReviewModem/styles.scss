@@ -1,0 +1,514 @@
+.ReviewModem{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(2, 36, 41, 0.95); // Changed to rgba for transparency
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px); // Safari support
+    transform-origin: top center;
+    color: #fff;
+    .checkUp{
+        width: 40%;
+        height: 100%;
+        padding: 0 2.5% 0 5%;
+        position: relative;
+        z-index: 45;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .Personal{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            .Personal__container{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                gap: 2.5vw;
+                .ImageConatiner{
+                    width: 60%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .image{
+                        border-radius: 50%;
+                        position: relative;
+                        width: 12.5vw;
+                        height: 12.5vw;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .Info__container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    .moto{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                        
+                        .moto__text{
+                            width: 100%;
+                            height: 20%;
+                            display: flex;
+                            align-items: flex-end;  
+                            justify-content: flex-start;
+                            position: relative;
+                            gap: 0.5rem;
+                            p{
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                                margin: 0;
+                                color: #00F0FF
+                            }
+                        }
+                        
+    
+                        .moto__name{
+                          width: 100%;
+                          height: 5%;
+                          display: flex;
+                          align-items: flex-start;  
+                          justify-content: flex-start;
+                          position: relative;
+                          gap: 0.5rem;
+    
+                          .devider{
+                            width: 2px;
+                            height: 25px;
+                            background-color: #fff;
+                          }
+                        }
+
+                        .stats{
+                            width: 100%;
+                            height: 20%;
+                            display: flex;
+                            align-items: flex-start;  
+                            justify-content: flex-start;
+                            position: relative;
+                            padding-top: 1rem;
+                            gap: 2rem;
+
+                            .ThumsUp{
+                                width: 25%;
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: flex-end;
+                                gap: 0.75rem;
+
+                                p{
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                            }
+
+                            .Comments{
+                                width: 25%;
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: flex-end;
+                                gap: 0.75rem;
+
+                                p{
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+
+    .CheckUpForm{
+        width: 60%;
+        height: 100%;
+        padding-top: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .form{
+            width: 100%;
+            height: 50%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 50;
+
+            .form__inputs{
+                width: 100%;
+                height: 80%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                .input__container{
+                    width: 80%;
+                    height: 100%;
+                    padding-left: 5%;
+
+                    .form__devider{
+                        width: 100%;
+                        height: 1px;
+                        background-color: #5E758D;
+                    }
+
+                    .text__container{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-right: 2rem;
+
+                        p{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+
+                    .input__container{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        label{
+                            font-size: 2rem;
+                        }
+                        h3{
+                            height: 100%;
+                            font-size: 2rem;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            opacity: 0.6;
+                            font-size: 1.5rem;
+                            resize: none;
+                            display: flex;
+                            line-height: 1.5;
+                            padding: 2.5rem 0 0 0;
+                            
+                            // Remove default focus highlight
+                            -webkit-tap-highlight-color: transparent;
+                            -webkit-focus-ring-color: transparent;
+                            
+                            &:focus {
+                                outline: none;
+                                -webkit-focus-ring-color: transparent;
+                                box-shadow: none;
+                            }
+                            
+                            // Remove default iOS styling
+                            -webkit-appearance: none;
+                            
+                            // Remove scrollbar
+                            &::-webkit-scrollbar {
+                                display: none;
+                            }
+                            
+                            // Firefox scrollbar
+                            scrollbar-width: none;
+                        }
+
+                        input {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            opacity: 0.6;
+                            font-size: 1.5rem;
+                    
+                            &::placeholder {
+                                color: #fff;
+                                opacity: 0.6;
+                            }
+                    
+                            &:focus {
+                                outline: none;
+                                -webkit-focus-ring-color: transparent;
+                                box-shadow: none;
+                            }
+                    
+                            // Remove webkit autofill styling
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                -webkit-text-fill-color: #fff;
+                                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                                transition: background-color 5000s ease-in-out 0s;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(1){
+                        width: 100%;
+                    }
+                    &:nth-of-type(3){
+                        width: 90%;
+                        label{
+                            width: 25%;
+                        }
+                    }
+                }
+                .person__selection{
+                    position: relative;
+                    width: 95%;
+                    height: 80%;
+                    padding-left: 5%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    .form__devider{
+                        width: 100%;
+                        height: 1px;
+                        background-color: #5E758D;
+                    }
+
+                    .input__container__wrapper{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                        .header__input{
+                           width: 22.5%;
+                           display: flex;
+                           justify-content: flex-start;
+                           align-items: center;
+                            .index{
+                                height: 100px;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: center;
+
+                                h3{
+                                    margin: 0;
+                                    font-size: 2rem;
+                                    font-weight: 500;
+                                }
+                            }
+                           p{
+                            font-size: 2rem;
+                            margin: 0;
+                           }
+                        }
+                        .person__container{
+                            width: 30%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            position: relative;
+                            .name{
+                                width: 100%;
+                                display: flex; 
+                                justify-content: flex-start;
+                                align-items: flex-start;
+
+                                p{
+                                    opacity: 1;
+                                    color: #00F0FF;
+                                    margin: 0;
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                    padding-top: 0.5rem;
+                                }
+                            }
+                        }
+
+                        .buttons{
+                            width: 35%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+
+                            .person__menu{
+                                position: absolute;
+                                top: 100%;
+                                left: 15%;
+                                width: 80%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 50;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.5rem;
+                                                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .cta{
+            width: 100%;
+            height: 20%;
+            bottom: 10%;
+            right: 0;
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 40;
+            .button{
+                width: 100%;
+                position: relative;
+                .Round__button_container{
+                    width: 150px;
+                    height: 150px;
+                    a{
+                        p{
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+            }
+            .devider{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 150%;
+                height: 2px;
+                background-color: #5E758D;
+                z-index: -1;
+            }
+        }
+    }
+
+    .addInfo{
+        position: absolute;
+        bottom: 2.5%;
+        right: 5%;
+        height: 5vh;
+        display: flex;
+        gap: 2rem;
+
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        .link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin: 0;
+                color: #00F0FF
+            }
+        }
+    }
+    
+    .button{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 10%;
+        left: 5%;
+        z-index: 100;
+        color: #fff;
+        gap: 1.5rem;
+        p{
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .Svg__button_container{
+            width: 75px;
+            height: 75px;
+            border: #00F0FF 1px solid;
+        }
+    }
+}

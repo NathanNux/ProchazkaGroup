@@ -1,0 +1,15 @@
+.Loading__Number__Container{
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        font-size: 4rem;
+        margin: 0;
+        text-transform: uppercase;
+        color: #00F0FF;
+    }
+}

@@ -1,0 +1,301 @@
+.Footer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #04444C;
+    overflow: hidden;
+    color: #fff;
+    .Footer__Header{
+        position: relative;
+        height: 45%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10vh 5vw 5vh 0 ;
+        gap: 5vw;
+
+        .MainText{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                width: 90%;
+                font-size: 3.5rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                margin: 0;
+                color: #fff;
+
+                span{
+                    color: #00F0FF;
+                }
+            }
+        }
+
+        .Logo{
+            margin-bottom: 10vh;
+            width: 30%;
+            height: 80%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .onViewLogo{
+                width: 25vw;
+                height: 25vh;
+                flex-direction: column;
+
+                .onViewLogo__Logo__Container{
+                    scale: 2.5;
+                }
+
+                .onViewLogo__Text{
+                    text-align: center;
+                    align-items: center;
+
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
+
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }   
+    }
+
+    .Footer__Form{
+        position: relative;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 10vh 0;
+        z-index: 55;
+        .Form__container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+            .Form__header{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                gap: 1rem;
+                padding: 2vw 10vw;
+                
+
+                .Form__header__index{
+                    display: flex;
+
+                    p{
+                        margin: 0;
+                        font-size: 2rem;
+                        font-weight: 300;
+                        
+                    }
+
+                    h3{
+                        margin: 1rem 0 0 0;
+                        font-size: 2rem;
+                        font-weight: 300;
+                    }
+                }
+                .Form__header__text{
+                    display: flex;
+                    position: relative;
+                    width: 50%;
+                    margin-top: 2rem;
+                    p{
+                        width: 50%;
+                        margin: 0;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+            
+            .Form__form{
+                width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                position: relative;
+
+                .button__container{
+                    position: absolute;
+                    top: 50%;
+                    right: 5%;
+                    transform: translateY(-50%);
+                    z-index: 5;
+                }
+
+                .devider{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 55%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+
+                form{
+                    width: 50%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                    .gdpr{
+                        position: absolute;
+                        bottom: -15%;
+                        right: 5%;
+                        margin: 0;
+                        font-size: 1rem;
+                    }
+
+                    .devider2{
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+
+                    .devider3{
+                        position: absolute;
+                        bottom: 0%;
+                        right: 0;
+                        width: 95%;
+                        height: 2px;
+                        background-color: #5E758D; 
+                    }
+
+                    .Form__input__container{
+                        padding: 2vh 0 2vh 5vw;
+                        width: 95%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        &:nth-of-type(3){
+                            width: 90%;
+                        }
+
+                        p{
+                            font-size: 1.2rem;
+                            margin: 0;
+                            font-weight: 400;
+                            margin-bottom: 2rem;
+                        }
+
+                        label{
+                            font-size: 1.6rem;
+                            width: 15%;
+                        }
+
+                        input {
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            font-size: 1.4rem;
+                            width: 100%;
+                            
+                            &::placeholder {
+                                color: #fff;
+                                opacity: 0.6;
+                                font-size: 1.2rem;
+                            }
+                            
+                            &:focus {
+                                outline: none;
+                            }
+                            
+                            // Remove autofill background
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                -webkit-text-fill-color: #fff;
+                                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                                transition: background-color 5000s ease-in-out 0s;
+                            }
+                        }
+
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .Footer__Links{
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vh 0 0 0;
+        .Links__Author{
+            padding: 0 2vw 5vh 2vw;
+            width: 25%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .Links__container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 75%;
+            padding: 2vh 2vw;
+
+            .devider{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+            .Social__Links{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 60%;
+                gap: 1rem;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 2rem;
+                }
+            }
+
+            .Credits{
+
+            }
+        }
+    }
+}

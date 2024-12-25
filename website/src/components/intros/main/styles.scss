@@ -1,0 +1,119 @@
+.MainIntro{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+
+    .MainIntro__Wrapper{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #fff;
+        will-change: transform, opacity;
+
+        .Heading{
+            z-index: 3;
+            position: absolute;
+            top: 40%;
+            right: 2.5%;
+            transform: translateY(-50%);
+            h1{
+            font-size: 4.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: right;
+            line-height: 1.5;
+            margin: 0;
+            color: #fff;
+            z-index: 3;
+            span{
+                color: #00F0FF;
+            }
+        }
+        }
+        
+        .cover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050A10;
+            opacity: 0.45;
+            z-index: 1;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rect__container{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+            z-index: 2;
+            .rect__Wrapper{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+                height: 100%;
+                width: 60%;
+                .rect{
+                    height: calc(100% / 3); 
+                    background-color: #050A10;
+                    opacity: 0.65;
+                    border-radius: 35px 0 0 0;
+                    will-change: transform, opacity;
+                    margin: 0;
+
+                    &:nth-of-type(1){
+                        width: 35%;
+                    }
+                    &:nth-of-type(2){
+                        width: 80%;
+                    }
+                    &:nth-of-type(3){
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .rect__bottom{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: #050A10;
+                opacity: 0.65;
+                position: relative;
+                color: #fff;
+                .onViewLogo{
+                    width: 25vw;
+                }
+            }
+        }
+    }
+    .button__container{
+        position: absolute;
+        bottom: 10%;
+        left: 2.5%;
+        z-index: 56;
+    }
+    
+}

@@ -1,0 +1,29 @@
+.MainTextV3__Main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .MainText__Container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p{
+            margin: 0;
+            text-transform: uppercase;
+            span{
+                font-size: 4rem;
+            }
+            .highlighted {
+                color: #00F0FF;
+            }
+        }
+    }
+}

@@ -1,0 +1,504 @@
+.About{
+    position: relative;
+    width: 100vw;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+    .button__container__round{
+        position: fixed;
+        top: 50%;
+        right:  calc(5% - 25px );
+        transform: translateY(-50%);
+        z-index: 56;
+    }
+    .AboutInto{
+        position: relative;
+        width: 100%;
+        height: 135vh;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+
+        .AboutInto__wrapper{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+            .header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                padding: 2rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                z-index: 60;
+                gap: 1rem;
+                mix-blend-mode: difference;
+                
+                h2{
+                    font-size: 1.5rem;
+                    margin: 0;
+                    color: #fff;
+                }
+            }
+            .mainHeader{
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                h1{
+                    font-size: 8rem;
+                    font-weight: 400;
+                    text-align: center;
+                    line-height: 1.5;
+                    color: #fff;
+                    span{
+                        color: #00F0FF
+                    }
+                }
+    
+            }
+    
+            .ImageFixed{
+                position: fixed;
+                width: 40%;
+                height: 40%;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 5;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+    
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .cover{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #050A10;
+                opacity: 0.65;
+                z-index: 1;
+            }
+    
+            .button__container{
+                position: absolute;
+                bottom: 5%;
+                left: 2.5%;
+                z-index: 3;
+            }
+        }
+    }
+
+
+    .AboutUs{
+        position: relative;
+        background-color: #050A10;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        .AboutUs__Sticky{
+            position: sticky;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #04444C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: 2;
+
+            .AboutUs__Sticky__content{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+
+                .AboutUs__Sticky__content__Container{
+                    position: relative;
+                    width: 60%;
+                    height: 100%;
+
+
+
+                    .AboutUs__Sticky__content__Container__wrapper{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        .AboutUs__Sticky__content__1{
+                            padding: 0 5%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 2;
+    
+                            .Header{
+                                padding: 0 5%;
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                width: 100%;
+                                color: #050A10;
+                                height: 40%;
+                                max-height: 250px;
+
+                                .Header__container{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    width: 100%;
+                                    height: 80%;
+                                    gap: 0.5rem;
+                                    color: #fff;
+    
+    
+                                    h2{
+                                        font-size: 2rem;
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin: 0;
+                                        padding-bottom: 2rem;
+                                    }
+                                    p{
+                                       font-size: 1.5rem; 
+                                       font-weight: 300;
+                                       text-align: left;
+                                       margin: 0;
+                                    }
+                                }
+                                .devider{
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                }
+                            }
+                            .MainText{
+                                padding: 5vh 0 0 0;
+                                position: relative;
+                                width: 100%;
+                                height: 40%;
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: flex-start;  
+                                color: #fff;
+                                flex-direction: column;
+                                .devider{
+                                    position: absolute;
+                                    left: -25%;
+                                    top: 80%;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                }
+                                p{
+                                    padding-right: 5vw;
+                                    width: 80%;
+                                    text-align: right;
+                                    font-size: 3rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                }
+                            }
+                            .subText{
+                                position: relative;
+                                width: 80%;
+                                height: 40%;
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: flex-start; 
+                                color: #fff;
+                                flex-direction: column;
+                                
+                                .subText__text{
+                                    width: 100%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    p{
+                                        width: 50%;
+                                        margin: 0;
+                                        font-size: 1.5rem;
+                                        font-weight: 300;
+                                    }
+                                }
+    
+                                .devider{
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                }
+                                
+                            }
+                        }  
+                        .AboutUs__Sticky__content__2{
+                            padding: 0 5%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 3;
+    
+                            .Header{
+                                padding: 0 5%;
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                width: 100%;
+                                color: #050A10;
+                                height: 40%;
+                                max-height: 250px;
+                                .Header__container{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    width: 100%;
+                                    height: 80%;
+                                    gap: 0.5rem;
+                                    color: #fff;
+    
+    
+                                    h2{
+                                        font-size: 2rem;
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin: 0;
+                                        padding-bottom: 2rem;
+                                    }
+                                    p{
+                                       font-size: 1.5rem; 
+                                       font-weight: 300;
+                                       text-align: left;
+                                       margin: 0;
+                                    }
+                                }
+                                .devider{
+                                    position: absolute;
+                                    left: 0;
+                                    top: 100%;
+                                    width: 150%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                }
+                            }
+                            .subText1{
+                                position: relative;
+                                width: 100%;
+                                height: 40%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center; 
+                                color: #fff;
+                                
+                                .subText__text{
+                                    margin-left: 10vw;
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    p{
+                                        width: 50%;
+                                        margin: 0;
+                                        font-size: 1.5rem;
+                                        font-weight: 300;
+                                    }
+                                }
+    
+                                .devider{
+                                    width: 60%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                }
+                            }
+                            .MainText{
+                                position: relative;
+                                width: 100%;
+                                height: 40%;
+                                display: flex;
+                                align-items: flex-end;
+                                padding: 5vh 0 0 0 ;
+                                justify-content: flex-start;  
+                                color: #fff;
+                                flex-direction: column;
+                                .devider{
+                                    position: absolute;
+                                    left: -5%;
+                                    top: 85%;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #fff;
+
+                                    &:nth-of-type(1){
+                                        left: -5%;
+                                        top: 0;
+                                    }
+                                }
+                                p{
+                                    padding-right: 5vw;
+                                    width: 80%;
+                                    text-align: right;
+                                    font-size: 3rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                }
+                            }
+                            .subText2{
+                                position: relative;
+                                width: 80%;
+                                height: 40%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center; 
+                                color: #fff;
+                                
+                                .subText__text{
+                                    width: 100%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    p{
+                                        width: 50%;
+                                        margin: 0;
+                                        font-size: 1.5rem;
+                                        font-weight: 300;
+                                    }
+                                }
+                                
+                            }
+                        }   
+                    }
+                }
+
+                .AboutUs__Sticky__content__values{
+                    position: relative;
+                    padding: 0 5vw;
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .Header{
+                        padding: 0 5%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 100%;
+                        color: #050A10;
+                        height: 40%;
+                        max-height: 250px;
+                        .Header__container{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            width: 100%;
+                            height: 80%;
+                            gap: 0.5rem;
+                            color: #fff;
+
+
+                            h2{
+                                font-size: 2rem;
+                                font-weight: 400;
+                                text-align: center;
+                                margin: 0;
+                                padding-bottom: 2rem;
+                            }
+                            p{
+                               font-size: 1.5rem; 
+                               font-weight: 300;
+                               text-align: left;
+                               margin: 0;
+                            }
+                        }
+                    }
+                    .Values__container{
+                        width: 100%;
+                        height: 75%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .svg__fillc__Ccontainer{
+                            width: 100%;
+                            height: 100%;
+
+                            svg{
+                                width: 500px;
+                                height: 500px;
+                                position: absolute;
+                                top: 5%;
+                                left: 10%;
+                                transform: translateX(-50%);
+                                stroke-width: 0.5;
+                                stroke: #00F0FF;
+                                &:nth-of-type(2){
+                                    top: 30%;
+                                    left: -5%;
+                                }
+                                &:nth-of-type(3){
+                                    top: 30%;
+                                    left: 25%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

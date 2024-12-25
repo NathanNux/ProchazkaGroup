@@ -1,0 +1,104 @@
+.Preloader__Main{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    .Preloader__Background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #050A10;
+        z-index: 1;
+    }
+    .Preloader__Loading__Line{
+        z-index: 3;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        .Preloader__Loading__Line__SVG{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            stroke: #00F0FF;
+            stroke-width: 0.5;
+            stroke-linecap: round;
+            scale: 8.5;
+            fill: none;
+            transform: rotate(90deg) scaleX(-1);;
+        }
+    }
+    .Preloader__Loading__Number{
+        z-index: 2;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        .Loading__PreLNumber__Container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1{
+                font-size: 2rem;
+                margin: 0;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+    }
+    .Preloader__Loading__Text{
+        color: #fff;
+        z-index: 2;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        p{
+            font-weight: 300;
+            font-style: normal;
+            margin: 0;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+        h3{
+            font-style: bold;
+            margin: 0;
+            font-size: 2rem;
+        }
+    }
+    .Preloader__Logo__Container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        .Preloader__Logo{
+            z-index: 2;
+            scale: 5;
+            stroke-width: 0.5;
+        }
+    }
+}

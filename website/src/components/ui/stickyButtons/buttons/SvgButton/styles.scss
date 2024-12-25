@@ -1,0 +1,41 @@
+.magnetic{
+    z-index: 70; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2
+    .Svg__button_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #050A10;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: #00F0FF 2.5px solid;
+        z-index: 100;
+        cursor: pointer;
+        .Svg__button_Bounds{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-content: center;
+            z-index: 4;
+            border-radius: 50%;
+            // I need to expand the border only when I hover over it
+            &:hover{
+                scale: 3;
+            }
+        }
+        .Svg__button_subcontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+        }
+    }
+}

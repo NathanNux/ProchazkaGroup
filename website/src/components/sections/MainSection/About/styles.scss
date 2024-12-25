@@ -1,0 +1,117 @@
+.About__Section{
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    margin-bottom: 25vh;
+    .image__container{
+        position: absolute;
+        left: 5%;
+        top: 25%;
+        width: 40%;
+        height: 50%;
+
+    }
+
+    .Text__container{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: 10vh;
+
+        .header{
+            position: relative;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                right: 20%;
+                width: 150%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+
+            h3{
+                font-size: 2rem;
+                font-weight: 900;
+                margin: 0;
+            }
+
+            p{
+                width: 50%;
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin: 0;
+                padding-top: 1rem;
+            }
+        }
+
+        .Main__text{
+            width: 110%;
+            height: 70%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding-right: 10vw;
+            p{
+                font-size: 3rem;
+                text-align: right;
+            }
+        }
+
+        .Button__container{
+            bottom: 10%;
+            right: 0;
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 10vw;
+            .add__Text{
+                width: 25%;
+                font-size: 1.1rem;
+                font-weight: 300;
+                margin: 0;
+            }
+            .devider{
+                width: 100%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+            .button{
+                position: absolute;
+                top: 65%;
+                left: 50%;
+                transform: translateY(-50%);
+                z-index: 70;
+
+                .Round__button_container{
+                    width: 200px;
+                    height: 200px;
+
+                    a{
+                        p{
+                            line-height: 1.2;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

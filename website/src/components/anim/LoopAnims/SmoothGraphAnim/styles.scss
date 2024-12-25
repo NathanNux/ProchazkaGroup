@@ -1,0 +1,46 @@
+.loop__advc__main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 55;
+    .loop__anim__button__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        z-index: 2;
+        .loop__anim__button__subcontainer{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+            z-index: 2;
+        }
+    }
+    .loop__anim__devider__Container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+        .loop__anim__devider{
+            width: 200px;
+            height: 5px;
+            background-color: #00F0FF;
+        }
+    }
+}

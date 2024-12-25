@@ -1,0 +1,151 @@
+.Benefits{
+    width: 100vw;
+    height: 110vh;
+    padding: 10vh 5vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    overflow: hidden;
+    
+
+    .cards__container{
+        width: 40%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+
+        .top__devider{
+            position: absolute;
+            top: 10%;
+            right: -50%;
+            width: 300%;
+            height: 2px;
+            background-color: #5E758D;
+        }
+        .card__wrapper{
+            width: 70%;
+            height: 25%;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            .card{
+                width: 100%;
+                height: 75%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                border-radius: 25px;
+                border: #00F0FF 2px solid;
+                padding: 1rem;
+                gap: 1rem;
+
+                h3{
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+                p{
+                    padding-top: 1rem;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+            .devider{
+                position: absolute;
+                bottom: 15%;
+                right: -85%;
+                width: 200%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+            &:nth-of-type(3){
+                margin-right: 5vw;
+            }  
+            &:nth-of-type(4){
+                margin-right: 10vw;
+            }     
+        }
+       
+    }
+
+    .text__container{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .header{
+            width: 60%;
+            height: 20%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0.5rem;
+
+            h3{
+                font-size: 2rem;
+                font-weight: 600;
+                margin: 0;
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin: 0;
+                padding-top: 1rem;
+            }
+        }
+
+        .subtext{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding-right: 5vw;
+
+            p{
+                width: 100%;
+                font-size: 3rem;
+                font-weight: 400;
+                margin: 0;
+                text-align: right;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .story{
+            width: 100%;
+            height: 30%;
+            gap: 0.5rem;
+            h4{
+                white-space: nowrap;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            p{
+                margin: 0;
+                padding-top: 0.5rem;
+                font-size: 1.2rem;
+                width: 75%;
+            }
+        }
+
+    }
+    .divider{
+        position: absolute;
+        bottom: 5%;
+        right: 0;
+        width: 95%;
+        height: 2px;
+        background-color: #5E758D;
+    }
+}

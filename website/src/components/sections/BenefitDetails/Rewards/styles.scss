@@ -1,0 +1,284 @@
+.BenefitRewards {
+    width: 100vw;
+    height: 800vh;
+    z-index: 50;
+    position: relative;
+    background-color: #fff;
+    color: #050A10;
+
+    .BenefitRewards__wrapper{
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+
+        .BenefitRewards__MainInfo {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 2.5vw;
+            z-index: 1;
+
+            .BenefitRewards__MainInfo__header {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                height: 50%;
+                position: relative;
+                .BenefitRewards__MainInfo__header__container{
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 25vw;
+                    height: 25vh;
+                    position: absolute;
+                    left: 0;
+                    bottom: 15%;
+                    background-color: #04444C;
+                    z-index: 70;
+                    border-radius: 25px;
+                    overflow: hidden;
+                }
+
+                
+            }
+
+            .BenefitRewards__MainInfo__text__container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 100%;
+                height: 50%;
+                padding-left: 15%;
+
+                .BenefitRewards__MainInfo__text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 40%;
+                    height: 50%;
+                    position: relative;
+                    .BenefitRewards__MainInfo__text__container__text{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        background-color: #04444C;
+                        p {
+                            font-size: 1.5rem;
+                            margin: 0;
+
+                            &:nth-of-type(1) {
+                                font-size: 2rem;
+                                font-weight: bold; // Changed from font-style to font-weight
+                                padding: 0 0.5rem 1rem 0;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+
+            .BenefitRewards__MainInfo__icons__container {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 60%;
+                height: 50%;
+                padding-top: 10vh;
+
+
+                p{
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .BenefitRewards__SubInfo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+
+            .BenefitRewards__SubInfo__intro__container {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+
+                .BenefitRewards__SubInfo__intro {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 25vw;
+                    height: 25vh;
+                    position: absolute;
+                    top: 5%;
+                    right: 5%;
+                    border-radius: 25px;
+                    overflow: hidden;
+                }
+            }
+
+            .BenefitRewards__SubInfo__Moto {
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                h2 {
+                    width: 75%;
+                    padding-right: 2rem;
+                    padding-bottom: 2rem;
+                    font-size: 2.8rem;
+                    margin: 0;
+                    text-transform: uppercase;
+                    text-align: right;
+                }
+            }
+        }
+
+        .BenefitRewards__Collage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+
+            .BenefitRewards__Collage__pics {
+                position: relative;
+                width: 40vw;
+                height: 40vw;
+                border-radius: 50%;
+                overflow: hidden;
+
+                .BenefitRewards__Collage__pic {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .BenefitRewards__Collage__progress {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 42.5vw;
+                height: 42.5vw;
+                border-radius: 50%;
+                pointer-events: none;
+            
+                // SCSS Variables
+                $num-points: 8; // Number of segments/circles
+                $circle-size: 15px; // Diameter of each circle
+                $segment-length: 10vw; // Length of each segment
+                $segment-height: 4px; // Thickness of each segment
+                $radius: 21.25vw; // Distance from center to the start of segments/circles
+                $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+            
+                // Position Circles
+                @for $i from 1 through $num-points {
+                    .progress__circle:nth-of-type(#{$i}) {
+                        position: absolute;
+                        width: $circle-size;
+                        height: $circle-size;
+                        border: #5E758D 1px solid;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%)
+                                rotate($angle-per-point * ($i - 1) - 90deg)
+                                translate($radius)
+                                rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                        z-index: 2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            background-color: #04444C;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            
+                // Position Segments
+                @for $i from 1 through $num-points {
+                    .progress__segment:nth-of-type(#{$i}) {
+                        position: absolute;
+                        width: $segment-length;
+                        height: $segment-height;
+                        border: #5E758D 1px solid;
+                        border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                        top: 50%;
+                        left: 50%;
+                        // Offset by half of $angle-per-point to place the segment between circles
+                        transform: translate(-50%, -50%) // Center origin for correct alignment
+                                rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
+                                translate($radius) // Move along the radius
+                                rotate(90deg); // Make the segment tangent to the circular path
+                        transform-origin: center; // Rotate around the center point
+                        z-index: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            background-color: #04444C;
+                            border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                        }
+                    }
+                }
+            }
+                
+            
+        }
+    }
+
+    
+}

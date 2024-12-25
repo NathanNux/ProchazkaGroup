@@ -1,0 +1,232 @@
+.GraphShowcase{
+    position: relative;
+    width: 100vw;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    color: #050A10;
+
+    .Graph__header{
+        width: 100%;
+        height: 25%;
+        padding-top: 10vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+
+        .devider{
+            height: 2px;
+            width: 90%;
+            background-color: #050A10;
+        }
+    }
+    .Graph__wrapper{
+        width: 100%;
+        height: 70%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .Graph__wrapper__container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .Graph__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                padding: 0 5vw;
+                gap: 5vh;
+                .Graph__content__header{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+                    
+                    h3{
+                      font-size: 2.5rem;
+                      font-weight: 400;
+                      margin: 0;  
+                      padding-bottom: 2.5rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;  
+                        padding-top: 2rem;
+                    }
+                }
+
+                .Graph__content__graph{
+                    width: 100%;
+                    height: 60%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+
+                    .recharts-responsive-container{
+                        .recharts-wrapper{
+                            .recharts-surface{
+                                .recharts-yAxis{
+                                    text{
+                                        transform: translate(10px, 5px);
+                                        tspan{
+                                            
+                                        }
+                                    }
+                                }
+                                .recharts-layer{
+                                    .recharts-cartesian-axis-ticks{
+                                       width: 90%;
+                                        .recharts-cartesian-axis-tick{
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Anim__content{
+                width: 30%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .Anim__content__header{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    
+                    h3{
+                      font-size: 2.5rem;
+                      font-weight: 400;
+                      margin: 0;  
+                      padding-bottom: 2.5rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;  
+                        padding-top: 2rem;
+                    }
+
+
+                }
+                .Anim__content__anim{
+                    height: 65%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    .loop__anim__main{
+                        width: 50%;
+                        height: 50%;
+                        scale: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+    .Graph__Values{
+        position: relative;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5vh 0;
+
+        .Graph__Values__header{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 5vw;
+            .devider{
+                width: 100%;
+                height: 2px;
+                background-color: #050A10;
+            }
+            h2{
+                font-size: 2.5rem;
+                font-weight: 400;
+                text-align: left;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .Graph__Values__Cards{
+            width: 100%;
+            height: 100%;
+            padding: 0 5vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly; 
+            gap: 2.5vw;
+            .Graph__Values__Card__item{
+                width: 100%;
+                height: 100%;
+                border: #00F0FF 3px solid;
+                border-radius: 25px;
+                padding: 1em 1.5rem;
+                display: flex;
+                gap: 0.75rem;
+
+                h3{ 
+                    font-size: 2rem;
+                    margin: 0;
+                    font-weight: 800;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin: 0;
+                    padding-top: 1rem;
+                    text-transform: uppercase;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

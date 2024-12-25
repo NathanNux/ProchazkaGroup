@@ -1,0 +1,42 @@
+.HoverLogo{
+    display: flex;
+    width: 50vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 2rem;
+    .HoverLogo__Logo__Container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .HoverLogo__Logo{
+            z-index: 2;
+            scale: 1;
+            stroke-width: 0.5;
+        }
+    } 
+
+    .HoverLogo__Text{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        h3{
+            font-size: 1.2rem;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        p{
+            font-size: 0.8rem;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+}

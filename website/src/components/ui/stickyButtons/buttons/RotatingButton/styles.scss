@@ -1,0 +1,81 @@
+.magnetic{
+    z-index: 70; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2
+    .Rotating__button_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #050A10;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: #00F0FF 2.5px solid;
+        z-index: 100;
+        cursor: pointer;
+        .Rotating__button_Bounds{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-content: center;
+            z-index: 4;
+            border-radius: 50%;
+            // I need to expand the border only when I hover over it
+            &:hover{
+                scale: 3;
+            }
+        }
+        a{
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #050A10;
+            z-index: 3;
+
+            .Rotating__button_Center{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+                height: 25%;
+                z-index: 2;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+            p{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                font-weight: 300;
+                color: #fff;
+                pointer-events: none; // Prevent text from interfering with hover
+
+                .Rotating__button_letter {
+                    position: absolute;
+                    font-size: 1rem;
+                    top: calc(50%);
+                    left: calc(50%);
+                    transform-origin: 0 0; // Rotate around the center
+                    /* Optional: add transition for smoothness */
+                }
+                
+            }
+        }
+    }
+}

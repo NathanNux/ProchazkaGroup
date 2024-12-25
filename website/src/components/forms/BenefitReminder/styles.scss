@@ -1,0 +1,372 @@
+.BenefitReminder{
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fff;
+    color: #050A10;
+
+    .BenefitReminder__Header{
+        width: 100%;
+        height: 60%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 1rem 5vw;
+
+        .Main__text{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 20%;
+            left: 5%;
+
+            h2{
+                font-size: 3.5rem;
+            }
+        }
+
+        .Header{
+            width: 35%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            position: absolute;
+            bottom: -20%;
+            right: 0%;
+            .Header__wrapper{
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                h3{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin: 0;
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+
+    .BenefitReminder__Personal__wrapper{
+        width: 55vw;
+        margin-left: 5vw;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3rem;
+        scale: 0.85;
+
+        .BenefitReminder__Personal__choice{
+            position: relative;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            .devider{
+                position: absolute;
+                top: -15%;
+                left: -20%;
+                width: 110%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+
+            .devider__bottom{
+                position: absolute;
+                bottom: -15%;
+                left: -20%;
+                width: 140%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+
+            .BenefitReminder__Personal__choice__container{
+                width: 80%;
+                height: 100%;
+                position: relative;
+                .BenefitReminder__Personal__choice__wrapper{
+                    position: absolute;
+                    top: -5%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    .BenefitReminder__Personal__choice__image__container{
+                        width: 50%;
+                        height: 100%;
+
+                        .BenefitReminder__Personal__choice__image{
+                            width: 15vw;
+                            height: 15vw;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .BenefitReminder__Personal__choice__Data__container{
+                        position: relative;
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        .BenefitReminder__choice__Input{
+                            width: 100%;
+                            height: 25%;
+                            position: relative;
+                            bottom: 5%;
+                            left: 0;
+                            display: flex;
+
+                            .devider{
+                                position: absolute;
+                                top: -5%;
+                                left: -5%;
+                                width: 110%;
+                                height: 2px;
+                                background-color: #5E758D;
+                                                    &:nth-of-type(5) {
+                                    bottom: 0%;
+                                    left: -5%;
+                                    top: 100%;
+                                    width: 120%;
+                                }
+                            }
+                            .header{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                                    .index{
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    h3{
+                                        margin: 0;
+                                        font-size: 2rem;
+                                        font-weight: 900;
+                                    }  
+                                }
+                                
+                                p{
+                                margin: 0; 
+                                font-size: 2.5rem;
+                                font-weight: 400;
+                                }
+                            }
+
+                            .person__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                .name{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    padding-left: 2rem;
+                                    padding-top: 0.5rem;
+                                    gap: 1rem;
+
+                                    p{
+                                        font-size: 1.75rem;
+                                        font-weight: 300;
+                                        margin: 0;
+                                        color: #050A10;
+                                    }
+                                }
+                            }
+                            .buttons{
+                                height: 100%;
+                                width: 20%;
+                                display: flex;
+                                position: relative;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 0.5rem;
+
+                                .menu__button{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+
+                                .person__menu{
+                                    position: absolute;
+                                    top: 80%;
+                                    left: 0%;
+                                    width: 300%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    background: #fff;
+                                    color: #050A10;
+                                    border-radius: 25px;
+                                    border: #00F0FF 2.5px solid;
+                                    overflow: hidden;
+                                    transform-origin: top center;
+                                    z-index: 5;
+
+                                    .menu__list{
+                                        width: 100%;
+                                        li{
+                                            font-size: 1.5rem;
+                                                                            cursor: pointer;
+                                            padding:  0.75rem 2.5rem;
+                                            width: 100%;
+                                            transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                            
+                                            &:hover{
+                                                background-color: #5E758D;
+                                            } 
+                                        }
+                                    }
+                                }
+                                .devider__vertical{
+                                    height: 60%;
+                                    width: 3px;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                        .Reviews_stats{
+                            width: 100%;
+                            height: 60%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: flex-start;
+                            padding: 0 0 0 10%;
+                            position: relative;
+
+                            .ThumsUp{
+                                display: flex;
+                                width: 40%;
+                                gap: 1rem;
+                                align-items: center;
+                                justify-content: flex-start;
+                                p{
+                                    font-size: 3.5rem;
+                                    margin: 0;
+                                }
+                            }
+                            .Comments{
+                                display: flex;
+                                width: 50%;
+                                gap: 1rem;
+                                align-items: center;
+                                justify-content: flex-start;
+                                p{
+                                    font-size: 3.5rem;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }      
+    }
+
+    .CTA__Wrapper{
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        top: 70%;
+        left: 70%;
+        transform: translate(-50%, -50%,);
+        z-index: 55;
+        
+        .devider__line{
+            position: absolute;
+            top: 50%;
+            right: -30%;
+            transform: translateY(-50%);
+            width: 120%;
+            height: 2px;
+            background-color: #5E758D;
+            z-index: -1;
+        }
+
+        .button__wrapper{
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%,);
+            z-index: 60;
+
+            .Round__button_container{
+                width: 200px;
+                height: 200px;
+                a{
+                    p{
+                        font-size: 1.8rem;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+
+    .Footer__wrapper{
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 0.5rem;
+
+        h2{
+            position: absolute;
+            top: -45%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        p{
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+}

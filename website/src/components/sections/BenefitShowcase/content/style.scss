@@ -1,0 +1,129 @@
+.Content {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5vh 2.5vw;
+    background-color: #04444C;
+    color: #fff;
+    // Remove overflow properties from here
+
+    .Image__wrapper{
+        position: absolute;
+        width: 100%;
+        height: 130%;
+        top: -2.5%;
+        left: 0;
+        overflow: hidden;
+        .Image__container {
+            position: absolute;
+            width: 40vw;
+            height: 100vh;
+            top: 0;
+            right: -5%;
+            z-index: 4; // Higher than DataBar's z-index
+            pointer-events: none; // Allow clicking through if needed
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                position: relative;
+            }
+        }
+    }
+
+    .header{
+        width: 80%;
+        height: 20%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+
+        p{
+            width: 30%;
+            font-size: 2rem;
+        }
+
+        .devider{
+            position: absolute;
+            bottom: 5%;
+            left: -10%;
+            width: 85%;
+            height: 2px;
+            background-color: #5E758D;
+        }
+    }
+
+    .main__text{
+        width: 60%;
+        height: 80%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        h2{
+            width: 70%;
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 400;
+            text-align: right;
+        }
+
+        .devider{
+            position: absolute;
+            width: 95%;
+            height: 2px;
+            bottom: 10%;
+            right: -10%;
+            background-color: #5E758D;
+        }
+    }
+
+    .footer__header{
+        width: 100%;
+        height: 15%;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10vw;
+
+        .devider{
+            position: absolute;
+            bottom: -55%;
+            left: -10%;
+            width: 85%;
+            height: 2px;
+            background-color: #5E758D;
+        }
+
+        .index{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 0.5rem;
+            
+            h3{
+                font-size: 2rem;
+                font-weight: 900;
+                margin: 0;
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin: 0;
+                width: 45%;
+                padding-top: 1rem;
+            }
+
+        }
+    }
+}

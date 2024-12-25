@@ -1,0 +1,311 @@
+.ContactIntro {
+    width: 100vw;
+    height: 200vh;
+    position: relative;
+    color: #fff;
+    .background__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 58;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .cover{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #050A10;
+        opacity: 0.8;
+        z-index: 58;
+    }
+
+    .ContactIntro__wrapper{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        overflow: hidden;
+        z-index: 59;
+
+        .ContactIntro__MainInfo {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+            .ContactIntro__MainInfo__header {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                height: 30%;
+                position: relative;
+                .ContactIntro__MainInfo__header__container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 15%;
+                    left: 15%;
+
+                    h2 {
+                        font-size: 3rem;
+                        margin: 0;
+                    }
+                }
+
+                
+            }
+
+            .ContactIntro__MainInfo__text__container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 100%;
+                height: 50%;
+                padding-left: 15%;
+
+                .ContactIntro__MainInfo__text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 40%;
+                    height: 50%;
+                    position: relative;
+                    .ContactIntro__MainInfo__text__container__text{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        p {
+                            font-size: 1.5rem;
+                            margin: 0;
+
+                            &:nth-of-type(1) {
+                                font-size: 2rem;
+                                font-weight: bold; // Changed from font-style to font-weight
+                                padding: 0 0.5rem 1rem 0;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+
+            .ContactIntro__MainInfo__icons__container {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 80%;
+                height: 20%;
+
+                .ContactIntro__MainInfo__icons {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .ContactIntro__MainInfo__icon {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+
+        .ContactIntro__SubInfo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+
+            .ContactIntro__SubInfo__intro__container {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+
+                .ContactIntro__SubInfo__intro {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    height: 40%;
+
+                    p {
+                        font-size: 1.5rem;
+                        margin: 0;
+
+                        &:nth-of-type(1) {
+                            font-size: 2rem;
+                            font-weight: bold; // Changed from font-style to font-weight
+                            padding: 0 0.5rem 1rem 0;
+                        }
+                    }
+                }
+            }
+
+            .ContactIntro__SubInfo__Moto {
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                h2 {
+                    width: 80%;
+                    padding-right: 2rem;
+                    padding-bottom: 2rem;
+                    font-size: 3rem;
+                    margin: 0;
+                    text-transform: uppercase;
+                    text-align: right;
+                }
+            }
+        }
+
+        .ContactIntro__Collage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+
+            .ContactIntro__Collage__pics {
+                position: relative;
+                width: 40vw;
+                height: 40vw;
+                border-radius: 50%;
+                overflow: hidden;
+
+                .ContactIntro__Collage__pic {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .ContactIntro__Collage__progress {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 42.5vw;
+                height: 42.5vw;
+                border-radius: 50%;
+                pointer-events: none;
+            
+                // SCSS Variables
+                $num-points: 8; // Number of segments/circles
+                $circle-size: 25px; // Diameter of each circle
+                $segment-length: 8vw; // Length of each segment
+                $segment-height: 4px; // Thickness of each segment
+                $radius: 21.75vw; // Distance from center to the start of segments/circles
+                $radius-segments: 21vw; // Distance from center to the start of segments/circles
+
+                $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+            
+                // Position Circles
+                @for $i from 1 through $num-points {
+                    .progress__circle:nth-of-type(#{$i}) {
+                        position: absolute;
+                        width: $circle-size;
+                        height: $circle-size;
+                        border: #00F0FF 1px solid;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%)
+                                rotate($angle-per-point * ($i - 1) - 90deg)
+                                translate($radius)
+                                rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                        z-index: 2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            background-color: #00F0FF;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            
+                // Position Segments
+                @for $i from 1 through $num-points {
+                    .progress__segment:nth-of-type(#{$i}) {
+                        position: absolute;
+                        width: $segment-length;
+                        height: $segment-height;
+                        border: #00F0FF 1px solid;
+                        border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                        top: 50%;
+                        left: 50%;
+                        // Offset by half of $angle-per-point to place the segment between circles
+                        transform: translate(-50%, -50%) // Center origin for correct alignment
+                                rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
+                                translate($radius-segments) // Move along the radius
+                                rotate(90deg); // Make the segment tangent to the circular path
+                        transform-origin: center; // Rotate around the center point
+                        z-index: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            background-color: #00F0FF;
+                            border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                        }
+                    }
+                }
+            }
+                
+            
+        }
+    }
+
+    
+}

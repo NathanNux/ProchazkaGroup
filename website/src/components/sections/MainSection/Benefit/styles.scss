@@ -1,0 +1,123 @@
+.Benefit{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    padding: 10vh 5vw 5vh 5vw;
+    gap: 5vw;
+    background-color: #04444C;
+    color: #fff;
+
+    .Header{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        .Index{
+            width: 60%;
+            height: 10%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0.5rem;
+
+            h3{
+                font-size: 2rem;
+                font-weight: 900;
+                margin: 0;
+            }
+
+            p{
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin: 0;
+                padding-top: 1rem;
+            }
+        }
+
+        .devider{
+            width: 100%;
+            height: 2px;
+            background-color: #5E758D;
+        }
+
+        .MainText{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            p{
+                text-transform: uppercase;
+                font-size: 3rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+        .Button__container{
+            width: 100%;
+            height: 40%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .button{
+                .Round__button_container{
+                    width: 200px;
+                    height: 200px;
+                    a{
+                        p{
+                            font-size: 1.5rem;
+                            line-height: 1.2;
+                        }
+                    }
+                }      
+            }
+            
+        }
+    }
+
+    .Details{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 5vh;
+
+        .Image__container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .Custom__image__container{
+                width: calc(50vw * 0.6);
+                height: 35vw
+            }
+        }
+
+        .subText{
+            width: 80%;
+            height: 30%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 0 2.5vw 0 0;
+
+            p{
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin: 0;
+                text-align: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.IntroPageBenefit{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #04444C;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 2;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #050A10;
+        opacity: 0.55;
+    }
+
+    .text{
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50vh;
+        h1{
+            width: 100%;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 9rem;
+            letter-spacing: 1rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            span{
+                margin-right: 10rem;
+            }
+        }
+        .Logo{
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+
+            .onViewLogo{
+                justify-content: flex-start;
+                scale: 1.2;
+            }
+        }
+    }
+}

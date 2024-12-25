@@ -1,0 +1,34 @@
+.Rolling__logos{
+    padding-top: 85vh;
+    padding-bottom: 85vh;
+    width: 100vw;
+    position: relative;
+    .Rolling_text_container{
+        overflow: hidden;
+        line-height: 0.8;
+        letter-spacing: -8px;
+        margin: 0;
+        white-space: nowrap;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        p{
+            margin: 0;
+            padding: 1rem 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 8em;
+            display: flex;
+            white-space: nowrap;
+            display: flex;
+            flex-wrap: nowrap;
+            span{
+                display: block;
+                margin-right: 5rem
+            }
+        }
+    }
+}

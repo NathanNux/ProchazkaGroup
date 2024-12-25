@@ -1,0 +1,15 @@
+.svg__main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 55;
+    overflow: hidden;
+
+    .space{
+        width: 100vw;
+        height: 50vh;
+    }
+}

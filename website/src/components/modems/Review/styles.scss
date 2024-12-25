@@ -1,0 +1,307 @@
+.ReviewsList{
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+    overflow: hidden;
+    .ReviewsList__header{
+        width: 100%;
+        height: 25vh;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        .devider{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #050A10;
+        }
+
+        .header{
+            width: 70%;
+            display: flex;
+            padding-left: 10%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            gap: 0.5rem;
+            padding-bottom: 1.5rem;
+            h3{
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin: 0;
+                color: #050A10
+            }
+            p{
+                padding-top: 1.5rem;
+                width: 60%;
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin: 0;
+                color: #050A10
+            }
+            .devider__header{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #050A10;
+            }
+        }
+
+        .mainText{
+            position: absolute;
+            right: 5%;
+            top: 35%;
+            width: 40%;
+            
+            h2{
+               font-size: 4rem;
+               font-weight: 400;
+               color: #050A10;
+               margin: 0; 
+               text-align: right;
+            }
+        }
+    }
+
+    .ReviewsList__menu{
+        width: 100%;
+        padding: 0 15%;
+        height: 25vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .devider__menu{
+            position: absolute;
+            bottom: -5%;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background-color: #050A10;
+        }
+        .menu__controls{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .menu__buttons{
+                display: flex;
+                gap: 2rem;
+                .button{
+                    .Small__button_container{
+                        width: 150px;
+                        height: 50px;
+                        a{
+                            pointer-events: none;
+                            p{
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+            .searchBar{
+                display: flex;
+                gap: 2rem;
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin: 0;
+                    color: #050A10;
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .addReviews{
+            position: absolute;
+            top: 30%;
+            right: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-bottom: 1rem;
+            .devider__rev{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 35%;
+                height: 2px;
+                background-color: #050A10;
+            }
+            .controls{
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 2rem;
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin: 0;
+                }
+                .button{
+                    .Svg__button_container{
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ReviewsList__Reviews{
+        min-height: 100vh;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        gap: 2vh;
+
+        .review__item{
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            position: relative;
+            flex-direction: row;
+
+            .devider__item{
+                position: absolute;
+                bottom: 0;
+                left: -15%;
+                width: 120%;
+                height: 2px;
+                background-color: #5E758D;
+                opacity: 0.4;
+            }
+
+            .context{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 1rem;
+
+                .Header{
+                    display: flex;
+                    gap: 0.5rem;
+                    p{
+                        font-size: 1.8rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10;
+                    }
+                }
+                .message{
+                    padding-left: 2vw;
+                    p{
+                        margin: 0;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        color: #050A10
+                    }
+                }
+            }
+
+            .ratings{
+                width: 60%;
+                padding-bottom: 2.5vh;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end; 
+                flex-direction: row;
+                gap: 1rem;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    margin: 0;
+                    color: #050A10;
+                }
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 0.25rem;
+                    p{
+                        font-size: 1.8rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10;
+                        margin-left: 0.75rem;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+          
+                .context {
+                  align-items: flex-end;
+                  text-align: right;
+          
+                  .Header {
+                    flex-direction: row;
+                  }
+          
+                  .message {
+                    padding-left: 0;
+                    padding-right: 2vw;
+                  }
+                }
+          
+                .ratings {
+                  justify-content: flex-end;
+                  flex-direction: row-reverse;
+                  .buttons {
+                    flex-direction: row;
+                  }
+                }
+          
+                .devider__item {
+                  left: auto;
+                  right: -15%;
+                }
+            } 
+        }
+    }
+
+    .showMore__button{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .Small__button_container{
+            width: 200px;
+            height: 75px;
+            pointer-events: none;
+            a{
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

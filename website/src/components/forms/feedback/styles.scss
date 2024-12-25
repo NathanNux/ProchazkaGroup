@@ -1,0 +1,379 @@
+.FeedbackForm{
+    width: 100vw;
+    height: 110vh;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #04444C;
+    padding: 0 5vw;
+
+    .form__wrapper{
+        width: 70%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .form{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 15%;
+
+            form{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                padding: 4rem 2rem 4rem 0;
+
+
+                .input__container{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+                    color: #fff;
+                    gap: 0.5rem;
+                    padding-left: 1rem;
+
+                    .form__devider{
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+
+                    h3{
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+
+                    .input__wrapper {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem 0;
+
+                        .label__wrapper{
+                            height: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 0.5rem;
+                            position: relative;
+                            .label__devider{
+                                position: absolute;
+                                top: 45%;
+                                left: 0;
+                                background-color: #5E758D;
+                                width: 100%;
+                                height: 2px;
+                            }
+                            
+                            label{
+                                width: 100%;
+                                padding-top: 1rem;
+                            }
+                        }
+
+                        label{
+                            white-space: nowrap; // this fixes the issue with the lable getting clumped into two lines
+                            font-size: 2rem;
+                        }
+                        h3{
+                            height: 100%;
+                            font-size: 2rem;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            opacity: 0.6;
+                            font-size: 1.5rem;
+                            resize: none;
+                            line-height: 1.5;
+                            padding: 1.5rem 0 0 0;
+                            &:focus {
+                                outline: none;
+                                -webkit-focus-ring-color: transparent;
+                                box-shadow: none;
+                            }
+                            
+                            // Remove default focus highlight
+                            -webkit-tap-highlight-color: transparent;
+                            -webkit-focus-ring-color: transparent;
+                            
+                            // Consistent positioning for placeholder and input
+                            &::placeholder {
+                                color: #fff;
+                                opacity: 0.6;
+                            }
+                            &::-webkit-input-placeholder,
+                            &::-moz-placeholder {
+                                line-height: inherit;
+                                position: absolute;
+                                top: 0.5rem;
+                                left: 0;
+                                opacity: 0.6;
+                                transition: opacity 0.2s ease;
+                            }
+                            
+                            // Fine-tune input text position
+                            &:not(:placeholder-shown) {
+                                padding-top: 1.5rem; // this is the text padding - need to match with the placeholder anim
+                            }
+                            
+                            // Optionally, add a pseudo-element for additional control
+                            &::before {
+                                content: '\2008';
+                                display: block;
+                                height: 1.5rem;
+                            }
+                        }
+
+                        input {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            opacity: 0.6;
+                            font-size: 1.5rem;
+                    
+                            &::placeholder {
+                                color: #fff;
+                                opacity: 0.6;
+                            }
+                    
+                            &:focus {
+                                outline: none;
+                                -webkit-focus-ring-color: transparent;
+                                box-shadow: none;
+                            }
+                    
+                            // Remove webkit autofill styling
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                -webkit-text-fill-color: #fff;
+                                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                                transition: background-color 5000s ease-in-out 0s;
+                            }
+                        }
+
+                        &:nth-of-type(4){
+                            padding: 0;
+                        }
+                    }
+
+                    &:nth-of-type(1){
+                        width: 100%;
+                    }
+                    &:nth-of-type(2){
+                        width: 95%;
+                    }
+                    &:nth-of-type(3){
+                        width: 90%;
+                    }
+                    &:nth-of-type(4){
+                        width: 85%;
+                    }
+                }
+
+                .terms__container{
+                    width: 80%;
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                    color: #fff;
+
+                    .form__devider{
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .terms__text{
+                        padding-right: 2rem;
+                        margin: 0;
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .CTA{
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10vw;
+
+            .devider{
+                position: absolute;
+                top: 50%;
+                right: 5%;
+                transform: translateY(-50%);
+                width: 110%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+
+            .magnetic{
+                z-index: 57;
+                .Round__button_container{
+                    width: 200px;
+                    height: 200px;
+                    z-index: 5;
+                    a{
+                        p{
+                            font-size: 2rem;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom__footer{
+            width: 90%;
+            height: 15%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+
+            .header{
+                height: 50%;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0.5rem;
+
+                h3{
+                    font-size: 2rem;
+                    font-weight: 800;
+                    margin: 0;
+
+                }
+                p{
+                    width: 30%;
+                    padding-top: 1.5rem;
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+
+            .phone__details{
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-direction: column;
+                gap: 1rem;
+
+                .details__devider{
+                    width: 65%;
+                    height: 2px;
+                    background-color: #5E758D;
+
+                    &:nth-of-type(1){
+                        width: 70%;
+                    }
+                }
+                .details{
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .map__wrapper{
+        width: 30%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        .map__container{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            .Header{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1rem;
+                padding: 0 1rem;
+                p{
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+
+            .Map{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 1rem;
+
+                .Map__div{
+                    width: 100%;
+                    height: 90%;
+                    background-color: #fff;
+                    border-radius: 25px;
+                }
+            }
+        }
+    }
+}

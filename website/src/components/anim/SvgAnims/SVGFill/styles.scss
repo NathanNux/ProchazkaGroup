@@ -1,0 +1,41 @@
+.svg__fillc__main{
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .svg__fillc__Tcontainer{
+        position: relative;
+        width: 55%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .svg__fillc__Ccontainer{
+        width: 35%;
+        height: 50%;
+        position: relative;
+
+        svg{
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            stroke-width: 0.5;
+            stroke: #00F0FF;
+            &:nth-of-type(2){
+                top: 90%;
+                left: 10%;
+            }
+            &:nth-of-type(3){
+                top: 90%;
+                left: 90%;
+            }
+        }
+    }
+}  

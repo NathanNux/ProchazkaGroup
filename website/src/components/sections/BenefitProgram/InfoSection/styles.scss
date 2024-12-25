@@ -1,0 +1,232 @@
+.InfoBenefitS{
+    position: relative;
+    width: 100%;
+    height: 2000vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    border: #050A10 1px solid;
+    z-index: 0;
+
+    .InfoBenefitS__sticky{
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        border: #050A10 1px solid;
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+
+        .InfoBenefitS__sticky__Wrapper{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-direction: column;
+            overflow: hidden;
+
+            .InfoBenefitS__sticky__Header{
+                height: 10vh;
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-direction: column;
+                position: relative;
+                .InfoBenefitS__sticky__Header__container{
+                    position: absolute;
+                    will-change: transform;
+                    backface-visibility: hidden;
+                    transform-style: preserve-3d;
+                    top: 0;
+                    right: 0;
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    flex-direction: column;
+                    .InfoBenefitS__sticky__Header__container__text{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        width: 60%;
+                        h3{
+                            font-size: 2rem;
+                            margin: 0;
+                            text-transform: uppercase;
+                            padding-bottom: 2rem;
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                            text-transform: lowercase;
+                        }
+                    }
+                    .devider{
+                        width: 100%;
+                        height: 1px;
+                        background-color: #050A10;
+                    }
+                }
+
+            }
+            
+            .InfoBenefitS__sticky__Content{
+                height: 70vh;
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .InfoBenefitS__sticky__Content__div{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 2rem;
+                    .InfoBenefitS__sticky__Content__div__content{
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                        width: 80%;
+                        flex-direction: column;
+                        background-color: #fff;
+
+                        h2{
+                            font-size: 2rem;
+                            margin: 0;
+                            text-transform: uppercase;
+                            font-weight: 300;
+                            line-height: 1.5;
+                        }
+                        p{
+                            width: 90%;
+                            font-size: 1.2rem;
+                            margin: 0;
+                            text-transform: lowercase;
+                            font-weight: 300;
+                            line-height: 1.5;
+                        }
+                    }
+
+                    &:nth-of-type(2){
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        .InfoBenefitS__sticky__Content__div__content{
+                            width: 80%;
+                            bottom: -25%;
+
+                            h2{
+                                text-align: right;
+                            }
+
+                            p{
+                                text-align: right;
+                            }
+
+                            &:nth-of-type(3){
+                                bottom: 0%;
+                                right: 15%
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+        }
+
+        .InfoBenefitS__sticky__Cover{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050A10;
+
+            .cover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #050A10;
+                opacity: 0.75;
+                z-index: 1;
+            }
+
+            .mainHeader{
+                position: absolute;
+                bottom: 15vh;
+                right: 5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                color: #fff;
+                width: 60%;
+
+                h2{
+                    font-size: 4rem;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    text-align: right;
+                }
+            }
+            .subHeader{
+                position: absolute;
+                bottom: 10vh;
+                left: 5vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                color: #fff;
+                width: 25%;
+                height: 10%;
+                gap: 0.5rem;
+
+                h3{
+                    font-size: 2rem;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-style: bold;
+                    line-height: 1.5;
+                    text-align: left;
+                    padding-bottom: 3rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    margin: 0;
+                    text-transform: lowercase;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

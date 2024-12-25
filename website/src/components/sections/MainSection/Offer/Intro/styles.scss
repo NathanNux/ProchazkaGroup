@@ -1,0 +1,89 @@
+.IntroOffer{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 5vw 0 5vw;
+
+    .divider{
+        position: absolute;
+        bottom: -5%;
+        left: 0;
+        width: 90%;
+        height: 2px;
+        background-color: #5E758D;
+    }
+    .IntroOffer__header{
+        height: 25%;
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding-left: 5vw;
+        padding-bottom: 5vh;
+        .header__wrapper{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            h3{
+                font-size: 2rem;
+                font-weight: 900;
+                margin: 0;
+            }
+            p{
+                padding-top: 1rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        .devider{
+            position: absolute;
+            bottom: 5%;
+            left: 10%;
+            width: 200%;
+            height: 2px;
+            background-color: #5E758D;
+        }
+    }
+
+    .IntroOffer__MainText{
+        width: 55%;
+        height: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 5vw;
+        padding-top: 5vh;
+        p{
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+    .IntroOffer__image__container{
+        position: absolute;
+        top: 45%;
+        right: 5%;
+    }
+
+    .IntroOffer__subText{
+        width: 60%;
+        height: 25%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        p{
+            width: 35%;
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+}

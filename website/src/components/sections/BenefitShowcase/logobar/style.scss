@@ -1,0 +1,61 @@
+.LogoBar{
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5vh 0;
+    z-index: 2;
+    background-color: #04444C;
+
+
+    .header{
+        height: 25%;
+        width: 50%;
+        padding: 0 5vw;
+        color: #fff;
+        h2{
+            font-size: 3rem;
+
+        }
+    }
+
+    .Logos{
+        width: 100%;
+        height: 85%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .Rolling__text{
+            padding: 0;
+            scale: 1.1;
+            .Rolling_text_container{
+
+                &:nth-of-type(2){
+                    display: none;
+                }
+
+                p{
+                    color: #fff;
+                    span{
+                        border: #00F0FF 1px solid;
+                        border-radius: 25px;
+                        padding: 2rem 4rem;
+                        margin-right: 2rem
+                    }
+                }
+            }
+        }
+
+        .devider{
+            width: 90%;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #5E758D;
+        }
+    }
+}

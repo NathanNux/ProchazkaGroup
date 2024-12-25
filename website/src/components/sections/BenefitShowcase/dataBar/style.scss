@@ -1,0 +1,57 @@
+.DataBar{
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw;
+    background-color: #04444C;
+    z-index: 3;
+
+    .devider{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 2px;
+        background-color: #00F0FF;
+    }
+
+    .data__item{
+        width: 15%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        .number__wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            h1{
+                font-size: 3rem;
+                font-weight: 600;
+                margin: 0;
+                color: #00F0FF;
+            }
+            
+            .currency {
+                color: #00F0FF;
+                font-size: 3rem;
+                font-weight: 600;
+                margin-left: 2px;
+            }
+        }
+
+        p{
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+}
