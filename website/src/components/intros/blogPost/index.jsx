@@ -1,32 +1,6 @@
-import ONViewLogo from "@/components/Logo/onView";
+import ONViewLogo from "@/components/anim/LogoAnims/onView";
+import { BlogData } from "@/constants/pages/blog";
 import Image from "next/image";
-
-const data = [
-    {
-        time: '10min',
-        data: '',
-        src: '/thumbsUp.svg',
-        alt: 'book__icon'
-    },
-    {
-        time: '',
-        data: '1928',
-        src: '/thumbsUp.svg',
-        alt: 'views__icon'
-    },
-    {
-        time: '',
-        data: '428',
-        src: '/thumbsUp.svg',
-        alt: 'Likes__icon'
-    },
-    {
-        time: '',
-        data: '28',
-        src: '/thumbsUp.svg',
-        alt: 'Comments__icon'
-    }
-]
 
 export default function BlogPostIntro() {
     return (
@@ -40,7 +14,7 @@ export default function BlogPostIntro() {
             <div className="cover" />
             <div className="IntroData">
                 <div className="Data">
-                    {data.map((object, i) => {
+                    {BlogData.map((object, i) => {
                         const { data, time, src, alt} = object
                         return (
                             <div className="Data__item" key={i}>

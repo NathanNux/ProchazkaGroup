@@ -1,56 +1,9 @@
 import MainText from "@/components/anim/TextAnims/MainText"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
+import { people } from "@/constants/people"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
-
-const people = [
-    {
-        name: 'Václav Procházka',
-        tel: '+420 776 127 934',
-        likes: '506',
-        reviews: '25',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/cactus.webp',
-        alt: 'person1',
-    },
-    {
-        name: 'Ondřej Efenberk',
-        tel: '+420 606 564 934',
-        likes: '340',
-        reviews: '20',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/house.webp',
-        alt: 'person2',
-    },
-    {
-        name: 'Michaela Marková',
-        tel: '+420 776 827 244',
-        likes: '400',
-        reviews: '30',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/rock.webp',
-        alt: 'person2',
-    },
-    {
-        name: 'Tereza Marková',
-        tel: '+420 776 425 389',
-        likes: '200',
-        reviews: '20',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/water.webp',
-        alt: 'person3',
-    },
-    {
-        name: 'Zdeněk Kafka',
-        tel: '+420 774 213 546',
-        likes: '158',
-        reviews: '18',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/tree.webp',
-        alt: 'person4',
-    }
-]
 
 const itemVariants = {
     open: {

@@ -2,31 +2,9 @@ import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import MainText from "@/components/anim/TextAnims/MainText";
 import MyButton from "@/components/ui/stickyButtons/buttons/MyButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
+import { FooterLinks } from "@/constants/common";
 import Link from "next/link";
 
-const FooterLinks = [
-    {
-        name: 'Facebook',
-        href: 'https://www.facebook.com/prochazkagroup'
-    },
-    {
-        name: 'Instagram',
-        href: 'https://www.instagram.com/prochazkagroup'
-    },
-    {
-        name: 'Website',
-        href: 'https://www.prochazkagroup.cz'
-    },
-    {
-        name: 'Benefits',
-        href: '/benefits'
-    },
-    {
-        name: 'Locations',
-        href: '/locations'
-    },
-    
-]
 export default function Footer() {
     return (
         <section className="Footer">

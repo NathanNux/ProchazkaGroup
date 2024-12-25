@@ -4,11 +4,14 @@ import ContactIntro from "@/components/intros/contact";
 
 
 export default function PersonFeebackPage() {
+    const name = "Ondřej Efenberk";
+    const moto = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+    const number = '02';
     return(
         <>
             <Cursor />
             <Navbar />
-            <ContactIntro />
+            <ContactIntro name={name} moto={moto} number={number}/>
         </>
     )
 }

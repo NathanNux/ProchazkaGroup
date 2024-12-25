@@ -1,49 +1,12 @@
 import LoopAnim from "@/components/anim/LoopAnims/GraphAnim";
 import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
+import { chartDataTheWay, valuesTheWay } from "@/constants/mainpage";
 import { useOnWindowResize } from "@/hooks/useOnWindowResize";
 import { AreaChart } from "@tremor/react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef, useState } from "react";
 
-const values = [
-    {
-        number: '01',
-        text: 'Za to, že se v životě nepohnete z místa'
-    },
-    {
-        number: "02",
-        text: "Za to, že platíte každý rok daně téměř za vše"
-    },
-    {
-        number: "03",
-        text: "Za to, že máte skvělé zdraví, volný čas a vztahy"
-    }
-]
-
-const chartData = [
-    {
-      date: "2020",
-      "Běžná cesta": 20000,
-      "Naše cesta": 45000,
-    },
-    {
-      date: "2025",
-      "Běžná cesta": 35000,
-      "Naše cesta": 85000,
-    },
-    {
-      date: "2030",
-      "Běžná cesta": 45000,
-      "Naše cesta": 125000,
-    },
-    {
-      date: "2035", 
-      "Běžná cesta": 55000,
-      "Naše cesta": 165000,
-    }
-]
-//WIP: add here some form of transition. 
 export default function TheWay() {
     const [ isMobile, setIsMobile ] = useState(false)
     const sectionRef = useRef(null)
@@ -89,7 +52,7 @@ export default function TheWay() {
                                 <div className="Graph__content__graph">
                                     <AreaChart
                                         className={isMobile ? "h-60" : "h-full w-full"}
-                                        data={chartData}
+                                        data={chartDataTheWay}
                                         index="date"
                                         categories={["Běžná cesta", "Naše cesta"]}
                                         colors={["customGray", "neonCyan"]}
@@ -130,7 +93,7 @@ export default function TheWay() {
                             <div className="devider"/>
                         </div>
                         <div className="Graph__Values__Cards">
-                            { values.map((value, i) => {
+                            { valuesTheWay.map((value, i) => {
                                 const { number, text } = value;
                                 return(
                                     <div className="Graph__Values__Card__item" key={i}>

@@ -4,27 +4,8 @@ import { motion } from "framer-motion";
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import PageHeading from "@/components/anim/TextAnims/PageHeading";
+import { stats } from "@/constants/pages/reviews";
 
-const stats = [
-    {
-        name: 'clients',
-        number: '1928',
-        src: '/thumbsUp.svg',
-        alt: 'clients_icon'
-    },
-    {
-        name: 'likes',
-        number: '428',
-        src: '/thumbsUp.svg',
-        alt: 'clients_icon'
-    },
-    {
-        name: 'comments',
-        number: '28',
-        src: '/thumbsUp.svg',
-        alt: 'clients_icon'
-    }
-]
 
 export default function ReviewsIntro () {
 

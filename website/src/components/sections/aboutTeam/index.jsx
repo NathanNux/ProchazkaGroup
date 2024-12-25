@@ -1,17 +1,9 @@
 // index.jsx
 
+import { icons } from "@/constants/pages/reviews";
 import { useScroll, useTransform, motion, animate } from "framer-motion";
 import Image from "next/image";
-import { useRef, useEffect, useState, useMemo, useCallback, useLayoutEffect } from "react";
-
-const icons = [
-    { name: "facebook", src: "/thumbsUp.png" },
-    { name: "instagram", src: "/thumbsUp.png" },
-    { name: "linkedin", src: "/thumbsUp.png" },
-    { name: "twitter", src: "/thumbsUp.png" },
-    { name: "youtube", src: "/thumbsUp.png" },
-    { name: "mainWeb", src: "/thumbsUp.png" }
-];
+import { useRef, useState, useMemo, useCallback, useLayoutEffect } from "react";
 
 
 export default function AboutTeam() {
@@ -67,6 +59,7 @@ export default function AboutTeam() {
     const segmentProgress6 = useTransform(scrollYProgress, [peakPoints[6], peakPoints[7]], ['100%', '0%'], { clamp: true });
     const segmentProgress7 = useTransform(scrollYProgress, [peakPoints[7], 1], ['100%', '0%'], { clamp: true });
 
+    //NOTE: poeple data are here also, needs to be updated here manually because of the animation
     const people = [
         {
             name: "John Doe",

@@ -1,19 +1,6 @@
 import MainText from "@/components/anim/TextAnims/MainText"
+import { cardsRequirements } from "@/constants/mainpage"
 
-const cards = [
-    {
-        number: '6 let',
-        content: 'Dlouholeté spolupráce vyžadují naše nejlepší vysledky s klienty'
-    },
-    {
-        number: '100%',
-        content: 'Dochvilnost a připravenost zkrátí schůzky až na polovinu'
-    },
-    {
-        number: '3 měsíce',
-        content: 'Trvá než se člověk naučí správně používat svůj měsíční rozpočet'
-    }
-]
 
 export default function Requirements () {
     return (
@@ -30,7 +17,7 @@ export default function Requirements () {
             </div>
 
             <div className="Cards__container">
-                {cards.map(( card, i) => {
+                {cardsRequirements.map(( card, i) => {
                     const { number, content } = card
                     return(
                         <div className="card__wrapper" key={i}>

@@ -1,7 +1,7 @@
 // index.jsx
 import { useScroll, useTransform, motion, animate } from "framer-motion";
 import Image from "next/image";
-import { useRef, useEffect, useState, useMemo, useCallback, useLayoutEffect } from "react";
+import { useRef, useState, useMemo, useCallback, useLayoutEffect } from "react";
 
 
 export default function BenefitRewards() {

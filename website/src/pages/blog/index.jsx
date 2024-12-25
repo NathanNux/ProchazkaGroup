@@ -1,8 +1,9 @@
-import BlogPostContent from "@/components/OtherAnims/blogPost";
-import Footer from "@/components/OtherAnims/Footer";
-import BlogPostIntro from "@/components/PagesIntro/blogPost";
-import Navbar from "@/components/Sticky/navbar";
-import Cursor from "@/components/Sticky/navbar/cursor";
+import BlogPostContent from "@/components/common/blog";
+import Footer from "@/components/common/footer";
+import Navbar from "@/components/common/navbar";
+import Cursor from "@/components/common/navbar/cursor";
+import BlogPostIntro from "@/components/intros/blogPost";
+
 
 export default function BlogPostPage() {
     return (

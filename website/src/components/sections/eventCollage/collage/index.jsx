@@ -64,6 +64,7 @@ export default function Collage() {
     const segmentProgress2 = useTransform(scrollYProgress, [peakPoints[2] - 0.15, peakPoints[3] - 0.15], ['100%', '0%'], { clamp: true });
     const segmentProgress3 = useTransform(scrollYProgress, [peakPoints[3] - 0.15, 1 - 0.15], ['100%', '0%'], { clamp: true });
 
+    //NOTE: Events data are here
     const events = [
         {
             name: 'Annual Company Meeting',

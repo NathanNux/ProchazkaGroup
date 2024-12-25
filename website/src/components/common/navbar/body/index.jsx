@@ -5,72 +5,8 @@ import { useState } from 'react'
 import GetChars from './getChars'
 import Magnetic from '@/components/anim/Magnetic'
 import ONViewLogo from '@/components/anim/LogoAnims/onView'
+import { NavLinks, NavAddLinks, NavIcons } from '@/constants/common'
 
-const links = [
-    {
-        href: '/',
-        text: 'DOMOV'
-    },
-    {
-        href: '/benefit-program',
-        text: 'BENEFIT PROGRAM'
-    },
-    {
-        href: '/nabidky',
-        text: 'PŘÍLEŽITOSTI'
-    },
-    {
-        href: '/o-nas',
-        text: 'NÁŠ PŘÍBĚH'
-    },
-    {
-        href: '/recenze',
-        text: 'RECENZE'
-    },
-    {
-        href: '/kontakt',
-        text: 'KONTAKT'
-    },
-]
-
-const addLinks = [
-    {
-        href: '/privacy-policy',
-        text: 'Ochrana osobních údajů'
-    },
-    {
-        href: '/cookies',
-        text: 'Cookies'
-    }
-]
-
-const icons = [
-    {
-        href: 'https://www.facebook.com/',
-        src: '/facebook.svg',
-        text: 'Facebook'
-    },
-    {
-        href: 'https://www.instagram.com/',
-        src: '/instagram.svg',
-        text: 'Instagram'
-    },
-    {
-        href: 'https://www.linkedin.com/',
-        src: '/linkedin.svg',
-        text: 'LinkedIn'
-    },
-    {
-        href: 'https://www.twitter.com/',
-        src: '/twitter.svg',
-        text: 'Twitter'
-    },
-    {
-        href: 'https://www.youtube.com/',
-        src: '/youtube.svg',
-        text: 'YouTube'
-    }
-]
 
 const rows = [
     {
@@ -104,7 +40,7 @@ const textShow = {
         transition: {
             duration: 0.5,
             ease: [0.76, 0, 0.24, 1],
-            delay: ((links.length - i - 1) * 0.05)
+            delay: ((NavLinks.length - i - 1) * 0.05)
         }
     })
 };
@@ -199,7 +135,7 @@ export default function NavbarBody({setMenu}) {
         })}
       </div>
       <div className='navbar__body__container'>
-        {links.map((link, index) => {
+        {NavLinks.map((link, index) => {
           const { href, text } = link;
           const initialColor = pathname === href ? '#00F0FF' : '#fff';
           return (
@@ -232,9 +168,9 @@ export default function NavbarBody({setMenu}) {
       </div>
       <div className='navbar__body__add__container'>
         <div className='navbar__body__add__devider'>
-          {addLinks.map((link, index) => {
+          {NavAddLinks.map((link, index) => {
             const { href, text } = link;
-            const newIndex = index + links.length;
+            const newIndex = index + NavLinks.length;
             const initialColor = pathname === href ? '#00F0FF' : '#fff';
             return (
               <Magnetic key={newIndex} sensitivity='0.1'>
@@ -265,9 +201,9 @@ export default function NavbarBody({setMenu}) {
           })}
         </div>
         <div className='navbar__body__add__devider'>
-          {icons.map((icon, index) => {
+          {NavIcons.map((icon, index) => {
             const { href, text } = icon;
-            const iconIndex = index + links.length + addLinks.length;
+            const iconIndex = index + NavLinks.length + NavAddLinks.length;
             const initialColor = pathname === href ? '#00F0FF' : '#fff';
             return (
               <Magnetic key={iconIndex} sensitivity='0.1'>

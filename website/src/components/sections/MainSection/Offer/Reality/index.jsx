@@ -1,45 +1,8 @@
 import SubText from "@/components/anim/TextAnims/SubText"
+import { chartData, dataR } from "@/constants/mainpage"
 import { useOnWindowResize } from "@/hooks/useOnWindowResize"
 import { AreaChart } from "@tremor/react"
 import { useState } from "react"
-
-const dataR = [
-    {
-        rate: '8/10',
-        text: 'Domácností jsou v dluzích nebo je ignorují'
-    },
-    {
-        rate: '3/10',
-        text: 'Domácností zachraňuje Budgeting a správné praktiky před dluhy'
-    },
-    {
-        rate: '1/10',
-        text: 'Domácností má profesionála, který skutečně léčí jejich finance'
-    }
-]
-
-const chartData = [
-    {
-      date: "2020",
-      "Běžná cesta": 20000,
-      "Naše cesta": 45000,
-    },
-    {
-      date: "2025",
-      "Běžná cesta": 35000,
-      "Naše cesta": 85000,
-    },
-    {
-      date: "2030",
-      "Běžná cesta": 45000,
-      "Naše cesta": 125000,
-    },
-    {
-      date: "2035", 
-      "Běžná cesta": 55000,
-      "Naše cesta": 165000,
-    }
-]
 
 export default function Reality() {
     const [ isMobile, setIsMobile ] = useState(false)

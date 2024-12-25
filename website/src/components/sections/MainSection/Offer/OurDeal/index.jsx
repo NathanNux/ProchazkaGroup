@@ -1,50 +1,8 @@
 import MainText from "@/components/anim/TextAnims/MainText";
 import StatNumberVariable from "@/components/anim/TextAnims/StatNumber";
 import SubText from "@/components/anim/TextAnims/SubText";
+import { deals, offerStats, quarentees } from "@/constants/mainpage";
 import Image from "next/image";
-
-const deals = [
-    {
-        number: '01',
-        content: 'Ušetříme Vám min. 500,- hned<br/>po první schůzce,'
-    },
-    {
-        number: '02',
-        content: 'Hned druhý den začneme, do<br/>5 dnů vyřešíme a zavoláme'
-    },
-    {
-        number: '03',
-        content: 'Nevyžadujeme žádné skryté<br/>smlouvy'
-    }
-]
-
-const quarentees = [
-    {
-        number: '01',
-        content: 'A když ne, dáme 500,- Vám<br/>ve slevách, nebo v hotovosti'
-    },
-    {
-        number: '02',
-        content: 'Zpoždění? dáme vám naši<br/>limitovanou slevu k tomu'
-    },
-    {
-        number: '03',
-        content: 'Ale jsme upřímní s naši<br/>pomocí, takže choďte na čas.'
-    }
-]
-
-const offerStats = [
-    {
-        value: '3000+',
-        name: 'spokoných klientů',
-        breakingPoint: '2500'
-    },
-    {
-        value: '9 500,-',
-        name: ' ušetřených korun / klienta',
-        breakingPoint: '9000'
-    }
-]
 
 export default function OurDeal() {
     const parseValue = (value) => {

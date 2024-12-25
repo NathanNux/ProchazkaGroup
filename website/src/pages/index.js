@@ -5,6 +5,7 @@ import QNA from "@/components/common/qna";
 import Statbar from "@/components/common/statbar";
 import MainIntro from "@/components/intros/main";
 import MainPageSection from "@/components/sections/MainSection";
+import { StatbarData } from "@/constants/mainpage";
 
 
 
@@ -14,7 +15,7 @@ export default function Home() {
       <Navbar />
       <Cursor />
       <MainIntro />
-      <Statbar />
+      <Statbar data={StatbarData}/>
       <MainPageSection />
       <QNA />
       <Footer />

@@ -4,52 +4,10 @@ import ContactModem from "@/components/modems/ContactModem"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
 import CustomImage from "@/components/ui/stickyImage"
+import { people } from "@/constants/people"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
-
-const people = [
-    {
-        name: 'Václav Procházka',
-        likes: '506',
-        reviews: '25',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/cactus.webp',
-        alt: 'person1',
-    },
-    {
-        name: 'Ondřej Efenberk',
-        likes: '340',
-        reviews: '20',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/house.webp',
-        alt: 'person2',
-    },
-    {
-        name: 'Michaela Marková',
-        likes: '400',
-        reviews: '30',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/rock.webp',
-        alt: 'person2',
-    },
-    {
-        name: 'Tereza Marková',
-        likes: '200',
-        reviews: '20',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/water.webp',
-        alt: 'person3',
-    },
-    {
-        name: 'Zdeněk Kafka',
-        likes: '158',
-        reviews: '18',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/tree.webp',
-        alt: 'person4',
-    }
-]
 
 const itemVariants = {
     open: {

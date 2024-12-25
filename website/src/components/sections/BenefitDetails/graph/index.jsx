@@ -1,30 +1,9 @@
 import LoopAnim from "@/components/anim/LoopAnims/GraphAnim";
+import { chartData } from "@/constants/benefitpage";
 import { useOnWindowResize } from "@/hooks/useOnWindowResize";
 import { AreaChart } from "@tremor/react";
 import { useState } from "react";
 
-const chartData = [
-    {
-      date: "2020",
-      "Běžná cesta": 20000,
-      "Naše cesta": 45000,
-    },
-    {
-      date: "2025",
-      "Běžná cesta": 35000,
-      "Naše cesta": 85000,
-    },
-    {
-      date: "2030",
-      "Běžná cesta": 45000,
-      "Naše cesta": 125000,
-    },
-    {
-      date: "2035", 
-      "Běžná cesta": 55000,
-      "Naše cesta": 165000,
-    }
-  ]
 
 export default function Graph() {
     const [ isMobile, setIsMobile ] = useState(false)

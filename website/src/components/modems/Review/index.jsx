@@ -6,101 +6,9 @@ import Image from "next/image";
 import { useState } from "react";
 import ReviewModem from "../ReviewModem";
 import ReviewsSearch from "./ReviewsSearch";
+import { WebsiteReviews } from "@/constants/pages/reviews";
 
 
-const reviews = [
-    {
-        number: '00',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '01',
-        hastag: 'benefitprogram',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '02',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '03',
-        hastag: 'benefitprogram',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '04',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '05',
-        hastag: 'benefitprogram',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '06',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '07',
-        hastag: 'benefitprogram',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '08',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '09',
-        hastag: 'benefitprogram',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '10',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '11',
-        hastag: 'benefitprogram',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-    {
-        number: '12',
-        hastag: 'poradce',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
-        name: '| Jméno a město klienta',
-        likes: '428'
-    },
-]
 export default function ReviewsList() {
     const [ isOpen, setIsOpen ] = useState(false)
     const [visibleItems, setVisibleItems] = useState(6);
@@ -138,7 +46,7 @@ export default function ReviewsList() {
         setVisibleItems(6) 
     }
 
-    const filteredReviews = filterReviews(reviews);
+    const filteredReviews = filterReviews(WebsiteReviews);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -253,7 +161,7 @@ export default function ReviewsList() {
                     })}
                 </AnimatePresence>
             </motion.div>
-            {visibleItems < reviews.length && (
+            {visibleItems < WebsiteReviews.length && (
                 <motion.div
                     onClick={showMore}
                     initial={{ opacity: 0 }}

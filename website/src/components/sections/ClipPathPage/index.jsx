@@ -3,48 +3,10 @@ import PageHeading from "@/components/anim/TextAnims/PageHeading";
 import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
+import { projects } from "@/constants/nabidkypage";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-
-const projects = [
-    {
-        number: '01',
-        title: 'Project 01',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-        href: 'https://www.google.com',
-        src: '/svg/cactus.webp',
-        alt: 'Project 01',
-        text: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.', 
-    },
-    {
-        number: '02',
-        title: 'Project 02',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-        href: 'https://www.google.com',
-        src: '/svg/rock.webp',
-        alt: 'Project 02',
-        text: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.', 
-    },
-    {
-        number: '03',
-        title: 'Project 03',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-        href: 'https://www.google.com',
-        src: '/svg/water.webp',
-        alt: 'Project 03',
-        text: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.', 
-    },
-    {
-        number: '04',
-        title: 'Project 04',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-        href: 'https://www.google.com',
-        src: '/svg/house.webp',
-        alt: 'Project 04',
-        text: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.', 
-    },
-]
 
 export default function ClipPathPage() {
     return (
