@@ -1,3 +1,6 @@
+import MainText from "@/components/anim/TextAnims/MainText";
+import PageHeading from "@/components/anim/TextAnims/PageHeading";
+import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -52,16 +55,12 @@ export default function ClipPathPage() {
             <div className="devider"></div>
             <div className="cover">
                 <div className="cover__header">
-                    <p>
-                        SLEVY A VÝHODNÉ NABÍDKY 
-                        <span> EXCLUSIF ET SEULEMENT </span>
-                        PRO NAŠE KLIENTY.  
-                    </p>
+                    <PageHeading text="SLEVY A VÝHODNÉ NABÍDKY <span> EXCLUSIF ET SEULEMENT </span><br/>PRO NAŠE KLIENTY.  " />
                 </div>
                 <div className="cover__desc">
-                        <p>
+                        <h3>
                             Σ
-                        </p>
+                        </h3>
                         <p>
                             Domlouváme exklusivní nabídky pro lepší podmínky
                         </p>
@@ -143,8 +142,8 @@ const Galery = ({ number, title, description, href, src, alt, text }) => {
                     </p>
                 </div>
                 <div className="ClipPathPage__Galery__Content__devider"/>
-                <p className="ClipPathPage__Galery__Content__p">{description}</p>
-                <p className="ClipPathPage__Galery__Content__p">{text}</p>
+                <MainText text={description} initialColor={'#050A10'} />
+                <SubText className={'ClipPathPage__Galery__Content__p'} text={text} />
                 <div className="ClipPathPage__Galery__Content__Button">
                     <motion.div
                         style={{ x }}
