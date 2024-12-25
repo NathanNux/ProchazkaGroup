@@ -25,9 +25,9 @@ const data = [
 
 export default function Statbar() {
     const parseValue = (value) => {
-        // Remove currency symbol and commas
-        const cleanValue = value.replace(/[^0-9]/g, '');
-        return parseInt(cleanValue, 10);
+        // Remove currency symbol and commas, but keep decimals
+        const cleanValue = value.replace(/[^0-9.]/g, '');
+        return parseFloat(cleanValue);
     }
 
     return (
@@ -39,13 +39,13 @@ export default function Statbar() {
                 return (
                     <div className="data__item" key={i}>
                         <div className="number__wrapper">
-                            <StatNumberVariable
-                                number={numericValue}  
-                                EndDuration={4} 
-                                StartDuration={2} 
-                                BreakPoint={barkingPoint}
-                                delay={0} 
-                            />
+                        <StatNumberVariable
+                            number={numericValue}  
+                            EndDuration={2} // Shorter duration for better UX
+                            StartDuration={1} 
+                            BreakPoint={parseValue(barkingPoint)}
+                            delay={i * 0.2} // Stagger animation
+                        />
                             {value.includes(',-') && <span className="currency">,-</span>}
                         </div>
                         <p>{name}</p>

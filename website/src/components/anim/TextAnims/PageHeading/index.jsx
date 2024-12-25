@@ -1,84 +1,117 @@
 import { motion } from "framer-motion";
-import { useGlobalContext } from "../../../../../context/LoadProvider";
+import { useGlobalContext } from "@/context/LoadProvider";
 
-const { firstLoad } = useGlobalContext();
-const textExplosionHover = (initialColor) => ({
+const textExplosionHover = (initialColor, firstLoad, isHighlighted) => ({
     initial: {
         scale: 1,
         opacity: 0.65,
-        color: initialColor
+        color: isHighlighted ? '#00F0FF' : initialColor
     },
-    enter: (i) => ({
-        scale: [1, 1.3, 1], // Increased scale value for more pronounced effect
-        opacity: 1,
-        color: [initialColor, '#00F0FF', initialColor],
-        transition: {
-            duration: 0.1,
-            ease: [0.76, 0, 0.24, 1],
-            delay: firstLoad ? 4 + i[0] : i[0],
-            scale: { times: [0, 0.5, 1], duration: 0.2, ease: [0.76, 0, 0.24, 1], delay: i[0] },
-            color: { times: [0, 0.5, 1], duration: 0.2, ease: [0.76, 0, 0.24, 1], delay: i[0] }
+    enter: (i) => {
+        const baseDelay = firstLoad ? 5.9 + i[0] : 2 + i[0];
+        return {
+            scale: [1, 1.3, 1], 
+            opacity: 1,
+            color: isHighlighted ? 
+                ['#00F0FF', '#00F0FF', '#00F0FF'] : 
+                [initialColor, '#00F0FF', initialColor],
+            transition: {
+                duration: 0.1,
+                ease: [0.76, 0, 0.24, 1],
+                delay: baseDelay,
+                scale: { times: [0, 0.5, 1], duration: 0.2, ease: [0.76, 0, 0.24, 1], delay: baseDelay },
+                color: { times: [0, 0.5, 1], duration: 0.2, ease: [0.76, 0, 0.24, 1], delay: baseDelay }
+            }
         }
-    }),
-    exit: (i) => ({
-        opacity: 0.65,
-        scale: [1, 1, 1.3], // Increased scale value for more pronounced effect
-        color: [initialColor, initialColor, '#00F0FF'],
-        transition: {
-            duration: 0.2,
-            ease: [0.76, 0, 0.24, 1],
-            delay: firstLoad ? 4 + i[1] : i[1],
-            scale: { times: [1, 0.5, 0], duration: 0.3, ease: [0.76, 0, 0.24, 1], delay: i[1] + 0.3 },
-            color: { times: [1, 0.5, 0], duration: 0.3, ease: [0.76, 0, 0.24, 1], delay: i[1] + 0.3 }
+    },
+    exit: (i) => {
+        const baseDelay = firstLoad ? 6.4 + i[1] : 2.5 + i[1];
+        return {
+            opacity: 0.65,
+            scale: [1, 1, 1.3],
+            color: isHighlighted ? 
+                ['#00F0FF', '#00F0FF', '#00F0FF'] : 
+                [initialColor, initialColor, '#00F0FF'],
+            transition: {
+                duration: 0.2,
+                ease: [0.76, 0, 0.24, 1],
+                delay: baseDelay,
+                scale: { times: [1, 0.5, 0], duration: 0.3, ease: [0.76, 0, 0.24, 1], delay: baseDelay },
+                color: { times: [1, 0.5, 0], duration: 0.3, ease: [0.76, 0, 0.24, 1], delay: baseDelay }
+            }
         }
-    }),
+    }
 });
 
-const getChars = ({ text, initialColor }) => {
-    let chars = [];
-
-    text.split('').forEach((char, i) => {
-        if (char === ' ') {
-            // Render a non-animated space
-            chars.push(
-                <span
-                    key={`space-${i}`}
-                    style={{
-                        display: 'inline-block',
-                        width: '0.3em', // Adjust spacing as needed
-                    }}
-                >
-                    &nbsp;
-                </span>
-            ) 
-        } else {
-            chars.push(
-                <motion.span
-                    key={char + i}
-                    variants={textExplosionHover(initialColor)}
-                    custom={[i * 0.02, (text.length - i) * 0.02]}
-                    initial="initial"
-                    animate='enter'
-                    exit='exit'
-                    style={{ display: 'inline-block', marginRight: '0.02em' }}
-                >
-                    {char}
-                </motion.span>
-            );
+const parseText = (text) => {
+    // Split text into segments (normal text, <br/>, and spans)
+    return text.split(/(<br\/>|<span>.*?<\/span>)/).filter(Boolean).map(segment => {
+        if (segment === '<br/>') {
+            return { type: 'break' };
+        } else if (segment.startsWith('<span>')) {
+            return {
+                type: 'text',
+                content: segment.replace(/<\/?span>/g, ''),
+                highlighted: true
+            };
         }
+        return { type: 'text', content: segment, highlighted: false };
     });
-    return chars;
 };
 
+const getChars = ({ text, initialColor, firstLoad }) => {
+    const segments = parseText(text);
+    let charIndex = 0;
+    
+    return (
+        <motion.p>
+            {segments.map((segment, segIndex) => {
+                if (segment.type === 'break') {
+                    return <br key={`br-${segIndex}`} />;
+                }
+                
+                return segment.content.split('').map((char, i) => {
+                    if (char === ' ') {
+                        charIndex++;
+                        return (
+                            <span
+                                key={`space-${segIndex}-${i}`}
+                                style={{
+                                    display: 'inline-block',
+                                    width: '0.3em'
+                                }}
+                            >
+                                &nbsp;
+                            </span>
+                        );
+                    }
+                    
+                    const currentIndex = charIndex++;
+                    return (
+                        <motion.span
+                            key={`${char}-${segIndex}-${i}`}
+                            variants={textExplosionHover(initialColor, firstLoad, segment.highlighted)}
+                            custom={[currentIndex * 0.0125, (text.length - currentIndex) * 0.0125]}
+                            initial="initial"
+                            animate="enter"
+                            exit="exit"
+                            style={{ display: 'inline-block', marginRight: '0.02em' }}
+                        >
+                            {char}
+                        </motion.span>
+                    );
+                });
+            })}
+        </motion.p>
+    );
+};
 
-export default function PageHeading() {
-    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
+export default function PageHeading({ text }) {
     const initialColor = '#fff';
+    const { firstLoad } = useGlobalContext();
     return (
         <div className="PageHeading__Container">
-            <motion.p>
-                {getChars({text, initialColor: initialColor})}
-            </motion.p>
+            {getChars({text, initialColor: initialColor, firstLoad: firstLoad})}
         </div>
-    )
+    );
 }

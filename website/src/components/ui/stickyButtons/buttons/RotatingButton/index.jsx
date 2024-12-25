@@ -14,7 +14,8 @@ export default function RotatingButton({ href, text }) {
     const { scrollY } = useScroll();
     const BaseVelocity = 50;
 
-    const BaseRotate = useMotionValue(0);
+    const CurrentRotation = useMotionValue(0); // Single source of truth
+    const isAnimating = useRef(true);
 
     const Velocity = useVelocity(scrollY)
     const SmoothVelocity = useSpring(Velocity, {
@@ -26,25 +27,24 @@ export default function RotatingButton({ href, text }) {
     const loopStart = 0;
     const loopEnd = 360;
 
-    const rotation = useTransform(BaseRotate, (v) => `${wrap(loopStart, loopEnd, v)}deg`);
+    const rotation = useTransform(CurrentRotation, (v) => `${wrap(0, 360, v)}deg`);
 
     const directionFactor = useRef(1);
-    useAnimationFrame((t, delta) => {
-        if( boundsHovered){
-            return
-        }
-        let moveBy = directionFactor.current * BaseVelocity * (delta / 1000); // that is the speed of the scroll in pixels per second
 
+    useAnimationFrame((t, delta) => {
+        if (!isAnimating.current) return;
+    
+        let moveBy = directionFactor.current * BaseVelocity * (delta / 1000);
+    
         if(velocityFactor.get() < 0) {
             directionFactor.current = -1;
         } else if (velocityFactor.get() > 0) {
             directionFactor.current = 1;
         }
-
+    
         moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-        BaseRotate.set(BaseRotate.get() + moveBy);
-    })
+        CurrentRotation.set(CurrentRotation.get() + moveBy);
+    });
 
 
     const scale = {
@@ -62,31 +62,36 @@ export default function RotatingButton({ href, text }) {
     }
 
     const manageMouseMove = useCallback((e) => {
+        if (!buttonRef.current) return;
+        
         const { clientX, clientY } = e;
-        const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = buttonRef.current.getBoundingClientRect();
-
+        const bounds = buttonRef.current.getBoundingClientRect();
+        
+        if (!bounds) return;
+        
+        const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = bounds;
+    
         const center = { x: leftBounds + widthBounds / 2, y: topBounds + heightBounds / 2 };
-
         const distance = { x: clientX - center.x, y: clientY - center.y };
-
+    
         if (boundsHovered) {
             rotate(distance);
             const absDistance = { x: Math.abs(distance.x), y: Math.abs(distance.y) };
-            const newScaleX = transform(absDistance.x, [0, widthBounds / 2], [1, 1.05], { clamp: true }); // clamps => value will not exceed the range - true
+            const newScaleX = transform(absDistance.x, [0, widthBounds / 2], [1, 1.05], { clamp: true });
             const newScaleY = transform(absDistance.y, [0, heightBounds / 2], [1, 0.95], { clamp: true });
             scale.x.set(newScaleX);
             scale.y.set(newScaleY);
-        } else {return null}
+        }
     }, [boundsHovered, scale.x, scale.y, buttonRef]);
 
     const manageBoundsHover = () => {
         setBoundsHovered(true);
-        animate(BaseRotate, BaseRotate.get(), { duration: 1, ease: 'easeOut' });
+        isAnimating.current = false; // Completely stop animation
     };
-
+    
     const manageBoundsLeave = () => {
         setBoundsHovered(false);
-        animate(buttonRef.current, {scaleX: 1, scaleY: 1,}, {duration: 0.5}, {type: 'spring', damping: 5, stiffness: 350, mass: 0.5});
+        isAnimating.current = true; // Resume from current position
     };
 
     const renderCircularText = (text) => {
@@ -143,10 +148,9 @@ export default function RotatingButton({ href, text }) {
     }, [ButtonBoundsRef.current, registerRef, unregisterRef]);
 
     const template = ({rotate, scaleX, scaleY}) => {
-        const base = BaseRotate.get();
         const hover = HoverRotate.get();
-        return `rotate(${base + hover}deg) scaleX(${scaleX}) scaleY(${scaleY})` 
-    }
+        return `rotate(${CurrentRotation.get() + hover}deg) scaleX(${scaleX}) scaleY(${scaleY})`;
+    };
     return (
         <Magnetic sensitivity='0.1'>
             <motion.div transformTemplate={template} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Rotating__button_container'>

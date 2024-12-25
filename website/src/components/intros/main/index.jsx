@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useGlobalContext } from "@/context/LoadProvider";
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
+import PageHeading from "@/components/anim/TextAnims/PageHeading";
 
 
 
@@ -80,10 +81,7 @@ export default function MainIntro () {
                     animate='enter'
                     variants={introText}
                 >
-                    <h1>BUDUJEME PRO LIDI <br/> 
-                    STABILNÍ A KVALITNÍ <br/>
-                    FINANČNÍ PORADENSTVÍ <br/>
-                    UŽ PŘES <span>JEDNU DEKÁDU</span></h1>
+                    <PageHeading text="BUDUJEME PRO LIDI <br/> STABILNÍ A KVALITNÍ <br/> FINANČNÍ PORADENSTVÍ <br/> UŽ PŘES <span>JEDNU DEKÁDU</span>" />
                 </motion.div>
                 
                 <div className="cover"/>

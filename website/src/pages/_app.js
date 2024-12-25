@@ -1,9 +1,9 @@
 import "@/styles/globals.scss";
 import '@/styles/styles.scss';
-import { CursorRefProvider } from "@/context/CursorRefProvider";
-import { LoadProvider } from "@/context/LoadProvider";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { LoadProvider } from "@/context/LoadProvider";
+import { CursorRefProvider } from "@/context/CursorRefProvider";
 import Transition from "@/components/anim/Transition";
 
 export default function App({ Component, pageProps }) {
