@@ -1,7 +1,7 @@
 .Reality{
     width: 100vw;
-    height: 100vh;
-    padding: 10vh 0;
+    height: 120vh;
+    padding: 20vh 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -10,6 +10,7 @@
     overflow: hidden;
     background-color: #04444C;
     color: #fff;
+    will-change: transform;
 
     .Graph__container{
         height: 100%;

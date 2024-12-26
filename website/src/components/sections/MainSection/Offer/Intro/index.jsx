@@ -1,6 +1,7 @@
 import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
 import CustomImage from "@/components/ui/stickyImage";
+import Image from "next/image";
 
 export default function IntroOffer(){
     return(
@@ -20,7 +21,7 @@ export default function IntroOffer(){
                 <SubText className={'subtext__div'} text={'Každý den, kdy vaše dluhy rostou nebo inflace roste, ztrácíte peníze, které už nikdy neuvidíte.*'}/>
             </div>
             <div className="IntroOffer__image__container">
-                <CustomImage src='/assets/reviewsBackground.png' altText='about-image'/>
+                <Image src='/assets/reviewsBackground.png' alt='about-image' fill={true}/>
             </div>
         </div>
     )

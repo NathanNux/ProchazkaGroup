@@ -1,11 +1,13 @@
 .IntroOffer{
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     position: relative;
     align-items: center;
     justify-content: center;
-    padding: 10vh 0vw 0 0vw;
+    padding: 10vh 0vw 20vh 0vw;
     overflow: hidden;
+    will-change: transform;
+
 
     .divider{
         position: absolute;
@@ -73,7 +75,15 @@
     .IntroOffer__image__container{
         position: absolute;
         top: 45%;
-        right: 5%;
+        right: 2.5%;
+        width: 35vw;
+        height: 40vh;
+        border-radius: 25px;
+        overflow: hidden;
+
+        img{
+            object-fit: cover;
+        }
     }
 
     .IntroOffer__subText{
