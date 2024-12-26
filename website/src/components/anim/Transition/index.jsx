@@ -197,7 +197,7 @@ export default function Transition ({ children }) {
     <AnimatePresence mode="wait">
         <motion.div 
             className="Transition__main"
-            key={pathname}
+            key={`transition${pathname}`}
         >
             <motion.div
                 className='Transition__body__background'
@@ -217,7 +217,7 @@ export default function Transition ({ children }) {
                     const { number } = row;
                     return (
                     <motion.div
-                        key={number}
+                        key={`rowsr${number}`}
                         className='navbar__body__row'
                         variants={rowSlide}
                         initial='initial'

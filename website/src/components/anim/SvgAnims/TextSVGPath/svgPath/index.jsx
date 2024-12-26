@@ -85,7 +85,7 @@ export default function SVGPath ({ text, scroll, textButton }) {
                 <text className="path__Text">
                     { [...Array(3)].map((_, i) => {
                         return (
-                            <textPath key={i} ref={ref => texts.current[i] = ref} href="#curve" startOffset={`${i * 40}%`}>
+                            <textPath key={`textpath${i}`} ref={ref => texts.current[i] = ref} href="#curve" startOffset={`${i * 40}%`}>
                                 {text}
                             </textPath>
                         )

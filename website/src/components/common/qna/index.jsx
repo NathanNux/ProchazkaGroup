@@ -52,7 +52,7 @@ export default function QNA() {
             <div className="QNA__wrapper">
                 {qnas.map((qna, index) => (
                     <motion.div 
-                        key={index} 
+                        key={`qna${index}`} 
                         className="QNA__item"
                         onClick={() => toggleQNA(index)}
                         initial={false}

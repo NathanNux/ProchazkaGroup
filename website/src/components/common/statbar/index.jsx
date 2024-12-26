@@ -14,7 +14,7 @@ export default function Statbar({data}) {
                 const numericValue = parseValue(value);
                 
                 return (
-                    <div className="data__item" key={i}>
+                    <div className="data__item" key={`dataitems${i}`}>
                         <div className="number__wrapper">
                         <StatNumberVariable
                             number={numericValue}  

@@ -78,7 +78,7 @@ export default function Footer() {
                         {FooterLinks.map(( link, i ) => {
                             const { name, href } = link
                             return(
-                                <Link key={i} href={href}>
+                                <Link key={`links${i}`} href={href}>
                                     {name}
                                 </Link>
                             )

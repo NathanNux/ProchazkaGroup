@@ -32,7 +32,7 @@ function BlogHeader () {
                     const { time, data, src, alt} = detail
 
                     return (
-                        <div className="Details__item" key={i}>
+                        <div className="Details__item" key={`itemsDet${i}`}>
                             <h3>
                                 {time || data}
                             </h3>
@@ -63,14 +63,14 @@ const renderContent = (content) => {
     
     if (hasListItems) {
       return (
-        <ul key={pIndex} className="styled-list">
+        <ul key={`contsr${pIndex}`} className="styled-list">
           {paragraph.map((line, lIndex) => {
             if (line.startsWith('<dot/>')) {
-              return <li key={lIndex} className="main-list-item">{line.slice(6)}</li>;
+              return <li key={`li${lIndex}`} className="main-list-item">{line.slice(6)}</li>;
             } else if (line.startsWith('<sub/>')) {
-              return <li key={lIndex} className="sub-list-item">{line.slice(6)}</li>;
+              return <li key={`li${lIndex}`} className="sub-list-item">{line.slice(6)}</li>;
             } else {
-              return <li key={lIndex} className="text-item">{line}</li>;
+              return <li key={`li${lIndex}`} className="text-item">{line}</li>;
             }
           })}
         </ul>
@@ -79,7 +79,7 @@ const renderContent = (content) => {
       return (
         <p key={pIndex}>
           {paragraph.map((line, lIndex) => (
-            <Fragment key={lIndex}>
+            <Fragment key={`parag${lIndex}`}>
               {line}
               {lIndex < paragraph.length - 1 && <br />}
             </Fragment>
@@ -93,9 +93,9 @@ const renderContent = (content) => {
 
 const renderIntroContent = (content) => {
     return splitContent(content).map((paragraph, pIndex) => (
-      <p key={pIndex}>
+      <p key={`lipar${pIndex}`}>
         {paragraph.map((line, lIndex) => (
-          <Fragment key={lIndex}>
+          <Fragment key={`fra${lIndex}`}>
             {line}
             {lIndex < paragraph.length - 1 && <br />}
           </Fragment>
@@ -110,7 +110,7 @@ function ContentMap({ handleCircleClick }) {
         <h3>Table of Contents:</h3>
         <ul>
           {BlogPostData.map((post, index) => (
-            <li key={post.number}>
+            <li key={`blogD${post.number}`}>
               <button onClick={() => handleCircleClick(index)}>
                 {post.number}. {post.header}
               </button>
@@ -307,7 +307,7 @@ function BlogContent () {
                             {BlogPostBar.map((post, index) => {
                                 const isLastItem = index === BlogPostData.length - 1;
                                 return (
-                                    <div className="Blog__MainPage__progressBar__Container" key={index}>
+                                    <div className="Blog__MainPage__progressBar__Container" key={`progressbar${index}`}>
                                         <div className="circle" onClick={() => handleCircleClick(index)}>
                                             <motion.div 
                                                 className="circle__inner" 
@@ -333,7 +333,7 @@ function BlogContent () {
               {BlogPostData.map((paragraph, i) => {
                   const { header, number, content, src, alt, styles} = paragraph
                   return (
-                      <div className="Content__wrapper" key={number}  ref={el => contentWrapperRefs.current[i] = el}>
+                      <div className="Content__wrapper" key={`wrp${number}`}  ref={el => contentWrapperRefs.current[i] = el}>
                           <div className="paragraph">
                               <div className="paragraph__header">
                                   <h2>{header}</h2>
@@ -385,7 +385,7 @@ function CommentForm () {
                     </div>
                     <div className="icons">
                         {icons.map((icon, i) => (
-                            <Image src={icon.src} alt={icon.name} key={i} width={50} height={50}/>
+                            <Image src={icon.src} alt={icon.name} key={`icons${i}`} width={50} height={50}/>
                         ))}
                     </div>
                 </div>
@@ -471,7 +471,7 @@ function CommentsList() {
                     {BlogData.map(( info, i) => {
                         const { time, data, src, alt } = info
                         return (
-                            <div className="stat" key={i}>
+                            <div className="stat" key={`stat${i}`}>
                                 <p>{data}</p>
                                 {data && <Image src={src} alt={alt} width={50} height={50}/>}
                             </div>
@@ -487,7 +487,7 @@ function CommentsList() {
                         const { name, content, likes, number, hashtag } = comment
                         return (
                             <motion.div 
-                                key={number}
+                                key={`comment${number}`}
                                 className="comment__wrapper"
                                 variants={commentVariants}
                                 initial="hidden"

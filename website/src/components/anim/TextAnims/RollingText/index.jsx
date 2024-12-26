@@ -57,7 +57,7 @@ const RollingParagraph = ({ text, baseVelocity = 100, childrenCount, Scroll }) =
         <div className="Rolling_text_container">
             <motion.p style={{ x }}>
                 {Array.from({ length: childrenCount }, (_, index) => (
-                    <span key={index}>{text} </span>
+                    <span key={`textroll${index}`}>{text} </span>
                 ))}
             </motion.p>
         </div>

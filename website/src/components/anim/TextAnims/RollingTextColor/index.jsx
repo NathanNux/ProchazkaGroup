@@ -58,7 +58,7 @@ const RollingParagraph = ({ text, baseVelocity = 100, childrenCount, Scroll }) =
         <div className="Rolling_text_container">
             <motion.p style={{ x }} ref={paragraphRef}>
                 {Array.from({ length: childrenCount }).map((_, childIndex) => (
-                    <Fragment key={childIndex}>
+                    <Fragment key={`cons${childIndex}`}>
                         {characters.map((char, charIndex) => {
                             if (char === ' ') {
                                 return <span key={`space-${childIndex}-${charIndex}`}>&nbsp;</span>; 

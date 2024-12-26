@@ -139,9 +139,9 @@ export default function NavbarBody({setMenu}) {
           const { href, text } = link;
           const initialColor = pathname === href ? '#00F0FF' : '#fff';
           return (
-            <Magnetic key={index} sensitivity='0.1'>
+            <Magnetic key={`magns${index}`} sensitivity='0.1'>
                 <motion.div
-                key={index}
+                key={`bds${index}`}
                 className={`navbar__body__link ${pathname === href ? 'active' : ''}`}
                 onMouseEnter={() => setSelectedLink({ isActive: true, index })}
                 onMouseLeave={() => setSelectedLink({ isActive: false, index })}
@@ -173,9 +173,9 @@ export default function NavbarBody({setMenu}) {
             const newIndex = index + NavLinks.length;
             const initialColor = pathname === href ? '#00F0FF' : '#fff';
             return (
-              <Magnetic key={newIndex} sensitivity='0.1'>
+              <Magnetic key={`magnts${newIndex}`} sensitivity='0.1'>
                 <motion.div
-                    key={newIndex}
+                    key={`adddiv${newIndex}`}
                     className='navbar__body__add-link'
                     onMouseEnter={() => setSelectedLink({ isActive: true, index: index + links.length })}
                     onMouseLeave={() => setSelectedLink({ isActive: false, index: index + links.length })}
@@ -206,11 +206,11 @@ export default function NavbarBody({setMenu}) {
             const iconIndex = index + NavLinks.length + NavAddLinks.length;
             const initialColor = pathname === href ? '#00F0FF' : '#fff';
             return (
-              <Magnetic key={iconIndex} sensitivity='0.1'>
+              <Magnetic key={`iconsmag${iconIndex}`} sensitivity='0.1'>
                 <motion.div
                     // Icons will have very similar animation, but with svg filing from the left opacity 0.65 to 1
                     // Now I use text as the icons, or I can use just the text instead of the svg icons, we'll see
-                    key={iconIndex}
+                    key={`iconsdiv${iconIndex}`}
                     onMouseEnter={() => setSelectedLink({ isActive: true, index: index + links.length + addLinks.length })}
                     onMouseLeave={() => setSelectedLink({ isActive: false, index: index + links.length + addLinks.length })}
                     className='navbar__body__icon'

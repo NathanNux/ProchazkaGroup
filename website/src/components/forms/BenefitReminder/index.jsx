@@ -73,8 +73,8 @@ export default function BenefitReminder() {
                                 const { name, likes, reviews, moto, src, alt } = person
 
                                 return (
-                                    <div className="BenefitReminder__Personal__choice__wrapper" key={i}>
-                                        <div className="BenefitReminder__Personal__choice__image__container" key={i} style={{ zIndex: 1 + i}}>
+                                    <div className="BenefitReminder__Personal__choice__wrapper" key={`wrappersfs${i}`}>
+                                        <div className="BenefitReminder__Personal__choice__image__container" key={`wsarappersfs${i}`} style={{ zIndex: 1 + i}}>
                                             <AnimatePresence mode="wait">
                                                 <motion.div 
                                                     key={activeIndex}

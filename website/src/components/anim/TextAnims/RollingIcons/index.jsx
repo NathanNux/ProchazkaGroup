@@ -59,7 +59,7 @@ const RollingLogos = ({ text, baseVelocity = 100, childrenCount, Scroll }) => {
             <motion.div style={{ x }}>
                 {Array.from({ length: childrenCount }, (_, index) => (
                     <Image
-                        key={index} // Added key prop
+                        key={`rolling${index}`} // Added key prop
                         src=''
                         alt=''
                         width={200}

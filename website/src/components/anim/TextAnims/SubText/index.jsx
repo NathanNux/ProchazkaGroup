@@ -45,7 +45,7 @@ export default function SubText({text, className}) {
                         <br key={`br-${i}`} />
                     ) : (
                         <motion.span
-                            key={i}
+                            key={`brs${i}`}
                             initial={{ opacity: 0, y: 10 }}
                             animate={isInView ? {
                                 opacity: 1,

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
@@ -30,7 +30,7 @@ export default function AboutInto( ){
         target: mainContentRef,
         offset: [ 'start end', 'end end']
     })
-    const rotation = [0, 120, 240];
+    const rotation = useMemo(() => [0, 120, 240], []);
 
     const imageAnimX = useTransform(
         scrollYProgress,
@@ -93,13 +93,8 @@ export default function AboutInto( ){
         }
     }
 
-    useEffect(() => {
-        const unsubscribe = scrollYProgress.on('change', v => {
-            console.log('Scroll progress:', v)
-        })
-        
-        return () => unsubscribe()
-    }, [scrollYProgress])
+    const circlePath = "M50,50 m-45,0 a45,45 0 1,0 90,0 a45,45 0 1,0 -90,0";
+
     
     return(
         <section className="About" ref={introRef}>
@@ -220,70 +215,27 @@ export default function AboutInto( ){
                                 </div>
                             </div>
                             <div className="Values__container">
-                                <div className="svg__fillc__Ccontainer">
-                                    <motion.svg 
-                                        viewBox="0 0 100 100" 
-                                        initial='initial' 
-                                        whileInView='animate'
-                                        style={{
-                                            transform: `rotate(${rotation[0]}deg)`,
-                                            transformOrigin: "50% 50%", // Ensure rotation around center
-                                        }}
-                                    >
-                                        <motion.path
-                                            variants={draw} 
-                                            custom={1}
-                                            d="
-                                                M50,50
-                                                m-45,0
-                                                a45,45 0 1,0 90,0
-                                                a45,45 0 1,0 -90,0
-                                            "
-                                            fill="none"
-                                        />
-                                    </motion.svg>
-                                    <motion.svg 
-                                        viewBox="0 0 100 100"
-                                        initial='initial' 
-                                        whileInView='animate'
-                                        style={{
-                                            transform: `rotate(${rotation[1]}deg)`,
-                                            transformOrigin: "50% 50%", // Ensure rotation around center
-                                        }}
-                                    >
-                                        <motion.path
-                                            variants={draw} 
-                                            custom={2}
-                                            d="
-                                                M50,50
-                                                m-45,0
-                                                a45,45 0 1,0 90,0
-                                                a45,45 0 1,0 -90,0
-                                            "
-                                            fill="none"
-                                        />
-                                    </motion.svg>
-                                    <motion.svg 
-                                        viewBox="0 0 100 100"
-                                        initial='initial' 
-                                        whileInView='animate'
-                                        style={{
-                                            transform: `rotate(${rotation[2]}deg)`,
-                                            transformOrigin: "50% 50%", // Ensure rotation around center
-                                        }}
-                                    >
-                                        <motion.path
-                                            variants={draw}
-                                            custom={3}
-                                            d="
-                                                M50,50
-                                                m-45,0
-                                                a45,45 0 1,0 90,0
-                                                a45,45 0 1,0 -90,0
-                                            "
-                                            fill="none"
-                                        />
-                                    </motion.svg>
+                            <div className="svg__fillc__Ccontainer">
+                                    {[0, 1, 2].map((index) => (
+                                        <motion.svg 
+                                            key={`circle-${index}`}
+                                            viewBox="0 0 100 100" 
+                                            initial='initial' 
+                                            whileInView='animate'
+                                            style={{
+                                                transform: `rotate(${rotation[index]}deg)`,
+                                                transformOrigin: "50% 50%"
+                                            }}
+                                        >
+                                            <motion.path
+                                                variants={draw} 
+                                                custom={index + 1}
+                                                d={circlePath}
+                                                fill="none"
+                                                strokeLinecap="round"
+                                            />
+                                        </motion.svg>
+                                    ))}
                                 </div>
                             </div>
                         </div>
