@@ -22,6 +22,7 @@ export const stats = [
 export const WebsiteReviews = [
     {
         number: '00',
+        person: 'poradce1',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -29,6 +30,7 @@ export const WebsiteReviews = [
     },
     {
         number: '01',
+        person: 'poradce2',
         hastag: 'benefitprogram',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -36,6 +38,7 @@ export const WebsiteReviews = [
     },
     {
         number: '02',
+        person: 'poradce3',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -43,6 +46,7 @@ export const WebsiteReviews = [
     },
     {
         number: '03',
+        person: 'poradce4',
         hastag: 'benefitprogram',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -50,6 +54,7 @@ export const WebsiteReviews = [
     },
     {
         number: '04',
+        person: 'poradce1',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -57,6 +62,7 @@ export const WebsiteReviews = [
     },
     {
         number: '05',
+        person: 'poradce2',
         hastag: 'benefitprogram',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -64,6 +70,7 @@ export const WebsiteReviews = [
     },
     {
         number: '06',
+        person: 'poradce3',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -71,6 +78,7 @@ export const WebsiteReviews = [
     },
     {
         number: '07',
+        person: 'poradce4',
         hastag: 'benefitprogram',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -78,6 +86,7 @@ export const WebsiteReviews = [
     },
     {
         number: '08',
+        person: 'poradce1',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -85,6 +94,7 @@ export const WebsiteReviews = [
     },
     {
         number: '09',
+        person: 'poradce2',
         hastag: 'benefitprogram',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -92,6 +102,7 @@ export const WebsiteReviews = [
     },
     {
         number: '10',
+        person: 'poradce3',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -99,6 +110,7 @@ export const WebsiteReviews = [
     },
     {
         number: '11',
+        person: 'poradce4',
         hastag: 'benefitprogram',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',
@@ -106,6 +118,7 @@ export const WebsiteReviews = [
     },
     {
         number: '12',
+        person: 'poradce1',
         hastag: 'poradce',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in dui ut metus blandit dapibus ut eget purus. Nunc vel turpis mollis, consequat turpis at, tempus velit.',
         name: '| Jméno a město klienta',

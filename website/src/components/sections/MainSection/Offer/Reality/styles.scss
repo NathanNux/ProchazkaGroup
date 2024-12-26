@@ -11,6 +11,8 @@
     background-color: #04444C;
     color: #fff;
     will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 
     .Graph__container{
         height: 100%;

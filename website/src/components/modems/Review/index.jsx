@@ -10,43 +10,54 @@ import { WebsiteReviews } from "@/constants/pages/reviews";
 
 
 export default function ReviewsList() {
-    const [ isOpen, setIsOpen ] = useState(false)
-    const [visibleItems, setVisibleItems] = useState(6);
-    const [ activeFilter, setActiveFilter ] = useState('všechno')
+    const [isOpen, setIsOpen] = useState(false)
+    const [visibleItems, setVisibleItems] = useState(6)
+    const [activeFilter, setActiveFilter] = useState('všechno')
     const [searchQuery, setSearchQuery] = useState("")
+    const [activeMode, setActiveMode] = useState('filter') // 'filter' or 'search'
 
-  // Update searchReviews function
-    const searchReviews = (reviews) => {
-        return reviews.filter(review => {
-        const searchLower = searchQuery.toLowerCase()
-        
-        const matchesFilter = activeFilter === 'všechno' || 
-            review.hastag.toLowerCase() === activeFilter.toLowerCase()
-        
-        const matchesSearch = !searchQuery ||
-            review.hastag.toLowerCase().includes(searchLower) ||
-            review.advisorName?.toLowerCase().includes(searchLower) ||
-            review.city?.toLowerCase().includes(searchLower)
-        
-        return matchesFilter && matchesSearch
-        })
+    const handleFilterClick = (filter) => {
+        setActiveFilter(filter)
+        setSearchQuery("") // Reset search
+        setActiveMode('filter')
+        setVisibleItems(6)
     }
+
+    const handleSearch = (value) => {
+        setSearchQuery(value)
+        setActiveFilter('všechno') // Reset filter
+        setActiveMode('search')
+        setVisibleItems(6)
+    }
+
+    const getFilteredReviews = () => {
+        try {
+            if (activeMode === 'search' && searchQuery) {
+                return WebsiteReviews.filter(review => 
+                    review?.person?.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+            }
+    
+            if (activeMode === 'filter') {
+                return WebsiteReviews.filter(review => 
+                    activeFilter === 'všechno' || 
+                    review?.hastag?.toLowerCase() === activeFilter.toLowerCase()
+                )
+            }
+    
+            return WebsiteReviews
+        } catch (error) {
+            console.error('Filter error:', error)
+            return []
+        }
+    }
+
+    const filteredReviews = getFilteredReviews()
 
     const showMore = () => {
         setVisibleItems(prevCount => prevCount + 6);
     };
-
-    const filterReviews = (reviews) => {
-        if (activeFilter === 'všechno') return reviews;
-        return reviews.filter(review => review.hastag.toLowerCase() === activeFilter.toLowerCase());
-    };
-
-    const handleFilterClick = (filter) => {
-        setActiveFilter(filter)
-        setVisibleItems(6) 
-    }
-
-    const filteredReviews = filterReviews(WebsiteReviews);
+    
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -87,19 +98,38 @@ export default function ReviewsList() {
                 <div className="menu__controls">
                     <div className="menu__buttons">
                         <div className="button" onClick={() => handleFilterClick('všechno')}>
-                            <SmallButton href='/' text='všechno' active={activeFilter === 'všechno'}/>
+                            <SmallButton 
+                                href='/' 
+                                text='všechno' 
+                                active={activeMode === 'filter' && activeFilter === 'všechno'}
+                            />
                         </div>
                         <div className="button" onClick={() => handleFilterClick('benefitprogram')}>
-                            <SmallButton href='/' text='benefit' active={activeFilter === 'benefitprogram'}/>
+                            <SmallButton 
+                                href='/' 
+                                text='benefit' 
+                                active={activeMode === 'filter' && activeFilter === 'benefitprogram'}
+                            />
                         </div>
                         <div className="button" onClick={() => handleFilterClick('poradce')}>
-                            <SmallButton href='/' text='poradci' active={activeFilter === 'poradce'}/>
+                            <SmallButton 
+                                href='/' 
+                                text='poradci' 
+                                active={activeMode === 'filter' && activeFilter === 'poradce'}
+                            />
                         </div>
                     </div>
                     
                     <div className="searchBar">
-                        {/* <ReviewsSearch onSearch={setSearchQuery} /> */}
-                        <Image src='' alt='search_icon' width={35} height={35}/>
+                        <ReviewsSearch 
+                            onSearch={handleSearch} // Function to update search
+                            reviews={WebsiteReviews}
+                            searchValue={searchQuery} // String value
+                            resetSearch={() => {
+                                setSearchQuery("")
+                                setActiveMode('filter')
+                            }}
+                        />
                     </div>
                 </div>
                 <div className="addReviews">

@@ -12,7 +12,7 @@
         .sticky {
             position: absolute;
             width: 100%;
-            height: 100vh;
+            height: 110vh;
             overflow: hidden;
             will-change: transform;
             backface-visibility: hidden;
@@ -26,6 +26,7 @@
                 height: 100%;
                 will-change: transform;
                 backface-visibility: hidden;
+                transform-style: preserve-3d;
             }
         }
     }

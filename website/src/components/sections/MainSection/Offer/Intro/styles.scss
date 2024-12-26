@@ -1,12 +1,14 @@
 .IntroOffer{
     width: 100vw;
-    height: 120vh;
+    height: 130vh;
     position: relative;
     align-items: center;
     justify-content: center;
-    padding: 10vh 0vw 20vh 0vw;
+    padding: 20vh 0vw 20vh 0vw;
     overflow: hidden;
     will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 
 
     .divider{
