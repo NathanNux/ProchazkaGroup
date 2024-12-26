@@ -142,20 +142,11 @@
                 margin: 0;
             }
         }
-        .Rolling__text{
+        .Rolling__icons{
             padding: 0;
-            .Rolling_text_container{
+            .Rolling_icons_container{
                 &:nth-of-type(2){
                     display: none;
-                }
-                p{
-                    font-size: 5rem;
-                    span{
-                        padding: 2rem 6rem;
-                        border: #00F0FF 2px solid;
-                        border-radius: 50px;
-                        margin-right: 2rem;
-                    }
                 }
             }
         }

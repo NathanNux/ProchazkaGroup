@@ -238,3 +238,139 @@ export const chartDataTheWay = [
       "Naše cesta": 165000,
     }
 ]
+
+
+export const partnersIcons = [
+    {
+        src: '/logos/Allianz.png',
+        alt: 'Allianz'
+    },
+    {
+        src: '/logos/Amundi.png',
+        alt: 'Amundi'
+    },
+    {
+        src: '/logos/arts.jpg',
+        alt: 'Arts'
+    },
+    {
+        src: '/logos/AXA.png',
+        alt: 'AXA'
+    },
+    {
+        src: '/logos/ceskapojis.png',
+        alt: 'Ceska Pojisovna'
+    },
+    {
+        src: '/logos/Conseq.png',
+        alt: 'Conseq'
+    },
+    {
+        src: '/logos/cp_invest.jpeg',
+        alt: 'CP Invest'
+    },
+    {
+        src: '/logos/cpp.png',
+        alt: 'CPP'
+    },
+    {
+        src: '/logos/csob.png',
+        alt: 'CSOB'
+    },
+    {
+        src: '/logos/csobpenzpoj.png',
+        alt: 'CSOB Penzpoj'
+    },
+    {
+        src: '/logos/csobstavebnisporitelna.png',
+        alt: 'CSOB Stavebni Sporitelna',
+    },
+    {
+        src: '/logos/das.jpg',
+        alt: 'DAS'
+    },
+    {
+        src: '/logos/gcp.jpg',
+        alt: 'GPC'
+    },
+    {
+        src: '/logos/gpenzspor.png',
+        alt: 'GPenzSpor'
+    },
+    {
+        src: '/logos/hypotecnibanka.jpg',
+        alt: 'Hypotecni Banka'
+    },
+    {
+        src: '/logos/ING.jpg',
+        alt: 'ING'
+    },
+    {
+        src: '/logos/KB.png',
+        alt: 'KB'
+    },
+    {
+        src: '/logos/kbpenzijni.png',
+        alt: 'KB Penzijni'
+    },
+    {
+        src: '/logos/Komercnipojistovna.jpg',
+        alt: 'Komercni Pojistovna'
+    },
+    {
+        src: '/logos/kooperativa.png',
+        alt: 'Kooperativa'
+    },
+    {
+        src: '/logos/Mbank.jpg',
+        alt: 'Mbank'
+    },
+    {
+        src: '/logos/metlife.png',
+        alt: 'Metlife'
+    },
+    {
+        src: '/logos/modrapyr.png',
+        alt: 'Modra Pyramida'
+    },
+    {
+        src: '/logos/monetamb.jpg',
+        alt: 'Moneta MB'
+    },
+    {
+        src: '/logos/monetastavbspor.jpg',
+        alt: 'Moneta Stavebni Sporitelna'
+    },
+    {
+        src: '/logos/penzceskapoj.jpg',
+        alt: 'Penz Ceska Poj'
+    },
+    {
+        src: '/logos/penzijniceskaspor.webp',
+        alt: 'Penzijni Ceska Sporitelna'
+    },
+    {
+        src: '/logos/reifbank.png',
+        alt: 'Reif Bank'
+    },
+    {
+        src: '/logos/reifstavbspor.png',
+        alt: 'Reif Stavebni Sporitelna'
+    },
+    {
+        src: '/logos/stavebni_sporitelna_cs.jpg',
+        alt: 'Stavebni Sporitelna Ceska'
+    },
+    {
+        src: '/logos/unicreditbank.jpg',
+        alt: 'Unicredit Bank'
+    },
+    {
+        src: '/logos/uniqua.jpeg', 
+        alt: 'Uniqua'
+    },
+    {
+        src: '/logos/youplus.png',
+        alt: 'You Plus'
+    }
+]

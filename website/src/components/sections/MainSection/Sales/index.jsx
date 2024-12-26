@@ -1,4 +1,5 @@
 import MainText from "@/components/anim/TextAnims/MainText";
+import RollingIcons from "@/components/anim/TextAnims/RollingIcons";
 import RollingText from "@/components/anim/TextAnims/RollingText";
 import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
@@ -30,8 +31,8 @@ export default function Sales() {
                 <CustomImage altText='Sales-image' src='/assets/reviewsBackground.png'/>
             </div>
             <div className="Logo__container">
-                <SubText className={'subtext'} text={'BYLI JSME ZMÍNĚNI:'}/>
-                <RollingText text='Ξ' baseVelocity={5} textsCount='25'/>
+                <SubText className={'subtext'} text={'NAŠI PARTNEŘI:'}/>
+                <RollingIcons baseVelocity={1}/>
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import CustomImage from "@/components/ui/stickyImage";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
+import RollingIcons from "@/components/anim/TextAnims/RollingIcons";
 
 
 export default function Blog () {
@@ -36,7 +37,7 @@ export default function Blog () {
                     <SubText text={'BYLI JSME ZMÍNĚNI:'}/>
                 </div>
                 <div className="devider__wrapper"/>
-                <RollingText text='Ξ' baseVelocity={5} textsCount='25'/>
+                    <RollingIcons baseVelocity={1}/>
                 <div className="devider__wrapper"/>
             </div>
         </div>

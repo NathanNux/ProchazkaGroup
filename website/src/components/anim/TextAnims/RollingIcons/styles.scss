@@ -1,13 +1,15 @@
-.Rolling__logos{
-    padding-top: 85vh;
-    padding-bottom: 85vh;
-    width: 100vw;
-    position: relative;
-    .Rolling_text_container{
+.Rolling__icons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+
+    .Rolling_icons_container {
         overflow: hidden;
-        line-height: 0.8;
-        letter-spacing: -8px;
-        margin: 0;
         white-space: nowrap;
         display: flex;
         flex-wrap: nowrap;
@@ -15,19 +17,24 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        p{
-            margin: 0;
+        
+        .icons_wrapper {
+            display: flex;
             padding: 1rem 0;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 8em;
-            display: flex;
-            white-space: nowrap;
-            display: flex;
-            flex-wrap: nowrap;
-            span{
-                display: block;
-                margin-right: 5rem
+            gap: 2rem;
+            
+            .icon_item {
+                display: inline-flex;
+                padding: 1rem;
+                max-width: 200px;
+                width: 200px;
+                height: 150px;
+                max-height: 200px;
+                border: #00F0FF 1px solid;
+                border-radius: 50px;
+                img {
+                    object-fit: contain;
+                }
             }
         }
     }
