@@ -15,12 +15,6 @@ export default function Offer() {
         target: sectionRef,
         offset: ['start start', 'end end']
     });
-
-    const top = useTransform(
-        scrollYProgress,
-        [0, 1],
-        ['0vh', '150vh'],
-    );
     const move1x = useTransform(
         scrollYProgress,
         [0.25, 0.75],
@@ -35,17 +29,17 @@ export default function Offer() {
     return(
         <section className="Offer">
             <div className="sticky__wrapper" ref={sectionRef}>
-                <motion.div className="sticky" style={{ top }}>
+                <motion.div className="sticky">
                     <motion.div className="mainPageSection__content" 
                         style={{ 
-                            left: move1x,  // Change from left to transform
+                            x: move1x,  // Change from left to transform
                         }}
                     >
                         <IntroOffer />
                     </motion.div>
                     <motion.div className="mainPageSection__content" 
                         style={{ 
-                            left: move2x,  // Change from left to transform
+                            x: move2x,  // Change from left to transform
                         }}
                     >
                         <Reality />

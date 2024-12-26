@@ -6,22 +6,23 @@
 
     .sticky__wrapper {
         width: 100%;
-        height: 250vh;
+        height: 300vh;
         position: relative;
 
         .sticky {
-            position: absolute;
+            position: sticky;
+            top: 0;
             width: 100%;
-            height: 110vh;
-            overflow: hidden;
+            height: 105vh;
             will-change: transform;
             backface-visibility: hidden;
             transform-style: preserve-3d;
-
+            overflow: hidden;
             
             .mainPageSection__content {
                 position: absolute;
                 top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
                 will-change: transform;

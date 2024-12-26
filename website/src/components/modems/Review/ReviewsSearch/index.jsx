@@ -54,15 +54,21 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
   }
 
   return (
-    <div className="relative w-full">
-      <Command className="rounded-lg border-solid border-[#00F0FF] w-full bg-transparent">
+    <div className="relative w-full [&>*]:!border-none [&>*]:!shadow-none [&>*]:!outline-none">
+      <Command className="rounded-[25px] w-full bg-transparent border-none shadow-none ring-0 ring-offset-0">
         <CommandInput 
           value={searchValue}
           onValueChange={handleSearch}
           placeholder="Hledat podle jména poradce"
           onFocus={() => setIsOpen(true)}
           onBlur={() => setTimeout(() => setIsOpen(false), 200)}
-          className="h-9 bg-cyan-800 border-none focus:outline-none text-white placeholder:text-white/50"
+          className="h-9 text-[1.5rem] bg-transparent border-0 border-none shadow-none 
+          focus:outline-none focus:ring-0 focus:ring-offset-0
+          text-[#050A10] p-4 placeholder:text-[#050A10/10]
+          [-webkit-tap-highlight-color:transparent] 
+          [-webkit-appearance:none]
+          [&:-webkit-autofill]:bg-transparent
+          [&:-webkit-autofill]:text-[#050A10]"
         />
         <AnimatePresence>
           {isOpen && searchValue && (
@@ -72,7 +78,7 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
               exit={{ opacity: 0, y: -10 }}
               className="absolute top-full left-0 w-full z-50 mt-2"
             >
-              <CommandList className="bg-[#04444C] rounded-lg shadow-lg max-h-[300px] overflow-auto p-2">
+              <CommandList className="rounded-[25px] border border-[#00F0FF] p-4 max-h-[300px] overflow-auto bg-[#050A10]">
                 {filteredReviews.length === 0 ? (
                   <CommandEmpty className="text-white/70">Žádné výsledky.</CommandEmpty>
                 ) : (
@@ -81,7 +87,7 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
                       key={person}
                       value={person}
                       onSelect={() => handlePersonSelect(person)}
-                      className="px-4 py-2 hover:bg-[#00F0FF]/10 cursor-pointer"
+                      className="px-4 py-2 hover:bg-[#00F0FF]/10 cursor-pointer text-white/70"
                     >
                       <motion.div
                         initial={{ opacity: 0 }}
@@ -89,8 +95,8 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
                         transition={{ delay: index * 0.05 }}
                         className="flex justify-between items-center w-full"
                       >
-                        <span className="text-[#00F0FF]">{person}</span>
-                        <span className="text-white/50">{count} recenzí</span>
+                        <span className="text-[#00F0FF] text-[1.2rem]">{person}</span>
+                        <span className="text-white/50 text-[1.1rem]" >{count} recenzí</span>
                       </motion.div>
                     </CommandItem>
                   ))
@@ -100,6 +106,6 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
           )}
         </AnimatePresence>
       </Command>
-    </div>
+</div>
   )
 }

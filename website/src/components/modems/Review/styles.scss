@@ -117,13 +117,21 @@
             }
             .searchBar{
                 display: flex;
-                gap: 2rem;
-                p{
-                    font-size: 1.5rem;
-                    font-weight: 400;
-                    margin: 0;
-                    color: #050A10;
-                    opacity: 0.6;
+                width: 25vw;
+
+                svg{
+                    width: 35px;
+                    height: 35px;
+                    stroke: #050A10;
+                }
+                // Override Tailwind base styles
+                *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+                    
+                    border-width: 0 !important;
+                    border-style: none !important;
+                    border-color: transparent !important;
+                    outline: none !important;
+                    box-shadow: none !important;
                 }
             }
         }
