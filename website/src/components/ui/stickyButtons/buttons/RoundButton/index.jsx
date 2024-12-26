@@ -3,15 +3,20 @@ import { animate, transform, useMotionValue, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Magnetic from "@/components/anim/Magnetic";
+import { useRouter } from "next/navigation";
 
-export default function RoundButton({ href, text }) {
+export default function RoundButton({ href, text, disableLink }) {
     const { registerRef, unregisterRef } = useCursorRef();
     const ButtonBoundsRef = useRef(null);
     const buttonRef = useRef(null);
     const textRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false); 
+    const router = useRouter();
 
-    //WIP: Fix the issue with all Links components 
+    const handleClick = () => {
+        if(disableLink === true) return;
+        router.push(href);
+    }
 
     const scale = {
         x: useMotionValue(1),
@@ -88,7 +93,7 @@ export default function RoundButton({ href, text }) {
     }
     return (
         <Magnetic sensitivity='0.05'>
-            <motion.div transformTemplate={template} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Round__button_container'>
+            <motion.div transformTemplate={template} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Round__button_container' onClick={handleClick}>
                 <div ref={ButtonBoundsRef} className='Round__button_Bounds'></div>
                     <Link href={href}>
                         <p ref={textRef}>{text}</p>

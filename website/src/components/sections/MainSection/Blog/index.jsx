@@ -1,4 +1,3 @@
-import RollingText from "@/components/anim/TextAnims/RollingText";
 import CustomImage from "@/components/ui/stickyImage";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";

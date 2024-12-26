@@ -168,72 +168,82 @@ export default function NavbarBody({setMenu}) {
       </div>
       <div className='navbar__body__add__container'>
         <div className='navbar__body__add__devider'>
-          {NavAddLinks.map((link, index) => {
-            const { href, text } = link;
-            const newIndex = index + NavLinks.length;
-            const initialColor = pathname === href ? '#00F0FF' : '#fff';
-            return (
-              <Magnetic key={`magnts${newIndex}`} sensitivity='0.1'>
-                <motion.div
-                    key={`adddiv${newIndex}`}
-                    className='navbar__body__add-link'
-                    onMouseEnter={() => setSelectedLink({ isActive: true, index: index + links.length })}
-                    onMouseLeave={() => setSelectedLink({ isActive: false, index: index + links.length })}
-                    variants={textShow}
-                    initial='initial'
-                    animate='enter'
-                    exit='exit'
-                    custom={newIndex}
-                >
-                    <Link href={href}>
-                        <motion.p>
-                            <GetChars
-                                text={text}
-                                selectedLink={selectedLink}
-                                index={newIndex}
-                                initialColor={initialColor}
-                            />
-                        </motion.p>
-                    </Link>
-                </motion.div>
-              </Magnetic>
-            );
-          })}
+            {NavAddLinks.map((link, index) => {
+                const { href, text } = link;
+                const newIndex = index + NavLinks.length;
+                const initialColor = pathname === href ? '#00F0FF' : '#fff';
+                return (
+                    <Magnetic key={`magnts${newIndex}`} sensitivity='0.1'>
+                        <motion.div
+                            key={`adddiv${newIndex}`}
+                            className='navbar__body__add-link'
+                            onMouseEnter={() => setSelectedLink({ 
+                                isActive: true, 
+                                index: newIndex 
+                            })}
+                            onMouseLeave={() => setSelectedLink({ 
+                                isActive: false, 
+                                index: newIndex 
+                            })}
+                            variants={textShow}
+                            initial='initial'
+                            animate='enter'
+                            exit='exit'
+                            custom={newIndex}
+                        >
+                            <Link href={href}>
+                                <motion.p>
+                                    <GetChars
+                                        text={text}
+                                        selectedLink={selectedLink}
+                                        index={newIndex}
+                                        initialColor={initialColor}
+                                    />
+                                </motion.p>
+                            </Link>
+                        </motion.div>
+                    </Magnetic>
+                );
+            })}
         </div>
         <div className='navbar__body__add__devider'>
-          {NavIcons.map((icon, index) => {
-            const { href, text } = icon;
-            const iconIndex = index + NavLinks.length + NavAddLinks.length;
-            const initialColor = pathname === href ? '#00F0FF' : '#fff';
-            return (
-              <Magnetic key={`iconsmag${iconIndex}`} sensitivity='0.1'>
-                <motion.div
-                    // Icons will have very similar animation, but with svg filing from the left opacity 0.65 to 1
-                    // Now I use text as the icons, or I can use just the text instead of the svg icons, we'll see
-                    key={`iconsdiv${iconIndex}`}
-                    onMouseEnter={() => setSelectedLink({ isActive: true, index: index + links.length + addLinks.length })}
-                    onMouseLeave={() => setSelectedLink({ isActive: false, index: index + links.length + addLinks.length })}
-                    className='navbar__body__icon'
-                    variants={textShow}
-                    initial='initial'
-                    animate='enter'
-                    exit='exit'
-                    custom={iconIndex}
-                >
-                    <Link href={href}>
-                        <motion.p>
-                            <GetChars
-                                text={text}
-                                selectedLink={selectedLink}
-                                index={iconIndex}
-                                initialColor={initialColor}
-                            />
-                        </motion.p>
-                    </Link>
-                </motion.div>
-              </Magnetic>
-            );
-          })}
+            {NavIcons.map((icon, index) => {
+                const { href, text } = icon;
+                const iconIndex = index + NavLinks.length + NavAddLinks.length;
+                const initialColor = pathname === href ? '#00F0FF' : '#fff';
+                return (
+                    <Magnetic key={`iconsmag${iconIndex}`} sensitivity='0.1'>
+                        <motion.div
+                            key={`iconsdiv${iconIndex}`}
+                            onMouseEnter={() => setSelectedLink({ 
+                                isActive: true, 
+                                index: index + NavLinks.length + NavAddLinks.length 
+                            })}
+                            onMouseLeave={() => setSelectedLink({ 
+                                isActive: false, 
+                                index: index + NavLinks.length + NavAddLinks.length 
+                            })}
+                            className='navbar__body__icon'
+                            variants={textShow}
+                            initial='initial'
+                            animate='enter'
+                            exit='exit'
+                            custom={iconIndex}
+                        >
+                            <Link href={href}>
+                                <motion.p>
+                                    <GetChars
+                                        text={text}
+                                        selectedLink={selectedLink}
+                                        index={iconIndex}
+                                        initialColor={initialColor}
+                                    />
+                                </motion.p>
+                            </Link>
+                        </motion.div>
+                    </Magnetic>
+                );
+            })}
         </div>
       </div>
     </div>

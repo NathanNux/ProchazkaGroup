@@ -1,51 +1,10 @@
 
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
+import { people } from "@/constants/people"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
-const people = [
-    {
-        name: 'Václav Procházka',
-        likes: '506',
-        reviews: '25',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/cactus.webp',
-        alt: 'person1',
-    },
-    {
-        name: 'Ondřej Efenberk',
-        likes: '340',
-        reviews: '20',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/house.webp',
-        alt: 'person2',
-    },
-    {
-        name: 'Michaela Marková',
-        likes: '400',
-        reviews: '30',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/rock.webp',
-        alt: 'person2',
-    },
-    {
-        name: 'Tereza Marková',
-        likes: '200',
-        reviews: '20',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/water.webp',
-        alt: 'person3',
-    },
-    {
-        name: 'Zdeněk Kafka',
-        likes: '158',
-        reviews: '18',
-        moto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
-        src: '/svg/tree.webp',
-        alt: 'person4',
-    }
-]
 const modemAnim = {
     open: {
         x: "0",
@@ -319,7 +278,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                 </div>
                 <div className="cta">
                     <div className="button">
-                        <RoundButton href='' text='Poslat Zprávu'/>
+                        <RoundButton href='' text='Poslat Zprávu' disableLink={true}/>
                     </div>
                     <div className="devider"/>
                 </div>

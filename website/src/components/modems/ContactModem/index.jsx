@@ -314,7 +314,7 @@ export default function ContactModem({
                 </div>
                 <div className="cta">
                     <div className="button">
-                        <RoundButton href='' text='Poslat Zprávu'/>
+                        <RoundButton href='' text='Poslat Zprávu' disableLink={true}/>
                     </div>
                     <div className="devider"/>
                 </div>

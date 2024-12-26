@@ -105,7 +105,6 @@ export default function Menu({menu, setMenu}) {
         <div className="navbar__container">
             <Magnetic sensitivity='0.15'>
                 <motion.div transformTemplate={template} ref={menuRef} style={{scaleX: scale.x, scaleY: scale.y}} className='navbar__menu' onClick={() => setMenu(!menu)}
-                    // NOTE: The useClick will need to be done to use the link anyways. because motion.Link cannot be used. so I need a custom function to do that. the link can be there but will not function in other components-buttons
                     >
                     <div ref={menuBoundsRef} className='navbar__bounds'></div>
                     <div ref={textRef}>

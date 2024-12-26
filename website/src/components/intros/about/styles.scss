@@ -11,6 +11,15 @@
         transform: translateY(-50%);
         z-index: 56;
     }
+    .button__container {
+        position: fixed; // Change from absolute to fixed
+        bottom: 5%;
+        left: 2.5%;
+        z-index: 70;
+        transform-origin: center center;
+        will-change: transform;
+        pointer-events: auto;
+    }
     .AboutInto{
         position: relative;
         width: 100%;
@@ -107,13 +116,6 @@
                 background-color: #050A10;
                 opacity: 0.65;
                 z-index: 1;
-            }
-    
-            .button__container{
-                position: absolute;
-                bottom: 5%;
-                left: 2.5%;
-                z-index: 3;
             }
         }
     }

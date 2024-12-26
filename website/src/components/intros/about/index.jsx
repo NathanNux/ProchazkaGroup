@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
@@ -103,7 +103,18 @@ export default function AboutInto( ){
                     opacity: buttonOpacity2
                 }}
             >
-                <RoundButton href='/' text='Zájem o pozici?'/>
+                <RoundButton href='/' text='Zájem o pozici?' disableLink={true}/>
+            </motion.div>
+            <motion.div 
+                className="button__container"
+                initial='initial'
+                animate='enter'
+                variants={introbutton}
+                style={{
+                    opacity: buttonOpacity2
+                }}
+            >
+                <RotatingButton text=" - Nahlášení Pojistného - Nahlášení Pojistného" href="/"/>
             </motion.div>
             <motion.section className="AboutInto"
                 initial='initial'
@@ -126,14 +137,6 @@ export default function AboutInto( ){
                         }}
                     >
                         <Image  src='/assets/aboutPhoto.png' alt="team_photo" fill={true}/>
-                    </motion.div>
-                    <motion.div 
-                        className="button__container"
-                        initial='initial'
-                        animate='enter'
-                        variants={introbutton}
-                    >
-                        <RotatingButton text=" - Nahlášení Pojistného - Nahlášení Pojistného" href="/"/>
                     </motion.div>
                 </div>
             </motion.section>

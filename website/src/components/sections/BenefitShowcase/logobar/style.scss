@@ -2,6 +2,7 @@
     width: 100vw;
     height: 40vh;
     position: relative;
+    display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-end;
@@ -22,30 +23,19 @@
         }
     }
 
-    .Logos{
+    .Logos__logobar{
         width: 100%;
         height: 85%;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        .Rolling__text{
+        overflow: hidden;
+        .Rolling__icons{
             padding: 0;
-            scale: 1.1;
-            .Rolling_text_container{
-
+            .Rolling_icons_container{
                 &:nth-of-type(2){
                     display: none;
-                }
-
-                p{
-                    color: #fff;
-                    span{
-                        border: #00F0FF 1px solid;
-                        border-radius: 25px;
-                        padding: 2rem 4rem;
-                        margin-right: 2rem
-                    }
                 }
             }
         }

@@ -1,6 +1,7 @@
 .magnetic{
     z-index: 70; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2
     .Round__button_container{
+        overflow: visible;
         position: relative;
         display: flex;
         justify-content: center;

@@ -250,7 +250,7 @@ export default function ContactBenefit() {
                     <p className="infoText">Jste více tradiční?</p>
                     <div className="devider__vertical"/>
                     <div className="Button" onClick={() => setIsOpen(true)}>
-                        <RoundButton href='/' text='Použít E-mail' />
+                        <RoundButton href='' text='Použít E-mail' disableLink={true}/>
                     </div>
                 </div>
             </div>

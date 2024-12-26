@@ -4,8 +4,12 @@ import MyButton from "@/components/ui/stickyButtons/buttons/MyButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import { FooterLinks } from "@/constants/common";
 import Link from "next/link";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import GetChars from "../navbar/body/getChars";
 
 export default function Footer() {
+    const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 });
     return (
         <section className="Footer">
             <div className="Footer__Header">
@@ -75,11 +79,23 @@ export default function Footer() {
                 <div className="Links__container">
                     <div className="devider"/>
                     <div className="Social__Links">
-                        {FooterLinks.map(( link, i ) => {
-                            const { name, href } = link
-                            return(
-                                <Link key={`links${i}`} href={href}>
-                                    {name}
+                        {FooterLinks.map((link, i) => {
+                            const { name, href } = link;
+                            return (
+                                <Link 
+                                    key={`footerLink-${i}`} 
+                                    href={href}
+                                    onMouseEnter={() => setSelectedLink({ isActive: true, index: i })}
+                                    onMouseLeave={() => setSelectedLink({ isActive: false, index: i })}
+                                >
+                                    <motion.p>
+                                        <GetChars
+                                            text={name}
+                                            selectedLink={selectedLink}
+                                            index={i}
+                                            initialColor={'#fff'}
+                                        />
+                                    </motion.p>
                                 </Link>
                             )
                         })}
