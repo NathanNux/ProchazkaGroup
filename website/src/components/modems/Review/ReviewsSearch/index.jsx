@@ -55,20 +55,29 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
 
   return (
     <div className="relative w-full [&>*]:!border-none [&>*]:!shadow-none [&>*]:!outline-none">
-      <Command className="rounded-[25px] w-full bg-transparent border-none shadow-none ring-0 ring-offset-0">
+      <Command 
+        className="rounded-[25px] w-full bg-transparent border-none shadow-none ring-0 ring-offset-0"
+        aria-label="Vyhledávání poradců"
+      >
         <CommandInput 
           value={searchValue}
           onValueChange={handleSearch}
           placeholder="Hledat podle jména poradce"
           onFocus={() => setIsOpen(true)}
           onBlur={() => setTimeout(() => setIsOpen(false), 200)}
-          className="h-9 text-[1.5rem] bg-transparent border-0 border-none shadow-none 
+          type="search"
+          role="searchbox"
+          aria-label="Vyhledat poradce podle jména"
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          aria-controls="search-results-list"
+          className="h-9 text-[1.5rem] bg-transparent border-0 border-none 
           focus:outline-none focus:ring-0 focus:ring-offset-0
           text-[#050A10] p-4 placeholder:text-[#050A10/10]
           [-webkit-tap-highlight-color:transparent] 
           [-webkit-appearance:none]
-          [&:-webkit-autofill]:bg-transparent
-          [&:-webkit-autofill]:text-[#050A10]"
+          [&:-webkit-autofill]:bg-none
+          [&:-webkit-autofill]:!bg-transparent"
         />
         <AnimatePresence>
           {isOpen && searchValue && (
@@ -77,16 +86,26 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               className="absolute top-full left-0 w-full z-50 mt-2"
+              id="search-results"
+              role="listbox"
+              aria-label="Výsledky vyhledávání"
             >
-              <CommandList className="rounded-[25px] border border-[#00F0FF] p-4 max-h-[300px] overflow-auto bg-[#050A10]">
+              <CommandList 
+                id="search-results-list"
+                role="listbox"
+                aria-label="Výsledky vyhledávání"
+                className="rounded-[25px] border border-[#00F0FF] p-4 max-h-[300px] overflow-auto bg-[#050A10]"
+              >
                 {filteredReviews.length === 0 ? (
-                  <CommandEmpty className="text-white/70">Žádné výsledky.</CommandEmpty>
+                  <CommandEmpty className="text-white/70" role="status" aria-live="polite">Žádné výsledky.</CommandEmpty>
                 ) : (
                   filteredReviews.map(({ person, count }, index) => (
                     <CommandItem
                       key={person}
                       value={person}
                       onSelect={() => handlePersonSelect(person)}
+                      role="option"
+                      aria-selected={searchValue === person}
                       className="px-4 py-2 hover:bg-[#00F0FF]/10 cursor-pointer text-white/70"
                     >
                       <motion.div

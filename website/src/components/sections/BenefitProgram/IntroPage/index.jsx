@@ -33,7 +33,16 @@ export default function IntroPageBenefit() {
                 borderBottomRightRadius: borderRadiusValue,
             }}
         > 
-            <Image src="/background/benefit.png" alt="Benefit Program Intro Page" fill={true} />
+            <Image 
+                src="/background/benefit.png" 
+                alt="Benefit Program Intro Page" 
+                fill={true}
+                priority={true}
+                quality={100}
+                sizes="100vw"
+                className="background-image"
+
+            />
             <div className="cover"/>
             <div className="text">
                 <PageHeading text="BENEFIT PROGRAM"/>

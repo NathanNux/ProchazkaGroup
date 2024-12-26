@@ -24,7 +24,11 @@ export default function Graph() {
                                 s námi dokážete během několika let  
                             </p>
                         </div>
-                        <div className="Graph__content__graph">
+                        <div 
+                            className="Graph__content__graph" 
+                            role="region" 
+                            aria-label="Finanční růst - porovnání"
+                        >
                             <AreaChart
                                 className={isMobile ? "h-60" : "h-full w-full"}
                                 data={chartData}
@@ -40,6 +44,7 @@ export default function Graph() {
                                 showXAxis={true}
                                 startEndOnly={isMobile}
                                 fill='solid'
+                                ariaLabel="Graf finančního růstu"
                             />
                         </div>
                     </div>

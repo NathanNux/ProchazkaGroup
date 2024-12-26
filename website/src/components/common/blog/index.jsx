@@ -42,8 +42,8 @@ function BlogHeader () {
                 })}
             </div>
             <div className="settings">
-                <SVGButton src='/thumbsUp.svg'/>
-                <SVGButton src='/thumbsUp.svg'/>
+                <SVGButton src='/thumbsUp.svg' altText='icon'/>
+                <SVGButton src='/thumbsUp.svg' altText='icon'/>
             </div>
             <div className="devider"/>
         </div>
@@ -372,7 +372,7 @@ function CommentForm () {
                             <SVGButton src="/thumbsUp.png" altText="thumbsUp_icon"/>
                         </div>
                         <div className="buttton">
-                            <SVGButton src="/thumbsUp.png" altText={icons.name}/>
+                            <SVGButton src="/thumbsUp.png" altText="thumbsUp_icon"/>
                         </div>
                     </div>
                 </div>  

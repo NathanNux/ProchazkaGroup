@@ -22,7 +22,13 @@
         top: calc(50% - 20vh);
         left: calc(50% - 10vw);
         width: 17.5vw;
-        height: 40vh;
+        height: 42.5vh;
         z-index: 5;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 320/415;
+        }
     }
 }

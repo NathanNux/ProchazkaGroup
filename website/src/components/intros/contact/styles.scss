@@ -125,8 +125,12 @@
                     gap: 1rem;
 
                     .ContactIntro__MainInfo__icon {
-                        width: 30px;
-                        height: 30px;
+                        position: relative;
+                        width: auto;
+                        height: 56px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
             }

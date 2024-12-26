@@ -12,7 +12,7 @@ export default function ClipPathPage() {
     return (
         <section className="ClipPathPage">
             <div className="header">
-                <h1>Σ</h1>
+                <h2>Σ</h2>
             </div>
             <div className="devider"></div>
             <div className="cover">

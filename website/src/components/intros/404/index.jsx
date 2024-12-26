@@ -1,34 +1,16 @@
 
 import ONViewLogo from "@/components/anim/LogoAnims/onView"
+import SubText from "@/components/anim/TextAnims/SubText"
 import MyButton from "@/components/ui/stickyButtons/buttons/MyButton"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
+import { FooterLinks } from "@/constants/common"
 import Link from "next/link"
-
-const FooterLinks = [
-    {
-        name: 'Facebook',
-        href: 'https://www.facebook.com/prochazkagroup'
-    },
-    {
-        name: 'Instagram',
-        href: 'https://www.instagram.com/prochazkagroup'
-    },
-    {
-        name: 'Website',
-        href: 'https://www.prochazkagroup.cz'
-    },
-    {
-        name: 'Benefits',
-        href: '/benefits'
-    },
-    {
-        name: 'Locations',
-        href: '/locations'
-    },
-    
-]
+import { motion } from "framer-motion"
+import GetChars from "@/components/common/navbar/body/getChars"
+import { useState } from "react"
 
 export default function Intro404() {
+    const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 })
     return(
         <section className="Intro404">
             <div className="Index">
@@ -36,11 +18,7 @@ export default function Intro404() {
             </div>
             <div className="mainContent">
                 <div className="MainText">
-                    <h2>
-                        OMLOUVÁME SE...<br />
-                        TATO STRÁNKA <span>NENÍ</span> <br />
-                        VE  SCHRÁNCE<br />
-                    </h2>
+                    <SubText text='OMLOUVÁME SE...<br/>TATO STRÁNKA NENÍ<br/>VE SCHRÁNCE'/>
                 </div>
                 <div className="logo">
                     <ONViewLogo />
@@ -104,11 +82,23 @@ export default function Intro404() {
                     <div className="Links__container">
                         <div className="devider"/>
                         <div className="Social__Links">
-                            {FooterLinks.map(( link, i ) => {
-                                const { name, href } = link
-                                return(
-                                    <Link key={i} href={href}>
-                                        {name}
+                            {FooterLinks.map((link, i) => {
+                                const { name, href } = link;
+                                return (
+                                    <Link 
+                                        key={`footerLink-${i}`} 
+                                        href={href}
+                                        onMouseEnter={() => setSelectedLink({ isActive: true, index: i })}
+                                        onMouseLeave={() => setSelectedLink({ isActive: false, index: i })}
+                                    >
+                                        <motion.p>
+                                            <GetChars
+                                                text={name}
+                                                selectedLink={selectedLink}
+                                                index={i}
+                                                initialColor={'#fff'}
+                                            />
+                                        </motion.p>
                                     </Link>
                                 )
                             })}

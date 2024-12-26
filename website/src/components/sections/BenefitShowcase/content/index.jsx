@@ -18,7 +18,7 @@ export default function Content() {
 
             <div className="footer__header">
                 <div className="index">
-                    <h3>01</h3>
+                    <h1>01</h1>
                     <p>To nejlepší na odměnách?
                     Jsou okamžitě použitelné</p>
                 </div>

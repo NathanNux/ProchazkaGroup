@@ -5,6 +5,10 @@ const nextConfig = {
   experimental: {
     reactCompiler: true,
   },
+  i18n: {
+    locales: ["cs"],
+    defaultLocale: "cs",
+  },
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'styles')],
   },

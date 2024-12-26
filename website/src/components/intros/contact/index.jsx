@@ -43,10 +43,11 @@ export default function ContactIntro({name, number, moto,}) {
                                     <Image
                                         src={icon.src}
                                         alt={icon.name}
-                                        width={30}
-                                        height={30}
+                                        width={50}  // Increased from 39
+                                        height={56} // Increased from 44
                                         priority
                                         quality={100}
+                                        sizes="56px"
                                     />
                                 </div>
                             ))}
@@ -70,7 +71,15 @@ export default function ContactIntro({name, number, moto,}) {
                 <div className="ContactIntro__Collage"> 
                     <div className="ContactIntro__Collage__pics">
                         <div className="ContactIntro__Collage__pic">
-                            <Image src="/svg/tree.png" alt="profile_pic1" fill={true}/>
+                        <Image 
+                            src="/svg/tree.png" 
+                            alt="profile_pic1" 
+                            fill={true}
+                            quality={100}
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover w-full h-full"
+                        />
                         </div>
                     </div>
                     <div className="ContactIntro__Collage__progress">
