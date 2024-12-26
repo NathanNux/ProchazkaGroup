@@ -389,3 +389,86 @@ export const BenefitCards = [
         content: 'Jsme vázáni zákonem a ČNB, máme zkušenosti i výsledky'
     }
 ]
+
+export const MainTestimonials = [
+    {
+        id: 1,
+        number: '01',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 2,
+        number: '02',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 3,
+        number: '03',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 4,
+        number: '04',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 5,
+        number: '05',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 6,
+        number: '06',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 7,
+        number: '07',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 8,
+        number: '08',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 9,
+        number: '09',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    },
+    {
+        id: 10,
+        number: '10',
+        hashtag: '#hashtag',
+        name: 'John Doe',
+        town: 'Strakonice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+    }
+]

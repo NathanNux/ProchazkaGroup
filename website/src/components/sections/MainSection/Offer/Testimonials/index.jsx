@@ -3,9 +3,9 @@ import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
 import { testimonials } from "@/constants/mainpage";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const cardVariants = {
     enter: (direction) => ({
@@ -26,6 +26,18 @@ export default function Testimonials () {
     const [activeIndices, setActiveIndices] = useState([0, 1]);
     const [direction, setDirection] = useState(1);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const sectionRef = useRef()
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end start'],
+    })
+
+    const x = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1], 
+        [400, -100, -200]
+    )
 
     const totalTestimonials = testimonials.length;
 
@@ -81,9 +93,9 @@ export default function Testimonials () {
                 <SubText className={'Testimonials__headerText'} text={'Realita je jednoduchá – buď budete dále ztrácet peníze, nebo uděláte změnu dnes. Čekání stojí více, než si připouštíte.'}/>
             </div>
             <div className="button__container">
-                <div className="button">
-                    <RoundButton href='#' text='Všechny Ohlasy'/>
-                </div>
+                <motion.div className="button" style={{ x }}>
+                    <RoundButton href='/recenze' text='Všechny Ohlasy'/>
+                </motion.div>
             </div>
             <div className="image__container">
                 <CustomImage src='/assets/reviewsBackground.png' altText='about-image'/>

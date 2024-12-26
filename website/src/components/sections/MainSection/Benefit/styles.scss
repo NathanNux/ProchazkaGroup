@@ -8,6 +8,7 @@
     gap: 5vw;
     background-color: #04444C;
     color: #fff;
+    overflow: hidden;
 
     .Header{
         width: 55%;
@@ -76,7 +77,20 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
+            .divider{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 130%;
+                height: 2px;
+                background-color: #5E758D;
+            }
             .button{
+                position: absolute;
+                transform: translate(-50%, -50%);
+                z-index: 70;
                 .Round__button_container{
                     width: 200px;
                     height: 200px;

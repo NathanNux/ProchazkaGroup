@@ -1,89 +1,8 @@
+import { MainTestimonials } from "@/constants/mainpage";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const testimonials = [
-    {
-        id: 1,
-        number: '01',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 2,
-        number: '02',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 3,
-        number: '03',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 4,
-        number: '04',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 5,
-        number: '05',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 6,
-        number: '06',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 7,
-        number: '07',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 8,
-        number: '08',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 9,
-        number: '09',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    },
-    {
-        id: 10,
-        number: '10',
-        hashtag: '#hashtag',
-        name: 'John Doe',
-        town: 'Strakonice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-    }
-]
 
 // Animation variants
 const cardVariants = {
@@ -110,7 +29,7 @@ export default function TestimonialsMain () {
 
     // const visibleTestimonials = testimonials.slice(activeIndex, activeIndex + 2);
 
-    const totalTestimonials = testimonials.length;
+    const totalTestimonials = MainTestimonials.length;
 
     // Auto-rotation effect
     useEffect(() => {
@@ -170,7 +89,7 @@ export default function TestimonialsMain () {
             <div className="TestimonialsMain__Carousel__container">
                 <div className="TestimonialsMain__Carousel__subContainer">
                     {activeIndices.map((testimonialIndex, idx) => {
-                        const testimonial = testimonials[testimonialIndex];
+                        const testimonial = MainTestimonials[testimonialIndex];
                         const { id, name, town, description, number, hashtag } = testimonial;
 
                         return (

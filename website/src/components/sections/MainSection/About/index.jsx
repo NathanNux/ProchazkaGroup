@@ -2,10 +2,23 @@ import CustomImage from "@/components/ui/stickyImage";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 
 export default function About() {
-    //WIP: These Components do not have any anim. Anim needed to be done here as the desing dictates 
+    const sectionRef = useRef()
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end start'],
+    })
+
+    const x = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1], 
+        [400, -100, -200]
+    )
     return(
         <div className="About__Section">
             <div className="image__container">
@@ -24,9 +37,9 @@ export default function About() {
                 </div>
                 <div className="Button__container">
                     <SubText className={'add__Text'} text={'Každý den přicházíme s řešeními, kteránašim klientům otevírají nové možnosti, a vytváříme hodnotu, která přetrvává.'}/>
-                    <div className="button">
-                        <RoundButton href="#" text="náš tým"/>
-                    </div>
+                    <motion.div className="button" style={{ x }}>
+                        <RoundButton href="/o-nas" text="náš tým"/>
+                    </motion.div>
                     <div className="devider"/>
                 </div>
             </div>

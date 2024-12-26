@@ -3,9 +3,23 @@ import RollingIcons from "@/components/anim/TextAnims/RollingIcons";
 import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
 
 
 export default function Sales() {
+    const sectionRef = useRef()
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end start'],
+    })
+
+    const x = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1], 
+        [400, -100, -200]
+    )
     return (
         <div className="Sales">
             <div className="Content__Sales">
@@ -20,9 +34,9 @@ export default function Sales() {
                     <MainText initialColor={'#050A10'} text={'<span>VYJEDNALI JSME</span> PRO NAŠE KLIENTY<br />SLEVY A SKVĚLÉ NABÍDKY TAKY MIMO NAŠÍ OBLAST, ABYSTE UŠETŘILI<br />I U KAŽDODENNÍCH POTŘEB'}/>
                 </div>
                 <div className="Button__container">
-                    <div className="button">
-                        <RoundButton href='#' text='Zobrazit Slevy'/>
-                    </div>
+                    <motion.div className="button" style={{ x }}>
+                        <RoundButton href='/nabidky' text='Zobrazit Slevy'/>
+                    </motion.div>
                     <div className="divider"/>
                 </div>
             </div>

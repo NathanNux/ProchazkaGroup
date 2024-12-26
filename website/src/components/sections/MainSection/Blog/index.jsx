@@ -3,9 +3,24 @@ import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
 import RollingIcons from "@/components/anim/TextAnims/RollingIcons";
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 
 export default function Blog () {
+    const sectionRef = useRef()
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end start'],
+    })
+
+    const x = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1], 
+        [400, -100, -200]
+    )
+
     return (
         <div className="Blog">
             <div className="image__container">
@@ -21,9 +36,9 @@ export default function Blog () {
                     </p>
                 </div>
                 <div className="button__container">
-                    <div className="button">
-                        <RoundButton href='#' text='Chci Víc'/>
-                    </div>
+                    <motion.div className="button" style={{ x }}>
+                        <RoundButton href='/blog' text='Chci Víc'/>
+                    </motion.div>
                     <div className="devider"/>
                 </div>
                 <div className="main__Text">

@@ -170,11 +170,18 @@ const getChars = ({ text, initialColor }) => {
 const routes = {
     '/': 'Domov',
     '/benefit-program': 'Benefit program',
-    '/prilezitosti': 'Příležitosti',
-    '/nas-pribeh': 'Náš příběh',
+    '/nabidky': 'Nabídky',
+    '/o-nas': 'Náš příběh',
     '/recenze': 'Recenze',
     '/kontakt': 'Kontakt',
+    '/404': '404',
+    '/blog': 'Blog Článek',
+    '/privacy-policy': 'Ochrana Osobních Údajů',
+    '/cookies': 'Cookies',
+    '/reviews/efenberk-ondrej': 'Osobní Recenze',
+    '/reviews/efenberk-ondrej': 'Osobní Recenze',
 }
+
 const rows = [
     {
         number: 0,
