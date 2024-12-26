@@ -118,7 +118,7 @@ export default function Contact() {
                                                     }}
                                                 >
                                                     <p>{people[activeIndex].likes}</p>
-                                                    <Image  src='/thumbsUp.svg' alt="thumbsUp_icon" width={50} height={50}/> 
+                                                    <Image  src='/svg/thumbsup.svg' alt="thumbsUp_icon" width={50} height={50}/> 
                                                 </motion.div>
                                             </AnimatePresence>
 
@@ -135,7 +135,7 @@ export default function Contact() {
                                                     }}
                                                 >
                                                     <p>{people[activeIndex].reviews}</p>
-                                                    <Image  src='/thumbsUp.svg' alt="thumbsUp_icon" width={50} height={50}/> 
+                                                    <Image  src='/svg/comment.svg' alt="reviews__icon" width={50} height={50}/> 
                                                 </motion.div>
                                             </AnimatePresence>
                                         </div>
@@ -178,10 +178,13 @@ export default function Contact() {
                             >
                                 <motion.div
                                     variants={{
-                                        open: { rotate: 180 },
-                                        closed: { rotate: 90 }
+                                        open: { rotate: -90 },
+                                        closed: { rotate: 0 }
                                     }}
+                                    initial="closed"
+                                    animate={menuOpen ? "open" : "closed"}
                                     transition={{ duration: 0.2 }}
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
                                     <Image src='/svg/arrow-left.svg' alt="arrow" width={30} height={30} />
                                 </motion.div>
@@ -224,10 +227,10 @@ export default function Contact() {
                     <div className="Contact__CTA__buttons">
                         <div className="Contact__CTA__buttons__container">
                             <div className="cta__button">
-                                <SVGButton src='/thumbsUp.svg' altText='CallIcon' />
+                                <SVGButton src='/svg/MessageIcon.svg' altText='CallIcon' />
                             </div>
                             <div className="cta__button">
-                                <SVGButton src='/thumbsUp.svg' altText='CallIcon' />
+                                <SVGButton src='/svg/phoneIcon.svg' altText='CallIcon' />
                             </div>
                         </div>
                         <div className="devider"/>

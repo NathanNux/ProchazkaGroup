@@ -77,7 +77,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
             variants={modemAnim}
         >
             <div className="button" onClick={() => setIsOpen(!isOpen)}>
-                <SVGButton src='/svg/arrow-left.svg' altText='close_icon'/>
+                <SVGButton src='/svg/exit.svg' altText='close_icon'/>
                 <p>Zrušit</p>
             </div>
 
@@ -146,7 +146,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                             }}
                                         >
                                             <p>{people[activeIndex].likes}</p>
-                                            <Image  src='/thumbsUp.svg' alt="thumbsUp_icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
+                                            <Image  src='/svg/thumbsUp.svg' alt="thumbsUp_icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
                                         </motion.div>
                                     </AnimatePresence>
 
@@ -163,7 +163,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                             }}
                                         >
                                             <p>{people[activeIndex].reviews}</p>
-                                            <Image  src='/thumbsUp.svg' alt="thumbsUp_icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
+                                            <Image  src='/svg/comment.svg' alt="reviews__icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
                                         </motion.div>
                                     </AnimatePresence>
                                 </div>
@@ -220,10 +220,13 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                     >
                                         <motion.div
                                             variants={{
-                                                open: { rotate: 180 },
-                                                closed: { rotate: 90 }
+                                                open: { rotate: -90 },
+                                                closed: { rotate: 0 }
                                             }}
+                                            initial="closed"
+                                            animate={menuOpen ? "open" : "closed"}
                                             transition={{ duration: 0.2 }}
+                                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                         >
                                             <Image src='/svg/arrow-left.svg' alt="arrow" width={30} height={30} />
                                         </motion.div>

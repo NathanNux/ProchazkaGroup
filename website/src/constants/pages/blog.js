@@ -2,25 +2,29 @@ export const BlogData = [
     {
         time: '10min',
         data: '',
-        src: '/thumbsUp.svg',
+        src: '/svg/book.svg',
+        src2: '/svg/bookblack.svg',
         alt: 'book__icon'
     },
     {
         time: '',
         data: '1928',
-        src: '/thumbsUp.svg',
+        src: '/svg/person.svg',
+        src2: '/svg/personblack.svg',
         alt: 'views__icon'
     },
     {
         time: '',
         data: '428',
-        src: '/thumbsUp.svg',
+        src: '/svg/thumbsup.svg',
+        src2: '/svg/thumbsupblack.svg',
         alt: 'Likes__icon'
     },
     {
         time: '',
         data: '28',
-        src: '/thumbsUp.svg',
+        src: '/svg/comment.svg',
+        src2: '/svg/commentblack.svg', 
         alt: 'Comments__icon'
     }
 ]
@@ -388,6 +392,7 @@ export const comments = [
 
 
 export const icons = [
+  // WIP: Add any custom icons here
     { name: "facebook", src: "/thumbsUp.png" },
     { name: "instagram", src: "/thumbsUp.png" },
     { name: "linkedin", src: "/thumbsUp.png" },

@@ -111,14 +111,12 @@
                         flex-direction: column;
                         background-color: #fff;
 
-                        .heading{
-                            p{
-                                font-size: 2rem;
-                                margin: 0;
-                                text-transform: uppercase;
-                                font-weight: 300;
-                                line-height: 1.5;
-                            }
+                        h2{
+                            font-size: 2rem;
+                            margin: 0;
+                            text-transform: uppercase;
+                            font-weight: 300;
+                            line-height: 1.5;
                         }
                         p{
                             width: 90%;
@@ -137,11 +135,8 @@
                             width: 80%;
                             bottom: -25%;
 
-                            .heading{
-                                width: 100%;
-                                p{
-                                    text-align: right;
-                                }
+                            h2{
+                                text-align: right;
                             }
 
                             p{
@@ -190,7 +185,7 @@
                 color: #fff;
                 width: 60%;
 
-                .heading{
+                p{
                     font-size: 4rem;
                     margin: 0;
                     text-transform: uppercase;

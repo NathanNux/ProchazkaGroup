@@ -129,11 +129,11 @@ export default function Testimonials () {
                                             </p>
                                             <div className="Testimonials__Carousel__container__item__header__controls">
                                             <button onClick={() => handlePrev(idx)}>
-                                                <Image src="/svg/arrow-left.svg" alt="Arrow Left" width={15} height={15} />
+                                                <Image src="/svg/arrow-left.svg" alt="Arrow Left" width={20} height={20} />
                                             </button>
                                             <p>|</p>
                                             <button onClick={() => handleNext(idx)}>
-                                                <Image src="/svg/arrow-right.svg" alt="Arrow Right" width={15} height={15} />
+                                                <Image src="/svg/arrow-right.svg" alt="Arrow Right" width={20} height={20} />
                                             </button>
                                             </div>
                                         </div>

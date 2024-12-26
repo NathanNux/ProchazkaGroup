@@ -117,10 +117,13 @@ export default function BenefitReminder() {
                                                     >
                                                         <motion.div
                                                             variants={{
-                                                                open: { rotate: 180 },
-                                                                closed: { rotate: 90 }
+                                                                open: { rotate: -90 },
+                                                                closed: { rotate: 0 }
                                                             }}
+                                                            initial="closed"
+                                                            animate={menuOpen ? "open" : "closed"}
                                                             transition={{ duration: 0.2 }}
+                                                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                                         >
                                                             <Image src='/svg/arrow-left.svg' alt="arrow" width={30} height={30} />
                                                         </motion.div>
@@ -170,7 +173,7 @@ export default function BenefitReminder() {
                                                         }}
                                                     >
                                                         <p>{people[activeIndex].likes}</p>
-                                                        <Image  src='/thumbsUp.svg' alt="thumbsUp_icon" width={50} height={50} style={{ backgroundColor: '#000'}}/> 
+                                                        <Image  src='/svg/thumbsupblack.svg' alt="thumbsUp_icon" width={50} height={50}/> 
                                                     </motion.div>
                                                 </AnimatePresence>
 
@@ -187,7 +190,7 @@ export default function BenefitReminder() {
                                                         }}
                                                     >
                                                         <p>{people[activeIndex].reviews}</p>
-                                                        <Image  src='/thumbsUp.svg' alt="thumbsUp_icon" width={50} height={50} style={{ backgroundColor: '#000'}}/> 
+                                                        <Image  src='/svg/commentblack.svg' alt="review__icon" width={50} height={50}/> 
                                                     </motion.div>
                                                 </AnimatePresence>
                                             </div>

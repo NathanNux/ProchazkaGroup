@@ -2,7 +2,7 @@ export const stats = [
     {
         name: 'clients',
         number: '1928',
-        src: '/thumbsUp.svg',
+        src: '/svg/person.svg',
         alt: 'clients_icon'
     },
     {
@@ -14,7 +14,7 @@ export const stats = [
     {
         name: 'comments',
         number: '28',
-        src: '/thumbsUp.svg',
+        src: '/svg/comment.svg',
         alt: 'clients_icon'
     }
 ]
@@ -128,6 +128,7 @@ export const WebsiteReviews = [
 
 
 export const icons = [
+    // WIP: add icons here as objects
     { name: "facebook", src: "/thumbsUp.png" },
     { name: "instagram", src: "/thumbsUp.png" },
     { name: "linkedin", src: "/thumbsUp.png" },

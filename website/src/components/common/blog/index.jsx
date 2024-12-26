@@ -29,21 +29,23 @@ function BlogHeader () {
             </div>
             <div className="Details">
                 {BlogData.map((detail, i) => {
-                    const { time, data, src, alt} = detail
+                    const { time, data, src2, alt} = detail
 
                     return (
                         <div className="Details__item" key={`itemsDet${i}`}>
                             <h3>
                                 {time || data}
                             </h3>
-                            <Image src={src} alt={alt} width={50} height={50}/>
+                            <Image src={src2} alt={alt} width={30} height={30}/>
                         </div>
                     )
                 })}
             </div>
-            <div className="settings">
-                <SVGButton src='/thumbsUp.svg' altText='icon'/>
-                <SVGButton src='/thumbsUp.svg' altText='icon'/>
+            <div className="settings"
+                //WIP: Add different icons and functionality to play audio and speed it up and down with a widget for the progress bar
+            >
+                <SVGButton src='/svg/thumbsup.svg' altText='icon'/>
+                <SVGButton src='/svg/thumbsup.svg' altText='icon'/>
             </div>
             <div className="devider"/>
         </div>
@@ -369,10 +371,10 @@ function CommentForm () {
                     </div>
                     <div className="butttons">
                         <div className="buttton">
-                            <SVGButton src="/thumbsUp.png" altText="thumbsUp_icon"/>
+                            <SVGButton src="/svg/thumbsup.svg" altText="thumbsUp_icon"/>
                         </div>
                         <div className="buttton">
-                            <SVGButton src="/thumbsUp.png" altText="thumbsUp_icon"/>
+                            <SVGButton src="/svg/thumbsdown.svg" altText="thumbsdonw_icon"/>
                         </div>
                     </div>
                 </div>  
@@ -469,11 +471,11 @@ function CommentsList() {
                 </div>
                 <div className="Header__stats">
                     {BlogData.map(( info, i) => {
-                        const { time, data, src, alt } = info
+                        const { time, data, src2, alt } = info
                         return (
                             <div className="stat" key={`stat${i}`}>
                                 <p>{data}</p>
-                                {data && <Image src={src} alt={alt} width={50} height={50}/>}
+                                {data && <Image src={src2} alt={alt} width={50} height={50}/>}
                             </div>
                         )
                     })}
@@ -509,8 +511,8 @@ function CommentsList() {
 
                                     <div className="comment__header__likes">
                                         <h3>{likes}</h3>
-                                        <Image src='/thumbsUp.svg' alt="thumbsUp-icon" width={30} height={30}/>
-                                        <SVGButton src='/thumbsUp.svg' altText='thumbsUp-icon'/>
+                                        <Image src='/svg/thumbsUpblack.svg' alt="thumbsUp-icon" width={30} height={30}/>
+                                        <SVGButton src='/svg/thumbsUp.svg' altText='thumbsUp-icon'/>
                                     </div>
                                 </div>
                                 <div className="comment__content">

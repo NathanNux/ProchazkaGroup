@@ -32,6 +32,7 @@ const FooterLinks = [
 ]
 
 const icons = [
+    //WIP: add icons here
     { name: "facebook", src: "/thumbsUp.png" },
     { name: "instagram", src: "/thumbsUp.png" },
     { name: "linkedin", src: "/thumbsUp.png" },

@@ -52,7 +52,7 @@
             align-items: flex-end;
             justify-content: flex-end;
             height: 100%;
-            gap: 2rem;
+            gap: 4rem;
 
             .Details__item{
                 display: flex;
@@ -65,11 +65,7 @@
                     font-size: 2rem;
                     font-weight: 800;
                     margin: 0;
-                    padding-bottom: 2.5rem;
-                }
-
-                img{
-                    background-color: #5E758D;
+                    padding-bottom: 1rem;
                 }
             }
         }
@@ -837,9 +833,7 @@
                 .stat{
                     display: flex;
                     align-items: flex-end;
-                    img{
-                        background-color: #050A10;
-                    }
+                    gap: 0.5rem;
 
                     p{
                         font-size: 2rem;
@@ -917,9 +911,6 @@
 
                         h3{
                             font-size: 1.6rem;
-                        }
-                        img{ 
-                            background-color: #5E758D;
                         }
                     }
                 }

@@ -136,7 +136,7 @@ export default function ReviewsList() {
                     <div className="devider__rev"/>
                     <div className="controls">
                         <div className="button" onClick={() => setIsOpen(!isOpen)}>
-                            <SVGButton src='/thumbsUp.svg' altText="add__icon" />
+                            <SVGButton src='/svg/addIcon.svg' altText="add__icon" />
                         </div>
                         <p>Chcete přidat váš feedback?</p>
                     </div>
@@ -179,10 +179,10 @@ export default function ReviewsList() {
                                 <div className="ratings">
                                     <p>{name}</p>
                                     <div className="buttons">
-                                        <SVGButton src='/thumbsUp.svg' altText='Like__icon'/>
+                                        <SVGButton src='/svg/thumbsUp.svg' altText='Like__icon'/>
                                         <p>{likes}</p>
-                                        <div style={{ backgroundColor: '#050A10'}}>
-                                            <Image src='/thumbsUp.svg' alt="like__icon" width={35} height={35}/>
+                                        <div style={{ marginLeft: '15px' }}>
+                                            <Image src='/svg/thumbsupblack.svg' alt="like__icon" width={35} height={35}/>
                                         </div>
                                     </div>
                                 </div>
