@@ -374,3 +374,18 @@ export const partnersIcons = [
         alt: 'You Plus'
     }
 ]
+
+export const BenefitCards = [
+    {
+        number: '01',
+        content: 'Budete mít více času a klid díky plánování'
+    },
+    {
+        number: '02',
+        content: 'Kontrolujeme vaši situaci pravidelně'
+    },
+    {
+        number: '03',
+        content: 'Jsme vázáni zákonem a ČNB, máme zkušenosti i výsledky'
+    }
+]

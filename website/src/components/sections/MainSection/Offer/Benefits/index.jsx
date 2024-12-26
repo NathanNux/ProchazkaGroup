@@ -1,20 +1,32 @@
 import MainText from "@/components/anim/TextAnims/MainText"
 import SubText from "@/components/anim/TextAnims/SubText"
+import { BenefitCards } from "@/constants/mainpage"
+import { motion } from "framer-motion"
 
-const cards = [
-    {
-        number: '01',
-        content: 'Budete mít více času a klid díky plánování'
-    },
-    {
-        number: '02',
-        content: 'Kontrolujeme vaši situaci pravidelně'
-    },
-    {
-        number: '03',
-        content: 'Jsme vázáni zákonem a ČNB, máme zkušenosti i výsledky'
+
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.3
+        }
     }
-]
+};
+
+const rectVariants = {
+    hidden: {
+        x: "50vw",
+        opacity: 0
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        }
+    }
+};
 
 export default function Benefits() {
     return(
@@ -35,21 +47,31 @@ export default function Benefits() {
                     <SubText text={'Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani<br/> své špatné situace způsobené nezodpovědnými návyky. <br/> <br/>Společně jsme vytvořili plán, který nejen zlepšil jejich situaci,<br/> ale změnil jejich pohled na budoucnost. <br/> <br/>Dnes už řeší jen to, jak investovat své úspory a využít svůj volný <br/> čas s rodinou. Zní to dobře, že jo?'}/>
                 </div>
             </div>
-            <div className="cards__container">
+            <motion.div 
+                className="cards__container"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-100px" }}
+            >
                 <div className="top__devider"/>
-                {cards.map(( card, i) => {
+                {BenefitCards.map(( card, i) => {
                     const { number, content } = card
                     return(
-                        <div className="card__wrapper" key={i}>
+                        <motion.div 
+                            className="card__wrapper" 
+                            key={i}
+                            variants={rectVariants}
+                        >
                             <div className="card">
                                 <h3>{number}</h3>
                                 <p>{content}</p>
                             </div>
                             <div className="devider"/>
-                        </div>
+                        </motion.div>
                     )
                 })}
-            </div>
+            </motion.div>
             <div className="divider"/>
         </div>
     )

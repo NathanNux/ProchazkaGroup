@@ -1,5 +1,30 @@
 import MainText from "@/components/anim/TextAnims/MainText"
 import { cardsRequirements } from "@/constants/mainpage"
+import { motion } from "framer-motion"
+
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.3
+        }
+    }
+};
+
+const rectVariants = {
+    hidden: {
+        x: "50vw",
+        opacity: 0
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        }
+    }
+};
 
 
 export default function Requirements () {
@@ -16,23 +41,29 @@ export default function Requirements () {
                 </div>
             </div>
 
-            <div className="Cards__container">
+            <motion.div 
+                className="Cards__container"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-100px" }}
+            >
                 {cardsRequirements.map(( card, i) => {
                     const { number, content } = card
                     return(
-                        <div className="card__wrapper" key={i}>
+                        <motion.div 
+                            className="card__wrapper" 
+                            key={i}
+                            variants={rectVariants}
+                        >
                             <div className="card">
-                                <h3>    
-                                    {number}
-                                </h3>
-                                <p>
-                                    {content}
-                                </p>
+                                <h3>{number}</h3>
+                                <p>{content}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     )
                 })}
-            </div>
+            </motion.div>
        </div> 
     )
 }

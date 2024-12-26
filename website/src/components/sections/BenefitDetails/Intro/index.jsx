@@ -1,3 +1,4 @@
+import MainText from "@/components/anim/TextAnims/MainText";
 import RollingText from "@/components/anim/TextAnims/RollingText";
 import SubText from "@/components/anim/TextAnims/SubText";
 import { IntroRects } from "@/constants/benefitpage";
@@ -64,9 +65,7 @@ export default function Intro() {
             <div className="Intro__content">
                 <div className="Texts__container">
                     <div className="mainText">
-                        <h3>
-                            ZÍSKEJ ODMĚNY ZA NĚCO TAK JEDNODUCHÉHO, ŽE SE TI NEBUDE CHTÍT VĚŘIT.
-                        </h3>
+                        <MainText initialColor={'#050A10'} text='ZÍSKEJ ODMĚNY ZA NĚCO<br />TAK JEDNODUCHÉHO, ŽE<br />SE TI NEBUDE CHTÍT VĚŘIT'/>
                     </div>
                     <div className="subText__container">
                         <div className="ps">

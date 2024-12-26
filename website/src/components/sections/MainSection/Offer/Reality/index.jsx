@@ -3,6 +3,32 @@ import { chartData, dataR } from "@/constants/mainpage"
 import { useOnWindowResize } from "@/hooks/useOnWindowResize"
 import { AreaChart } from "@tremor/react"
 import { useState } from "react"
+import { motion } from "framer-motion"
+
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.3
+        }
+    }
+};
+
+const rectVariants = {
+    hidden: {
+        x: "50vw",
+        opacity: 0
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        }
+    }
+};
+
 
 export default function Reality() {
     const [ isMobile, setIsMobile ] = useState(false)
@@ -41,18 +67,28 @@ export default function Reality() {
                     <p>Statistiky</p>
                 </div>
             </div>
-            <div className="Text__container">
+            <motion.div 
+                className="Text__container"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-100px" }}
+            >
                 {dataR.map((data, i) => {
-                    const { rate, text } = data
+                    const { rate, text } = data;
                     return(
-                        <div className="Text__wrapper" key={i}>
+                        <motion.div 
+                            className="Text__wrapper" 
+                            key={i}
+                            variants={rectVariants}
+                        >
                             <div className="divider"/>
                             <h3>{rate}</h3>
                             <p>{text}</p>
-                        </div>
+                        </motion.div>
                     )
                 })}
-            </div>
+            </motion.div>
             <div className="divider"/>
         </div>
     )
