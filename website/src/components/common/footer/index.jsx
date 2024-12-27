@@ -7,9 +7,47 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import GetChars from "../navbar/body/getChars";
+import { useNewsletterForm } from "@/hooks/useNewsletterForm";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Footer() {
     const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 });
+    const { toast } = useToast()
+    const {
+        formData,
+        setFormData,
+        loading,
+        handleSubmit: handleNewsletterSubmit
+    } = useNewsletterForm()
+
+    const handleSubmit = async (e) => {
+        e?.preventDefault()
+        
+        if (!formData.name || !formData.email) {
+            toast({
+                title: "Chyba!",
+                description: "Prosím vyplňte všechna pole",
+                variant: "destructive"
+            })
+            return
+        }
+
+        const result = await handleNewsletterSubmit()
+        
+        if (result.success) {
+            toast({
+                title: "Úspěch!",
+                description: result.message,
+                variant: "success"
+            })
+        } else {
+            toast({
+                title: "Chyba!",
+                description: result.message,
+                variant: "destructive"
+            })
+        }
+    }
     return (
         <section className="Footer">
             <div className="Footer__Header">
@@ -40,9 +78,9 @@ export default function Footer() {
                     <div className="Form__form">
                         <div className="devider"/>
                         <div className="button__container">
-                            <RoundButton  href='/' text='Chci se Zapojit'/>
+                            <RoundButton  href='#' text={ loading ? 'Odesilám...' : 'Chci se Zapojit'} disableLink={true} onClick={handleSubmit}/>
                         </div>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="Form__input__container">
                                 <p>Δ</p>
                                 <label htmlFor="name">Jméno:</label>
@@ -50,6 +88,8 @@ export default function Footer() {
                                     type="text" 
                                     id="name" 
                                     name="name" 
+                                    value={formData.name}
+                                    onChange={(e) => setFormData(prev =>({ ...prev, name: e.target.value }))}
                                     placeholder="Vaše jméno"
                                     required
                                 />
@@ -61,7 +101,9 @@ export default function Footer() {
                                 <input 
                                     type="email" 
                                     id="email" 
-                                    name="email" 
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={(e) => setFormData(prev =>({ ...prev, email: e.target.value }))} 
                                     placeholder="Váš email"
                                     required
                                 />

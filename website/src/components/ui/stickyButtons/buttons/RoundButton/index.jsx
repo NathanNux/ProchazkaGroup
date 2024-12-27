@@ -5,7 +5,7 @@ import Link from "next/link";
 import Magnetic from "@/components/anim/Magnetic";
 import { useRouter } from "next/navigation";
 
-export default function RoundButton({ href, text, disableLink }) {
+export default function RoundButton({ href, text, disableLink, onClick }) {
     const { registerRef, unregisterRef } = useCursorRef();
     const ButtonBoundsRef = useRef(null);
     const buttonRef = useRef(null);
@@ -13,9 +13,15 @@ export default function RoundButton({ href, text, disableLink }) {
     const [boundsHovered, setBoundsHovered] = useState(false); 
     const router = useRouter();
 
-    const handleClick = () => {
-        if(disableLink === true) return;
-        router.push(href);
+    const handleClick = (e) => {
+        if (onClick) {
+            e.preventDefault()
+            onClick(e)
+            return
+        }
+        
+        if (disableLink === true) return
+        router.push(href)
     }
 
     const scale = {
@@ -95,7 +101,7 @@ export default function RoundButton({ href, text, disableLink }) {
         <Magnetic sensitivity='0.05'>
             <motion.div transformTemplate={template} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Round__button_container' onClick={handleClick}>
                 <div ref={ButtonBoundsRef} className='Round__button_Bounds'></div>
-                    <Link href={href}>
+                    <Link href={href} onClick={(e) => onClick && e.preventDefault()}>
                         <p ref={textRef}>{text}</p>
                     </Link>
             </motion.div>

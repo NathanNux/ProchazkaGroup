@@ -5,6 +5,7 @@ import Lenis from "lenis";
 import { LoadProvider } from "@/context/LoadProvider";
 import { CursorRefProvider } from "@/context/CursorRefProvider";
 import Transition from "@/components/anim/Transition";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }) {
       <CursorRefProvider>
           <Transition> 
             <Component {...pageProps} />
+            <Toaster />
           </Transition>
       </CursorRefProvider>
     </LoadProvider>

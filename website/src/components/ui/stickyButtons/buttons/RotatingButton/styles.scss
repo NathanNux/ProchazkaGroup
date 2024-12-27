@@ -12,6 +12,7 @@
         border: #00F0FF 2.5px solid;
         z-index: 100;
         cursor: pointer;
+        will-change: transform;
         .Rotating__button_Bounds{
             position: absolute;
             top: 0;
@@ -23,6 +24,7 @@
             align-content: center;
             z-index: 4;
             border-radius: 50%;
+            will-change: transform;
             // I need to expand the border only when I hover over it
             &:hover{
                 scale: 3;
