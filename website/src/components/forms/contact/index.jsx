@@ -4,6 +4,9 @@ import Image from "next/image";
 import MyButton from "@/components/ui/stickyButtons/buttons/MyButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
+import { useReviewForm } from "@/hooks/useReviewForm";
+import { useToast } from "@/hooks/use-toast";
+import { useEffect } from "react";
 
 //NOTE:FeedBack and contact are switched
 
@@ -41,8 +44,37 @@ const icons = [
     { name: "mainWeb", src: "/thumbsUp.png" }
 ];
 
-export default function ContactForm({ scroll }) {
+export default function ContactForm({ scroll, name }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
+    
+    const { toast } = useToast()
+    const {
+        formData,
+        setFormData,
+        loading,
+        handleSubmit: handleReviewSubmit
+    } = useReviewForm()
+
+    // Set default person on mount
+    useEffect(() => {
+        setFormData(prev => ({
+            ...prev,
+            consultantName: name,
+            reviewType: 'poradce' // Always poradce in this form
+        }))
+    }, [name])
+
+    const handleSubmit = async (e) => {
+        e?.preventDefault()
+        
+        const result = await handleReviewSubmit()
+        
+        toast({
+            title: result.success ? "Úspěch!" : "Chyba!",
+            description: result.message,
+            variant: result.success ? "success" : "destructive"
+        })
+    }
     return (
         <motion.section 
             className="ContactForm" 
@@ -61,7 +93,15 @@ export default function ContactForm({ scroll }) {
                                     <h3>Δ</h3>
                                     <div className="input__wrapper">
                                         <label htmlFor="name">Jméno:</label>
-                                        <input placeholder="Vaše Jméno" type="text" id="name" name="name" required />
+                                        <input 
+                                            type="text" 
+                                            value={formData.customerName}
+                                            onChange={(e) => setFormData(prev => ({
+                                                ...prev,
+                                                customerName: e.target.value
+                                            }))}
+                                            placeholder="Vaše jméno"
+                                        />
                                     </div>
                                     
                                 </div>
@@ -74,7 +114,14 @@ export default function ContactForm({ scroll }) {
                                             <label htmlFor="message">Zpráva:</label>
                                             <div className="label__devider"/>
                                         </div>
-                                        <textarea placeholder="Vaše zpráva" id="message" name="message" rows="4" required></textarea>
+                                        <textarea 
+                                            value={formData.message}
+                                            onChange={(e) => setFormData(prev => ({
+                                                ...prev,
+                                                message: e.target.value
+                                            }))}
+                                            placeholder="Váš názor"
+                                        />
                                     </div>
                                 </div>
                                 <div className="terms__container">
@@ -86,7 +133,12 @@ export default function ContactForm({ scroll }) {
 
                         <div className="CTA">
                             <div className="devider"/>
-                            <RoundButton href='/' text='Poslat Zprávu' />
+                            <RoundButton 
+                                href='' 
+                                text={loading ? 'Odesílám...' : 'Poslat Recenzi'} 
+                                disableLink={true}
+                                onClick={handleSubmit}
+                            />
                         </div>
 
                         <div className="bottom__footer">

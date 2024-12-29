@@ -7,6 +7,7 @@ export default function PersonFeebackPage2() {
     const name = "Ondřej Efenberk"
     const moto = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     const number = '02'
+    const databaseName = 'efenberk-ondrej'
     
     return(
         <>
@@ -62,7 +63,7 @@ export default function PersonFeebackPage2() {
             <main lang="cs">
                 <Cursor />
                 <Navbar />
-                <ContactIntro name={name} moto={moto} number={number}/>
+                <ContactIntro name={name} moto={moto} number={number} databaseName={databaseName}/>
             </main>
         </>
     )

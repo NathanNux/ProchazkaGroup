@@ -7,7 +7,7 @@ import { useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-export default function ContactIntro({name, number, moto,}) {
+export default function ContactIntro({name, number, moto, databaseName}) {
     const sectionRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -100,7 +100,7 @@ export default function ContactIntro({name, number, moto,}) {
                     </div>
                 </div>
             </div>
-            <ContactForm scroll={scrollYProgress}/>
+            <ContactForm scroll={scrollYProgress} name={databaseName}/>
         </section>
     )
 }

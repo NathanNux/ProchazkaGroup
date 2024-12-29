@@ -4,7 +4,9 @@ import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
 import { people } from "@/constants/people"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useReviewForm } from '@/hooks/useReviewForm'
+import { useToast } from '@/hooks/use-toast'
 const modemAnim = {
     open: {
         x: "0",
@@ -68,6 +70,39 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
     const [previewIndex, setPreviewIndex] = useState(null)
 
     const activeIndex = previewIndex ?? currentIndex
+
+    const { toast } = useToast()
+    const {
+        formData,
+        setFormData,
+        loading,
+        handleSubmit: handleReviewSubmit
+    } = useReviewForm()
+
+    // Set default person on mount
+    useEffect(() => {
+        setFormData(prev => ({
+            ...prev,
+            consultantName: people[0].name,
+            reviewType: people[0].name === 'benefitprogram' ? 'benefitprogram' : 'poradce'
+        }))
+    }, [])
+
+    const handleSubmit = async (e) => {
+        e?.preventDefault()
+        
+        const result = await handleReviewSubmit()
+        
+        toast({
+            title: result.success ? "Úspěch!" : "Chyba!",
+            description: result.message,
+            variant: result.success ? "success" : "destructive"
+        })
+
+        if (result.success) {
+            setIsOpen(false)
+        }
+    }
     return(
         <motion.section 
             className="ReviewModem"
@@ -181,7 +216,15 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                             <div className="input__container">
                                 <h3>Δ</h3>
                                 <label>Jméno:</label>
-                                <input type="text" placeholder="Vaše jméno"/>
+                                <input 
+                                    type="text" 
+                                    value={formData.customerName}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        customerName: e.target.value
+                                    }))}
+                                    placeholder="Vaše jméno"
+                                />
                             </div>
                         </div>
                         
@@ -252,6 +295,11 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                                         setCurrentIndex(index)
                                                         setMenuOpen(false)
                                                         setPreviewIndex(null)
+                                                        setFormData(prev => ({
+                                                            ...prev,
+                                                            consultantName: person.name,
+                                                            reviewType: person.name === 'benefitprogram' ? 'benefitprogram' : 'poradce'
+                                                        }))
                                                     }}
                                                 >
                                                     {person.name}
@@ -268,7 +316,14 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                             <div className="input__container">
                                 <h3>λ</h3>
                                 <label>Váš Názor:</label>
-                                <textarea placeholder="Váš Názor"/>
+                                <textarea 
+                                    value={formData.message}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        message: e.target.value
+                                    }))}
+                                    placeholder="Váš názor"
+                                />
                             </div>
                         </div>
                         <div className="input__container">
@@ -281,7 +336,12 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                 </div>
                 <div className="cta">
                     <div className="button">
-                        <RoundButton href='' text='Poslat Zprávu' disableLink={true}/>
+                        <RoundButton 
+                            href='' 
+                            text={loading ? 'Odesílám...' : 'Poslat Recenzi'} 
+                            disableLink={true}
+                            onClick={handleSubmit}
+                        />
                     </div>
                     <div className="devider"/>
                 </div>

@@ -1,11 +1,32 @@
 import Image from "next/image";
 import { motion, useTransform } from "framer-motion";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
+import { useQuestionForm } from "@/hooks/useQuestionForm";
+import { useToast } from "@/hooks/use-toast";
 
 //NOTE: FeedBack and contact are switched
 
 export default function FeedbackForm({ scroll }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
+    const { toast } = useToast()
+    const {
+        formData,
+        setFormData,
+        loading,
+        handleSubmit: handleFeedbackSubmit
+    } = useQuestionForm()
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        
+        const result = await handleFeedbackSubmit()
+        
+        toast({
+            title: result.success ? "Úspěch!" : "Chyba!",
+            description: result.message,
+            variant: result.success ? "success" : "destructive"
+        })
+    }
     return (
         <motion.section 
             className="FeedbackForm" 
@@ -20,7 +41,16 @@ export default function FeedbackForm({ scroll }) {
                             <h3>Δ</h3>
                             <div className="input__wrapper">
                                 <label htmlFor="name">Jméno:</label>
-                                <input placeholder="Vaše Jméno" type="text" id="name" name="name" required />
+                                <input 
+                                    type="text"
+                                    value={formData.name}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        name: e.target.value
+                                    }))}
+                                    placeholder="Vaše jméno"
+                                    required
+                                />
                             </div>
                             
                         </div>
@@ -30,7 +60,18 @@ export default function FeedbackForm({ scroll }) {
                             <h3>ζ</h3>
                             <div className="input__wrapper">
                                 <label htmlFor="email">E-mail:</label>
-                                <input placeholder="Váš E-mail" type="email" id="email" name="email" required />
+                                <input 
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))}
+                                    placeholder="Váš E-mail"
+                                    required
+                                />
                             </div>      
                            
                         </div>
@@ -40,7 +81,18 @@ export default function FeedbackForm({ scroll }) {
                             <h3>π</h3>
                             <div className="input__wrapper">
                                 <label htmlFor="phone">Tel. číslo:</label>
-                                <input placeholder="+420" type="tel" id="phone" name="phone" required />
+                                <input 
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        phone: e.target.value
+                                    }))}
+                                    placeholder="+420"
+                                    required
+                                />
                             </div>
                            
                         </div>
@@ -53,7 +105,18 @@ export default function FeedbackForm({ scroll }) {
                                     <label htmlFor="message">Zpráva:</label>
                                     <div className="label__devider"/>
                                 </div>
-                                <textarea placeholder="Vaše zpráva" id="message" name="message" rows="4" required></textarea>
+                                <textarea 
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    value={formData.message}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        message: e.target.value
+                                    }))}
+                                    placeholder="Vaše zpráva"
+                                    required
+                                />
                             </div>
                         </div>
                         <div className="terms__container">
@@ -65,7 +128,12 @@ export default function FeedbackForm({ scroll }) {
 
                 <div className="CTA">
                     <div className="devider"/>
-                    <RoundButton href='/' text='Poslat Zprávu' />
+                    <RoundButton 
+                        href='/' 
+                        text={loading ? 'Odesílám...' : 'Poslat Zprávu'}
+                        onClick={handleSubmit}
+                        disableLink={true}
+                    />
                 </div>
 
                 <div className="bottom__footer">

@@ -2,7 +2,10 @@ import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useContactForm } from '@/hooks/useContactForm'
+import { useToast } from '@/hooks/use-toast'
+
 
 const modemAnim = {
     open: {
@@ -69,7 +72,38 @@ export default function ContactModem({
     previewIndex,
     setPreviewIndex
 }) {
+    const { toast } = useToast()
+    const {
+        formData,
+        setFormData,
+        loading,
+        handleSubmit: handleContactSubmit
+    } = useContactForm()
     const [menuOpen, setMenuOpen] = useState(false)
+    // Set default person on mount
+    useEffect(() => {
+        setFormData(prev => ({
+            ...prev,
+            selectedPerson: people[0].name,
+        }))
+    }, [])
+
+    const handleSubmit = async (e) => {
+        e?.preventDefault()
+        
+        const result = await handleContactSubmit()
+        
+        toast({
+            title: result.success ? "Úspěch!" : "Chyba!",
+            description: result.message,
+            variant: result.success ? "success" : "destructive"
+        })
+
+        if (result.success) {
+            setIsOpen(false)
+        }
+    }
+
     return(
         <motion.section 
             className="ContactModem"
@@ -201,7 +235,15 @@ export default function ContactModem({
                             <div className="input__container">
                                 <h3>Δ</h3>
                                 <label>Jméno:</label>
-                                <input type="text" placeholder="Vaše jméno"/>
+                                <input 
+                                    type="text" 
+                                    value={formData.name}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        name: e.target.value
+                                    }))}
+                                    placeholder="Vaše jméno"
+                                />
                             </div>
                         </div>
                         <div className="input__container">
@@ -209,7 +251,15 @@ export default function ContactModem({
                             <div className="input__container">
                                 <h3>ζ</h3>
                                 <label>E-mail:</label>
-                                <input type="email" placeholder="Váš email"/>
+                                <input 
+                                    type="email" 
+                                    value={formData.email}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))}
+                                    placeholder="Váš email"
+                                />
                             </div>
                         </div>
                         <div className="input__container">
@@ -217,7 +267,15 @@ export default function ContactModem({
                             <div className="input__container">
                                 <h3>π</h3>
                                 <label>Telefon:</label>
-                                <input type="tel" placeholder="+420"/>
+                                <input 
+                                    type="tel" 
+                                    value={formData.phone}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        phone: e.target.value
+                                    }))}
+                                    placeholder="+420"
+                                />
                             </div>
                         </div>
                         
@@ -288,6 +346,10 @@ export default function ContactModem({
                                                         setCurrentIndex(index)
                                                         setMenuOpen(false)
                                                         setPreviewIndex(null)
+                                                        setFormData(prev => ({
+                                                            ...prev,
+                                                            selectedPerson: person.name
+                                                        }))
                                                     }}
                                                 >
                                                     {person.name}
@@ -304,7 +366,14 @@ export default function ContactModem({
                             <div className="input__container">
                                 <h3>λ</h3>
                                 <label>Zpráva:</label>
-                                <textarea placeholder="Vaše zpráva"/>
+                                <textarea 
+                                    value={formData.message}
+                                    onChange={(e) => setFormData(prev => ({
+                                        ...prev,
+                                        message: e.target.value
+                                    }))}
+                                    placeholder="Vaše zpráva"
+                                />
                             </div>
                         </div>
                         <div className="input__container">
@@ -317,7 +386,12 @@ export default function ContactModem({
                 </div>
                 <div className="cta">
                     <div className="button">
-                        <RoundButton href='' text='Poslat Zprávu' disableLink={true}/>
+                    <RoundButton 
+                        href='' 
+                        text={loading ? 'Odesílám...' : 'Poslat Zprávu'} 
+                        disableLink={true}
+                        onClick={handleSubmit}
+                    />
                     </div>
                     <div className="devider"/>
                 </div>
