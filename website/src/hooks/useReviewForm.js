@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { supabase } from './supabaseClient'
+
 
 export const useReviewForm = () => {
     const [formData, setFormData] = useState({
@@ -36,28 +38,28 @@ export const useReviewForm = () => {
         }
 
         try {
-            // Simulate database call
-            await new Promise(resolve => setTimeout(resolve, 1000))
-            
-            // Simulate database object
             const reviewObject = {
-                customerName: formData.customerName,
-                reviewType: formData.consultantName === 'poradce' ? 'poradce' : 'benefitprogram',
-                consultantName: formData.consultantName,
+                customer_name: formData.customerName,
+                hashtag: formData.consultantName === 'poradce' ? 'poradce' : 'benefitprogram',
+                consultant_name: formData.consultantName,
                 message: formData.message,
                 timestamp: new Date().toISOString(),
-                approved: false // Reviews need approval before showing
+                approved: false
             }
-            
-            console.log('Would save to database:', reviewObject)
-            
+    
+            const { data, error } = await supabase
+                .from('reviews')
+                .insert([reviewObject])
+    
+            if (error) throw error
+    
             setFormData({
                 customerName: '',
                 reviewType: '',
                 consultantName: '',
                 message: ''
             })
-            
+    
             return { success: true, message: 'Děkujeme za váš názor!' }
         } catch (err) {
             console.error('Review submission failed:', err)
