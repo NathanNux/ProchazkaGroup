@@ -2,6 +2,7 @@ import Head from "next/head"
 import Navbar from "@/components/common/navbar"
 import Cursor from "@/components/common/navbar/cursor"
 import ClipPathPage from "@/components/sections/ClipPathPage"
+import Footer from "@/components/common/footer"
 
 export default function PrilezitostiPage() {
     return (
@@ -60,6 +61,7 @@ export default function PrilezitostiPage() {
                 <Navbar />
                 <Cursor />
                 <ClipPathPage />
+                <Footer />
             </main>
         </>
     )

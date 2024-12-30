@@ -6,7 +6,9 @@ import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import { useReviewForm } from "@/hooks/useReviewForm";
 import { useToast } from "@/hooks/use-toast";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import CopyText from "@/components/ui/copyText";
+import GetChars from "@/components/common/navbar/body/getChars";
 
 //NOTE:FeedBack and contact are switched
 
@@ -46,6 +48,7 @@ const icons = [
 
 export default function ContactForm({ scroll, name }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
+    const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 })
     
     const { toast } = useToast()
     const {
@@ -154,10 +157,8 @@ export default function ContactForm({ scroll, name }) {
                             <div className="phone__details">
                                 <div className="details__devider"/> 
                                 <div className="details">
-                                    <p>
-                                        +420 776 888 888
-                                    </p>
-                                    <p>ovb.asistenka@ovbmail.cz</p>
+                                    <CopyText text="+420 776 888 888" type='phone' className='pcopytext'/>
+                                    <CopyText text="ovb.asistenka@ovbmail.cz" type='email' className='pcopytext'/>
                                 </div>
                                 <div className="details__devider"/> 
                             </div>
@@ -201,9 +202,21 @@ export default function ContactForm({ scroll, name }) {
                             {FooterLinks.map(( link, i ) => {
                                 const { name, href } = link
                                 return(
-                                    <Link key={i} href={href}>
-                                        {name}
-                                    </Link>
+                                <Link 
+                                    key={`footerLink-${i}`} 
+                                    href={href}
+                                    onMouseEnter={() => setSelectedLink({ isActive: true, index: i })}
+                                    onMouseLeave={() => setSelectedLink({ isActive: false, index: i })}
+                                >
+                                    <motion.p>
+                                        <GetChars
+                                            text={name}
+                                            selectedLink={selectedLink}
+                                            index={i}
+                                            initialColor={'#fff'}
+                                        />
+                                    </motion.p>
+                                </Link>
                                 )
                             })}
                         </div>

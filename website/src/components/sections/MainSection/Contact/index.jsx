@@ -1,13 +1,15 @@
 
 import SubText from "@/components/anim/TextAnims/SubText"
 import ContactModem from "@/components/modems/ContactModem"
+import CopyText from "@/components/ui/copyText"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
 import CustomImage from "@/components/ui/stickyImage"
 import { people } from "@/constants/people"
+import { useToast } from "@/hooks/use-toast"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const itemVariants = {
     open: {
@@ -52,6 +54,65 @@ export default function Contact() {
     const [previewIndex, setPreviewIndex] = useState(null)
 
     const activeIndex = previewIndex ?? currentIndex
+    const [isMobile, setIsMobile] = useState(false)
+    const { toast } = useToast()
+    
+    useEffect(() => {
+        setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+    }, [])
+
+    const handleCopyName = async () => {
+        if (isMobile) {
+            window.location.href = `tel:${people[activeIndex].tel}`
+            return
+        }
+
+        try {
+            await navigator.clipboard.writeText(people[activeIndex].name)
+            toast({
+                title: "Úspěch!",
+                description: "Jméno bylo zkopírováno do schránky",
+                variant: "success"
+            })
+        } catch (err) {
+            toast({
+                title: "Chyba!",
+                description: "Kopírování se nezdařilo",
+                variant: "destructive"
+            })
+        }
+    }
+
+    const handleMessage = () => {
+        const activePerson = people[activeIndex]
+        
+        if (!activePerson || !activePerson.tel) {
+            toast({
+                title: "Chyba!",
+                description: "Telefonní číslo není k dispozici",
+                variant: "destructive"
+            })
+            return
+        }
+    
+        const message = `Dobrý den, mám zájem o více informací o vašich službách.`
+        const phoneNumber = activePerson.tel.replace(/\s/g, '')
+        
+        try {
+            if (isMobile) {
+                window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+            } else {
+                window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank')
+            }
+        } catch (err) {
+            toast({
+                title: "Chyba!",
+                description: "Nepodařilo se otevřít WhatsApp",
+                variant: "destructive"
+            })
+        }
+    }
+
 
 
     return (
@@ -226,11 +287,11 @@ export default function Contact() {
                 <div className="contact__wrapper">
                     <div className="Contact__CTA__buttons">
                         <div className="Contact__CTA__buttons__container">
-                            <div className="cta__button">
-                                <SVGButton src='/svg/MessageIcon.svg' altText='CallIcon' />
-                            </div>
-                            <div className="cta__button">
+                            <div className="cta__button" onClick={handleCopyName}>
                                 <SVGButton src='/svg/phoneIcon.svg' altText='CallIcon' />
+                            </div>
+                            <div className="cta__button" onClick={handleMessage}>
+                                <SVGButton src='/svg/MessageIcon.svg' altText='TextIcon' />
                             </div>
                         </div>
                         <div className="devider"/>
@@ -249,10 +310,8 @@ export default function Contact() {
                                 <p>Potřebujete Poradit?</p>
                                 <p> | 8-16</p>
                             </div>
-                            <div className="addInfo__phoneNumber"
-                            >
-                                <p>+420 777 898 157</p>
-                            </div>
+                            <div className="addInfo__phoneNumber">
+                                <CopyText text={'+420 777 898 157'} type={'phone'} />                            </div>
                         </div>
                     </div>
                 </div>

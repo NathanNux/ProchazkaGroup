@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useContactForm } from '@/hooks/useContactForm'
 import { useToast } from '@/hooks/use-toast'
+import CopyText from "@/components/ui/copyText";
 
 
 const modemAnim = {
@@ -407,9 +408,7 @@ export default function ContactModem({
                     </p>
                 </div>
                 <div className="link">
-                    <p>
-                        +420 777 898 157
-                    </p>
+                    <CopyText text="+420 777 898 157" type='phone' className='linkP'/>
                 </div>
             </div>
         </motion.section>

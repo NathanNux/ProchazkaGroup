@@ -45,7 +45,7 @@ export default function Sales() {
             </div>
             <div className="Logo__container">
                 <SubText className={'subtext'} text={'NAŠI PARTNEŘI:'}/>
-                <RollingIcons baseVelocity={1}/>
+                <RollingIcons baseVelocity={2.5}/>
             </div>
         </div>
     )

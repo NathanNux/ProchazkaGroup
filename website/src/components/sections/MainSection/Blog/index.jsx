@@ -51,7 +51,7 @@ export default function Blog () {
                     <SubText text={'BYLI JSME ZMÍNĚNI:'}/>
                 </div>
                 <div className="devider__wrapper"/>
-                    <RollingIcons baseVelocity={1}/>
+                    <RollingIcons baseVelocity={2.5}/>
                 <div className="devider__wrapper"/>
             </div>
         </div>

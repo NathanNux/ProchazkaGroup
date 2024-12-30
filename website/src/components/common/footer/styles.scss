@@ -330,7 +330,17 @@
             }
 
             .Credits{
-
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                p{
+                    text-align: left;
+                    width: 100%;
+                }
             }
         }
     }

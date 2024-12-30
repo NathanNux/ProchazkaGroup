@@ -1,12 +1,12 @@
 .Contact{
     position: relative;
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     background: #04444C;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 5vw 10vh 5vw; 
+    padding: 5vh 5vw 5vh 5vw; 
     overflow: hidden;
     color: #fff;
     
@@ -103,8 +103,8 @@
                             padding: 0 0 0 10%;
                             p{
                                 font-size: 1.5rem;
-                                width: 90%;
-                                color: #00F0FF;
+                                width: 80%;
+                                text-align: left;
                             }
                         }
                         .Reviews_stats{
@@ -287,12 +287,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                cursor: pointer;
                 p{
                     font-size: 1.4rem;
-                    font-weight: 400;
-                    margin: 0;
-                    color: #00F0FF
                 }
             }
         }
@@ -346,8 +342,8 @@
                 gap: 5rem;
                 
                 .Svg__button_container{
-                    width: 100px;
-                    height: 100px;
+                    width: 150px;
+                    height: 150px;
                      
                     .Svg__button_subcontainer{
                          img{

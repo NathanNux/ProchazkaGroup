@@ -103,7 +103,7 @@ export default function MyButton({ href, text }) {
                 className='My__button_container'
             >
                 <div ref={ButtonBoundsRef} className='My__button_Bounds'></div>
-                <Link href='/' ref={textRef} className="logo">
+                <Link href='https://matejforejt.com/' ref={textRef} className="logo">
                     <p className="copyright">©</p>
                     <div className="name">
                         <p className="codeBy">Kód od</p>

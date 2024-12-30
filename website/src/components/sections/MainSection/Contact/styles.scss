@@ -312,8 +312,8 @@
                         z-index: 71;
 
                         .Svg__button_container{
-                            width: 200px;
-                            height: 200px;
+                            width: 150px;
+                            height: 150px;
                              
                             .Svg__button_subcontainer{
                                  img{
@@ -397,12 +397,8 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        cursor: pointer;
                         p{
-                            font-size: 1.4rem;
-                            font-weight: 400;
-                            margin: 0;
-                            color: #00F0FF
+                            font-size: 1.2rem;
                         }
                     }
                 }

@@ -1,9 +1,10 @@
 import MainText from "@/components/anim/TextAnims/MainText"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import { people } from "@/constants/people"
+import { useToast } from "@/hooks/use-toast"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const itemVariants = {
     open: {
@@ -45,8 +46,37 @@ export default function BenefitReminder() {
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ currentIndex, setCurrentIndex ] = useState(0)
     const [previewIndex, setPreviewIndex] = useState(null)
+    const [isMobile, setIsMobile] = useState(false)
+    const { toast } = useToast()
+    
+    useEffect(() => {
+        setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+    }, [])
+
 
     const activeIndex = previewIndex ?? currentIndex
+
+    const handleCopyName = async () => {
+        if (isMobile) {
+            window.location.href = `tel:${people[activeIndex].tel}`
+            return
+        }
+
+        try {
+            await navigator.clipboard.writeText(people[activeIndex].name)
+            toast({
+                title: "Úspěch!",
+                description: "Jméno bylo zkopírováno do schránky",
+                variant: "success"
+            })
+        } catch (err) {
+            toast({
+                title: "Chyba!",
+                description: "Kopírování se nezdařilo",
+                variant: "destructive"
+            })
+        }
+    }
     return (
         <section className="BenefitReminder"> 
             <div className="BenefitReminder__Header">
@@ -205,8 +235,8 @@ export default function BenefitReminder() {
 
             <div className="CTA__Wrapper">
                 <div className="devider__line"/>
-                <div className="button__wrapper">
-                    <RoundButton href='#' text='Zapojit se hned'/>
+                <div className="button__wrapper" onClick={handleCopyName}>
+                    <RoundButton href='' text='Zapojit se hned' disableLink={true}/>
                 </div> 
             </div>
                     
