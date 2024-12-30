@@ -297,7 +297,7 @@ export default function ContactBenefit() {
 
             <div className="Contact__CTA">
                 <div className="Contact__CTA__Header">
-                    <SubText text={'JE TO NA VÁS... FINANČNÍ NEZÁVISLOST,<br/> NEBO DALŠÍ ROKY NA MÍSTĚ? PŘIDEJTE <br/> SE K NAŠIM 3000+ KLIENTŮM, KTEŘÍ UŽ <br/> DÁVNO ZAČALI VYHRÁVAT.'} />
+                    <SubText initialColor="#fff" text={'JE TO NA VÁS... <span>FINANČNÍ NEZÁVISLOST,</span><br/> <span>NEBO DALŠÍ ROKY NA MÍSTĚ?</span> PŘIDEJTE <br/> SE K NAŠIM 3000+ KLIENTŮM, KTEŘÍ UŽ <br/> DÁVNO ZAČALI VYHRÁVAT.'} />
                 </div>
 
                 <div className="Contact__CTA__buttons">

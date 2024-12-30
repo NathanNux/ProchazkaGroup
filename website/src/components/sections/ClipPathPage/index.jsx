@@ -105,7 +105,7 @@ const Galery = ({ number, title, description, href, src, alt, text }) => {
                 </div>
                 <div className="ClipPathPage__Galery__Content__devider"/>
                 <MainText text={description} initialColor={'#050A10'} />
-                <SubText className={'ClipPathPage__Galery__Content__p'} text={text} />
+                <SubText initialColor="#050A10" className={'ClipPathPage__Galery__Content__p'} text={text} />
                 <div className="ClipPathPage__Galery__Content__Button">
                     <motion.div
                         style={{ x }}

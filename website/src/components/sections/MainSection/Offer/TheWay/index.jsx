@@ -125,7 +125,7 @@ export default function TheWay() {
                     </div> 
                     <div className="text__content">
                         <div className="main__text">
-                            <SubText text={'první krok? přijďte na schůzku. my se postaráme o zbytek – žádné velké oběti,<br/> jen skutečný plán a krok po kroku k<br/> velké změně vpřed - jednoduše'}/>
+                            <SubText initialColor="#050A10" text={'první krok? přijďte na schůzku. my se postaráme o zbytek – žádné velké oběti,<br/> jen skutečný plán a krok po kroku k<br/> velké změně vpřed - jednoduše'}/>
                             <div className="divider"/>
                             <div className="divider"/>
                         </div>

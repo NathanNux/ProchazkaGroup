@@ -43,7 +43,7 @@ export default function Benefits() {
                     style={{ display: 'flex'}}
                 >
                     <h4>δ |</h4>
-                    <SubText text={'Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani<br/>své špatné situace způsobené nezodpovědnými návyky. <br/><br/>Společně jsme vytvořili plán, který nejen zlepšil jejich situaci,<br/>ale změnil jejich pohled na budoucnost. <br/><br/>Dnes už řeší jen to, jak investovat své úspory a využít svůj volný<br/>čas s rodinou. Zní to dobře, že jo?'}/>
+                    <SubText initialColor="#050A10" text={'Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani<br/>své špatné situace způsobené nezodpovědnými návyky. <br/><br/>Společně jsme vytvořili plán, který nejen zlepšil jejich situaci,<br/>ale změnil jejich pohled na budoucnost. <br/><br/>Dnes už řeší jen to, jak investovat své úspory a využít svůj volný<br/>čas s rodinou. Zní to dobře, že jo?'}/>
                 </div>
             </div>
             <motion.div 

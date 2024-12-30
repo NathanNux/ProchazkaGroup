@@ -12,7 +12,7 @@ export default function Content() {
             </div>
 
             <div className="main__text">
-                <MainText initialColor={'#fff'} text={'VYHRÁVÁTE SLUŽBY I Z LOKÁLNÍCH<br />OBCHODŮ, KTERÉ  DO TOHO JDOU S NÁMI.<br />VÁŠ VLIV POROSTE A VYTVÁŘÍ VLNY,<br />KTERÉ BUDEME CÍTIT V<br />NAŠEM MĚSTĚ JEŠTĚ DLOUHO.'}/>
+                <MainText initialColor={'#fff'} secondaryColor={'#00F0FF'} text={'VYHRÁVÁTE SLUŽBY I <span>Z LOKÁLNÍCH</span><br /><span>OBCHODŮ</span>, KTERÉ  DO TOHO JDOU S NÁMI.<br />VÁŠ VLIV POROSTE A VYTVÁŘÍ VLNY,<br />KTERÉ BUDEME CÍTIT V<br />NAŠEM MĚSTĚ JEŠTĚ DLOUHO.'}/>
                 <div className="devider"/>
             </div>
 

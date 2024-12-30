@@ -319,7 +319,7 @@ export default function Contact() {
 
             <div className="Contact__CTA">
                 <div className="Contact__CTA__Header">
-                    <SubText secondaryColor="#00F0FF" text={'Je to na vás... <span>Finanční nezávislost,</span><br/>nebo další roky na místě?<br/><span>Přidejte se k našim 3000+ klientům</span>, kteří už dávno <span>začali vyhrávat.</span>'}/>
+                    <SubText initialColor="#fff" secondaryColor="#00F0FF" text={'Je to na vás... <span>Finanční nezávislost,</span><br/>nebo další roky na místě?<br/><span>Přidejte se k našim 3000+ klientům</span>, kteří už dávno <span>začali vyhrávat.</span>'}/>
                 </div>
 
                 <div className="map__container">

@@ -18,7 +18,7 @@ export default function IntroOffer(){
                 <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'NEMÁTE NA VAŠE FINANCE PROSTOR?<br /><br /><span>30 MINUT VÁS DRŽÍ</span> OD TAKOVÉHO<br />ABSURDNÍHO FINANČNÍHO RŮSTU, ŽE<br /><span>I VAŠE VNOUČATA</span> VÁM PODĚKUJI ZA<br />TENTO KROK VPŘED.'}/>
             </div>
             <div className="IntroOffer__subText">
-                <SubText className={'subtext__div'} text={'Každý den, kdy vaše dluhy rostou nebo<br/>inflace roste, ztrácíte peníze, které<br/> už nikdy neuvidíte.'}/>
+                <SubText initialColor="#050A10" className={'subtext__div'} text={'Každý den, kdy vaše dluhy rostou nebo<br/>inflace roste, ztrácíte peníze, které<br/> už nikdy neuvidíte.'}/>
             </div>
             <div className="IntroOffer__image__container">
                 <Image src='/assets/reviewsBackground.png' alt='about-image' fill={true}/>

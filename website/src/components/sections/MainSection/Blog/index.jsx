@@ -48,7 +48,7 @@ export default function Blog () {
             </div>
             <div className="logos__wrapper">
                 <div className="header">
-                    <SubText text={'BYLI JSME ZMÍNĚNI:'}/>
+                    <SubText initialColor="#050A10" text={'BYLI JSME ZMÍNĚNI:'}/>
                 </div>
                 <div className="devider__wrapper"/>
                     <RollingIcons baseVelocity={2.5}/>

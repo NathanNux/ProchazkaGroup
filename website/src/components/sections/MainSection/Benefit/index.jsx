@@ -45,7 +45,7 @@ export default function Benefit() {
                     <CustomImage altText='benefit__image' src='/assets/reviewsBackground.png'/>
                 </div>
                 <div className="subText">
-                    <SubText text={'Ať už chcete splatit hypotéku, zajistit lepší<br/>budoucnost pro děti, nebo si dopřát něco<br/>navíc. Benefit program vám k tomu pomůže.<br/>Prostě doporučte, a sledujte, jak roste<br/>nejen váš úspěch, ale i jejich díky Vám.'}/>
+                    <SubText initialColor="#fff" text={'Ať už chcete splatit hypotéku, zajistit lepší<br/>budoucnost pro děti, nebo si dopřát něco<br/>navíc. Benefit program vám k tomu pomůže.<br/>Prostě doporučte, a sledujte, jak roste<br/>nejen váš úspěch, ale i jejich díky Vám.'}/>
                 </div>
             </div>
         </section>

@@ -154,7 +154,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                     <div  className="cover"/>
                     <Image  src='/assets/backgroundSection.png' alt='background__section' fill={true}/>
                     <div className="mainHeader">
-                        <SubText text={'JDE O VYTVOŘENÍ NĚČEHO, CO VYDRŽÍ GENERACE—VĚTŠÍ NEŽ MY, VĚTŠÍ NEŽ VY, VYTVOŘÍME TRVALÝ DOPAD'}/>
+                        <SubText initialColor="#fff" text={'JDE O VYTVOŘENÍ NĚČEHO, CO<br/> VYDRŽÍ GENERACE—VĚTŠÍ<br/> NEŽ MY, VĚTŠÍ NEŽ VY,<br/> VYTVOŘÍME TRVALÝ DOPAD'}/>
                     </div>
                     <div className="subHeader">
                         <h3>01</h3>

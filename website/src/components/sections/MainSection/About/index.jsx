@@ -36,7 +36,7 @@ export default function About() {
                     <MainText secondaryColor={'#FF5733'} initialColor={'#050A10'} text={'SKRZE FINANČNÍ SEKTOR UMOŽŇUJEME<br />VYVÍJET <span>NOVÉ ÚSPĚŠNÉ PŘÍBĚHY,</span><br />A TO NEJEN TY VAŠE.<br />SPOLEČNĚ MĚNÍME KAŽDODENNÍ SNY<br />VE SKUTEČNOST.'}/>
                 </div>
                 <div className="Button__container">
-                    <SubText className={'add__Text'} text={'Každý den přicházíme s řešeními, která našim<br/>klientům otevírají nové možnosti, a vytváříme<br/>hodnotu, která přetrvává.'}/>
+                    <SubText initialColor="#050A10" className={'add__Text'} text={'Každý den přicházíme s řešeními, která našim<br/>klientům otevírají nové možnosti, a vytváříme<br/>hodnotu, která přetrvává.'}/>
                     <motion.div className="button" style={{ x }}>
                         <RoundButton href="/o-nas" text="náš tým"/>
                     </motion.div>
