@@ -2,22 +2,22 @@ export const StatbarData = [
     {
         value: '12',
         barkingPoint: '7',
-        name: 'odměn celkem'
+        name: 'Let na trhu'
     },
     {
-        value: '5',
-        barkingPoint: '3',
-        name: 'úrovní odměn'
+        value: '3000+',
+        barkingPoint: '2500',
+        name: 'Spokojených klientů'
     },
     {
-        value: '2500,-',
-        barkingPoint: '2300',
-        name: 'na první úrovni '
+        value: '9000+',
+        barkingPoint: '8000',
+        name: 'Podepsaných smluv'
     },
     {
-        value: '47 500,-',
-        barkingPoint: '45000',
-        name: 'celkem v odměnách'
+        value: '5 000 000,-',
+        barkingPoint: '4 500 000',
+        name: 'celkem ušetřeno klientům'
     }
 ]
 

@@ -39,7 +39,7 @@ export default function QNA() {
         <section className="QNA">
             <div className="QNA__Intro">
                 <div className="QNA__MainText">
-                    <MainText initialColor={'#050A10'} text="MÁTE NĚJAKÝ DOTAZ? NĚKTERÉ Z NICH JSME UŽ ZODPOVĚZELI." />
+                    <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text="<span>MÁTE NĚJAKÝ DOTAZ?</span> NĚKTERÉ<br />Z NICH JSME UŽ ZODPOVĚZELI." />
                 </div>
                 <div className="QNA__Header">
                     <div className="QNA__Header__container">

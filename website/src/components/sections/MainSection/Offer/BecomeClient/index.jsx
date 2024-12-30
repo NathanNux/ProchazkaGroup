@@ -9,7 +9,7 @@ export default function BecomeAclient() {
             </div>
             
             <div className="Texts">
-                <MainText initialColor={'#050A10'} text={'STAŇTE SE SOUČÁSTÍ NAŠÍ VIZE<br />A PROLOMTE S NÁMI TO <br /> MULTIGENERAČNÍ PROKLETÍ <br /> <br />JSME TU, KDYKOLIV SE ROZHODNETE <br /> – S NÁMI VÁŠ FINANČNÍ ÚSPĚCH <br /> ZARUČUJEME.'}/>
+                <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'STAŇTE SE SOUČÁSTÍ NAŠÍ VIZE<br />A PROLOMTE S NÁMI TO <br /> MULTIGENERAČNÍ PROKLETÍ <br /> <br />JSME TU, KDYKOLIV SE ROZHODNETE <br /><span> – S NÁMI VÁŠ FINANČNÍ ÚSPĚCH</span> <br /> <span>ZARUČUJEME.</span>'}/>
                 <div className="divider"/>
                 <div className="divider"/>
                 <div className="divider"/>

@@ -29,7 +29,7 @@ export default function Benefit() {
                 </div>
                 <div className="devider"/>
                 <div className="MainText">
-                    <MainText initialColor={'#fff'} text={'ŽÁDNÉ KOMPLIKACE. ŽÁDNÁ BYROKRACIE.<br />STAČÍ, ABY SE Z VAŠEHO<br />DOPORUČENÍ STAL NOVÝ KLIENT,<br />A PENÍZE JSOU VAŠE.<br />VYHRÁVÁTE VY, VYHRÁVÁ I ON.'}/>
+                    <MainText secondaryColor={'#00F0FF'} initialColor={'#fff'} text={'<span>ŽÁDNÉ KOMPLIKACE. ŽÁDNÁ BYROKRACIE.</span><br />STAČÍ, ABY SE Z VAŠEHO<br />DOPORUČENÍ STAL NOVÝ KLIENT,<br />A PENÍZE JSOU VAŠE.<br />VYHRÁVÁTE VY, VYHRÁVÁ I ON.'}/>
                 </div>
                 <div className="Button__container">
                     <div className="divider"/>

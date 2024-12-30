@@ -37,14 +37,13 @@ export default function Benefits() {
                     <p>Budujeme finanční portfolia se sny těch, kteří věří v úspěch.</p>
                 </div>
                 <div className="subtext"> 
-                    <MainText initialColor={'#050A10'} text={'Vaše finanční problémy nejsou jen čísla.<br /> Jsou to roky vašeho života, které můžete zachránit.'}/>
+                    <MainText initialColor={'#050A10'} text={'Vaše finanční problémy<br /> nejsou jen čísla. Jsou to<br /> roky vašeho života, které můžete zachránit.'}/>
                 </div>
                 <div className="story"
-                    // WIP: this of how to animate this, maybe as absolute positioned small button "The Real Story"
                     style={{ display: 'flex'}}
                 >
                     <h4>δ |</h4>
-                    <SubText text={'Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani<br/> své špatné situace způsobené nezodpovědnými návyky. <br/> <br/>Společně jsme vytvořili plán, který nejen zlepšil jejich situaci,<br/> ale změnil jejich pohled na budoucnost. <br/> <br/>Dnes už řeší jen to, jak investovat své úspory a využít svůj volný <br/> čas s rodinou. Zní to dobře, že jo?'}/>
+                    <SubText text={'Velká většina rodin měli pocit, že nikdy neuvidí konec dluhů ani<br/>své špatné situace způsobené nezodpovědnými návyky. <br/><br/>Společně jsme vytvořili plán, který nejen zlepšil jejich situaci,<br/>ale změnil jejich pohled na budoucnost. <br/><br/>Dnes už řeší jen to, jak investovat své úspory a využít svůj volný<br/>čas s rodinou. Zní to dobře, že jo?'}/>
                 </div>
             </div>
             <motion.div 

@@ -15,10 +15,10 @@ export default function IntroOffer(){
                 <div className="devider"/>
             </div>
             <div className="IntroOffer__MainText">
-                <MainText initialColor={'#050A10'} text={'NEMÁTE NA VAŠE FINANCE PROSTOR?<br /><br />30 MINUT VÁS DRŽÍ OD TAKOVÉHO ABSURDNÍHO FINANČNÍHO RŮSTU, ŽE I VAŠE VNOUČATA VÁM PODĚKUJI ZA TENTO KROK VPŘED. '}/>
+                <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'NEMÁTE NA VAŠE FINANCE PROSTOR?<br /><br /><span>30 MINUT VÁS DRŽÍ</span> OD TAKOVÉHO<br />ABSURDNÍHO FINANČNÍHO RŮSTU, ŽE<br /><span>I VAŠE VNOUČATA</span> VÁM PODĚKUJI ZA<br />TENTO KROK VPŘED.'}/>
             </div>
             <div className="IntroOffer__subText">
-                <SubText className={'subtext__div'} text={'Každý den, kdy vaše dluhy rostou nebo inflace roste, ztrácíte peníze, které už nikdy neuvidíte.*'}/>
+                <SubText className={'subtext__div'} text={'Každý den, kdy vaše dluhy rostou nebo<br/>inflace roste, ztrácíte peníze, které<br/> už nikdy neuvidíte.'}/>
             </div>
             <div className="IntroOffer__image__container">
                 <Image src='/assets/reviewsBackground.png' alt='about-image' fill={true}/>

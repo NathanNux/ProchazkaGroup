@@ -32,7 +32,7 @@ export default function TheWay() {
     return (
         <section className="GraphTheWay" ref={sectionRef}>
             <div className="Graph__header">
-                <MainText text={' naše stystémy garantují váš úspěch, udělali jsme je<br /> tak hloupě lehké, že není šance neusmět.'} initialColor={'#fff'}/>
+                <MainText secondaryColor={'#00F0FF'} text={'naše stystémy <span>garantují váš úspěch</span>, udělali jsme je<br /> tak hloupě lehké, že není šance neusmět.'} initialColor={'#fff'}/>
                 <div className="devider"/>
             </div>
             <div className="sticky__wrapper">

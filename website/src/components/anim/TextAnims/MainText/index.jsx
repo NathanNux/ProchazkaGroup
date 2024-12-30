@@ -4,7 +4,7 @@ import { Fragment, useRef } from "react";
 // Linear Interpolation function
 const lerp = (start, end, t) => start + t * (end - start);
 
-const AnimatedWord = ({ char, progress, animationOffset, initialColor, isHighlighted }) => {
+const AnimatedWord = ({ char, progress, animationOffset, initialColor, isHighlighted, secondaryColor }) => {
     const scale = useTransform(
         progress,
         [
@@ -26,7 +26,7 @@ const AnimatedWord = ({ char, progress, animationOffset, initialColor, isHighlig
             animationOffset + 0.6
         ],
         isHighlighted 
-            ? ['#00F0FF', '#00F0FF', '#FF5733', '#00F0FF', '#00F0FF'] // Fixed color for highlighted text
+            ? [secondaryColor, secondaryColor, '#FF5733', secondaryColor, secondaryColor] // Fixed color for highlighted text
             : [initialColor, '#00F0FF', '#FF5733', '#00F0FF', initialColor]
     );
     const opacity = useTransform(progress, [animationOffset + 0.1, animationOffset + 0.3], [0.65, 1]);
@@ -62,7 +62,7 @@ const parseText = (text) => {
     });
 };
 
-const getCharsWithBrAndSpans = ({ text, initialColor, progress }) => {
+const getCharsWithBrAndSpans = ({ text, initialColor, progress, secondaryColor }) => {
     const segments = parseText(text);
     let allChars = [];
     let charIndex = 0;
@@ -99,6 +99,7 @@ const getCharsWithBrAndSpans = ({ text, initialColor, progress }) => {
                             animationOffset={animationOffsets[charIndex]}
                             initialColor={initialColor}
                             isHighlighted={item.isHighlighted}
+                            secondaryColor={secondaryColor}
                         />
                     )}
                 </Fragment>
@@ -106,7 +107,7 @@ const getCharsWithBrAndSpans = ({ text, initialColor, progress }) => {
         </>
     );
 };
-export default function MainText({text, initialColor}) {
+export default function MainText({text, initialColor, secondaryColor}) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -117,7 +118,7 @@ export default function MainText({text, initialColor}) {
         <div className="MainTextV3__Main" ref={ref}>
             <div className="MainText__Container">
                 <motion.p>
-                    {getCharsWithBrAndSpans({ text, initialColor: initialColor, progress: scrollYProgress })}
+                    {getCharsWithBrAndSpans({ text, initialColor: initialColor, progress: scrollYProgress, secondaryColor: secondaryColor })}
                 </motion.p>
             </div>
         </div>

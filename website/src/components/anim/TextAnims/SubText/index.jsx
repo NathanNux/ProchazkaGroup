@@ -1,37 +1,51 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
-export default function SubText({text, className}) {
+const parseText = (text) => {
+    return text.split(/(<br\/>|<span>.*?<\/span>)/).filter(Boolean).map(segment => {
+        if (segment === '<br/>') {
+            return { type: 'break' };
+        } else if (segment.startsWith('<span>')) {
+            return {
+                type: 'text',
+                content: segment.replace(/<\/?span>/g, ''),
+                highlighted: true
+            };
+        }
+        return { type: 'text', content: segment, highlighted: false };
+    });
+};
+
+export default function SubText({text, className, initialColor = "#fff", secondaryColor = "#00F0FF"}) {
     const ref = useRef(null);
     const lastAnimatedIndex = useRef(0);
     const isAnimatingOut = useRef(false);
     
     const isInView = useInView(ref, {
-        margin: "-2% 0px -2% 0px", // Tighter margin
-        amount: 0.2, // Lower threshold
+        margin: "-2% 0px -2% 0px",
+        amount: 0.2,
         once: false
     });
 
     useEffect(() => {
         if (!isInView) {
             isAnimatingOut.current = true;
-            // Force immediate state update
             lastAnimatedIndex.current = 0;
         }
     }, [isInView]);
 
-    // Split text into segments, preserving <br/> tags
-    const segments = text.split(/(<br\/>)/).map((segment, index) => {
-        return segment === '<br/>' ? { type: 'break' } : { type: 'text', content: segment };
-    });
-
-    // Create flat array of characters and breaks
+    // Updated segments parsing
+    const segments = parseText(text);
     const characters = segments.reduce((acc, segment) => {
         if (segment.type === 'break') {
             acc.push({ char: '<br/>', type: 'break' });
         } else {
             segment.content.split('').forEach(char => {
-                acc.push({ char, type: 'text' });
+                acc.push({ 
+                    char, 
+                    type: 'text',
+                    highlighted: segment.highlighted 
+                });
             });
         }
         return acc;
@@ -55,10 +69,10 @@ export default function SubText({text, className}) {
                                 y: 10
                             }}
                             transition={{
-                                duration: 0.05,  // Faster base duration
+                                duration: 0.05,
                                 delay: isAnimatingOut.current ? 
-                                    Math.max(0, (characters.length - i) * 0.006) :  // Reduced delay
-                                    i * 0.008,  // Reduced delay
+                                    Math.max(0, (characters.length - i) * 0.006) :
+                                    i * 0.008,
                                 ease: [0.215, 0.61, 0.355, 1],
                             }}
                             onAnimationComplete={() => {
@@ -69,7 +83,8 @@ export default function SubText({text, className}) {
                             }}
                             style={{
                                 display: 'inline-block',
-                                marginRight: item.char === ' ' ? '0.1em' : '0.015em'
+                                marginRight: item.char === ' ' ? '0.1em' : '0.015em',
+                                color: item.highlighted ? secondaryColor : initialColor
                             }}
                         >
                             {item.char === ' ' ? '\u00A0' : item.char}

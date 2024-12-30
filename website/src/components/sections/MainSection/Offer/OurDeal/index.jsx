@@ -47,7 +47,7 @@ export default function OurDeal() {
                 </div>
 
                 <div className="mainText">
-                    <MainText initialColor={'#050A10'} text={'VEŘÍME PEVNĚ V NAŠE SLUŽBY AŽ DO TAKOVÉHO EXTRÉMU, ŽE VÁM<br /> MŮŽEME GARANTOVAT PENÍZE ZPĚT, KDYŽ NEDODRŽÍME NAŠE SLOVO.'}/>
+                    <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'VĚŘÍME PEVNĚ V NAŠE SLUŽBY AŽ DO TAKOVÉHO EXTRÉMU, ŽE VÁM<br /> MŮŽEME <span>GARANTOVAT PENÍZE ZPĚT, KDYŽ NEDODRŽÍME NAŠE SLOVO.</span>'}/>
                 </div>
             </div>
             <div className="Quarentees__wrapper">

@@ -42,7 +42,7 @@ export default function Blog () {
                     <div className="devider"/>
                 </div>
                 <div className="main__Text">
-                    <MainText initialColor={'#050A10'} text={'10 NEPŘÍJEMNÝCH VĚCÍ [ZDARMA], KTERÉ VÁM VÁŠ BANKÉŘ URČITĚ ZATAJIL A TAKY NIKDY NEŘEKNE. PROJDĚTE SI JE HNED TEĎ.'}/>
+                    <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'10 NEPŘÍJEMNÝCH VĚCÍ <span>[ZDARMA]</span>,<br />KTERÉ VÁM VÁŠ BANKÉŘ URČITĚ<br />ZATAJIL A TAKY NIKDY NEŘEKNE.<br /><span>PROJDĚTE SI JE HNED TEĎ.</span>'}/>
                     <div className="devider"/>
                 </div>
             </div>

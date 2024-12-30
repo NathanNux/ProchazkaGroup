@@ -37,7 +37,7 @@ export default function Requirements () {
                     <div className="devider"/>
                 </div>
                 <div className="Main__text">
-                    <MainText initialColor={'#050A10'} text={'JEDINÉ, CO OD VÁS CHCEME, JE VAŠE ČIRÁ POZORNOST A ODHODLÁNÍ. <br />A MY VÁM DÁME PRVOTŘÍDNÍ SERVIS<br />BEZ HLOUPÉ NÁMAHY.'}/>
+                    <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'JEDINÉ, CO OD VÁS CHCEME, <span>JE VAŠE</span><br /><span>ČIRÁ POZORNOST A ODHODLÁNÍ.</span><br />A MY VÁM DÁME PRVOTŘÍDNÍ SERVIS<br />BEZ HLOUPÉ NÁMAHY.'}/>
                 </div>
             </div>
 

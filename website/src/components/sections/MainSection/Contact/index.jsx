@@ -162,7 +162,7 @@ export default function Contact() {
                                                     delay: 0.05
                                                 }}
                                             >
-                                                <p>{people[activeIndex].moto}</p>
+                                                <CopyText text={people[activeIndex].name} type={'phone'} />
                                             </motion.div>
                                         </AnimatePresence>
                                         <div className="Reviews_stats">
@@ -319,7 +319,7 @@ export default function Contact() {
 
             <div className="Contact__CTA">
                 <div className="Contact__CTA__Header">
-                    <SubText text={'Je to na vás... Finanční nezávislost,<br/>nebo další roky na místě? Přidejte<br/>se k našim 3000+ klientům, kteří už<br/>dávno začali vyhrávat.'}/>
+                    <SubText secondaryColor="#00F0FF" text={'Je to na vás... <span>Finanční nezávislost,</span><br/>nebo další roky na místě?<br/><span>Přidejte se k našim 3000+ klientům</span>, kteří už dávno <span>začali vyhrávat.</span>'}/>
                 </div>
 
                 <div className="map__container">
