@@ -5,9 +5,29 @@ import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import PageHeading from "@/components/anim/TextAnims/PageHeading";
 import { stats } from "@/constants/pages/reviews";
+import { supabase } from "@/hooks/supabaseClient";
+import { useFetchDatabase } from "@/hooks/useFetchDatabase";
+import { useEffect, useState } from "react";
+
 
 
 export default function ReviewsIntro () {
+    const [localStats, setLocalStats] = useState(stats);
+    const {fetchTotal} = useFetchDatabase();
+    useEffect(() => {
+        (async () => {
+          const data = await fetchTotal();
+          if (data) {
+            const updated = localStats.map(item => {
+              if(item.name === "clients") return {...item, number: data.totalpeople};
+              if(item.name === "likes") return {...item, number: data.likes};
+              if(item.name === "comments") return {...item, number: data.reviews};
+              return item;
+            });
+            setLocalStats(updated);
+          }
+        })();
+      }, []);
 
     const introAnim = {
         initial: {
@@ -102,7 +122,7 @@ export default function ReviewsIntro () {
                         <ONViewLogo />
                         <div className="background"/> 
                         <div className="stats__container">
-                            {stats.map(( sta, i) => {
+                            {localStats.map(( sta, i) => {
                                 const { name, number, src, alt } = sta
                                 return(
                                     <div className="stat" key={i}>

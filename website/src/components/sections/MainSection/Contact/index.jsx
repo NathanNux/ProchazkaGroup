@@ -5,11 +5,12 @@ import CopyText from "@/components/ui/copyText"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
 import CustomImage from "@/components/ui/stickyImage"
-import { people } from "@/constants/people"
+import { people as staticPeople } from "@/constants/people"
 import { useToast } from "@/hooks/use-toast"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { useFetchDatabase } from "@/hooks/useFetchDatabase"
 
 const itemVariants = {
     open: {
@@ -46,12 +47,14 @@ const menuVariants = {
         }
     }
 }
+//WIP: Nahradit Jména Jménama z databáze
 
 export default function Contact() {
     const [ isOpen, setIsOpen ] = useState(false)
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ currentIndex, setCurrentIndex ] = useState(0)
     const [previewIndex, setPreviewIndex] = useState(null)
+    const [peopleData, setPeopleData] = useState(staticPeople)
 
     const activeIndex = previewIndex ?? currentIndex
     const [isMobile, setIsMobile] = useState(false)
@@ -63,12 +66,12 @@ export default function Contact() {
 
     const handleCopyName = async () => {
         if (isMobile) {
-            window.location.href = `tel:${people[activeIndex].tel}`
+            window.location.href = `tel:${peopleData[activeIndex].tel}`
             return
         }
 
         try {
-            await navigator.clipboard.writeText(people[activeIndex].name)
+            await navigator.clipboard.writeText(peopleData[activeIndex].name)
             toast({
                 title: "Úspěch!",
                 description: "Jméno bylo zkopírováno do schránky",
@@ -83,8 +86,43 @@ export default function Contact() {
         }
     }
 
+
+    const {fetchPeople} = useFetchDatabase()
+            
+                // Set default person on mount
+                useEffect(() => {
+                    const loadPeopleData = async () => {
+                        try {
+                            const fetchedData = await fetchPeople() // Načtení dat ze supabase
+                            const updatedPeople = staticPeople.map(person => {
+                                const fetchedPerson = fetchedData.find(p => p.name === person.name)
+                                console.log(fetchedPerson)
+                                return {
+                                    ...person,
+                                    moto: fetchedPerson?.moto ?? person.moto,
+                                    likes: typeof fetchedPerson?.likes === 'number' ? fetchedPerson.likes : person.likes,
+                                    reviews: typeof fetchedPerson?.reviews === 'number' ? fetchedPerson.reviews : person.reviews,
+                                    tel: fetchedPerson?.tel ?? person.tel
+                                }
+                            })
+                            setPeopleData(updatedPeople)
+                            console.log(updatedPeople)
+                        } catch (error) {
+                            toast({
+                                title: "Chyba!",
+                                description: "Nepodařilo se načíst data.",
+                                variant: "destructive"
+                            })
+                            console.log(error)
+                        }
+                    }
+                    loadPeopleData()
+                }, [])
+
+
+
     const handleMessage = () => {
-        const activePerson = people[activeIndex]
+        const activePerson = peopleData[activeIndex]
         
         if (!activePerson || !activePerson.tel) {
             toast({
@@ -129,7 +167,7 @@ export default function Contact() {
 
                 <div className="Contact__Personal__choice">
                     <div className="Contact__Personal__choice__container">
-                        {people.map(( person, i) => {
+                        {peopleData.map(( person, i) => {
                             const { name, likes, reviews, moto, src, alt } = person
 
                             return (
@@ -144,7 +182,7 @@ export default function Contact() {
                                                 exit={{ opacity: 0, x: -100 }}
                                                 transition={{ duration: 0.2 }}
                                             >
-                                                <Image src={people[activeIndex].src} alt={people[activeIndex].alt} fill={true}/>
+                                                <Image src={peopleData[activeIndex].src} alt={peopleData[activeIndex].alt} fill={true}/>
                                             </motion.div>
                                             </AnimatePresence>
                                             
@@ -162,7 +200,7 @@ export default function Contact() {
                                                     delay: 0.05
                                                 }}
                                             >
-                                                <CopyText text={people[activeIndex].name} type={'phone'} />
+                                                <CopyText text={peopleData[activeIndex].name} type={'phone'} />
                                             </motion.div>
                                         </AnimatePresence>
                                         <div className="Reviews_stats">
@@ -178,7 +216,7 @@ export default function Contact() {
                                                         delay: 0.1
                                                     }}
                                                 >
-                                                    <p>{people[activeIndex].likes}</p>
+                                                    <p>{peopleData[activeIndex].likes}</p>
                                                     <Image  src='/svg/thumbsup.svg' alt="thumbsUp_icon" width={50} height={50}/> 
                                                 </motion.div>
                                             </AnimatePresence>
@@ -195,7 +233,7 @@ export default function Contact() {
                                                         delay: 0.15
                                                     }}
                                                 >
-                                                    <p>{people[activeIndex].reviews}</p>
+                                                    <p>{peopleData[activeIndex].reviews}</p>
                                                     <Image  src='/svg/comment.svg' alt="reviews__icon" width={50} height={50}/> 
                                                 </motion.div>
                                             </AnimatePresence>
@@ -227,7 +265,7 @@ export default function Contact() {
                                         ease: "easeInOut"
                                     }}
                                 >
-                                    <p>{people[activeIndex].name}</p>
+                                    <p>{peopleData[activeIndex].name}</p>
                                 </motion.div>
                             </AnimatePresence>
                         </div>
@@ -262,7 +300,7 @@ export default function Contact() {
                                     variants={menuVariants}
                                     className="menu__list"
                                 >
-                                    {people.map((person, index) => (
+                                    {peopleData.map((person, index) => (
                                         <motion.li
                                             key={index}
                                             variants={itemVariants}
@@ -340,7 +378,7 @@ export default function Contact() {
                     <ContactModem 
                         setIsOpen={setIsOpen} 
                         isOpen={isOpen}
-                        people={people}
+                        people={peopleData}
                         currentIndex={currentIndex}
                         setCurrentIndex={setCurrentIndex}
                         activeIndex={activeIndex}

@@ -6,6 +6,7 @@ import { testimonials } from "@/constants/mainpage";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useFetchDatabase } from "@/hooks/useFetchDatabase";
 
 const cardVariants = {
     enter: (direction) => ({
@@ -26,7 +27,37 @@ export default function Testimonials () {
     const [activeIndices, setActiveIndices] = useState([0, 1]);
     const [direction, setDirection] = useState(1);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [reviews, setReviews] = useState(testimonials)
+    const [loading, setLoading] = useState(false)
     const sectionRef = useRef()
+
+    const { fetchReviews } = useFetchDatabase();
+
+    useEffect(() => {
+        const loadReviews = async () => {
+            try {
+                setLoading(true)
+                const data = await fetchReviews()
+                if (data && data.length > 0) {
+                    // Kontrola validity dat
+                    const validData = data.filter(item => 
+                        item && 
+                        typeof item === 'object' && 
+                        'id' in item &&
+                        'customer_name' in item
+                    )
+                    setReviews(validData)
+                }
+                console.log('Reviews:', data)
+            } catch (error) {
+                console.error('Error loading reviews:', error)
+                setReviews(testimonials) // Fallback na statická data
+            } finally {
+                setLoading(false)
+            }
+        }
+        loadReviews()
+    }, [])
 
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -39,7 +70,7 @@ export default function Testimonials () {
         [400, -100, -200]
     )
 
-    const totalTestimonials = testimonials.length;
+    const totalTestimonials = reviews.length;
 
         const handleNext = (testimonialPosition) => {
         setDirection(1);
@@ -103,8 +134,23 @@ export default function Testimonials () {
             <div className="Testimonials__Carousel__container">
                 <div className="Testimonials__Carousel__subContainer">
                     {activeIndices.map((testimonialIndex, idx) => {
-                        const testimonial = testimonials[testimonialIndex];
-                        const { id, name, town, description, number, hashtag } = testimonial;
+                                                
+                        const adjustedIndex = testimonialIndex % reviews.length;
+                        const testimonial = reviews[adjustedIndex];
+
+                        if (!testimonial || typeof testimonial !== 'object') {
+                            const fallbackIndex = idx % reviews.length;
+                            return reviews[fallbackIndex];
+                        }
+
+                        const {
+                            id = `fallback-${idx}`,
+                            customer_name = '',
+                            town = '',
+                            message = '',
+                            number = adjustedIndex,
+                            hashtag = ''
+                        } = testimonial;
 
                         return (
                             <div key={idx} className="Testimonials__Carousel__itemWrapper">
@@ -125,7 +171,7 @@ export default function Testimonials () {
                                         {/* Testimonial Header */}
                                         <div className="Testimonials__Carousel__container__item__header">
                                             <p>
-                                            {number} {hashtag}
+                                            {number < 9 ? "0"+number : number} {"#"+hashtag}
                                             </p>
                                             <div className="Testimonials__Carousel__container__item__header__controls">
                                             <button onClick={() => handlePrev(idx)}>
@@ -139,12 +185,12 @@ export default function Testimonials () {
                                         </div>
                                         {/* Testimonial Content */}
                                         <div className="Testimonials__Carousel__container__item__content">
-                                            <p>{description}</p>
+                                            <p>{message}</p>
                                         </div>
                                         {/* Additional Info */}
                                         <div className="Testimonials__Carousel__container__item__addInfo">
                                             <p>
-                                            {name} | {town}
+                                            {customer_name} | {"Strakonice"}
                                             </p>
                                         </div>
                                     </motion.div>

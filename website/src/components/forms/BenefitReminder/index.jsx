@@ -1,10 +1,11 @@
 import MainText from "@/components/anim/TextAnims/MainText"
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
-import { people } from "@/constants/people"
+import { people as staticPeople } from "@/constants/people"
 import { useToast } from "@/hooks/use-toast"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { useFetchDatabase } from "@/hooks/useFetchDatabase"
 
 const itemVariants = {
     open: {
@@ -41,12 +42,14 @@ const menuVariants = {
         }
     }
 }
+//WIP: Nahradit Jména Jménama z databáze
 
 export default function BenefitReminder() {
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ currentIndex, setCurrentIndex ] = useState(0)
     const [previewIndex, setPreviewIndex] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
+    const [peopleData, setPeopleData] = useState(staticPeople)
     const { toast } = useToast()
     
     useEffect(() => {
@@ -56,14 +59,46 @@ export default function BenefitReminder() {
 
     const activeIndex = previewIndex ?? currentIndex
 
+
+    const {fetchPeople} = useFetchDatabase()
+            
+                // Set default person on mount
+                useEffect(() => {
+                    const loadPeopleData = async () => {
+                        try {
+                            const fetchedData = await fetchPeople() // Načtení dat ze supabase
+                            const updatedPeople = staticPeople.map(person => {
+                                const fetchedPerson = fetchedData.find(p => p.name === person.name)
+                                console.log(fetchedPerson)
+                                return {
+                                    ...person,
+                                    moto: fetchedPerson?.moto ?? person.moto,
+                                    likes: typeof fetchedPerson?.likes === 'number' ? fetchedPerson.likes : person.likes,
+                                    reviews: typeof fetchedPerson?.reviews === 'number' ? fetchedPerson.reviews : person.reviews
+                                }
+                            })
+                            setPeopleData(updatedPeople)
+                            console.log(updatedPeople)
+                        } catch (error) {
+                            toast({
+                                title: "Chyba!",
+                                description: "Nepodařilo se načíst data.",
+                                variant: "destructive"
+                            })
+                            console.log(error)
+                        }
+                    }
+                    loadPeopleData()
+                }, [])
+
     const handleCopyName = async () => {
         if (isMobile) {
-            window.location.href = `tel:${people[activeIndex].tel}`
+            window.location.href = `tel:${peopleData[activeIndex].tel}`
             return
         }
 
         try {
-            await navigator.clipboard.writeText(people[activeIndex].name)
+            await navigator.clipboard.writeText(peopleData[activeIndex].name)
             toast({
                 title: "Úspěch!",
                 description: "Jméno bylo zkopírováno do schránky",
@@ -99,7 +134,7 @@ export default function BenefitReminder() {
                     <div className="devider"/>
                     <div className="devider__bottom"/>
                         <div className="BenefitReminder__Personal__choice__container">
-                            {people.map(( person, i) => {
+                            {peopleData.map(( person, i) => {
                                 const { name, likes, reviews, moto, src, alt } = person
 
                                 return (
@@ -114,7 +149,7 @@ export default function BenefitReminder() {
                                                     exit={{ opacity: 0, x: -100 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
-                                                    <Image src={people[activeIndex].src} alt={people[activeIndex].alt} fill={true}/>
+                                                    <Image src={peopleData[activeIndex].src} alt={peopleData[activeIndex].alt} fill={true}/>
                                                 </motion.div>
                                                 </AnimatePresence>
                                                 
@@ -134,8 +169,8 @@ export default function BenefitReminder() {
                                                                 ease: "easeInOut"
                                                             }}
                                                         >
-                                                            <p>| {people[activeIndex].name}</p>
-                                                            <p>{people[activeIndex].tel}</p>
+                                                            <p>| {peopleData[activeIndex].name}</p>
+                                                            <p>{peopleData[activeIndex].tel}</p>
                                                         </motion.div>
                                                     </AnimatePresence>
                                                 </div>
@@ -170,7 +205,7 @@ export default function BenefitReminder() {
                                                             variants={menuVariants}
                                                             className="menu__list"
                                                         >
-                                                            {people.map((person, index) => (
+                                                            {peopleData.map((person, index) => (
                                                                 <motion.li
                                                                     key={index}
                                                                     variants={itemVariants}
@@ -202,7 +237,7 @@ export default function BenefitReminder() {
                                                             delay: 0.1
                                                         }}
                                                     >
-                                                        <p>{people[activeIndex].likes}</p>
+                                                        <p>{peopleData[activeIndex].likes}</p>
                                                         <Image  src='/svg/thumbsupblack.svg' alt="thumbsUp_icon" width={50} height={50}/> 
                                                     </motion.div>
                                                 </AnimatePresence>
@@ -219,7 +254,7 @@ export default function BenefitReminder() {
                                                             delay: 0.15
                                                         }}
                                                     >
-                                                        <p>{people[activeIndex].reviews}</p>
+                                                        <p>{peopleData[activeIndex].reviews}</p>
                                                         <Image  src='/svg/commentblack.svg' alt="review__icon" width={50} height={50}/> 
                                                     </motion.div>
                                                 </AnimatePresence>

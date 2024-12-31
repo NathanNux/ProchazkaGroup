@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Magnetic from "@/components/anim/Magnetic";
 
-export default function SVGButton({ src, altText }) {
+export default function SVGButton({ src, altText, onClick }) {
     const { registerRef, unregisterRef } = useCursorRef();
     const ButtonBoundsRef = useRef(null);
     const buttonRef = useRef(null);
@@ -86,7 +86,7 @@ export default function SVGButton({ src, altText }) {
     }
     return (
         <Magnetic sensitivity='0.05'>
-            <motion.div transformTemplate={template} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Svg__button_container'>
+            <motion.div transformTemplate={template} onClick={onClick} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Svg__button_container'>
                 <div ref={ButtonBoundsRef} className='Svg__button_Bounds'></div>
                     <div className="Svg__button_subcontainer" ref={textRef}>
                         <Image src={src} alt={altText} width={25} height={25}/>

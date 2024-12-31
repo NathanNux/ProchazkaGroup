@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { useContactForm } from '@/hooks/useContactForm'
 import { useToast } from '@/hooks/use-toast'
 import CopyText from "@/components/ui/copyText";
+import { useFetchDatabase } from "@/hooks/useFetchDatabase";
+import { people as staticPeople } from "@/constants/people";
 
 
 const modemAnim = {
@@ -63,6 +65,9 @@ const menuVariants = {
         }
     }
 }
+
+//WIP: Nahradit Jména Jménama z databáze
+
 export default function ContactModem({ 
     isOpen, 
     setIsOpen, 
@@ -81,6 +86,7 @@ export default function ContactModem({
         handleSubmit: handleContactSubmit
     } = useContactForm()
     const [menuOpen, setMenuOpen] = useState(false)
+    const [peopleData, setPeopleData] = useState(staticPeople)
     // Set default person on mount
     useEffect(() => {
         setFormData(prev => ({
@@ -88,6 +94,38 @@ export default function ContactModem({
             selectedPerson: people[0].name,
         }))
     }, [])
+
+
+        const {fetchPeople} = useFetchDatabase()
+        
+            // Set default person on mount
+            useEffect(() => {
+                const loadPeopleData = async () => {
+                    try {
+                        const fetchedData = await fetchPeople() // Načtení dat ze supabase
+                        const updatedPeople = staticPeople.map(person => {
+                            const fetchedPerson = fetchedData.find(p => p.name === person.name)
+                            console.log(fetchedPerson)
+                            return {
+                                ...person,
+                                moto: fetchedPerson?.moto ?? person.moto,
+                                likes: typeof fetchedPerson?.likes === 'number' ? fetchedPerson.likes : person.likes,
+                                reviews: typeof fetchedPerson?.reviews === 'number' ? fetchedPerson.reviews : person.reviews
+                            }
+                        })
+                        setPeopleData(updatedPeople)
+                        console.log(updatedPeople)
+                    } catch (error) {
+                        toast({
+                            title: "Chyba!",
+                            description: "Nepodařilo se načíst data.",
+                            variant: "destructive"
+                        })
+                        console.log(error)
+                    }
+                }
+                loadPeopleData()
+            }, [])
 
     const handleSubmit = async (e) => {
         e?.preventDefault()
@@ -132,8 +170,8 @@ export default function ContactModem({
                                     transition={{ duration: 0.2 }}
                                 >
                                     <Image 
-                                        src={people[activeIndex].src} 
-                                        alt={people[activeIndex].alt} 
+                                        src={peopleData[activeIndex].src} 
+                                        alt={peopleData[activeIndex].alt} 
                                         fill={true}
                                     />
                                 </motion.div>
@@ -151,7 +189,7 @@ export default function ContactModem({
                                             animate={{ opacity: 1 }}
                                             exit={{ opacity: 0 }}
                                         >
-                                            {people[activeIndex].moto}
+                                            {peopleData[activeIndex].moto}
                                         </motion.p>
                                     </AnimatePresence>
                                 </div>
@@ -165,7 +203,7 @@ export default function ContactModem({
                                             animate={{ opacity: 1 }}
                                             exit={{ opacity: 0 }}
                                         >
-                                            {people[activeIndex].name}
+                                            {peopleData[activeIndex].name}
                                         </motion.p>
                                     </AnimatePresence>
                                 </div>
@@ -182,7 +220,7 @@ export default function ContactModem({
                                                 delay: 0.1
                                             }}
                                         >
-                                            <p>{people[activeIndex].likes}</p>
+                                            <p>{peopleData[activeIndex].likes}</p>
                                             <Image  src='/svg/thumbsup.svg' alt="thumbsUp_icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
                                         </motion.div>
                                     </AnimatePresence>
@@ -199,7 +237,7 @@ export default function ContactModem({
                                                 delay: 0.15
                                             }}
                                         >
-                                            <p>{people[activeIndex].reviews}</p>
+                                            <p>{peopleData[activeIndex].reviews}</p>
                                             <Image  src='/svg/comment.svg' alt="reviews__icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
                                         </motion.div>
                                     </AnimatePresence>
@@ -302,7 +340,7 @@ export default function ContactModem({
                                                 ease: "easeInOut"
                                             }}
                                         >
-                                            <p>{people[activeIndex].name}</p>
+                                            <p>{peopleData[activeIndex].name}</p>
                                         </motion.div>
                                     </AnimatePresence>
                                 </div>
@@ -337,7 +375,7 @@ export default function ContactModem({
                                             variants={menuVariants}
                                             className="menu__list"
                                         >
-                                            {people.map((person, index) => (
+                                            {peopleData.map((person, index) => (
                                                 <motion.li
                                                     key={index}
                                                     variants={itemVariants}

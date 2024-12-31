@@ -9,6 +9,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useEffect, useState } from "react";
 import CopyText from "@/components/ui/copyText";
 import GetChars from "@/components/common/navbar/body/getChars";
+import { supabase } from "@/hooks/supabaseClient";
+import { useFetchDatabase } from "@/hooks/useFetchDatabase";
 
 //NOTE:FeedBack and contact are switched
 
@@ -46,15 +48,21 @@ const icons = [
     { name: "mainWeb", src: "/thumbsUp.png" }
 ];
 
+//WIP: zde udělat taky recenze, akorát vše pro tohoto člověka - potom i ještě pro druhého na jiné stránce
+//: info je na hlavní stránce
+
 export default function ContactForm({ scroll, name }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
     const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 })
     
+    const {fetchPeople} = useFetchDatabase()
+
     const { toast } = useToast()
     const {
         formData,
         setFormData,
         loading,
+        setLoading,
         handleSubmit: handleReviewSubmit
     } = useReviewForm()
 
@@ -65,18 +73,97 @@ export default function ContactForm({ scroll, name }) {
             consultantName: name,
             reviewType: 'poradce' // Always poradce in this form
         }))
-    }, [name])
+    }, [name, setFormData])
 
     const handleSubmit = async (e) => {
         e?.preventDefault()
         
-        const result = await handleReviewSubmit()
-        
-        toast({
-            title: result.success ? "Úspěch!" : "Chyba!",
-            description: result.message,
-            variant: result.success ? "success" : "destructive"
-        })
+        // Validace
+        if (!formData.customerName.trim()) {
+            toast({
+                title: "Chyba!",
+                description: "Prosím vyplňte jméno",
+                variant: "destructive"
+            })
+            return
+        }
+
+        if (!formData.message.trim()) {
+            toast({
+                title: "Chyba!",
+                description: "Prosím napište váš názor",
+                variant: "destructive"
+            })
+            return
+        }
+
+        try {
+            // Vytvoření nové recenze
+            const reviewObject = {
+                customer_name: formData.customerName,
+                hashtag: 'poradce',
+                consultant_name: name,
+                message: formData.message,
+                timestamp: new Date().toISOString(),
+                approved: false
+            }
+    
+            const { error: reviewError } = await supabase
+                .from('reviews')
+                .insert([reviewObject])
+    
+            if (reviewError) throw reviewError
+
+            // Aktualizace počítadla v total
+            const { data: totalData, error: totalError } = await supabase
+                .from('total')
+                .select('reviews, totalpeople')
+                .eq('id', "7d1cc7c4-b546-40a1-8e9e-97d0601e7b07")
+                .single()
+
+            if (totalError) throw totalError
+
+            const { error: updateError } = await supabase
+                .from('total')
+                .update({ reviews: totalData.reviews + 1,
+                          totalpeople: totalData.totalpeople + 1
+                 })
+                .eq('id', "7d1cc7c4-b546-40a1-8e9e-97d0601e7b07")
+
+            if (updateError) throw updateError
+
+            const peopledata = await fetchPeople()
+            const { data: peopleData, error: peopleError } = await supabase
+                    .from('people')
+                    .update({ reviews: peopledata[0].reviews + 1 })
+                    .eq('name', name)
+            
+            if (peopleError) throw peopleError
+
+
+            setFormData(prev => ({
+                ...prev,
+                customerName: '',
+                message: '',
+                consultantName: name,
+                reviewType: 'poradce'
+            }))
+
+            toast({
+                title: "Úspěch!",
+                description: "Děkujeme za váš názor!",
+                variant: "success"
+            })
+
+        } catch (error) {
+            console.error('Error submitting review:', error)
+            toast({
+                title: "Chyba!",
+                description: "Něco se pokazilo, zkuste to prosím znovu",
+                variant: "destructive"
+            })
+        } finally {
+        }
     }
     return (
         <motion.section 

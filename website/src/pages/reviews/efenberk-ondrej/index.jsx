@@ -2,21 +2,46 @@ import Head from "next/head"
 import Navbar from "@/components/common/navbar"
 import Cursor from "@/components/common/navbar/cursor"
 import ContactIntro from "@/components/intros/contact"
+import { useFetchDatabase } from "@/hooks/useFetchDatabase"
+import { useEffect, useState } from "react"
 
 export default function PersonFeebackPage2() {
-    const name = "Ondřej Efenberk"
-    const moto = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    const number = '02'
-    const databaseName = 'efenberk-ondrej'
+    const {fetchClovek} = useFetchDatabase()
+    
+        const [personData, setPersonData] = useState({
+            name: 'Ondřej Efenberk',
+            moto: '',
+            number: '01',
+            databaseName: 'Ondřej Efenberk'
+        })
+    
+        useEffect(() => {
+            const loadData = async () => {
+                try {
+                    const data = await fetchClovek("Ondřej Efenberk")
+                    if (data && data.length > 0) {
+                        setPersonData(prev => ({
+                            ...prev,
+                            name: data[0].name,
+                            moto: data[0].moto
+                        }))
+                    }
+                }
+                catch (err) {
+                    console.log(err)
+                }
+            }
+            loadData();
+        }, [])
     
     return(
         <>
             <Head>
-                <title>{`${name} | Finanční Poradce | Procházka Group`}</title>
+                <title>{`${personData.name} | Finanční Poradce | Procházka Group`}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content={`${name} - profesionální finanční poradce Procházka Group. Specializace na investice, pojištění a finanční plánování.`} />
-                <meta name="keywords" content={`${name}, finanční poradce, Procházka Group, investiční poradenství, finanční plánování`} />
+                <meta name="description" content={`${personData.name} - profesionální finanční poradce Procházka Group. Specializace na investice, pojištění a finanční plánování.`} />
+                <meta name="keywords" content={`${personData.name}, finanční poradce, Procházka Group, investiční poradenství, finanční plánování`} />
                 <meta name="author" content="Procházka Group" />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href={`https://prochazkagroup.cz/reviews/efenberk-ondrej`} />
@@ -24,8 +49,8 @@ export default function PersonFeebackPage2() {
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="profile" />
                 <meta property="og:url" content={`https://prochazkagroup.cz/reviews/efenberk-ondrej`} />
-                <meta property="og:title" content={`${name} | Finanční Poradce`} />
-                <meta property="og:description" content={`Profesionální finanční poradce ${name} z týmu Procházka Group`} />
+                <meta property="og:title" content={`${personData.name} | Finanční Poradce`} />
+                <meta property="og:description" content={`Profesionální finanční poradce ${personData.name} z týmu Procházka Group`} />
                 <meta property="og:image" content="https://prochazkagroup.cz/profile-ondrej.jpg" />
                 <meta property="profile:first_name" content="Ondřej" />
                 <meta property="profile:last_name" content="Efenberk" />
@@ -33,8 +58,8 @@ export default function PersonFeebackPage2() {
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={`https://prochazkagroup.cz/reviews/efenberk-ondrej`} />
-                <meta property="twitter:title" content={`${name} | Finanční Poradce`} />
-                <meta property="twitter:description" content={`Profesionální finanční poradce ${name} z týmu Procházka Group`} />
+                <meta property="twitter:title" content={`${personData.name} | Finanční Poradce`} />
+                <meta property="twitter:description" content={`Profesionální finanční poradce ${personData.name} z týmu Procházka Group`} />
                 <meta property="twitter:image" content="https://prochazkagroup.cz/profile-ondrej.jpg" />
 
                 {/* Schema.org markup */}
@@ -42,13 +67,13 @@ export default function PersonFeebackPage2() {
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Person",
-                        "name": name,
+                        "name": personData.name,
                         "jobTitle": "Finanční Poradce",
                         "worksFor": {
                             "@type": "Organization",
                             "name": "Procházka Group"
                         },
-                        "description": moto,
+                        "description": personData.moto,
                         "image": "https://prochazkagroup.cz/profile-ondrej.jpg",
                         "url": `https://prochazkagroup.cz/reviews/efenberk-ondrej`,
                         "contactPoint": {
@@ -63,7 +88,7 @@ export default function PersonFeebackPage2() {
             <main lang="cs">
                 <Cursor />
                 <Navbar />
-                <ContactIntro name={name} moto={moto} number={number} databaseName={databaseName}/>
+                <ContactIntro name={personData.name} moto={personData.moto} number={personData.number} databaseName={personData.databaseName}/>
             </main>
         </>
     )

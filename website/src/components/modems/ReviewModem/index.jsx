@@ -1,12 +1,13 @@
 
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
-import { people } from "@/constants/people"
+import { people as staticPeople} from "@/constants/people"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { useReviewForm } from '@/hooks/useReviewForm'
 import { useToast } from '@/hooks/use-toast'
+import { useFetchDatabase } from "@/hooks/useFetchDatabase"
 const modemAnim = {
     open: {
         x: "0",
@@ -64,10 +65,13 @@ const menuVariants = {
     }
 }
 
+//WIP: Nahradit Jména Jménama z databáze
+
 export default function ReviewModem ({ isOpen, setIsOpen}) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [ currentIndex, setCurrentIndex ] = useState(0)
     const [previewIndex, setPreviewIndex] = useState(null)
+    const [peopleData, setPeopleData] = useState(staticPeople) // Přidáno
 
     const activeIndex = previewIndex ?? currentIndex
 
@@ -79,13 +83,36 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
         handleSubmit: handleReviewSubmit
     } = useReviewForm()
 
+    
+    const {fetchPeople} = useFetchDatabase()
+
     // Set default person on mount
     useEffect(() => {
-        setFormData(prev => ({
-            ...prev,
-            consultantName: people[0].name,
-            reviewType: people[0].name === 'benefitprogram' ? 'benefitprogram' : 'poradce'
-        }))
+        const loadPeopleData = async () => {
+            try {
+                const fetchedData = await fetchPeople() // Načtení dat ze supabase
+                const updatedPeople = staticPeople.map(person => {
+                    const fetchedPerson = fetchedData.find(p => p.name === person.name)
+                    console.log(fetchedPerson)
+                    return {
+                        ...person,
+                        moto: fetchedPerson?.moto ?? person.moto,
+                        likes: typeof fetchedPerson?.likes === 'number' ? fetchedPerson.likes : person.likes,
+                        reviews: typeof fetchedPerson?.reviews === 'number' ? fetchedPerson.reviews : person.reviews
+                    }
+                })
+                setPeopleData(updatedPeople)
+                console.log(updatedPeople)
+                
+            } catch (error) {
+                toast({
+                    title: "Chyba!",
+                    description: "Nepodařilo se načíst data.",
+                    variant: "destructive"
+                })
+            }
+        }
+        loadPeopleData()
     }, [])
 
     const handleSubmit = async (e) => {
@@ -103,6 +130,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
             setIsOpen(false)
         }
     }
+
     return(
         <motion.section 
             className="ReviewModem"
@@ -130,8 +158,8 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                     transition={{ duration: 0.2 }}
                                 >
                                     <Image 
-                                        src={people[activeIndex].src} 
-                                        alt={people[activeIndex].alt} 
+                                        src={peopleData[activeIndex].src} 
+                                        alt={peopleData[activeIndex].alt} 
                                         fill={true}
                                     />
                                 </motion.div>
@@ -149,7 +177,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                             animate={{ opacity: 1 }}
                                             exit={{ opacity: 0 }}
                                         >
-                                            {people[activeIndex].moto}
+                                            {peopleData[activeIndex].moto}
                                         </motion.p>
                                     </AnimatePresence>
                                 </div>
@@ -163,7 +191,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                             animate={{ opacity: 1 }}
                                             exit={{ opacity: 0 }}
                                         >
-                                            {people[activeIndex].name}
+                                            {peopleData[activeIndex].name}
                                         </motion.p>
                                     </AnimatePresence>
                                 </div>
@@ -180,7 +208,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                                 delay: 0.1
                                             }}
                                         >
-                                            <p>{people[activeIndex].likes}</p>
+                                            <p>{peopleData[activeIndex].likes}</p>
                                             <Image  src='/svg/thumbsUp.svg' alt="thumbsUp_icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
                                         </motion.div>
                                     </AnimatePresence>
@@ -197,7 +225,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                                 delay: 0.15
                                             }}
                                         >
-                                            <p>{people[activeIndex].reviews}</p>
+                                            <p>{peopleData[activeIndex].reviews}</p>
                                             <Image  src='/svg/comment.svg' alt="reviews__icon" width={35} height={35} style={{ paddingBottom: 5}}/> 
                                         </motion.div>
                                     </AnimatePresence>
@@ -250,7 +278,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                                 ease: "easeInOut"
                                             }}
                                         >
-                                            <p>{people[activeIndex].name}</p>
+                                            <p>{peopleData[activeIndex].name}</p>
                                         </motion.div>
                                     </AnimatePresence>
                                 </div>
@@ -285,7 +313,7 @@ export default function ReviewModem ({ isOpen, setIsOpen}) {
                                             variants={menuVariants}
                                             className="menu__list"
                                         >
-                                            {people.map((person, index) => (
+                                            {peopleData.map((person, index) => (
                                                 <motion.li
                                                     key={index}
                                                     variants={itemVariants}

@@ -1,19 +1,16 @@
 export const stats = [
     {
         name: 'clients',
-        number: '1928',
         src: '/svg/person.svg',
         alt: 'clients_icon'
     },
     {
         name: 'likes',
-        number: '428',
         src: '/thumbsUp.svg',
         alt: 'clients_icon'
     },
     {
         name: 'comments',
-        number: '28',
         src: '/svg/comment.svg',
         alt: 'clients_icon'
     }

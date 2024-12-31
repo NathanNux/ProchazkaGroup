@@ -3,10 +3,12 @@ import SmallButton from "@/components/ui/stickyButtons/buttons/SmallButton";
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReviewModem from "../ReviewModem";
 import ReviewsSearch from "./ReviewsSearch";
 import { WebsiteReviews } from "@/constants/pages/reviews";
+import {useFetchDatabase} from "@/hooks/useFetchDatabase";
+import { supabase } from '@/hooks/supabaseClient';
 
 
 export default function ReviewsList() {
@@ -15,6 +17,29 @@ export default function ReviewsList() {
     const [activeFilter, setActiveFilter] = useState('všechno')
     const [searchQuery, setSearchQuery] = useState("")
     const [activeMode, setActiveMode] = useState('filter') // 'filter' or 'search'
+
+    const [reviews, setReviews] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
+    const { fetchReviews, fetchPeople } = useFetchDatabase()
+
+
+
+    useEffect(() => {
+        const loadReviews = async () => {
+            try {
+                const data = await fetchReviews()
+                if (data) {
+                    setReviews(data)
+                }
+            } catch (err) {
+                setError(err.message)
+            } finally {
+                setLoading(false)
+            }
+        }
+        loadReviews()
+    }, [])
 
     const handleFilterClick = (filter) => {
         setActiveFilter(filter)
@@ -30,25 +55,173 @@ export default function ReviewsList() {
         setVisibleItems(6)
     }
 
+    const getIPAddress = async () => {
+        try {
+            const response = await fetch('https://api.ipify.org?format=json')
+            const data = await response.json()
+            return data.ip
+        } catch (error) {
+            console.error('Chyba při získávání IP adresy:', error)
+            return null
+        }
+    }
+
     const getFilteredReviews = () => {
         try {
+            // Nejprve kopie
+            let workingArray = [...reviews];
+            
             if (activeMode === 'search' && searchQuery) {
-                return WebsiteReviews.filter(review => 
-                    review?.person?.toLowerCase().includes(searchQuery.toLowerCase())
-                )
+                workingArray = workingArray.filter(review => 
+                    review?.customer_name?.toLowerCase().includes(searchQuery.toLowerCase())
+                );
             }
-    
-            if (activeMode === 'filter') {
-                return WebsiteReviews.filter(review => 
-                    activeFilter === 'všechno' || 
-                    review?.hastag?.toLowerCase() === activeFilter.toLowerCase()
-                )
+            else if (activeMode === 'filter') {
+                workingArray = workingArray.filter(review => 
+                    activeFilter === 'všechno' 
+                    || review?.hashtag?.toLowerCase() === activeFilter.toLowerCase()
+                );
             }
-    
-            return WebsiteReviews
+      
+            // Seřazení podle "number"
+            workingArray.sort((a, b) => a.number - b.number);
+      
+            return workingArray;
         } catch (error) {
-            console.error('Filter error:', error)
-            return []
+            console.error('Filter error:', error);
+            return [];
+        }
+      };
+
+    const addLike = async (reviewId) => {
+        try {
+            console.log('Adding like to review:', reviewId)
+            // Získání IP adresy
+            const userIP = await getIPAddress()
+            if (!userIP) throw new Error('Nepodařilo se získat IP adresu')
+    
+                // Načtení aktuální recenze
+                const { data: reviewData, error: reviewError } = await supabase
+                    .from('reviews')
+                    .select('likes, ip_list, list_of_all_ips, consultant_name')
+                    .eq('id', reviewId)
+                    .single()
+        
+                if (reviewError) throw reviewError
+        
+                // Kontrola IP v seznamu
+                const ipList = reviewData.ip_list ? reviewData.ip_list.split(',') : []
+                
+                if (ipList.includes(userIP)) {
+                    // Odstranění IP adresy ze seznamu
+
+                    const { data: totalData, error: totalError } = await supabase
+                        .from('total')
+                        .select('totalpeople, likes')
+                        .eq('id', "7d1cc7c4-b546-40a1-8e9e-97d0601e7b07")
+
+
+
+                    const TotalObject = {
+                        totalpeople: totalData[0].totalpeople - 1,
+                        likes: totalData[0].likes - 1
+                    }
+
+                    const { data: totalDataUpdate, error: totalErrorUpdate } = await supabase
+                        .from('total')
+                        .update(TotalObject)
+                        .eq('id', "7d1cc7c4-b546-40a1-8e9e-97d0601e7b07")
+                        
+                        const newIpList = ipList.filter(ip => ip !== userIP)
+                    
+                        const { error: updateError } = await supabase
+                            .from('reviews')
+                            .update({
+                                likes: (reviewData.likes || 0) - 1,
+                                ip_list: newIpList.join(',')
+                            })
+                            .eq('id', reviewId)
+                    
+                        if (updateError) throw updateError
+                    
+                        // Aktualizace UI
+                        setReviews(prevReviews =>
+                            prevReviews.map(review =>
+                                review.id === reviewId
+                                    ? {
+                                        ...review,
+                                        likes: (review.likes || 0) - 1,
+                                        ip_list: newIpList.join(',')
+                                    }
+                                    : review
+                            )
+                        )
+
+                        const peopledata = await fetchPeople()
+
+                        const { data: peopleData, error: peopleError } = await supabase
+                            .from('people')
+                            .update({ likes: peopledata[0].likes - 1 })
+                            .eq('name', reviewData.consultant_name)
+                    }
+            else{
+                // Přidání nové IP do seznamu
+                ipList.push(userIP)
+
+                    const { data: totalData, error: totalError } = await supabase
+                        .from('total')
+                        .select('totalpeople, likes')
+                        .eq('id', "7d1cc7c4-b546-40a1-8e9e-97d0601e7b07")
+
+
+
+                    const TotalObject = {
+                        totalpeople: totalData[0].totalpeople + 1,
+                        likes: totalData[0].likes + 1
+                    }
+
+                    const { data: totalDataUpdate, error: totalErrorUpdate } = await supabase
+                        .from('total')
+                        .update(TotalObject)
+                        .eq('id', "7d1cc7c4-b546-40a1-8e9e-97d0601e7b07")
+            
+                // Update recenze
+                const { error: updateError } = await supabase
+                    .from('reviews')
+                    .update({ 
+                        likes: (reviewData.likes || 0) + 1,
+                        ip_list: ipList.join(',')
+                    })
+                    .eq('id', reviewId)
+        
+                if (updateError) throw updateError
+        
+                // Aktualizace UI
+                setReviews(prevReviews => 
+                    prevReviews.map(review => 
+                        review.id === reviewId 
+                            ? { 
+                                ...review, 
+                                likes: (review.likes || 0) + 1,
+                                ip_list: ipList.join(',')
+                            }
+                            : review
+                    )
+                )
+
+                const peopledata = await fetchPeople()
+
+                        const { data: peopleData, error: peopleError } = await supabase
+                            .from('people')
+                            .update({ likes: peopledata[0].likes + 1 })
+                            .eq('name', reviewData.consultant_name)
+            }
+    
+            
+    
+        } catch (error) {
+            console.error('Chyba při přidávání like:', error)
+            alert('Nepodařilo se přidat like')
         }
     }
 
@@ -151,7 +324,7 @@ export default function ReviewsList() {
             >
                 <AnimatePresence>
                     {filteredReviews.slice(0, visibleItems).map(( review, i) => {
-                        const { number, hastag, message, name, likes} = review
+                        const { number, hashtag, message, customer_name, likes, consultant_name, id} = review
                         return (
                             <motion.div 
                                 key={review.number}
@@ -169,21 +342,18 @@ export default function ReviewsList() {
                                 <div className="devider__item"/>
                                 <div className="context">
                                     <div className="Header">
-                                        <p>{number}</p>
-                                        <p>#{hastag}</p>
+                                        <p>{number < 9 ? "0" + number : number}</p>
+                                        <p>#{hashtag}</p>
                                     </div>
                                     <div className="message">
                                         <p>{message}</p>
                                     </div>  
                                 </div>
                                 <div className="ratings">
-                                    <p>{name}</p>
+                                    <p>{customer_name}</p>
                                     <div className="buttons">
-                                        <SVGButton src='/svg/thumbsUp.svg' altText='Like__icon'/>
+                                        <SVGButton src='/svg/thumbsUp.svg' altText='Like__icon' onClick={() => addLike(id)}/>
                                         <p>{likes}</p>
-                                        <div style={{ marginLeft: '15px' }}>
-                                            <Image src='/svg/thumbsupblack.svg' alt="like__icon" width={35} height={35}/>
-                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

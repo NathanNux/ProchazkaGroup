@@ -2,21 +2,47 @@ import Head from "next/head"
 import Navbar from "@/components/common/navbar"
 import Cursor from "@/components/common/navbar/cursor"
 import ContactIntro from "@/components/intros/contact"
+import { useFetchDatabase } from "@/hooks/useFetchDatabase"
+import { useEffect, useState } from "react"
 
 export default function PersonFeebackPage1() {
-    const name = "Václav Procházka"
-    const moto = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    const number = '01'
-    const databaseName = 'prochazka-vaclav'
+
+    const {fetchClovek} = useFetchDatabase()
+
+    const [personData, setPersonData] = useState({
+        name: 'Václav Procházka',
+        moto: '',
+        number: '01',
+        databaseName: 'Václav Procházka'
+    })
+
+    useEffect(() => {
+        const loadData = async () => {
+            try {
+                const data = await fetchClovek("Václav Procházka")
+                if (data && data.length > 0) {
+                    setPersonData(prev => ({
+                        ...prev,
+                        name: data[0].name,
+                        moto: data[0].moto
+                    }))
+                }
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+        loadData();
+    }, [])
     
     return(
         <>
             <Head>
-                <title>{`${name} | Finanční Poradce | Procházka Group`}</title>
+                <title>{`${personData.name} | Finanční Poradce | Procházka Group`}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content={`${name} - zakladatel a hlavní finanční poradce Procházka Group. Expert na investice a finanční plánování.`} />
-                <meta name="keywords" content={`${name}, Procházka Group zakladatel, finanční poradce, investiční expert, finanční plánování`} />
+                <meta name="description" content={`${personData.name} - zakladatel a hlavní finanční poradce Procházka Group. Expert na investice a finanční plánování.`} />
+                <meta name="keywords" content={`${personData.name}, Procházka Group zakladatel, finanční poradce, investiční expert, finanční plánování`} />
                 <meta name="author" content="Procházka Group" />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href={`https://prochazkagroup.cz/reviews/prochazka-vaclav`} />
@@ -24,8 +50,8 @@ export default function PersonFeebackPage1() {
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="profile" />
                 <meta property="og:url" content={`https://prochazkagroup.cz/reviews/prochazka-vaclav`} />
-                <meta property="og:title" content={`${name} | Zakladatel Procházka Group`} />
-                <meta property="og:description" content={`Zakladatel a hlavní finanční poradce ${name} z Procházka Group`} />
+                <meta property="og:title" content={`${personData.name} | Zakladatel Procházka Group`} />
+                <meta property="og:description" content={`Zakladatel a hlavní finanční poradce ${personData.name} z Procházka Group`} />
                 <meta property="og:image" content="https://prochazkagroup.cz/profile-vaclav.jpg" />
                 <meta property="profile:first_name" content="Václav" />
                 <meta property="profile:last_name" content="Procházka" />
@@ -33,8 +59,8 @@ export default function PersonFeebackPage1() {
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={`https://prochazkagroup.cz/reviews/prochazka-vaclav`} />
-                <meta property="twitter:title" content={`${name} | Zakladatel Procházka Group`} />
-                <meta property="twitter:description" content={`Zakladatel a hlavní finanční poradce ${name}`} />
+                <meta property="twitter:title" content={`${personData.name} | Zakladatel Procházka Group`} />
+                <meta property="twitter:description" content={`Zakladatel a hlavní finanční poradce ${personData.name}`} />
                 <meta property="twitter:image" content="https://prochazkagroup.cz/profile-vaclav.jpg" />
 
                 {/* Schema.org markup */}
@@ -42,17 +68,17 @@ export default function PersonFeebackPage1() {
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Person",
-                        "name": name,
+                        "name": personData.name,
                         "jobTitle": "Zakladatel a Hlavní Finanční Poradce",
                         "worksFor": {
                             "@type": "Organization",
                             "name": "Procházka Group",
                             "founder": {
                                 "@type": "Person",
-                                "name": name
+                                "name": personData.name
                             }
                         },
-                        "description": moto,
+                        "description": personData.moto,
                         "image": "https://prochazkagroup.cz/profile-vaclav.jpg",
                         "url": `https://prochazkagroup.cz/reviews/prochazka-vaclav`,
                         "contactPoint": {
@@ -67,7 +93,7 @@ export default function PersonFeebackPage1() {
             <main lang="cs">
                 <Cursor />
                 <Navbar />
-                <ContactIntro name={name} moto={moto} number={number} databaseName={databaseName}/>
+                <ContactIntro name={personData.name} moto={personData.moto} number={personData.number} databaseName={personData.databaseName}/>
             </main>
         </>
     )
