@@ -9,11 +9,11 @@ import { useFetchDatabase } from './useFetchDatabase'
 
 export const useReviewForm = () => {
 
-    const {fetchPeople, fetchReviews, fetchTotal} = useFetchDatabase()
+    const {fetchClovek} = useFetchDatabase()
     const [formData, setFormData] = useState({
         customerName: '',
         reviewType: '', // Will be either 'poradce' or 'benefitprogram'
-        consultantName: '', // The selected person's name
+        consultantName: 'Václav Procházka', // The selected person's name
         message: ''
     })
     const [loading, setLoading] = useState(false)
@@ -48,7 +48,7 @@ export const useReviewForm = () => {
         try {
             const reviewObject = {
                 customer_name: formData.customerName,
-                hashtag: formData.consultantName === 'poradce' ? 'poradce' : 'benefitprogram',
+                hashtag: formData.consultantName === "benefitprogram" ? "benefitprogram" : "poradce",
                 consultant_name: formData.consultantName,
                 message: formData.message,
                 timestamp: new Date().toISOString(),
@@ -61,11 +61,17 @@ export const useReviewForm = () => {
     
             if (error) throw error
 
-            const peopledata = await fetchPeople()
+            const peopledata = await fetchClovek(formData.consultantName)
+
+            console.log("jmeno:", formData.consultantName)
             const { data: peopleData, error: peopleError } = await supabase
                     .from('people')
                     .update({ reviews: peopledata[0].reviews + 1 })
                     .eq('name', formData.consultantName)
+
+                console.log("reviews:", peopleData)
+            
+                    if (peopleError) throw peopleError
 
 
             const { data: totalData, error: totalError } = await supabase

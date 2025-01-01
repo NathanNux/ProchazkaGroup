@@ -146,7 +146,7 @@ export default function Testimonials () {
                         const {
                             id = `fallback-${idx}`,
                             customer_name = '',
-                            town = '',
+                            town = '', 
                             message = '',
                             number = adjustedIndex,
                             hashtag = ''

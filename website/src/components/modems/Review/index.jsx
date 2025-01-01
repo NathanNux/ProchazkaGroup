@@ -21,7 +21,7 @@ export default function ReviewsList() {
     const [reviews, setReviews] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const { fetchReviews, fetchPeople } = useFetchDatabase()
+    const { fetchReviews, fetchClovek } = useFetchDatabase()
 
 
 
@@ -157,7 +157,7 @@ export default function ReviewsList() {
                             )
                         )
 
-                        const peopledata = await fetchPeople()
+                        const peopledata = await fetchClovek(reviewData.consultant_name)
 
                         const { data: peopleData, error: peopleError } = await supabase
                             .from('people')
@@ -209,7 +209,7 @@ export default function ReviewsList() {
                     )
                 )
 
-                const peopledata = await fetchPeople()
+                const peopledata = await fetchClovek(reviewData.consultant_name)
 
                         const { data: peopleData, error: peopleError } = await supabase
                             .from('people')
@@ -342,8 +342,9 @@ export default function ReviewsList() {
                                 <div className="devider__item"/>
                                 <div className="context">
                                     <div className="Header">
-                                        <p>{number < 9 ? "0" + number : number}</p>
-                                        <p>#{hashtag}</p>
+                                        <h3>{number < 9 ? "0" + number : number}</h3>
+                                        <h3>#{hashtag}</h3>
+                                        <p>{hashtag === "poradce" ? " | " + consultant_name : ""}</p>
                                     </div>
                                     <div className="message">
                                         <p>{message}</p>

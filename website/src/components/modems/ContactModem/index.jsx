@@ -127,21 +127,51 @@ export default function ContactModem({
                 loadPeopleData()
             }, [])
 
-    const handleSubmit = async (e) => {
-        e?.preventDefault()
-        
-        const result = await handleContactSubmit()
-        
-        toast({
-            title: result.success ? "Úspěch!" : "Chyba!",
-            description: result.message,
-            variant: result.success ? "success" : "destructive"
-        })
-
-        if (result.success) {
-            setIsOpen(false)
-        }
-    }
+            const handleSubmit = async (e) => {
+                e?.preventDefault()
+                
+                try {
+                    // Připravit data pro API
+                    const apiData = {
+                        email: formData.email,
+                        message: formData.message,
+                        phone_number: formData.phone,
+                        consultant_name: formData.selectedPerson
+                    }
+            
+                    // Volání API endpointu
+                    const response = await fetch('https://centrumservers.com/prochazkagroup/send_email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(apiData)
+                    })
+            
+                    const data = await response.json()
+            
+                    if (!response.ok) {
+                        throw new Error(data.error || 'Něco se pokazilo')
+                    }
+            
+                    // Zobrazit úspěšnou notifikaci
+                    toast({
+                        title: "Úspěch!",
+                        description: data.message,
+                        variant: "success"
+                    })
+            
+                    setIsOpen(false)
+            
+                } catch (error) {
+                    // Zobrazit chybovou notifikaci
+                    toast({
+                        title: "Chyba!",
+                        description: error.message,
+                        variant: "destructive"
+                    })
+                }
+            }
 
     return(
         <motion.section 
