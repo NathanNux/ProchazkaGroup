@@ -1,140 +1,1020 @@
-.Sales{
-    padding-top: 15vh;
-    width: 100vw;
-    height: 120vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    overflow: hidden;
-
-    .Content__Sales{
-        position: relative;
-        width: 60%;
-        height: 75%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 0 5vw;
-        gap: 5vh;
-
-        .Header{
-            width: 100%;
-            height: 15%;
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 120vh;
             position: relative;
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            justify-content: flex-start;
-            gap: 0.5rem;
-
-            h3{
-                font-size: 2rem;
-                font-weight: 800;
-                margin: 0;
-            }
-
-            p{
-                font-size: 1.5rem;
-                font-weight: 400;
-                margin: 0;
-                padding-top: 1rem;
-            }
-
-            .divider{
-                width: 200%;
-                height: 2px;
-                background-color: #5E758D;
-                position: absolute;
-                bottom: 0;
-                left: -20%;
-            }
-        }
-
-        .Main__Text{
-            width: 110%;
-            height: 65%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-
-            .MainTextV3__Main{
-                width: 95%;
-                height: 70%;
-
-                span{
-                    font-size: 3rem;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 15%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 95%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 3rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 200px;
+                            height: 200px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+        
                 }
             }
-        }
-
-        .Button__container{
-            position: absolute;
-            width: 160%;
-            height: 25%;
-            bottom: 0;
-            right: -80%;
-
-            .divider{
+        
+            .Image__container{
                 position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                width: 100%;
-                height: 2px;
-                background-color: #5E758D;
+                top: 20%;
+                right: 7.5%;
+        
             }
-
-            .button{
-                position: absolute;
-                top: -10%;
-                left: 30%;
-                z-index: 70;
-
-                .Round__button_container{
-                    width: 200px;
-                    height: 200px;
-
-                    a{
-                        p{
-                            line-height: 1.2;
-                            font-size: 1.8rem;
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    font-size: 4rem;
+                    font-weight: 400;
+                    margin: 0;
+                    border-bottom: #5E758D 2px solid;
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
                         }
                     }
                 }
             }
-
         }
     }
-
-    .Image__container{
-        position: absolute;
-        top: 20%;
-        right: 7.5%;
-
-    }
-    .Logo__container{
-        width: 100%;
-        height: 45%;
-
-        display: flex;
-        flex-direction: column;
-
-
-        .subtext{
-            width: 60%;
-            padding-left: 5vw;
-            font-size: 4rem;
-            font-weight: 400;
-            margin: 0;
-            border-bottom: #5E758D 2px solid;
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 120vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 15%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 2.8rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 200px;
+                            height: 200px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 20%;
+                right: 7.5%;
+        
+            }
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    border-bottom: #5E758D 2px solid;
+                    p{
+                        font-size: 3.6rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
-        .Rolling__icons{
-            padding: 0;
-            .Rolling_icons_container{
-                &:nth-of-type(2){
-                    display: none;
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 120vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 15%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 180px;
+                            height: 180px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 25%;
+                right: 7.5%;
+        
+            }
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    border-bottom: #5E758D 2px solid;
+                    p{
+                        font-size: 3.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 125vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 20%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 170px;
+                            height: 170px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 25%;
+                right: 7.5%;
+        
+            }
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    border-bottom: #5E758D 2px solid;
+                    p{
+                        font-size: 2.8rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 125vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 20%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.8rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 25%;
+                right: 7.5%;
+        
+            }
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    border-bottom: #5E758D 2px solid;
+                    p{
+                        font-size: 2.4rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 180vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 25%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.6em;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 130px;
+                            height: 130px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 25%;
+                right: 7.5%;
+        
+            }
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    border-bottom: #5E758D 2px solid;
+                    p{
+                        font-size: 2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .Sales{
+            padding-top: 15vh;
+            width: 100vw;
+            height: 180vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 60%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 25%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.3rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 115%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 0;
+                    right: -80%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: -10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 110px;
+                            height: 110px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.1rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 30%;
+                right: 7.5%;
+        
+            }
+            .Logo__container{
+                width: 100%;
+                height: 45%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 60%;
+                    padding-left: 5vw;
+                    border-bottom: #5E758D 2px solid;
+                    p{
+                        font-size: 2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
                 }
             }
         }

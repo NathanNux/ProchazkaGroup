@@ -44,7 +44,7 @@ export default function Sales() {
                 <CustomImage altText='Sales-image' src='/assets/reviewsBackground.png'/>
             </div>
             <div className="Logo__container">
-                <SubText className={'subtext'} text={'NAŠI PARTNEŘI:'}/>
+                <SubText className={'subtext'} initialColor="#050A10" text={'NAŠI PARTNEŘI:'}/>
                 <RollingIcons baseVelocity={2.5}/>
             </div>
         </div>
