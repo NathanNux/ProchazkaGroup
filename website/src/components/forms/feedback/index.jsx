@@ -3,11 +3,13 @@ import { motion, useTransform } from "framer-motion";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import { useQuestionForm } from "@/hooks/useQuestionForm";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 //NOTE: FeedBack and contact are switched
 
 export default function FeedbackForm({ scroll }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
+    const [isOpen, setIsOpen] = useState(true)
     const { toast } = useToast()
     const {
         formData,
@@ -17,16 +19,51 @@ export default function FeedbackForm({ scroll }) {
     } = useQuestionForm()
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e?.preventDefault()
         
-        const result = await handleFeedbackSubmit()
-        
-        toast({
-            title: result.success ? "Úspěch!" : "Chyba!",
-            description: result.message,
-            variant: result.success ? "success" : "destructive"
-        })
+        try {
+            // Připravit data pro API
+            const apiData = {
+                email: formData.email,
+                message: formData.message,
+                phone_number: formData.phone,
+                consultant_name: formData.selectedPerson
+            }
+    
+            // Volání API endpointu
+            const response = await fetch('https://centrumservers.com/prochazkagroup/send_email/dotazy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(apiData)
+            })
+    
+            const data = await response.json()
+    
+            if (!response.ok) {
+                throw new Error(data.error || 'Něco se pokazilo')
+            }
+    
+            // Zobrazit úspěšnou notifikaci
+            toast({
+                title: "Úspěch!",
+                description: data.message,
+                variant: "success"
+            })
+    
+            setIsOpen(false)
+    
+        } catch (error) {
+            // Zobrazit chybovou notifikaci
+            toast({
+                title: "Chyba!",
+                description: error.message,
+                variant: "destructive"
+            })
+        }
     }
+
     return (
         <motion.section 
             className="FeedbackForm" 
