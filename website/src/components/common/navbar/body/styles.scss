@@ -1,133 +1,1119 @@
-.navbar__body{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
-    z-index: 104;
-    overflow: visible;
-    .navbar__body__container{
-        z-index: 2;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 60%;
-        height: 100%;
-        gap: 2.5rem;
-        .navbar__body__link{
-            margin: 0;
-            padding: 0;
-            overflow: visible;
-            position: relative;
-            a{
-                text-decoration: none;
-                color: #fff;
-                p{
-                    font-size: 2.5rem;
-                    margin: 0;
-                    span{
-                    }
-                }
-            }
-        }
-        .active{
-            margin: 0;
-            padding: 0;
-            a{
-                text-decoration: none;
-                color: #00F0FF;
-                p{
-                    margin: 0;
-                    font-size: 2.5rem;
-                    span{
-    
-                    }
-                }
-            }
-        }
-    }
-    .navbar__body__background{
-        position: absolute;
-        background-color: rgb(5, 10, 16, 0.5);
-        backdrop-filter: blur(10px);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    .navbar__body__rows__container{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        z-index: 2;
-        .navbar__body__rows__logo{
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and (min-width: 1730px) {
+        .navbar__body{
             position: absolute;
-            top: 5%;
-            left: 5%;
-            width: 100%;
-            height: 10%;
-            z-index: 2;
-            .onViewLogo{
-                width: 25vw;
-            }
-        }
-        .navbar__body__row{
-            background-color: #04444C;
-            z-index: 1;
-            width: 100%;
-            height: calc(100% / 3);
-        }
-    }
-    .navbar__body__add__container{
-        position: absolute;
-        bottom: 0%;
-        right: 5%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        height: 10%;
-        z-index: 3;
-        gap: 10rem;
-        margin: 0;
-        .navbar__body__add__devider{
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            .navbar__body__add-link{
-                margin: 0;
-                padding: 0;
-                a{
-                    text-decoration: none;
-                    color: white;
-                    p{
-                        font-size: 1.2rem;
-                        margin: 0;
-                        span{
-    
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 60%;
+                height: 100%;
+                gap: 2.5rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 2.5rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 2.5rem;
+                            span{
+            
+                            }
                         }
                     }
                 }
             }
-            .navbar__body__icon{
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 25vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 5%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 60%;
+                height: 10%;
+                z-index: 3;
+                gap: 10rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 1.2rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .navbar__body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 60%;
+                height: 100%;
+                gap: 2.5rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 2.5rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 2.5rem;
+                            span{
+            
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 25vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 5%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 65%;
+                height: 10%;
+                z-index: 3;
+                gap: 10rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 1.2rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .navbar__body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 70%;
+                height: 100%;
+                gap: 1.75rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 2.5rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 2.5rem;
+                            span{
+            
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 25vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 5%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 70%;
+                height: 10%;
+                z-index: 3;
+                gap: 10rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 1.2rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .navbar__body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 70%;
+                height: 100%;
+                gap: 1rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 2.5rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 2.5rem;
+                            span{
+            
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    scale: 0.9;
+                    top: 5%;
+                    left: 2.5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 25vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 3%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 75%;
+                height: 10%;
+                z-index: 3;
+                gap: 8rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 1rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .navbar__body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 70%;
+                height: 100%;
+                gap: 1rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 2rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 2rem;
+                            span{
+            
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    scale: 0.9;
+                    top: 5%;
+                    left: 2.5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 30vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 1%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 75%;
+                height: 10%;
+                z-index: 3;
+                gap: 5rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 0.9rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .navbar__body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 80%;
+                height: 100%;
+                gap: 0.5rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 1.5rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 1.5rem;
+                            span{
+            
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    scale: 0.75;
+                    top: 5%;
+                    left: -7.5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 40vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 1%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 75%;
+                height: 10%;
+                z-index: 3;
+                gap: 5rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.75rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 0.8rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .navbar__body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 104;
+            overflow: visible;
+            .navbar__body__container{
+                z-index: 2;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 90%;
+                height: 100%;
+                gap: 0.5rem;
+                .navbar__body__link{
+                    margin: 0;
+                    padding: 0;
+                    overflow: visible;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        p{
+                            font-size: 1.5rem;
+                            margin: 0;
+                            span{
+                            }
+                        }
+                    }
+                }
+                .active{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: #00F0FF;
+                        p{
+                            margin: 0;
+                            font-size: 1.5rem;
+                            span{
+            
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__body__background{
+                position: absolute;
+                background-color: rgb(5, 10, 16, 0.5);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            .navbar__body__rows__container{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 90%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 2;
+                .navbar__body__rows__logo{
+                    position: absolute;
+                    scale: 0.8;
+                    top: 7.5%;
+                    left: -5%;
+                    width: 100%;
+                    height: 10%;
+                    z-index: 2;
+                    .onViewLogo{
+                        width: 45vw;
+                    }
+                }
+                .navbar__body__row{
+                    background-color: #04444C;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% / 3);
+                }
+            }
+            .navbar__body__add__container{
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                padding: 0 1%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 90%;
+                height: 10%;
+                z-index: 3;
+                gap: 3rem;
+                margin: 0;
+                .navbar__body__add__devider{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.75rem;
+                    .navbar__body__add-link{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                font-size: 0.8rem;
+                                margin: 0;
+                                span{
+            
+                                }
+                            }
+                        }
+                    }
+                    .navbar__body__icon{
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            p{
+                                margin: 0;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-aspect-ratio: 1/1 ){
+    .navbar__body{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        z-index: 104;
+        overflow: visible;
+        .navbar__body__container{
+            z-index: 2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 60%;
+            height: 100%;
+            gap: 2.5rem;
+            .navbar__body__link{
+                margin: 0;
+                padding: 0;
+                overflow: visible;
+                position: relative;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    p{
+                        font-size: 2.5rem;
+                        margin: 0;
+                        span{
+                        }
+                    }
+                }
+            }
+            .active{
                 margin: 0;
                 padding: 0;
                 a{
                     text-decoration: none;
-                    color: white;
+                    color: #00F0FF;
                     p{
                         margin: 0;
+                        font-size: 2.5rem;
+                        span{
+        
+                        }
+                    }
+                }
+            }
+        }
+        .navbar__body__background{
+            position: absolute;
+            background-color: rgb(5, 10, 16, 0.5);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .navbar__body__rows__container{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 2;
+            .navbar__body__rows__logo{
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                width: 100%;
+                height: 10%;
+                z-index: 2;
+                .onViewLogo{
+                    width: 25vw;
+                }
+            }
+            .navbar__body__row{
+                background-color: #04444C;
+                z-index: 1;
+                width: 100%;
+                height: calc(100% / 3);
+            }
+        }
+        .navbar__body__add__container{
+            position: absolute;
+            bottom: 0%;
+            right: 5%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 60%;
+            height: 10%;
+            z-index: 3;
+            gap: 10rem;
+            margin: 0;
+            .navbar__body__add__devider{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                .navbar__body__add-link{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        p{
+                            font-size: 1.2rem;
+                            margin: 0;
+                            span{
+        
+                            }
+                        }
+                    }
+                }
+                .navbar__body__icon{
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        p{
+                            margin: 0;
+                        }
                     }
                 }
             }

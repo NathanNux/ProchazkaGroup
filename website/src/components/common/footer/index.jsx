@@ -52,7 +52,7 @@ export default function Footer() {
         <section className="Footer">
             <div className="Footer__Header">
                 <div className="MainText">
-                    <MainText initialColor={'#fff'} secondaryColor={'#00F0FF'} text={'JSME ODHOLÁNI VÁM ZLEHČIT <br /> <span>FINAČNÍ ASPEKT ŽIVOTA. </span> <br />KDYKOLIV JSTE PŘIPRAVENI, <br /><span> MY JSME TAKY.</span>'}/>
+                    <MainText initialColor={'#fff'} secondaryColor={'#00F0FF'} text={'JSME ODHOLÁNI VÁM ZLEHČIT <br /><span>FINAČNÍ ASPEKT ŽIVOTA. </span> <br />KDYKOLIV JSTE PŘIPRAVENI, <br /><span>MY JSME TAKY.</span>'}/>
                 </div>
                 <div className="Logo">
                     <ONViewLogo />

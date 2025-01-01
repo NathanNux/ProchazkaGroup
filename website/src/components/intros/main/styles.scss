@@ -1,119 +1,808 @@
-.MainIntro{
-    position: relative;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    overflow: hidden;
-
-    .MainIntro__Wrapper{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #fff;
-        will-change: transform, opacity;
-
-        .Heading{
-            z-index: 3;
-            position: absolute;
-            top: 40%;
-            right: 2.5%;
-            transform: translateY(-50%);
-            h1{
-            font-size: 4.5rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            text-align: right;
-            line-height: 1.5;
-            margin: 0;
-            color: #fff;
-            z-index: 3;
-            span{
-                color: #00F0FF;
-            }
-        }
-        }
-        
-        .cover{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #050A10;
-            opacity: 0.45;
-            z-index: 1;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .rect__container{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .MainIntro{
+            position: relative;
             display: flex;
+            width: 100vw;
+            height: 100vh;
             justify-content: center;
-            align-items: flex-end;
-            flex-direction: column;
-            z-index: 2;
-            .rect__Wrapper{
-                display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
-                flex-direction: column;
-                height: 100%;
-                width: 60%;
-                .rect{
-                    height: calc(100% / 3); 
-                    background-color: #050A10;
-                    opacity: 0.65;
-                    border-radius: 35px 0 0 0;
-                    will-change: transform, opacity;
-                    margin: 0;
-
-                    &:nth-of-type(1){
-                        width: 35%;
-                    }
-                    &:nth-of-type(2){
-                        width: 80%;
-                    }
-                    &:nth-of-type(3){
-                        width: 100%;
-                    }
-                }
-            }
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
         
-            .rect__bottom{
-                width: 100%;
-                height: 10%;
+            .MainIntro__Wrapper{
+                position: absolute;
                 display: flex;
-                justify-content: flex-start;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
                 align-items: center;
-                background-color: #050A10;
-                opacity: 0.65;
-                position: relative;
-                color: #fff;
-                .onViewLogo{
-                    width: 25vw;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 40%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    h1{
+                    font-size: 4.5rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    text-align: right;
+                    line-height: 1.5;
+                    margin: 0;
+                    color: #fff;
+                    z-index: 3;
+                    span{
+                        color: #00F0FF;
+                    }
+                }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: 100%; 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 35%;
+                            }
+                            &:nth-of-type(2){
+                                width: 80%;
+                            }
+                            &:nth-of-type(3){
+                                width: 100%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 25vw;
+                        }
+                    }
                 }
             }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+                z-index: 56;
+            }
+            
         }
     }
-    .button__container{
-        position: absolute;
-        bottom: 10%;
-        left: 2.5%;
-        z-index: 56;
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .MainIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .MainIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 45%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        span{
+                            font-size: 4rem;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: 100%; 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 35%;
+                            }
+                            &:nth-of-type(2){
+                                width: 80%;
+                            }
+                            &:nth-of-type(3){
+                                width: 100%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 25vw;
+                        }
+                    }
+                }
+            }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+                z-index: 56;
+            }
+            
+        }
     }
-    
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .MainIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .MainIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 45%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        span{
+                            font-size: 3.8rem;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: calc(100% / 3); 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 35%;
+                            }
+                            &:nth-of-type(2){
+                                width: 80%;
+                            }
+                            &:nth-of-type(3){
+                                width: 100%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 25vw;
+                        }
+                    }
+                }
+            }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+                z-index: 56;
+                scale: 0.9;
+            }
+            
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .MainIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .MainIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 45%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        span{
+                            font-size: 3.6rem;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: 100%; 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 45%;
+                            }
+                            &:nth-of-type(2){
+                                width: 90%;
+                            }
+                            &:nth-of-type(3){
+                                width: 110%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 25vw;
+                        }
+                    }
+                }
+            }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+                z-index: 56;
+                scale: 0.9;
+            }
+            
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .MainIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .MainIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 45%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        span{
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: 100%; 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 100%;
+                            }
+                            &:nth-of-type(3){
+                                width: 120%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 35vw;
+                        }
+                    }
+                }
+            }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+                z-index: 56;
+                scale: 0.8;
+            }
+            
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .MainIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .MainIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 35%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        span{
+                            font-size: 2.6rem;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: 100%; 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 45%;
+                            }
+                            &:nth-of-type(2){
+                                width: 90%;
+                            }
+                            &:nth-of-type(3){
+                                width: 110%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 15%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 35vw;
+                            scale: 0.8;
+                        }
+                    }
+                }
+            }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: -2.5%;
+                z-index: 56;
+                scale: 0.6;
+            }
+            
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .MainIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .MainIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 35%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        span{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: 100%; 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 100%;
+                            }
+                            &:nth-of-type(3){
+                                width: 120%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 15%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #050A10;
+                        opacity: 0.65;
+                        position: relative;
+                        color: #fff;
+                        .onViewLogo{
+                            width: 45vw;
+                            scale: 0.7;
+                        }
+                    }
+                }
+            }
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: -2.5%;
+                z-index: 56;
+                scale: 0.55;
+            }
+            
+        }
+    }
 }
