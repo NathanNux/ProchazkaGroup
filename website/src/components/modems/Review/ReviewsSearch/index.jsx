@@ -15,7 +15,7 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
   // Get unique persons
   const uniquePersons = useMemo(() => {
     if (!Array.isArray(reviews)) return []
-    return [...new Set(reviews.filter(review => review?.person).map(review => review.person))]
+    return [...new Set(reviews.filter(review => review?.consultant_name).map(review => review.consultant_name))]
   }, [reviews])
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function ReviewsSearch({ onSearch, reviews, searchValue, resetSea
         person?.toLowerCase().includes(value.toLowerCase())
       ).map(person => ({
         person,
-        count: reviews.filter(review => review?.person === person).length || 0
+        count: reviews.filter(review => review?.consultant_name === person).length || 0
       }))
 
       setFilteredReviews(filtered)
