@@ -48,8 +48,6 @@ const menuVariants = {
     }
 }
 
-//WIP: Nahradit Jména Jménama z databáze
-
 export default function ContactBenefit() {
     const [peopleData, setPeopleData] = useState(staticPeople) // Přidáno
     const [ isOpen, setIsOpen ] = useState(false)
