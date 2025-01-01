@@ -68,11 +68,12 @@ export default function ReviewsList() {
 
     const getFilteredReviews = () => {
         try {
-            // Nejprve kopie
             let workingArray = [...reviews];
             
             if (activeMode === 'search' && searchQuery) {
                 workingArray = workingArray.filter(review => 
+                    // Přidat filtrování podle consultant_name
+                    review?.consultant_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     review?.customer_name?.toLowerCase().includes(searchQuery.toLowerCase())
                 );
             }
@@ -83,7 +84,6 @@ export default function ReviewsList() {
                 );
             }
       
-            // Seřazení podle "number"
             workingArray.sort((a, b) => a.number - b.number);
       
             return workingArray;
@@ -91,7 +91,7 @@ export default function ReviewsList() {
             console.error('Filter error:', error);
             return [];
         }
-      };
+    };
 
     const addLike = async (reviewId) => {
         try {
@@ -296,7 +296,7 @@ export default function ReviewsList() {
                     <div className="searchBar">
                         <ReviewsSearch 
                             onSearch={handleSearch} // Function to update search
-                            reviews={WebsiteReviews}
+                            reviews={reviews}
                             searchValue={searchQuery} // String value
                             resetSearch={() => {
                                 setSearchQuery("")

@@ -10,6 +10,8 @@ import GetChars from "../navbar/body/getChars";
 import { useNewsletterForm } from "@/hooks/useNewsletterForm";
 import { useToast } from "@/hooks/use-toast";
 
+const SENDER_API_TOKEN = process.env.NEXT_PUBLIC_SENDER_API_TOKEN;
+
 export default function Footer() {
     const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 });
     const { toast } = useToast()
@@ -20,34 +22,62 @@ export default function Footer() {
         handleSubmit: handleNewsletterSubmit
     } = useNewsletterForm()
 
-    const handleSubmit = async (e) => {
-        e?.preventDefault()
-        
-        if (!formData.name || !formData.email) {
-            toast({
-                title: "Chyba!",
-                description: "Prosím vyplňte všechna pole",
-                variant: "destructive"
-            })
-            return
-        }
 
-        const result = await handleNewsletterSubmit()
+// Upravit handleSubmit funkci:
+const handleSubmit = async (e) => {
+    e?.preventDefault()
+    
+    if (!formData.name || !formData.email) {
+        toast({
+            title: "Chyba!",
+            description: "Prosím vyplňte všechna pole",
+            variant: "destructive"
+        })
+        return
+    }
+
+    try {
+        const url = "https://api.sender.net/v2/subscribers"
         
-        if (result.success) {
+        const headers = {
+            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SENDER_API_TOKEN}`,
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+        
+        const data = {
+            email: formData.email,
+            firstname: formData.name,
+            groups: ["prochazkagroup"]
+        }
+        
+        const response = await fetch(url, {
+            method: "POST",
+            headers,
+            body: JSON.stringify(data)
+        })
+
+        const result = await response.json()
+
+        if (response.ok) {
             toast({
                 title: "Úspěch!",
-                description: result.message,
+                description: "Byli jste úspěšně přihlášeni k odběru novinek",
                 variant: "success"
             })
+            setFormData({ name: '', email: '' })
         } else {
-            toast({
-                title: "Chyba!",
-                description: result.message,
-                variant: "destructive"
-            })
+            throw new Error(result.message || 'Něco se pokazilo')
         }
+
+    } catch (error) {
+        toast({
+            title: "Chyba!",
+            description: error.message,
+            variant: "destructive"
+        })
     }
+}
     return (
         <section className="Footer">
             <div className="Footer__Header">
