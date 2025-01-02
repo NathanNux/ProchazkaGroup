@@ -1,239 +1,1704 @@
-.OurDeal{
-    width: 100vw;
-    height: 150vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20vh 0;
-    color: #050A10;
-
-    .The__deal__container{
-        width: 90%;
-        height: 50%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 5vw;
-        border-bottom: #5E758D 2px solid;
-        border-top: #5E758D 2px solid;
-
-
-        .stats__container{
-            width: 40%;
-            height: 100%;
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .OurDeal{
+            width: 100vw;
+            height: 150vh;
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             justify-content: center;
-            padding: 5vh 0 5vh 7.5vw;
-
-            .header{
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                padding-top: 5vh;
-                height: 50%;
-                gap: 0.5rem;
-
-                h3{
-                    font-size: 2rem;
-                    font-weight: 800;
-                    margin: 0;
-                }
-
-                p{
-                    font-size: 1.5rem;
-                    font-weight: 400;
-                    margin: 0;
-                    padding-top: 1rem;
-                }
-                img{
-                    padding-top: 1.5rem;
-                    margin-left: 2.5vw;
-                }
-            }
-
-            .devider{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 150%;
-                height: 2px;
-                background-color: #5E758D;
-            }
-            .stats__wrapper{
-                display: flex;
-                align-items: flex-end;
-                justify-content: flex-start;
-                position: relative;
-                width: 100%;
-                height: 50%;
-                gap: 4rem;
-
-                .stat__container{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-
-                    .number__wrapper{
-                        display: flex;
-
-                        h1{
-                            font-size: 3rem;
-                            font-weight: 600;
-                            margin: 0;
-                            color: #00F0FF;
-                        }
-                        
-                        .currency {
-                            color: #00F0FF;
-                            font-size: 3rem;
-                            font-weight: 600;
-                            margin-left: 2px;
-                        }
-                    }
-
-                    p{
-                        color: #050A10;
-                        font-size: 1.5rem;
-                        font-weight: 300;
-                        margin: 0;
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
-        .mainText{
-            width: 100%;
-            height: 100%;
-            display: flex;
             align-items: flex-start;
-            justify-content: flex-end;
-            padding: 7.5vh 0 5vh 0;
-
-            .MainTextV3__Main{
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 90%;
+                height: 50%;
                 position: relative;
-                width: 110%;
-                height: 100%;
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                flex-direction: column;
-                
-                .MainText__Container{
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 40%;
+                    height: 100%;
                     position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 7.5vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2.5vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 150%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 3rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 3rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 1.5rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .mainText{
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    p{
-                        margin: 0;
-                        text-align: right;
-                        text-transform: uppercase;
-                        span{
-                            font-size: 3rem;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 110%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 3rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
                         }
-                        .highlighted {
-                            color: #00F0FF;
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 40%;
+                    padding: 0 10vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 30%;
+                        height: 60%;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.5rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 1rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 40%;
+                    padding: 0 10vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 30%;
+                        height: 60%;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.5rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 1rem;
                         }
                     }
                 }
             }
         }
+        
     }
-
-    .Quarentees__wrapper{
-        width: 100%;
-        height: 60%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 1rem;
-
-        .deals__wrapper{
-            width: 100%;
-            height: 40%;
-            padding: 0 10vw;
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .OurDeal{
+            width: 100vw;
+            height: 150vh;
+            position: relative;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .deal__container{
-                width: 30%;
-                height: 60%;
-                padding: 1rem 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 95%;
+                height: 50%;
+                position: relative;
                 display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                border: #00F0FF 2px solid;
-                border-radius: 25px;
-                gap: 0.5rem;
-
-                h3{
-                    font-size: 2rem;
-                    font-weight: 800;
-                    margin: 0;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 40%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 7.5vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 150%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 2.8rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 2.8rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 1.4rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
                 }
-
-                p{
-                   font-size: 1.5rem;
-                   font-weight: 400;
-                   margin: 0;
-                   padding-top: 1rem;
+                .mainText{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 2.6rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 35%;
+                    padding: 0 5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 30%;
+                        height: 70%;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.4rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.75rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 40%;
+                    padding: 0 5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 30%;
+                        height: 60%;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.4rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.7rem;
+                        }
+                    }
                 }
             }
         }
-
-        .devider{
-            width: 90%;
-            height: 2px;
-            background-color: #5E758D;
-        }
-
-        .quarantees__wrapper{
-            width: 100%;
-            height: 40%;
-            padding: 0 10vw;
+        
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .OurDeal{
+            width: 100vw;
+            height: 150vh;
+            position: relative;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .deal__container{
-                width: 30%;
-                height: 60%;
-                padding: 1rem 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 95%;
+                height: 50%;
+                position: relative;
                 display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                border: #050A10 2px solid;
-                border-radius: 25px;
-                gap: 0.5rem;
-
-                h3{
-                    font-size: 2rem;
-                    font-weight: 800;
-                    margin: 0;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 40%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 5vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 150%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 2.6rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 2.6rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 1.3rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
                 }
-
-                p{
-                   font-size: 1.5rem;
-                   font-weight: 400;
-                   margin: 0;
-                   padding-top: 1rem;
+                .mainText{
+                    width: 60%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 2.4rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 35%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 70%;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.4rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.75rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 40%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 60%;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.4rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.7rem;
+                        }
+                    }
                 }
             }
         }
+        
     }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .OurDeal{
+            width: 100vw;
+            height: 150vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 95%;
+                height: 50%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 37.5%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 2vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 140%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 2.6rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 2.6rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 1.3rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .mainText{
+                    width: 65%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 2.2rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 40%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 70%;
+                        padding: 1rem 1rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.6rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.2rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.75rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 45%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 60%;
+                        padding: 1rem 1rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.6rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.2rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .OurDeal{
+            width: 100vw;
+            height: 150vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 95%;
+                height: 50%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 37.5%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 2vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.6rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 1.1rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 140%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 2rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 2rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 1rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .mainText{
+                    width: 65%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 1.6rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 30%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 70%;
+                        padding: 0.5rem 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.25rem;
+        
+                        h3{
+                            font-size: 1.4rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.1rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.75rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 35%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 60%;
+                        padding: 1rem 1rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.4rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 1.1rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .OurDeal{
+            width: 100vw;
+            height: 250vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 95%;
+                height: 50%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 40%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 2vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.4rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 140%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 1.8rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 1.8rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 0.8rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .mainText{
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 110%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 1.4rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 30%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 70%;
+                        padding: 0.5rem 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.25rem;
+        
+                        h3{
+                            font-size: 1.2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 0.9rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.75rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 35%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 32%;
+                        height: 60%;
+                        padding: 0.5rem 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 0.9rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .OurDeal{
+            width: 100vw;
+            height: 250vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20vh 0;
+            color: #050A10;
+            overflow: hidden;
+        
+            .The__deal__container{
+                width: 95%;
+                height: 50%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5vw;
+                border-bottom: #5E758D 2px solid;
+                border-top: #5E758D 2px solid;
+        
+        
+                .stats__container{
+                    width: 40%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5vh 0 5vh 2vw;
+        
+                    .header{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 5vh;
+                        height: 50%;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.2rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                            margin: 0;
+                            padding-top: 1rem;
+                        }
+                        img{
+                            padding-top: 1.5rem;
+                            margin-left: 2vw;
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 140%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .stats__wrapper{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        gap: 4rem;
+        
+                        .stat__container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+        
+                            .number__wrapper{
+                                display: flex;
+        
+                                h1{
+                                    font-size: 1.8rem;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                                
+                                .currency {
+                                    color: #00F0FF;
+                                    font-size: 1.8rem;
+                                    font-weight: 600;
+                                    margin-left: 2px;
+                                }
+                            }
+        
+                            p{
+                                color: #050A10;
+                                font-size: 0.8rem;
+                                font-weight: 300;
+                                margin: 0;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .mainText{
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding: 7.5vh 0 5vh 0;
+        
+                    .MainTextV3__Main{
+                        position: relative;
+                        width: 110%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        .MainText__Container{
+                            position: relative;
+                            width: 110%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            p{
+                                margin: 0;
+                                text-align: right;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 1.2rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .Quarentees__wrapper{
+                width: 100%;
+                height: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 1rem;
+        
+                .deals__wrapper{
+                    width: 100%;
+                    height: 30%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 33%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #00F0FF 2px solid;
+                        border-radius: 25px;
+                        gap: 0.25rem;
+        
+                        h3{
+                            font-size: 1rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 0.75rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.5rem;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .quarantees__wrapper{
+                    width: 100%;
+                    height: 35%;
+                    padding: 0 2.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .deal__container{
+                        width: 33%;
+                        height: 70%;
+                        padding: 0.5rem 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        border: #050A10 2px solid;
+                        border-radius: 25px;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1rem;
+                            font-weight: 800;
+                            margin: 0;
+                        }
+        
+                        p{
+                           font-size: 0.75rem;
+                           font-weight: 400;
+                           margin: 0;
+                           padding-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
 }
