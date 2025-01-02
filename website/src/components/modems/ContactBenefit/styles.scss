@@ -1,394 +1,2870 @@
-.Contact{
-    position: relative;
-    width: 100vw;
-    height: 90vh;
-    background: #04444C;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5vh 5vw 5vh 5vw; 
-    overflow: hidden;
-    color: #fff;
-    
-
-    .Contact__Personal{
-        width: 45vw;
-        height: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 3rem;
-        scale: 0.85;
-
-        .Contact__Personal__header{
-            width: 80%;
-            height: 30%;
-            display: flex;
-            gap: 0.5rem;
-            align-items: flex-start;
-            justify-content: flex-start;
-            h3{
-                margin: 0;
-                font-size: 2.5rem;
-                font-weight: 900;
-                text-transform: uppercase;
-            }
-
-            p{
-                margin: 0;
-                font-size: 2rem;
-                font-weight: 400;
-                padding-top: 1.5rem;
-            }
-        }
-
-        .Contact__Personal__choice{
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .Contact{
             position: relative;
-            width: 100%;
-            height: 50%;
+            width: 100vw;
+            height: 100vh;
+            background: #04444C;
             display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5vh 5vw 5vh 5vw; 
+            overflow: hidden;
+            color: #fff;
+            margin-bottom: 5vh;
             
-
-            .Contact__Personal__choice__container{
-                width: 100%;
+        
+            .Contact__Personal{
+                width: 45vw;
                 height: 100%;
                 position: relative;
-                .Contact__Personal__choice__wrapper{
-                    position: absolute;
-                    top: -5%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 80%;
+                    height: 30%;
                     display: flex;
-                    .Contact__Personal__choice__image__container{
-                        width: 50%;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 2.5rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 2rem;
+                        font-weight: 400;
+                        padding-top: 1.5rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
                         height: 100%;
-    
-                        .Contact__Personal__choice__image{
-                            width: 15vw;
-                            height: 15vw;
-                            border-radius: 50%;
-                            background-color: #fff;
-                            position: relative;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 15vw;
+                                    height: 15vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.5rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 100%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 3.5rem;
+                                            margin: 0;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 3.5rem;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 80%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                            &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            overflow: hidden;
-                            img{
+                            position: relative;
+                                                .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 2rem;
+                                    font-weight: 900;
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 2.5rem;
+                               font-weight: 400;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 40%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
                                 width: 100%;
                                 height: 100%;
-                                object-fit: cover;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.75rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
                             }
                         }
-                    }
-                    .Contact__Personal__choice__Data__container{
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
-                        .Moto{
-                            height: 40%;
-                            width: 100%;
+                        .buttons{
+                            height: 100%;
+                            width: 20%;
                             display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            padding: 0 0 0 10%;
-                            p{
-                                font-size: 1.5rem;
-                                width: 80%;
-                                text-align: left;
-                            }
-                        }
-                        .Reviews_stats{
-                            width: 100%;
-                            height: 60%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            padding: 0 0 0 10%;
                             position: relative;
-
-                            .ThumsUp{
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
                                 display: flex;
-                                width: 40%;
-                                gap: 1rem;
+                                justify-content: center;
                                 align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 80%;
+                                left: 0%;
+                                width: 300%;
+                                display: flex;
+                                align-items: flex-start;
                                 justify-content: flex-start;
-                                p{
-                                    font-size: 3.5rem;
-                                    margin: 0;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.5rem;
+                                                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
                                 }
                             }
-                            .Comments{
-                                display: flex;
-                                width: 50%;
-                                gap: 1rem;
-                                align-items: center;
-                                justify-content: flex-start;
-                                p{
-                                    font-size: 3.5rem;
-                                    margin: 0;
-                                }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
                             }
                         }
                     }
                 }
-
-            }
-
-            .Contact__choice__Input{
-                width: 80%;
-                height: 25%;
-                position: relative;
-                bottom: 5%;
-                left: 0;
-                                display: flex;
-
-                .devider{
-                    position: absolute;
-                    top: -5%;
-                    left: -5%;
-                    width: 110%;
-                    height: 2px;
-                    background-color: #5E758D;
-                                        &:nth-of-type(5) {
-                        bottom: 0%;
-                        left: -5%;
-                        top: 100%;
-                        width: 120%;
-                    }
-                }
-                .header{
+        
+                .Contact__Personal__addInfo{
                     display: flex;
+                    width: 100%;
                     align-items: center;
-                    justify-content: center;
-                    position: relative;
-                                        .index{
-                        height: 100%;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
                         display: flex;
-                        align-items: flex-start;
-                        h3{
-                            margin: 0;
-                            font-size: 2rem;
-                            font-weight: 900;
-                        }  
-                    }
-                    
-                    p{
-                       margin: 0; 
-                       font-size: 2.5rem;
-                       font-weight: 400;
-                    }
-                }
-
-                .person__container{
-                    position: relative;
-                    width: 40%;
-                    height: 100%;
-                                        .name{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-start;
-                        padding-left: 2rem;
-                        padding-top: 0.5rem;
-
                         p{
-                            font-size: 1.75rem;
+                            font-size: 1.2rem;
                             font-weight: 400;
                             margin: 0;
-                            color: #00F0FF;
                         }
                     }
-                }
-                .buttons{
-                    height: 100%;
-                    width: 20%;
-                    display: flex;
-                    position: relative;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 0.5rem;
-
-                    .menu__button{
+        
+                    .addInfo__phoneNumber{
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        p{
+                            font-size: 1.4rem;
+                        }
                     }
-
-                    .person__menu{
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 50vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
                         position: absolute;
-                        top: 80%;
-                        left: 0%;
-                        width: 300%;
+                        width: 120%;
+                        top: 15%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 3rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
                         display: flex;
-                        align-items: flex-start;
-                        justify-content: flex-start;
-                        background: #fff;
-                        color: #050A10;
-                        border-radius: 25px;
-                        border: #00F0FF 2.5px solid;
-                        overflow: hidden;
-                        transform-origin: top center;
-                        z-index: 5;
-
-                        .menu__list{
-                            width: 100%;
-                            li{
-                                font-size: 1.5rem;
-                                                                cursor: pointer;
-                                padding:  0.75rem 2.5rem;
-                                width: 100%;
-                                transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
-                                
-                                &:hover{
-                                    background-color: #5E758D;
-                                } 
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 150px;
+                            height: 150px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 50px;
+                                    height: 50px; 
+                                 }
                             }
                         }
                     }
-                    .devider__vertical{
-                        height: 60%;
-                        width: 3px;
-                        background-color: #fff;
-                    }
-                }
-            }
-        }
-
-        .Contact__Personal__addInfo{
-            display: flex;
-            width: 100%;
-            align-items: center;
-            gap: 2rem;
-            .addInfo__text{
-                gap: 1rem;
-                display: flex;
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                    margin: 0;
-                }
-            }
-
-            .addInfo__phoneNumber{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                p{
-                    font-size: 1.4rem;
-                }
-            }
-        }
         
-    }
-
-    .Contact__CTA{
-        position: relative;
-        width: 50vw;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 5%;
-
-        .Contact__CTA__Header{
-            height: 30%;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            
-            p{
-                position: absolute;
-                width: 120%;
-                top: 15%;
-                right: 0;
-                text-align: right;
-                margin: 0;
-                font-size: 3rem;
-            }
-        }
-
-        .Contact__CTA__buttons{
-            width: 100%;
-            height: 15%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            position: relative;
-            gap: 5rem;
-
-            .Contact__CTA__buttons__container{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 5rem;
-                
-                .Svg__button_container{
-                    width: 150px;
-                    height: 150px;
-                     
-                    .Svg__button_subcontainer{
-                         img{
-                            width: 50px;
-                            height: 50px; 
-                         }
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
                     }
                 }
             }
-
-            .devider{
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                background-color: #5E758D;
-            }
         }
-        .Contact__CTA__optional{
-            width: 100%;
-            height: 20%;
+    }
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .Contact{
+            position: relative;
+            width: 100vw;
+            height: 110vh;
+            background: #04444C;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 1rem;
-            .infoText{
-                font-size: 1.5rem;
-                font-weight: 400;
-                margin: 0;
-            }
-            .devider__vertical{
-                width: 2px;
-                height: 25%;
-                background-color: #fff;
-                margin-right: 1rem;
-            }
-            .Button{
-                .Round__button_container{
-                    a{
+            justify-content: flex-start;
+            padding: 5vh 2.5vw 5vh 2.5vw; 
+            overflow: hidden;
+            color: #fff;  
+            margin-bottom: 15vh;  
+        
+            .Contact__Personal{
+                width: 45vw;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 80%;
+                    height: 30%;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 2rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        padding-top: 1.5rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 15vw;
+                                    height: 15vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.5rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 3rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 3rem;
+                                            height: 3rem;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 3rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 3rem;
+                                            height: 3rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 90%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                                                &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                                                .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.8rem;
+                                    font-weight: 900;
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 2rem;
+                               font-weight: 400;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 40%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.75rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                        .buttons{
+                            height: 100%;
+                            width: 20%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 80%;
+                                left: 0%;
+                                width: 300%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.5rem;
+                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+        
+                .Contact__Personal__addInfo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
+                        display: flex;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+        
+                    .addInfo__phoneNumber{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         p{
                             font-size: 1.4rem;
+                        }
+                    }
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 50vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 90%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
+                        position: absolute;
+                        width: 120%;
+                        top: 15%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 2.8rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 150px;
+                            height: 150px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 50px;
+                                    height: 50px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .Contact{
+            position: relative;
+            width: 100vw;
+            height: 110vh;
+            background: #04444C;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5vh 2.5vw 5vh 2.5vw; 
+            overflow: hidden;
+            color: #fff;  
+            margin-bottom: 15vh;  
+        
+            .Contact__Personal{
+                width: 45vw;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 90%;
+                    height: 30%;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 1.8rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 15vw;
+                                    height: 15vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.5rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 3rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 3rem;
+                                            height: 3rem;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 3rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 3rem;
+                                            height: 3rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 100%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                                                &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.8rem;
+                                    font-weight: 900;
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 2rem;
+                               font-weight: 400;
+                               white-space: nowrap;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 60%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.75rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                        .buttons{
+                            height: 100%;
+                            width: 20%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 80%;
+                                left: 0%;
+                                width: 300%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.5rem;
+                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+        
+                .Contact__Personal__addInfo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
+                        display: flex;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
                             margin: 0;
-                            line-height: 1.2;
+                        }
+                    }
+        
+                    .addInfo__phoneNumber{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 55vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
+                        position: absolute;
+                        width: 120%;
+                        top: 15%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 2.6rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 150px;
+                            height: 150px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 50px;
+                                    height: 50px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .Contact{
+            position: relative;
+            width: 100vw;
+            height: 110vh;
+            background: #04444C;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5vh 2.5vw 5vh 2.5vw; 
+            overflow: hidden;
+            color: #fff;  
+            margin-bottom: 15vh;  
+        
+            .Contact__Personal{
+                width: 45vw;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 90%;
+                    height: 30%;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 1.6rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 15vw;
+                                    height: 15vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.4rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.8rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.8rem;
+                                            height: 2.8rem;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.8rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.8rem;
+                                            height: 2.8rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 100%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                            &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.6em;
+                                    font-weight: 900;
+                                    white-space: nowrap;
+
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 1.8rem;
+                               font-weight: 400;
+                               white-space: nowrap;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 60%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                    white-space: nowrap;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                        .buttons{
+                            height: 100%;
+                            width: 20%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 80%;
+                                left: 0%;
+                                width: 300%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.5rem;
+                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+        
+                .Contact__Personal__addInfo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
+                        display: flex;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+        
+                    .addInfo__phoneNumber{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 55vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
+                        position: absolute;
+                        width: 120%;
+                        top: 15%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 2.2rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 125px;
+                            height: 125px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 50px;
+                                    height: 50px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.3rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .Contact{
+            position: relative;
+            width: 100vw;
+            height: 110vh;
+            background: #04444C;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5vh 2.5vw 5vh 2.5vw; 
+            overflow: hidden;
+            color: #fff;  
+            margin-bottom: 5vh;  
+        
+            .Contact__Personal{
+                width: 45vw;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 90%;
+                    height: 30%;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 20vw;
+                                    height: 20vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.2rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.4rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.4rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 100%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                            &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.6em;
+                                    font-weight: 900;
+                                    white-space: nowrap;
+
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 1.8rem;
+                               font-weight: 400;
+                               white-space: nowrap;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 60%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.3rem;
+                                    font-weight: 400;
+                                    white-space: nowrap;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                        .buttons{
+                            height: 80%;
+                            width: 20%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 80%;
+                                left: 0%;
+                                width: 500%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.2rem;
+                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+        
+                .Contact__Personal__addInfo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
+                        display: flex;
+                        p{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+        
+                    .addInfo__phoneNumber{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 55vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
+                        position: absolute;
+                        width: 130%;
+                        top: 20%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 2rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 100px;
+                            height: 100px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 40px;
+                                    height: 40px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            width: 80px;
+                            height: 80px;
+                            a{
+                                p{
+                                    font-size: 1.1rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .Contact{
+            position: relative;
+            width: 100vw;
+            height: 200vh;
+            background: #04444C;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5vh 2.5vw 5vh 2.5vw; 
+            overflow: hidden;
+            color: #fff;  
+            margin-bottom: 5vh;  
+        
+            .Contact__Personal{
+                width: 60vw;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 90%;
+                    height: 20%;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 20vw;
+                                    height: 20vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.2rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.4rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.4rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 100%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                            &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.2em;
+                                    font-weight: 900;
+                                    white-space: nowrap;
+
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 1.2rem;
+                               font-weight: 400;
+                               white-space: nowrap;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 60%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.2rem;
+                                    font-weight: 400;
+                                    white-space: nowrap;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                        .buttons{
+                            height: 80%;
+                            width: 20%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 100%;
+                                left: -200%;
+                                width: 500%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.2rem;
+                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+        
+                .Contact__Personal__addInfo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
+                        display: flex;
+                        p{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+        
+                    .addInfo__phoneNumber{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 55vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
+                        position: absolute;
+                        width: 130%;
+                        top: 20%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 1.4rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 100px;
+                            height: 100px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 40px;
+                                    height: 40px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            width: 80px;
+                            height: 80px;
+                            a{
+                                p{
+                                    font-size: 1.1rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .Contact{
+            position: relative;
+            width: 100vw;
+            height: 200vh;
+            background: #04444C;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5vh 2.5vw 5vh 2.5vw; 
+            overflow: hidden;
+            color: #fff;  
+            margin-bottom: 5vh;  
+        
+            .Contact__Personal{
+                width: 60vw;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 3rem;
+                scale: 0.85;
+        
+                .Contact__Personal__header{
+                    width: 90%;
+                    height: 20%;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3{
+                        margin: 0;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+        
+                    p{
+                        margin: 0;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .Contact__Personal__choice{
+                    position: relative;
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+        
+                    .Contact__Personal__choice__container{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .Contact__Personal__choice__wrapper{
+                            position: absolute;
+                            top: -5%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            .Contact__Personal__choice__image__container{
+                                width: 50%;
+                                height: 100%;
+            
+                                .Contact__Personal__choice__image{
+                                    width: 20vw;
+                                    height: 20vw;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .Contact__Personal__choice__Data__container{
+                                position: relative;
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .Moto{
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    p{
+                                        font-size: 1.2rem;
+                                        width: 80%;
+                                        text-align: left;
+                                    }
+                                }
+                                .Reviews_stats{
+                                    width: 80%;
+                                    height: 60%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 0 0 0 10%;
+                                    position: relative;
+        
+                                    .ThumsUp{
+                                        display: flex;
+                                        width: 40%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.4rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                        }
+                                    }
+                                    .Comments{
+                                        display: flex;
+                                        width: 50%;
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p{
+                                            font-size: 2.4rem;
+                                            margin: 0;
+                                        }
+                                        img{
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                    }
+        
+                    .Contact__choice__Input{
+                        width: 100%;
+                        height: 25%;
+                        position: relative;
+                        bottom: 5%;
+                        left: 0;
+                        display: flex;
+        
+                        .devider{
+                            position: absolute;
+                            top: -5%;
+                            left: -5%;
+                            width: 110%;
+                            height: 2px;
+                            background-color: #5E758D;
+                            &:nth-of-type(5) {
+                                bottom: 0%;
+                                left: -5%;
+                                top: 100%;
+                                width: 120%;
+                            }
+                        }
+                        .header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .index{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.2em;
+                                    font-weight: 900;
+                                    white-space: nowrap;
+
+                                }  
+                            }
+                            
+                            p{
+                               margin: 0; 
+                               font-size: 1.2rem;
+                               font-weight: 400;
+                               white-space: nowrap;
+                            }
+                        }
+        
+                        .person__container{
+                            position: relative;
+                            width: 60%;
+                            height: 100%;
+                            .name{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding-left: 2rem;
+                                padding-top: 0.5rem;
+        
+                                p{
+                                    font-size: 1.2rem;
+                                    font-weight: 400;
+                                    white-space: nowrap;
+                                    margin: 0;
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                        .buttons{
+                            height: 80%;
+                            width: 20%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+        
+                            .menu__button{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+        
+                            .person__menu{
+                                position: absolute;
+                                top: 100%;
+                                left: -200%;
+                                width: 500%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                background: #fff;
+                                color: #050A10;
+                                border-radius: 25px;
+                                border: #00F0FF 2.5px solid;
+                                overflow: hidden;
+                                transform-origin: top center;
+                                z-index: 100;
+        
+                                .menu__list{
+                                    width: 100%;
+                                    li{
+                                        font-size: 1.2rem;
+                                        cursor: pointer;
+                                        padding:  0.75rem 2.5rem;
+                                        width: 100%;
+                                        transition: background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+                                        
+                                        &:hover{
+                                            background-color: #5E758D;
+                                        } 
+                                    }
+                                }
+                            }
+                            .devider__vertical{
+                                height: 60%;
+                                width: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+        
+                .Contact__Personal__addInfo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2rem;
+                    .addInfo__text{
+                        gap: 1rem;
+                        display: flex;
+                        p{
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+        
+                    .addInfo__phoneNumber{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                
+            }
+        
+            .Contact__CTA{
+                position: relative;
+                width: 55vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+        
+                .Contact__CTA__Header{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    
+                    p{
+                        position: absolute;
+                        width: 130%;
+                        top: 20%;
+                        right: 0;
+                        text-align: right;
+                        margin: 0;
+                        font-size: 1.1rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 100px;
+                            height: 100px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 40px;
+                                    height: 40px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                    }
+                }
+                .Contact__CTA__optional{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            width: 80px;
+                            height: 80px;
+                            a{
+                                p{
+                                    font-size: 1.1rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
                         }
                     }
                 }

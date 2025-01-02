@@ -25,17 +25,17 @@ export const IntroRects = [
     {   
         number: '1/3',
         header: 'Staňte se součástí programu',
-        content: 'Je to jednoduché: staňte se naším klientem a máte přístup k programu. Žádné platby předem, jen reálné výsledky, na kterých vyděláte.'
+        content: 'Je to jednoduché: staňte se naším klientem a máte<br/>přístup k programu. Žádné platby předem, jen reálné<br/>výsledky, na kterých vyděláte.'
     },
     {
         number: '2/3',
         header: 'Přiveďte nového klienta',
-        content: 'Znáte někoho, kdo by mohl těžit z podobných výsledků? Připojte je k nám. Když novému klientovi pomůžeme na cestě finanční jistoty, vy máte přímý podíl na výsledcích.'
+        content: 'Znáte někoho, kdo by mohl těžit z podobných výsledků?<br/>Připojte je k nám. Když novému klientovi pomůžeme na<br/>cestě finanční jistoty, vy máte přímý podíl na výsledcích.'
     },
     {
         number: '3/3',
         header: 'Získejte odměnu, kterou si zasloužíte',
-        content: 'Za každou novou smlouvu dostanete přímou odměnu, aniž by kdokoli musel něco platit navíc. Pomáháte, budujete, vyděláváte. To je smysl programu.'
+        content: 'Za každou novou smlouvu dostanete přímou odměnu, aniž<br/>by kdokoli musel něco platit navíc. Pomáháte, budujete,<br/>vyděláváte. To je smysl programu.'
     }
 ]
 

@@ -7,17 +7,57 @@ export default function Reviews() {
     const batchSize = 3;
     const totalBatches = Math.ceil(Benefitreviews.length / batchSize);
     const container = useRef(null)
+    const [windowWidth, setWindowWidth] = useState(0)
+
 
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['start 0.8', 'end end']
     });
 
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+        
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth)
+        }
+        
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     const containerHeight = useTransform(
         scrollYProgress,
         [0, 0.2, 0.3, 1],
-        ['30vh', '60vh', '100vh', '100vh']
+        windowWidth >= 600 && windowWidth <= 790 
+            ? ['80vh', '110vh', '220vh', '220vh']
+            : windowWidth >= 800 && windowWidth <= 960 
+                ? ['70vh', '100vh', '200vh', '200vh']
+                : windowWidth >= 960 && windowWidth <= 1240
+                    ? ['60vh', '90vh', '180vh', '180vh']  // Added 960px viewport
+                    : windowWidth >= 1260 && windowWidth <= 1420 
+                        ? ['40vh', '70vh', '120vh', '120vh']
+                        : ['30vh', '60vh', '100vh', '100vh']
     );
+    
+    useEffect(() => {
+        const handleResize = () => {
+            containerHeight.set(
+                window.innerWidth >= 600 && window.innerWidth <= 790
+                    ? ['50vh', '80vh', '180vh', '180vh']
+                    : window.innerWidth >= 800 && window.innerWidth <= 960
+                        ? ['50vh', '80vh', '140vh', '140vh']
+                        : window.innerWidth >= 960 && window.innerWidth <= 1240
+                            ? ['50vh', '70vh', '100vh', '100vh']  // Added 960px viewport
+                            : window.innerWidth >= 1260 && window.innerWidth <= 1420 
+                                ? ['40vh', '70vh', '120vh', '120vh']
+                                : ['30vh', '60vh', '100vh', '100vh']
+            );
+        };
+    
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [containerHeight]);
 
     const opacity = useTransform(
         scrollYProgress,

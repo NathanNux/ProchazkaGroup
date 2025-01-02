@@ -1,57 +1,431 @@
-.DataBar{
-    width: 100vw;
-    height: 20vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5vw;
-    background-color: #04444C;
-    z-index: 3;
-
-    .devider{
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        height: 2px;
-        background-color: #00F0FF;
-    }
-
-    .data__item{
-        width: 15%;
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-
-        .number__wrapper {
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px ) {
+        .DataBar{
+            width: 100vw;
+            height: 25vh;
+            position: relative;
             display: flex;
-            align-items: flex-start;
+            align-items: flex-end;
             justify-content: center;
-
-            h1{
-                font-size: 3rem;
-                font-weight: 600;
-                margin: 0;
-                color: #00F0FF;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                height: 2px;
+                background-color: #00F0FF;
             }
-            
-            .currency {
-                color: #00F0FF;
-                font-size: 3rem;
-                font-weight: 600;
-                margin-left: 2px;
+        
+            .data__item{
+                width: 15%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 3rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 3rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
             }
         }
-
-        p{
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin: 0;
+    }
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .DataBar{
+            width: 100vw;
+            height: 25vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                height: 2px;
+                background-color: #00F0FF;
+            }
+        
+            .data__item{
+                width: 17.5%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 2.8rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 2.8rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .DataBar{
+            width: 100vw;
+            height: 25vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                height: 2px;
+                background-color: #00F0FF;
+            }
+        
+            .data__item{
+                width: 17.5%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .DataBar{
+            width: 100vw;
+            height: 25vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                height: 2px;
+                background-color: #00F0FF;
+            }
+        
+            .data__item{
+                width: 17.5%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .DataBar{
+            width: 100vw;
+            height: 25vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                height: 2px;
+                background-color: #00F0FF;
+            }
+        
+            .data__item{
+                width: 20%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .DataBar{
+            width: 100vw;
+            height: 35vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                height: 2px;
+                background-color: #00F0FF;
+            }
+        
+            .data__item{
+                width: 20%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .DataBar{
+            width: 100vw;
+            height: 35vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2.5vw;
+            padding-bottom: 5vh;
+                background-color: #04444C;
+            z-index: 3;
+            overflow: hidden;
+        
+            .devider{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 95%;
+                height: 2px;
+                background-color: #00F0FF;
+            }
+        
+            .data__item{
+                width: 25%;
+                height: 50%;
+                padding-right: 5vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+        
+                .number__wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+        
+                    h1{
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+                    
+                    .currency {
+                        color: #00F0FF;
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin-left: 2px;
+                    }
+                }
+        
+                p{
+                    color: #fff;
+                    font-size: 0.75rem;
+                    text-align: center;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
         }
     }
 }

@@ -1,241 +1,1723 @@
-.Intro{
-    width: 100vw;
-    height: 200vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: #050A10;
-    padding: 15vh 0 0 0;
-    gap: 10vh;
-    overflow: hidden;
-    
-    .Intro__header{
-        width: 100%;
-        height: 60vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        .Index{
-            width: 25%;
-            height: 20vh;
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .Intro{
+            width: 100vw;
+            height: 200vh;
+            background-color: #fff;
             display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            margin-left: 5vw;
-            h3{
-                font-size: 2rem;
-                font-weight: 800;
-                margin: 0;
-            }
-
-            p{
-                font-size: 1.5rem;
-                font-weight: 400;
-                margin: 0;
-                padding-top: 2rem;
-            }
-        }
-        .mainText{
-            width: 100%;
-            height: 20vh;
-            display: flex;
-            align-items: flex-start;
-            .Rolling__text{
-                padding-top: 0vh;
-                padding-bottom: 0vh;
-                width: 100vw;
-                position: relative;
-                .Rolling_text_container{
-                    padding: 1rem 0;
-                    &:nth-of-type(2){
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .devider{
-            position: absolute;
-            bottom: 35%;
-            left: 5%;
-            width: 90%;
-            height: 2px;
-            background-color: #050A10;
-        }
-    }
-
-    .Intro__content{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 0 0 5vw;
-        gap: 2vw;
-
-        .Rects__container{
-            width: 50%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
+            flex-direction: column;
             justify-content: flex-start;
-            flex-direction: column;
-            gap: 5vh;
-
-            .rect{
-                background-color: #04444C;
-                height: 40vh;
-                width: 100%;
-                position: relative;
-                padding: 2vh 2.5vw 5vh 2.5vw; 
-                border-radius: 35px 0 0 25px;
-                color: #fff;
-                gap: 5vh;
-                .header{
-                    height: 40%;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    gap: 1vw;
-
-                    h2{
-                        font-size: 2.5rem;
-                        font-weight: 900;
-                        margin: 0;
-                        color: #00F0FF;
-                    }
-
-                    h3{
-                        font-size: 2rem;
-                        font-weight: 600;
-                        margin: 0;
-                    }
-                }
-                .content{
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding-left: 3rem;
-                    p{
-                        font-size: 1.6rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                }
-
-                &:nth-of-type(1){
-                    width: 100%;
-                }
-                &:nth-of-type(2){
-                    width: 110%;
-                }
-                &:nth-of-type(3){
-                    width: 120%;
-                }
-            }
-        }
-
-        .Texts__container{
-            width: 50%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
             gap: 10vh;
-
-            .mainText{
+            overflow: hidden;
+            
+            .Intro__header{
                 width: 100%;
-                height: 40%;
-                .MainTextV3__Main{
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    
-                    .MainText__Container{
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        p{
-                            margin: 0;
-                            text-transform: uppercase;
-                            span{
-                                font-size: 4rem;
-                            }
-                            .highlighted {
-                                color: #00F0FF;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .subText__container{
-                width: 70%;
-                height: 60%;
+                height: 60vh;
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: flex-start;
-                gap: 10vh;
-
-                .ps{
-                    margin-left: 2.5vw;
+        
+                .Index{
+                    width: 25%;
+                    height: 20vh;
                     display: flex;
-                    flex-direction: column;
                     align-items: flex-start;
-                    justify-content: center;
-                    width: 80%;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
                     h3{
-                        font-size: 1.5rem;
-                        font-weight: 600;
+                        font-size: 2rem;
+                        font-weight: 800;
                         margin: 0;
-                    }   
+                    }
+        
                     p{
-                        font-size: 1.2rem;
-                        font-weight: 300;
+                        font-size: 1.5rem;
+                        font-weight: 400;
                         margin: 0;
-                        margin-left: 2rem;
+                        padding-top: 2rem;
                     }
                 }
-                .pss{
-                    margin-left: 5vw;
+                .mainText{
+                    width: 100%;
+                    height: 20vh;
                     display: flex;
-                    flex-direction: column;
                     align-items: flex-start;
-                    justify-content: center;
-                    h3{
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        margin: 0;
-                    }   
-                    p{
-                        width: 90%;
-                        font-size: 1.2rem;
-                        font-weight: 300;
-                        margin: 0;
-                        margin-left: 2rem;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
                     }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 35%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
                 }
             }
-        }        
+        
+            .Intro__content{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 40vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2.5vw 5vh 2.5vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 2.5rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 2rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 3rem;
+                            p{
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 10vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 4rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 70%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .Intro{
+            width: 100vw;
+            height: 200vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
+            gap: 10vh;
+            overflow: hidden;
+            
+            .Intro__header{
+                width: 100%;
+                height: 60vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+        
+                .Index{
+                    width: 25%;
+                    height: 20vh;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+                .mainText{
+                    width: 100%;
+                    height: 15vh;
+                    display: flex;
+                    align-items: flex-start;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            p{
+                                font-size: 6em;
+                            }
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 40%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+            }
+        
+            .Intro__content{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 40vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2vw 5vh 2vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 2.4rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 1.8rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 2rem;
+                            p{
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 60%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 10vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 3.5rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 70%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .Intro{
+            width: 100vw;
+            height: 200vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
+            gap: 10vh;
+            overflow: hidden;
+            
+            .Intro__header{
+                width: 100%;
+                height: 60vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+        
+                .Index{
+                    width: 25%;
+                    height: 20vh;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+                .mainText{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-start;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            p{
+                                font-size: 6em;
+                            }
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 40%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+            }
+        
+            .Intro__content{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 40vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2vw 5vh 2vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 2.4rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 1.8rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 2rem;
+                            p{
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 10vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 3rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 70%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .Intro{
+            width: 100vw;
+            height: 200vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
+            gap: 10vh;
+            overflow: hidden;
+            
+            .Intro__header{
+                width: 100%;
+                height: 60vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+        
+                .Index{
+                    width: 25%;
+                    height: 20vh;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+                .mainText{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-start;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            p{
+                                font-size: 5em;
+                            }
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 40%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+            }
+        
+            .Intro__content{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 40vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2vw 5vh 2vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 2rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 1.4rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 2rem;
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 10vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 2.6rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 70%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .Intro{
+            width: 100vw;
+            height: 200vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
+            gap: 10vh;
+            overflow: hidden;
+            
+            .Intro__header{
+                width: 100%;
+                height: 60vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+        
+                .Index{
+                    width: 35%;
+                    height: 20vh;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+                .mainText{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-start;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            p{
+                                font-size: 4.5em;
+                            }
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 40%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+            }
+        
+            .Intro__content{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 40vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2vw 5vh 2vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 1.8rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 2rem;
+                            p{
+                                font-size: 1rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 5vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 110%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 2.2rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 70%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 1rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 1rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .Intro{
+            width: 100vw;
+            height: 300vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
+            gap: 10vh;
+            overflow: hidden;
+            
+            .Intro__header{
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+        
+                .Index{
+                    width: 35%;
+                    height: 30vh;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+                .mainText{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-start;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            p{
+                                font-size: 4em;
+                            }
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 40%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+            }
+        
+            .Intro__content{
+                width: 100%;
+                height: 120vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 60%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 50vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2vw 5vh 2vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 1.6rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 1rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 2rem;
+                            p{
+                                font-size: 0.9rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 5vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 130%;
+                            height: 100%;
+                            top: -100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 2rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 80%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 0.9rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 1rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 0.9rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .Intro{
+            width: 100vw;
+            height: 320vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #050A10;
+            padding: 15vh 0 0 0;
+            gap: 10vh;
+            overflow: hidden;
+            
+            .Intro__header{
+                width: 100%;
+                height: 120vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+        
+                .Index{
+                    width: 45%;
+                    height: 30vh;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    margin-left: 5vw;
+                    h3{
+                        font-size: 1.4rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+                .mainText{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-start;
+                    .Rolling__text{
+                        padding-top: 0vh;
+                        padding-bottom: 0vh;
+                        width: 100vw;
+                        position: relative;
+                        .Rolling_text_container{
+                            padding: 1rem 0;
+                            p{
+                                font-size: 3em;
+                            }
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 55%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+            }
+        
+            .Intro__content{
+                width: 100%;
+                height: 120vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 0 5vw;
+                gap: 2vw;
+        
+                .Rects__container{
+                    width: 80%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 5vh;
+        
+                    .rect{
+                        background-color: #04444C;
+                        height: 50vh;
+                        width: 100%;
+                        position: relative;
+                        padding: 2vh 2vw 5vh 2vw; 
+                        border-radius: 35px 0 0 25px;
+                        color: #fff;
+                        gap: 5vh;
+                        .header{
+                            height: 40%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1vw;
+        
+                            h2{
+                                font-size: 1.4rem;
+                                font-weight: 900;
+                                margin: 0;
+                                color: #00F0FF;
+                            }
+        
+                            h3{
+                                font-size: 1rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            padding-left: 2rem;
+                            p{
+                                font-size: 0.8rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+        
+                        &:nth-of-type(1){
+                            width: 100%;
+                        }
+                        &:nth-of-type(2){
+                            width: 110%;
+                        }
+                        &:nth-of-type(3){
+                            width: 120%;
+                        }
+                    }
+                }
+        
+                .Texts__container{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 5vh;
+        
+                    .mainText{
+                        width: 100%;
+                        height: 40%;
+                        .MainTextV3__Main{
+                            position: relative;
+                            width: 170%;
+                            height: 100%;
+                            top: -100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            
+                            .MainText__Container{
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                p{
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                    span{
+                                        font-size: 1.8rem;
+                                    }
+                                    .highlighted {
+                                        color: #00F0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .subText__container{
+                        width: 70%;
+                        height: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 10vh;
+        
+                        .ps{
+                            margin-left: 2.5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            width: 80%;
+                            h3{
+                                font-size: 1rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                font-size: 0.8rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 1rem;
+                            }
+                        }
+                        .pss{
+                            margin-left: 5vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            h3{
+                                font-size: 1rem;
+                                font-weight: 600;
+                                margin: 0;
+                            }   
+                            p{
+                                width: 90%;
+                                font-size: 0.8rem;
+                                font-weight: 300;
+                                margin: 0;
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
     }
 }
