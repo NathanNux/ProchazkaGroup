@@ -17,7 +17,7 @@ export default function ClipPathPage() {
             <div className="devider"></div>
             <div className="cover">
                 <div className="cover__header">
-                    <PageHeading text="SLEVY A VÝHODNÉ NABÍDKY <span> EXCLUSIF ET SEULEMENT </span><br/>PRO NAŠE KLIENTY.  " />
+                    <PageHeading text="SLEVY A VÝHODNÉ NABÍDKY <br/><span>EXCLUSIF ET SEULEMENT </span><br/>PRO NAŠE KLIENTY.  " />
                 </div>
                 <div className="cover__desc">
                         <h3>
