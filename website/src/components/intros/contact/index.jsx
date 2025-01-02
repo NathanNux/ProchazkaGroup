@@ -1,5 +1,6 @@
 //NOTE:FeedBack and contact are switched
 
+import SubText from "@/components/anim/TextAnims/SubText";
 import ContactForm from "@/components/forms/contact";
 import { icons } from "@/constants/pages/reviews";
 import { people, TestPeople } from "@/constants/people";
