@@ -7,9 +7,9 @@ import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
 import CustomImage from "@/components/ui/stickyImage"
 import { people as staticPeople } from "@/constants/people"
 import { useToast } from "@/hooks/use-toast"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useFetchDatabase } from "@/hooks/useFetchDatabase"
 
 const itemVariants = {
@@ -55,6 +55,29 @@ export default function Contact() {
     const [ currentIndex, setCurrentIndex ] = useState(0)
     const [previewIndex, setPreviewIndex] = useState(null)
     const [peopleData, setPeopleData] = useState(staticPeople)
+    const sectionRef = useRef()
+    
+    const { scrollYProgress: phoneScrollProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end 0.7'],
+    })
+
+    const { scrollYProgress: messageScrollProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end 0.7'],
+    })
+
+    const phoneX = useTransform(
+        phoneScrollProgress,
+        [0, 0.5, 1], 
+        [400, -100, -200]
+    )
+
+    const messageX = useTransform(
+        messageScrollProgress,
+        [0, 0.6, 1], // Slightly delayed
+        [500, -50, -150] // Different positions
+    )
 
     const activeIndex = previewIndex ?? currentIndex
     const [isMobile, setIsMobile] = useState(false)
@@ -154,7 +177,7 @@ export default function Contact() {
 
 
     return (
-        <section className="ContactMain">
+        <section className="ContactMain" ref={sectionRef}>
             <div className="Contact__Personal">
                 <div className="Contact__Personal__header">
                     <h3>
@@ -325,12 +348,20 @@ export default function Contact() {
                 <div className="contact__wrapper">
                     <div className="Contact__CTA__buttons">
                         <div className="Contact__CTA__buttons__container">
-                            <div className="cta__button" onClick={handleCopyName}>
+                            <motion.div 
+                                className="cta__button"
+                                style={{ x: phoneX }}
+                                onClick={handleCopyName}
+                            >
                                 <SVGButton src='/svg/phoneIcon.svg' altText='CallIcon' />
-                            </div>
-                            <div className="cta__button" onClick={handleMessage}>
+                            </motion.div>
+                            <motion.div 
+                                className="cta__button"
+                                style={{ x: messageX }}
+                                onClick={handleMessage}
+                            >
                                 <SVGButton src='/svg/MessageIcon.svg' altText='TextIcon' />
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="devider"/>
                     </div>
@@ -357,7 +388,7 @@ export default function Contact() {
 
             <div className="Contact__CTA">
                 <div className="Contact__CTA__Header">
-                    <SubText initialColor="#fff" secondaryColor="#00F0FF" text={'Je to na vás... <span>Finanční nezávislost,</span><br/>nebo další roky na místě?<br/><span>Přidejte se k našim 3000+ klientům</span>, kteří už dávno <span>začali vyhrávat.</span>'}/>
+                    <SubText initialColor="#fff" secondaryColor="#00F0FF" text={'Je to na vás... <span>Finanční nezávislost,</span><br/>nebo další roky na místě?<br/><span>Přidejte se k našim 3000+ klientům</span>,<br/>kteří už dávno <span>začali vyhrávat.</span>'}/>
                 </div>
 
                 <div className="map__container">
