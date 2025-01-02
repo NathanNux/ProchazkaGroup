@@ -1,4 +1,4 @@
-@media (min-aspect-ratio: 1/1) { //1600:900, 1440:900, 1280:720, ipadmini - na šířku,iphone12pro-na šířku, iphonese-našířku
+@media (min-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1730px) {
         .ReviewsIntro{
             position: relative;
@@ -171,19 +171,19 @@
                     top: 40%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
-                    font-size: 4.5rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    text-align: right;
-                    line-height: 1.5;
-                    margin: 0;
-                    color: #fff;
-                    z-index: 3;
-                    span{
-                        color: #00F0FF;
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            color: #00F0FF;
+                            font-size: 4rem;
+                        }
                     }
-                }
                 }
                 
                 .cover{
@@ -316,19 +316,19 @@
                     top: 40%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
-                    font-size: 4.5rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    text-align: right;
-                    line-height: 1.5;
-                    margin: 0;
-                    color: #fff;
-                    z-index: 3;
-                    span{
-                        color: #00F0FF;
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            color: #00F0FF;
+                            font-size: 3.6rem;
+                        }
                     }
-                }
                 }
                 
                 .cover{
@@ -461,19 +461,19 @@
                     top: 40%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
-                    font-size: 4.5rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    text-align: right;
-                    line-height: 1.5;
-                    margin: 0;
-                    color: #fff;
-                    z-index: 3;
-                    span{
-                        color: #00F0FF;
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            color: #00F0FF;
+                            font-size: 3.6rem;
+                        }
                     }
-                }
                 }
                 
                 .cover{
@@ -519,20 +519,20 @@
                             margin: 0;
         
                             &:nth-of-type(1){
-                                width: 35%;
+                                width: 45%;
                             }
                             &:nth-of-type(2){
-                                width: 80%;
+                                width: 90%;
                             }
                             &:nth-of-type(3){
-                                width: 100%;
+                                width: 110%;
                             }
                         }
                     }
                 
                     .rect__bottom{
                         width: 100%;
-                        height: 10%;
+                        height: 15%;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -548,6 +548,7 @@
                         }
                         .onViewLogo{
                             width: 25vw;
+                            scale: 0.9;
                         }
                         .stats__container{
                             width: 60vw;
@@ -560,11 +561,16 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                gap: 1rem;
+                                gap: 0.5rem;
                                 p{
-                                    font-size: 2rem;
+                                    font-size: 2.5rem;
                                     font-weight: 400;
                                     margin: 0;
+                                }
+                                img{
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+                                    object-fit: contain;
                                 }
                             }
                         }
@@ -576,6 +582,7 @@
                 position: absolute;
                 bottom: 10%;
                 left: 2.5%;
+                scale: 0.9;
             }
         }
     }
@@ -603,22 +610,22 @@
                 .Heading{
                     z-index: 3;
                     position: absolute;
-                    top: 50%;
+                    top: 45%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
-                    font-size: 4rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    text-align: right;
-                    line-height: 1.5;
-                    margin: 0;
-                    color: #fff;
-                    z-index: 3;
-                    span{
-                        color: #00F0FF;
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            color: #00F0FF;
+                            font-size: 3rem;
+                        }
                     }
-                }
                 }
                 
                 .cover{
@@ -664,13 +671,13 @@
                             margin: 0;
         
                             &:nth-of-type(1){
-                                width: 35%;
+                                width: 45%;
                             }
                             &:nth-of-type(2){
-                                width: 80%;
+                                width: 90%;
                             }
                             &:nth-of-type(3){
-                                width: 100%;
+                                width: 110%;
                             }
                         }
                     }
@@ -692,7 +699,8 @@
                             z-index: -1;
                         }
                         .onViewLogo{
-                            width: 25vw;
+                            width: 35vw;
+                            scale: 0.9;
                         }
                         .stats__container{
                             width: 60vw;
@@ -705,11 +713,16 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                gap: 1rem;
+                                gap: 0.5rem;
                                 p{
                                     font-size: 2rem;
                                     font-weight: 400;
                                     margin: 0;
+                                }
+                                img{
+                                    width: 2.2rem;
+                                    height: 2.2rem;
+                                    object-fit: contain;
                                 }
                             }
                         }
@@ -721,6 +734,7 @@
                 position: absolute;
                 bottom: 10%;
                 left: 2.5%;
+                scale: 0.8;
             }
         }
     }
@@ -751,19 +765,19 @@
                     top: 30%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
-                    font-size: 4rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    text-align: right;
-                    line-height: 1.5;
-                    margin: 0;
-                    color: #fff;
-                    z-index: 3;
-                    span{
-                        color: #00F0FF;
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            color: #00F0FF;
+                            font-size: 2rem;
+                        }
                     }
-                }
                 }
                 
                 .cover{
@@ -809,20 +823,20 @@
                             margin: 0;
         
                             &:nth-of-type(1){
-                                width: 35%;
+                                width: 45%;
                             }
                             &:nth-of-type(2){
-                                width: 80%;
+                                width: 90%;
                             }
                             &:nth-of-type(3){
-                                width: 100%;
+                                width: 110%;
                             }
                         }
                     }
                 
                     .rect__bottom{
                         width: 100%;
-                        height: 30%;
+                        height: 20%;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -837,8 +851,8 @@
                             z-index: -1;
                         }
                         .onViewLogo{
-                            width: 25vw;
-                            margin: 0.5rem;
+                            width: 45vw;
+                            scale: 0.8;
                         }
                         .stats__container{
                             width: 60vw;
@@ -851,11 +865,16 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                gap: 1rem;
+                                gap: 0.5rem;
                                 p{
-                                    font-size: 2rem;
+                                    font-size: 1.8rem;
                                     font-weight: 400;
                                     margin: 0;
+                                }
+                                img{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    object-fit: contain;
                                 }
                             }
                         }
@@ -865,8 +884,9 @@
             
             .button__container{
                 position: absolute;
-                bottom: 30%;
+                bottom: 10%;
                 left: 2.5%;
+                scale: 0.7;
             }
         }
     }
@@ -897,19 +917,19 @@
                     top: 30%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
-                    font-size: 4rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    text-align: right;
-                    line-height: 1.5;
-                    margin: 0;
-                    color: #fff;
-                    z-index: 3;
-                    span{
-                        color: #00F0FF;
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            color: #00F0FF;
+                            font-size: 1.8rem;
+                        }
                     }
-                }
                 }
                 
                 .cover{
@@ -955,20 +975,20 @@
                             margin: 0;
         
                             &:nth-of-type(1){
-                                width: 35%;
+                                width: 45%;
                             }
                             &:nth-of-type(2){
-                                width: 80%;
+                                width: 90%;
                             }
                             &:nth-of-type(3){
-                                width: 100%;
+                                width: 110%;
                             }
                         }
                     }
                 
                     .rect__bottom{
                         width: 100%;
-                        height: 35%;
+                        height: 20%;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -983,8 +1003,8 @@
                             z-index: -1;
                         }
                         .onViewLogo{
-                            width: 25vw;
-                            margin-left: 2rem;
+                            width: 50vw;
+                            scale: 0.7;
                         }
                         .stats__container{
                             width: 60vw;
@@ -997,11 +1017,16 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                gap: 1rem;
+                                gap: 0.5rem;
                                 p{
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                     font-weight: 400;
                                     margin: 0;
+                                }
+                                img{
+                                    width: 1.8rem;
+                                    height: 1.8rem;
+                                    object-fit: contain;
                                 }
                             }
                         }
@@ -1011,8 +1036,9 @@
             
             .button__container{
                 position: absolute;
-                bottom: 30%;
+                bottom: 10%;
                 left: 2.5%;
+                scale: 0.6;
             }
         }
     }

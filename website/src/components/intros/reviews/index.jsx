@@ -5,7 +5,6 @@ import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import PageHeading from "@/components/anim/TextAnims/PageHeading";
 import { stats } from "@/constants/pages/reviews";
-import { supabase } from "@/hooks/supabaseClient";
 import { useFetchDatabase } from "@/hooks/useFetchDatabase";
 import { useEffect, useState } from "react";
 
