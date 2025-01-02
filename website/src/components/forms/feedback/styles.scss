@@ -1013,12 +1013,12 @@
                     .magnetic{
                         z-index: 57;
                         .Round__button_container{
-                            width: 200px;
-                            height: 200px;
+                            width: 175px;
+                            height: 175px;
                             z-index: 5;
                             a{
                                 p{
-                                    font-size: 2rem;
+                                    font-size: 1.8rem;
                                     line-height: 1.1;
                                 }
                             }
@@ -1046,7 +1046,7 @@
                         gap: 0.5rem;
         
                         h3{
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                             font-weight: 800;
                             margin: 0;
         
@@ -1055,7 +1055,7 @@
                             width: 30%;
                             padding-top: 1.5rem;
                             margin: 0;
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                             font-weight: 400;
                         }
                     }
@@ -1078,13 +1078,13 @@
                             }
                         }
                         .details{
-                            width: 70%;
+                            width: 65%;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
         
                             p{
-                                font-size: 1.5rem;
+                                font-size: 1.3rem;
                                 font-weight: 400;
                                 margin: 0;
                             }
@@ -1206,7 +1206,7 @@
                             }
         
                             h3{
-                                font-size: 1.5rem;
+                                font-size: 1.3rem;
                                 font-weight: 800;
                                 margin: 0;
                             }
@@ -1243,11 +1243,11 @@
         
                                 label{
                                     white-space: nowrap; // this fixes the issue with the lable getting clumped into two lines
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                 }
                                 h3{
                                     height: 100%;
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                 }
         
                                 textarea {
@@ -1400,7 +1400,7 @@
                             z-index: 5;
                             a{
                                 p{
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                     line-height: 1.1;
                                 }
                             }
@@ -1428,7 +1428,7 @@
                         gap: 0.5rem;
         
                         h3{
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                             font-weight: 800;
                             margin-bottom: 0.5rem;
         
@@ -1437,7 +1437,7 @@
                             width: 30%;
                             padding-top: 1.5rem;
                             margin: 0;
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                             font-weight: 400;
                         }
                     }
@@ -1460,13 +1460,13 @@
                             }
                         }
                         .details{
-                            width: 70%;
+                            width: 60%;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
         
                             p{
-                                font-size: 1.3rem;
+                                font-size: 1.2rem;
                                 font-weight: 400;
                             }
                         }
@@ -1500,7 +1500,7 @@
                         padding: 0 1rem;
                         p{
                             color: #fff;
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                             font-weight: 400;
                             margin: 0;
                         }
@@ -1587,7 +1587,7 @@
                             }
         
                             h3{
-                                font-size: 1.5rem;
+                                font-size: 1.4rem;
                                 font-weight: 800;
                                 margin: 0;
                             }
@@ -1624,11 +1624,11 @@
         
                                 label{
                                     white-space: nowrap; // this fixes the issue with the lable getting clumped into two lines
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                 }
                                 h3{
                                     height: 100%;
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                 }
         
                                 textarea {
@@ -1638,7 +1638,7 @@
                                     outline: none;
                                     color: #fff;
                                     opacity: 0.6;
-                                    font-size: 1.5rem;
+                                    font-size: 1.2rem;
                                     resize: none;
                                     line-height: 1.5;
                                     padding: 1.5rem 0 0 0;
@@ -1687,7 +1687,7 @@
                                     outline: none;
                                     color: #fff;
                                     opacity: 0.6;
-                                    font-size: 1.5rem;
+                                    font-size: 1.2rem;
                             
                                     &::placeholder {
                                         color: #fff;
@@ -1746,7 +1746,7 @@
                             .terms__text{
                                 padding-right: 2rem;
                                 margin: 0;
-                                font-size: 1rem;
+                                font-size: 0.8rem;
                                 font-weight: 400;
                             }
                         }
@@ -1781,7 +1781,7 @@
                             z-index: 5;
                             a{
                                 p{
-                                    font-size: 2rem;
+                                    font-size: 1.6rem;
                                     line-height: 1.1;
                                 }
                             }
@@ -1802,7 +1802,7 @@
                     color: #fff;
         
                     .header{
-                        height: 50%;
+                        height: 60%;
                         width: 120%;
                         display: flex;
                         align-items: flex-start;
@@ -1810,16 +1810,16 @@
                         gap: 0.5rem;
         
                         h3{
-                            font-size: 2rem;
+                            font-size: 1.6rem;
                             font-weight: 800;
                             margin-bottom: 0.5rem;
         
                         }
                         p{
                             width: 30%;
-                            padding-top: 1.5rem;
+                            padding-top: 1rem;
                             margin: 0;
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                             font-weight: 400;
                         }
                     }
@@ -1833,22 +1833,22 @@
                         gap: 1rem;
         
                         .details__devider{
-                            width: 65%;
+                            width: 70%;
                             height: 2px;
                             background-color: #5E758D;
         
                             &:nth-of-type(1){
-                                width: 70%;
+                                width: 80%;
                             }
                         }
                         .details{
-                            width: 77%;
+                            width: 70%;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
         
                             p{
-                                font-size: 1.2rem;
+                                font-size: 1rem;
                                 font-weight: 400;
                             }
                         }
@@ -1882,7 +1882,7 @@
                         padding: 0 1rem;
                         p{
                             color: #fff;
-                            font-size: 1.5rem;
+                            font-size: 1rem;
                             font-weight: 400;
                             margin: 0;
                         }
@@ -1899,7 +1899,7 @@
         
                         .Map__div{
                             width: 100%;
-                            height: 90%;
+                            height: 80%;
                             background-color: #fff;
                             border-radius: 25px;
                         }
@@ -1911,15 +1911,16 @@
     @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
         .FeedbackForm{
             width: 100vw;
-            height: 110vh;
+            height: 100vh;
             position: absolute;
-            bottom: 5%;
+            top: 0%;
             left: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #04444C;
             padding: 0 5vw;
+            margin-top: 100vh;
         
             .form__wrapper{
                 width: 70%;
@@ -1981,7 +1982,7 @@
                                 justify-content: flex-start;
                                 align-items: center;
                                 gap: 1rem;
-                                padding: 1rem 0;
+                                padding: 0.5rem 0;
         
                                 .label__wrapper{
                                     height: 100%;
@@ -2264,7 +2265,7 @@
                         padding: 0 1rem;
                         p{
                             color: #fff;
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                             font-weight: 400;
                             margin: 0;
                         }
@@ -2293,15 +2294,16 @@
     @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
         .FeedbackForm{
             width: 100vw;
-            height: 200vh;
+            height: 100vh;
             position: absolute;
-            bottom: 5%;
+            top: 0%;
             left: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #04444C;
             padding: 0 5vw;
+            margin-top: 120vh;
         
             .form__wrapper{
                 width: 70%;
@@ -2351,7 +2353,7 @@
                             }
         
                             h3{
-                                font-size: 0.8rem;
+                                font-size: 1rem;
                                 font-weight: 800;
                                 margin: 0;
                             }
@@ -2363,7 +2365,7 @@
                                 justify-content: flex-start;
                                 align-items: center;
                                 gap: 1rem;
-                                padding: 0.25rem 0;
+                                padding: 0.5rem 0;
         
                                 .label__wrapper{
                                     height: 100%;
@@ -2388,11 +2390,11 @@
         
                                 label{
                                     white-space: nowrap; // this fixes the issue with the lable getting clumped into two lines
-                                    font-size: 0.8rem;
+                                    font-size: 1rem;
                                 }
                                 h3{
                                     height: 10%;
-                                    font-size: 0.8rem;
+                                    font-size: 1rem;
                                 }
         
                                 textarea {
@@ -2402,7 +2404,7 @@
                                     outline: none;
                                     color: #fff;
                                     opacity: 0.6;
-                                    font-size: 0.8rem;
+                                    font-size: 1rem;
                                     resize: none;
                                     line-height: 1.5;
                                     padding: 1.5rem 0 0 0;
@@ -2451,7 +2453,7 @@
                                     outline: none;
                                     color: #fff;
                                     opacity: 0.6;
-                                    font-size: 0.8rem;
+                                    font-size: 1rem;
                             
                                     &::placeholder {
                                         color: #fff;
@@ -2519,7 +2521,7 @@
         
                 .CTA{
                     position: absolute;
-                    bottom: 25%;
+                    bottom: 35%;
                     left: 0;
                     width: 100%;
                     display: flex;
@@ -2555,7 +2557,9 @@
         
                 .bottom__footer{
                     width: 90%;
-                    height: 15%;
+                    height: 25%;
+                    margin-top: 20rem;
+                    margin-bottom: 20rem;
                     position: relative;
                     display: flex;
                     align-items: center;
@@ -2564,7 +2568,7 @@
                     color: #fff;
         
                     .header{
-                        height: 60%;
+                        height: 100%;
                         width: 120%;
                         display: flex;
                         align-items: flex-start;
@@ -2572,22 +2576,22 @@
                         gap: 0.5rem;
         
                         h3{
-                            font-size: 2rem;
+                            font-size: 1.4rem;
                             font-weight: 800;
                             margin-bottom: 0.5rem;
         
                         }
                         p{
-                            width: 30%;
-                            padding-top: 1.5rem;
+                            width: 40%;
+                            padding-top: 1rem;
                             margin: 0;
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                             font-weight: 400;
                         }
                     }
         
                     .phone__details{
-                        width: 90%;
+                        width: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: flex-end;
@@ -2595,22 +2599,22 @@
                         gap: 1rem;
         
                         .details__devider{
-                            width: 65%;
+                            width: 85%;
                             height: 2px;
                             background-color: #5E758D;
         
                             &:nth-of-type(1){
-                                width: 70%;
+                                width: 90%;
                             }
                         }
                         .details{
-                            width: 70%;
+                            width: 90%;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
         
                             p{
-                                font-size: 0.8rem;
+                                font-size: 1rem;
                                 font-weight: 400;
                             }
                         }
@@ -2644,7 +2648,7 @@
                         padding: 0 1rem;
                         p{
                             color: #fff;
-                            font-size: 1.2rem;
+                            font-size: 0.8rem;
                             font-weight: 400;
                             margin: 0;
                         }
