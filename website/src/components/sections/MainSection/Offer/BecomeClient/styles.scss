@@ -1,57 +1,415 @@
-.BecomeAclient{
-    width: 100vw;
-    height: 80vh;
-    padding: 10vh 5vw;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    .Image__container{
-        position: absolute;
-        top: 50%;
-        left: 7.5%;
-        transform: translateY(-50%);
-        z-index: 60;
-    }
-
-    .Texts{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 5vh;
-        .MainTextV3__Main{
-            width: 55%;
-            height: 50%;
-
-            p{
-                text-align: right;
-                span{
-                    font-size: 3rem;
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 80vh;
+            padding: 10vh 5vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 50%;
+                left: 7.5%;
+                transform: translateY(-50%);
+                z-index: 60;
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 55%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 3rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+        
+                    &:nth-of-type(1){
+                        top: 0;
+                        right: 5%;
+                    }
+                    
+                    &:nth-of-type(3){
+                        bottom: 0;
+                        right: 5%;
+                    }
                 }
             }
         }
-        .divider{
+    } 
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+    .BecomeAclient{
+        width: 100vw;
+        height: 80vh;
+        padding: 10vh 2.5vw;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        .Image__container{
             position: absolute;
-            right: -10%;
-            width: 110%;
-            height: 2px;
-            background-color: #5E758D;
-
-            &:nth-of-type(1){
-                top: 0;
-                right: 5%;
+            top: 50%;
+            left: 7.5%;
+            transform: translateY(-50%);
+            z-index: 60;
+        }
+    
+        .Texts{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 5vh;
+            .MainTextV3__Main{
+                width: 65%;
+                height: 50%;
+    
+                p{
+                    text-align: right;
+                    span{
+                        font-size: 2.8rem;
+                    }
+                }
             }
-            
-            &:nth-of-type(3){
-                bottom: 0;
-                right: 5%;
+            .divider{
+                position: absolute;
+                right: -10%;
+                width: 110%;
+                height: 2px;
+                background-color: #5E758D;
+    
+                &:nth-of-type(1){
+                    top: 0;
+                    right: 5%;
+                }
+                
+                &:nth-of-type(3){
+                    bottom: 0;
+                    right: 5%;
+                }
             }
         }
     }
+    } 
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 80vh;
+            padding: 10vh 2.5vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 50%;
+                left: 7.5%;
+                transform: translateY(-50%);
+                z-index: 60;
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 60%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 2.6rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+        
+                    &:nth-of-type(1){
+                        top: 0;
+                        right: 5%;
+                    }
+                    
+                    &:nth-of-type(3){
+                        bottom: 0;
+                        right: 5%;
+                    }
+                }
+            }
+        }
+    } 
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 80vh;
+            padding: 10vh 1vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 50%;
+                left: 7.5%;
+                transform: translateY(-50%);
+                z-index: 60;
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 65%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+        
+                    &:nth-of-type(1){
+                        top: 0;
+                        right: 5%;
+                    }
+                    
+                    &:nth-of-type(3){
+                        bottom: 0;
+                        right: 5%;
+                    }
+                }
+            }
+        }
+    } 
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 80vh;
+            padding: 10vh 1vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 50%;
+                left: 7.5%;
+                transform: translateY(-50%);
+                z-index: 60;
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 60%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+        
+                    &:nth-of-type(1){
+                        top: 0;
+                        right: 5%;
+                    }
+                    
+                    &:nth-of-type(3){
+                        bottom: 0;
+                        right: 5%;
+                    }
+                }
+            }
+        }
+    } 
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 90vh;
+            padding: 10vh 1vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 50%;
+                left: 7.5%;
+                transform: translateY(-50%);
+                z-index: 60;
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 65%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+        
+                    &:nth-of-type(1){
+                        top: 0;
+                        right: 5%;
+                    }
+                    
+                    &:nth-of-type(3){
+                        bottom: 0;
+                        right: 5%;
+                    }
+                }
+            }
+        }
+    } 
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 90vh;
+            padding: 10vh 1vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                transform: translateY(-50%);
+                z-index: 60;
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 67.5%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+        
+                    &:nth-of-type(1){
+                        top: 0;
+                        right: 5%;
+                    }
+                    
+                    &:nth-of-type(3){
+                        bottom: 0;
+                        right: 5%;
+                    }
+                }
+            }
+        }
+    } 
 }
