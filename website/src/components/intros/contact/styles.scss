@@ -466,6 +466,10 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                }
                             }
                         }
                     }
@@ -709,10 +713,10 @@
                             height: 100%;
                             position: absolute;
                             top: 15%;
-                            left: 15%;
+                            left: 10%;
         
                             h2 {
-                                font-size: 3rem;
+                                font-size: 2.8rem;
                                 margin: 0;
                             }
                         }
@@ -727,13 +731,13 @@
                         justify-content: flex-start;
                         width: 100%;
                         height: 50%;
-                        padding-left: 15%;
+                        padding-left: 10%;
         
                         .ContactIntro__MainInfo__text {
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            width: 40%;
+                            width: 50%;
                             height: 50%;
                             position: relative;
                             .ContactIntro__MainInfo__text__container__text{
@@ -791,6 +795,10 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                }
                             }
                         }
                     }
@@ -847,7 +855,7 @@
                             width: 60%;
                             padding-right: 2rem;
                             padding-bottom: 2rem;
-                            font-size: 2.5rem;
+                            font-size: 2.2rem;
                             margin: 0;
                             text-transform: uppercase;
                             text-align: right;
@@ -1034,10 +1042,10 @@
                             height: 100%;
                             position: absolute;
                             top: 0%;
-                            left: 15%;
+                            left: 10%;
         
                             h2 {
-                                font-size: 3rem;
+                                font-size: 2.2rem;
                                 margin: 0;
                             }
                         }
@@ -1052,13 +1060,13 @@
                         justify-content: flex-start;
                         width: 100%;
                         height: 50%;
-                        padding-left: 15%;
+                        padding-left: 10%;
         
                         .ContactIntro__MainInfo__text {
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            width: 40%;
+                            width: 50%;
                             height: 50%;
                             position: relative;
                             .ContactIntro__MainInfo__text__container__text{
@@ -1072,7 +1080,7 @@
                                 align-items: flex-start;
                                 gap: 1rem;
                                 p {
-                                    font-size: 1.5rem;
+                                    font-size: 1.4rem;
                                     margin: 0;
                                     padding-top: 1rem;
                                     word-wrap: break-word;      // Přidáno pro zalamování slov
@@ -1081,7 +1089,7 @@
                                     white-space: normal; 
         
                                     &:nth-of-type(1) {
-                                        font-size: 2rem;
+                                        font-size: 1.8rem;
                                         font-weight: bold; // Changed from font-style to font-weight
                                         padding-top: 0rem;
                                         word-wrap: normal;
@@ -1116,6 +1124,10 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                img{
+                                    width: 35px;
+                                    height: 35px;
+                                }
                             }
                         }
                     }
@@ -1172,7 +1184,7 @@
                             width: 60%;
                             padding-right: 2rem;
                             padding-bottom: 2rem;
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                             margin: 0;
                             text-transform: uppercase;
                             text-align: right;
@@ -1359,10 +1371,10 @@
                             height: 100%;
                             position: absolute;
                             top: 0%;
-                            left: 15%;
+                            left: 5%;
         
                             h2 {
-                                font-size: 3rem;
+                                font-size: 2.2rem;
                                 margin: 0;
                             }
                         }
@@ -1397,7 +1409,7 @@
                                 align-items: flex-start;
                                 gap: 1rem;
                                 p {
-                                    font-size: 1.5rem;
+                                    font-size: 1.2rem;
                                     margin: 0;
                                     padding-top: 1rem;
                                     word-wrap: break-word;      // Přidáno pro zalamování slov
@@ -1406,7 +1418,7 @@
                                     white-space: normal; 
         
                                     &:nth-of-type(1) {
-                                        font-size: 2rem;
+                                        font-size: 1.6rem;
                                         font-weight: bold; // Changed from font-style to font-weight
                                         padding-top: 0rem;
                                         word-wrap: normal;
@@ -1441,6 +1453,10 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                img{
+                                    width: 30px;
+                                    height: 30px;
+                                }
                             }
                         }
                     }
@@ -1497,7 +1513,7 @@
                             width: 70%;
                             padding-right: 2rem;
                             padding-bottom: 2rem;
-                            font-size: 2rem;
+                            font-size: 1.6rem;
                             margin: 0;
                             text-transform: uppercase;
                             text-align: right;
@@ -1627,7 +1643,7 @@
     @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
         .ContactIntro {
             width: 100vw;
-            height: 200vh;
+            height: 400vh;
             position: relative;
             color: #fff;
             .background__img{
@@ -1684,10 +1700,10 @@
                             height: 100%;
                             position: absolute;
                             top: 0%;
-                            left: 15%;
+                            left: 5%;
         
                             h2 {
-                                font-size: 2.5rem;
+                                font-size: 2rem;
                                 margin: 0;
                             }
                         }
@@ -1766,6 +1782,10 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                }
                             }
                         }
                     }
@@ -1952,8 +1972,8 @@
     }
     @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
         .ContactIntro {
-            width: 110vw;
-            height: 200vh;
+            width: 100vw;
+            height: 420vh;
             position: relative;
             color: #fff;
             .background__img{
@@ -1983,6 +2003,7 @@
                 display: flex;
                 overflow: hidden;
                 z-index: 59;
+                overflow: hidden;
         
                 .ContactIntro__MainInfo {
                     position: relative;
@@ -2010,10 +2031,10 @@
                             height: 100%;
                             position: absolute;
                             top: 0%;
-                            left: 15%;
+                            left: 5%;
         
                             h2 {
-                                font-size: 2.5rem;
+                                font-size: 2rem;
                                 margin: 0;
                             }
                         }

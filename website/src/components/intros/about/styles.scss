@@ -199,7 +199,7 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
@@ -609,10 +609,10 @@
                             justify-content: center;
                             align-items: center;
                             p {
-                                width: 90%;
+                                width: 95%;
                                 text-align:  center;
                                 span {
-                                    font-size: 7.8rem;
+                                    font-size: 8rem;
                                     &.highlightedspan {
                                         color: #00F0FF;
                                     }
@@ -733,7 +733,7 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
@@ -797,7 +797,7 @@
                                                     text-transform: uppercase;
                                                     text-align: right;
                                                     span{
-                                                        font-size: 3rem;
+                                                        font-size: 2.8rem;
                                                     }
                                                     .highlighted {
                                                         color: #00F0FF;
@@ -825,7 +825,7 @@
                                             p{
                                                 width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -868,7 +868,7 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
@@ -905,15 +905,15 @@
                                         color: #fff;
                                         
                                         .subText__text{
-                                            margin-left: 10vw;
-                                            width: 80%;
+                                            margin-left: 0vw;
+                                            width: 100%;
                                             height: 60%;
                                             display: flex;
                                             align-items: flex-start;
                                             p{
                                                 width: 50%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -930,7 +930,7 @@
                                         height: 50%;
                                         display: flex;
                                         align-items: flex-end;
-                                        padding: 5vh 0 0 0 ;
+                                        padding: 2.5vh 0 0 0 ;
                                         justify-content: flex-start;  
                                         color: #fff;
                                         flex-direction: column;
@@ -949,9 +949,9 @@
                                         }
                                         p{
                                             padding-right: 5vw;
-                                            width: 80%;
+                                            width: 100%;
                                             text-align: right;
-                                            font-size: 3rem;
+                                            font-size: 2.8rem;
                                             font-weight: 400;
                                             margin: 0;
                                             text-transform: uppercase;
@@ -959,7 +959,7 @@
                                     }
                                     .subText2{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 40%;
                                         display: flex;
                                         align-items: center;
@@ -974,7 +974,7 @@
                                             p{
                                                 width: 50%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -1007,11 +1007,11 @@
                                 max-height: 250px;
                                 .Header__container{
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: flex-start;
                                     width: 100%;
-                                    height: 80%;
-                                    gap: 0.5rem;
+                                    height: 60%;
+                                    gap: 1rem;
                                     color: #fff;
         
         
@@ -1020,19 +1020,19 @@
                                         font-weight: 400;
                                         text-align: center;
                                         margin: 0;
-                                        padding-bottom: 2rem;
                                     }
                                     p{
                                        font-size: 1.5rem; 
                                        font-weight: 300;
                                        text-align: left;
                                        margin: 0;
+                                       padding-top: 1.5rem;
                                     }
                                 }
                             }
                             .Values__container{
                                 width: 100%;
-                                height: 75%;
+                                height: 85%;
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -1041,6 +1041,7 @@
                                 .svg__fillc__Ccontainer{
                                     width: 100%;
                                     height: 100%;
+                                    scale: 0.9;
         
                                     svg{
                                         width: 500px;
@@ -1084,7 +1085,7 @@
             }
             .button__container {
                 position: fixed; // Change from absolute to fixed
-                bottom: 3%;
+                bottom: 5%;
                 left: 2.5%;
                 z-index: 70;
                 transform-origin: center center;
@@ -1146,7 +1147,7 @@
                                 width: 90%;
                                 text-align:  center;
                                 span {
-                                    font-size: 7rem;
+                                    font-size: 6.5rem;
                                     &.highlightedspan {
                                         color: #00F0FF;
                                     }
@@ -1158,8 +1159,8 @@
             
                     .ImageFixed{
                         position: fixed;
-                        width: 40%;
-                        height: 40%;
+                        width: 35%;
+                        height: 35%;
                         top: 35%;
                         left: 50%;
                         transform: translate(-50%, -50%);
@@ -1267,7 +1268,7 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
@@ -1320,7 +1321,7 @@
                                             
                                             .MainText__Container{
                                                 position: relative;
-                                                width: 80%;
+                                                width: 90%;
                                                 height: 100%;
                                                 display: flex;
                                                 justify-content: flex-start;
@@ -1331,7 +1332,7 @@
                                                     text-transform: uppercase;
                                                     text-align: right;
                                                     span{
-                                                        font-size: 3rem;
+                                                        font-size: 2.8rem;
                                                     }
                                                     .highlighted {
                                                         color: #00F0FF;
@@ -1359,7 +1360,7 @@
                                             p{
                                                 width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -1402,7 +1403,7 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
@@ -1439,15 +1440,15 @@
                                         color: #fff;
                                         
                                         .subText__text{
-                                            margin-left: 10vw;
-                                            width: 80%;
+                                            margin-left: 0vw;
+                                            width: 100%;
                                             height: 60%;
                                             display: flex;
                                             align-items: flex-start;
                                             p{
                                                 width: 50%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -1464,7 +1465,7 @@
                                         height: 50%;
                                         display: flex;
                                         align-items: flex-end;
-                                        padding: 5vh 0 0 0 ;
+                                        padding: 2.5vh 0 0 0 ;
                                         justify-content: flex-start;  
                                         color: #fff;
                                         flex-direction: column;
@@ -1483,9 +1484,9 @@
                                         }
                                         p{
                                             padding-right: 5vw;
-                                            width: 80%;
+                                            width: 100%;
                                             text-align: right;
-                                            font-size: 3rem;
+                                            font-size: 2.8rem;
                                             font-weight: 400;
                                             margin: 0;
                                             text-transform: uppercase;
@@ -1493,7 +1494,7 @@
                                     }
                                     .subText2{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 40%;
                                         display: flex;
                                         align-items: center;
@@ -1508,7 +1509,7 @@
                                             p{
                                                 width: 50%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -1541,11 +1542,11 @@
                                 max-height: 250px;
                                 .Header__container{
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: flex-start;
                                     width: 100%;
-                                    height: 80%;
-                                    gap: 0.5rem;
+                                    height: 60%;
+                                    gap: 1rem;
                                     color: #fff;
         
         
@@ -1554,19 +1555,19 @@
                                         font-weight: 400;
                                         text-align: center;
                                         margin: 0;
-                                        padding-bottom: 2rem;
                                     }
                                     p{
                                        font-size: 1.5rem; 
                                        font-weight: 300;
                                        text-align: left;
                                        margin: 0;
+                                       padding-top: 1.5rem;
                                     }
                                 }
                             }
                             .Values__container{
                                 width: 100%;
-                                height: 75%;
+                                height: 85%;
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -1575,6 +1576,7 @@
                                 .svg__fillc__Ccontainer{
                                     width: 100%;
                                     height: 100%;
+                                    scale: 0.9;
         
                                     svg{
                                         width: 500px;
@@ -1600,7 +1602,7 @@
                     }
                 }
             } 
-        }        
+        }          
     }
     @media only screen and (min-width: 1260px) and (max-width: 1420px) {
         .About{
@@ -1618,15 +1620,13 @@
             }
             .button__container {
                 position: fixed; // Change from absolute to fixed
-                bottom: 0%;
+                bottom: 5%;
                 left: 2.5%;
                 z-index: 70;
                 transform-origin: center center;
                 will-change: transform;
                 pointer-events: auto;
-                .magnetic{
-                    scale: 0.8;
-                }
+                scale: 0.8;
             }
             .AboutInto{
                 position: relative;
@@ -1680,10 +1680,10 @@
                             justify-content: center;
                             align-items: center;
                             p {
-                                width: 90%;
+                                width: 85%;
                                 text-align:  center;
                                 span {
-                                    font-size: 6.2rem;
+                                    font-size: 6rem;
                                     &.highlightedspan {
                                         color: #00F0FF;
                                     }
@@ -1695,8 +1695,8 @@
             
                     .ImageFixed{
                         position: fixed;
-                        width: 40%;
-                        height: 40%;
+                        width: 32.5%;
+                        height: 32.5%;
                         top: 35%;
                         left: 50%;
                         transform: translate(-50%, -50%);
@@ -1804,19 +1804,19 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.6rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1.2rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -1829,7 +1829,7 @@
                                         }
                                     }
                                     .MainText{
-                                        padding: 5vh 0 0 0;
+                                        padding: 2.5vh 0 0 0;
                                         position: relative;
                                         width: 100%;
                                         height: 40%;
@@ -1857,7 +1857,7 @@
                                             
                                             .MainText__Container{
                                                 position: relative;
-                                                width: 80%;
+                                                width: 90%;
                                                 height: 100%;
                                                 display: flex;
                                                 justify-content: flex-start;
@@ -1868,7 +1868,7 @@
                                                     text-transform: uppercase;
                                                     text-align: right;
                                                     span{
-                                                        font-size: 3rem;
+                                                        font-size: 2.4rem;
                                                     }
                                                     .highlighted {
                                                         color: #00F0FF;
@@ -1896,7 +1896,7 @@
                                             p{
                                                 width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.2rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -1939,19 +1939,19 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.6rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1.2rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -1976,15 +1976,15 @@
                                         color: #fff;
                                         
                                         .subText__text{
-                                            margin-left: 10vw;
-                                            width: 80%;
+                                            margin-left: 0vw;
+                                            width: 100%;
                                             height: 60%;
                                             display: flex;
                                             align-items: flex-start;
                                             p{
                                                 width: 50%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.2rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -2001,7 +2001,7 @@
                                         height: 50%;
                                         display: flex;
                                         align-items: flex-end;
-                                        padding: 5vh 0 0 0 ;
+                                        padding: 2.5vh 0 0 0 ;
                                         justify-content: flex-start;  
                                         color: #fff;
                                         flex-direction: column;
@@ -2020,9 +2020,9 @@
                                         }
                                         p{
                                             padding-right: 5vw;
-                                            width: 80%;
+                                            width: 100%;
                                             text-align: right;
-                                            font-size: 3rem;
+                                            font-size: 2.4rem;
                                             font-weight: 400;
                                             margin: 0;
                                             text-transform: uppercase;
@@ -2030,7 +2030,7 @@
                                     }
                                     .subText2{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 40%;
                                         display: flex;
                                         align-items: center;
@@ -2045,7 +2045,7 @@
                                             p{
                                                 width: 50%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.2rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -2078,32 +2078,32 @@
                                 max-height: 250px;
                                 .Header__container{
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: flex-start;
                                     width: 100%;
-                                    height: 80%;
-                                    gap: 0.5rem;
+                                    height: 60%;
+                                    gap: 1rem;
                                     color: #fff;
         
         
                                     h2{
-                                        font-size: 2rem;
+                                        font-size: 1.6rem;
                                         font-weight: 400;
                                         text-align: center;
                                         margin: 0;
-                                        padding-bottom: 2rem;
                                     }
                                     p{
-                                       font-size: 1.5rem; 
+                                       font-size: 1.2rem; 
                                        font-weight: 300;
                                        text-align: left;
                                        margin: 0;
+                                       padding-top: 1.5rem;
                                     }
                                 }
                             }
                             .Values__container{
                                 width: 100%;
-                                height: 75%;
+                                height: 100%;
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -2112,10 +2112,11 @@
                                 .svg__fillc__Ccontainer{
                                     width: 100%;
                                     height: 100%;
+                                    scale: 0.9;
         
                                     svg{
-                                        width: 500px;
-                                        height: 500px;
+                                        width: 400psx;
+                                        height: 400px;
                                         position: absolute;
                                         top: 5%;
                                         left: 10%;
@@ -2155,15 +2156,13 @@
             }
             .button__container {
                 position: fixed; // Change from absolute to fixed
-                bottom: 2%;
+                bottom: 5%;
                 left: 2.5%;
                 z-index: 70;
                 transform-origin: center center;
                 will-change: transform;
                 pointer-events: auto;
-                .magnetic{
-                    scale: 0.8;
-                }
+                scale: 0.8;
             }
             .AboutInto{
                 position: relative;
@@ -2217,10 +2216,10 @@
                             justify-content: center;
                             align-items: center;
                             p {
-                                width: 90%;
+                                width: 100%;
                                 text-align:  center;
                                 span {
-                                    font-size: 5rem;
+                                    font-size: 4.2rem;
                                     &.highlightedspan {
                                         color: #00F0FF;
                                     }
@@ -2232,8 +2231,8 @@
             
                     .ImageFixed{
                         position: fixed;
-                        width: 40%;
-                        height: 40%;
+                        width: 35%;
+                        height: 30%;
                         top: 35%;
                         left: 50%;
                         transform: translate(-50%, -50%);
@@ -2341,19 +2340,19 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.6rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1.2rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -2366,7 +2365,7 @@
                                         }
                                     }
                                     .MainText{
-                                        padding: 5vh 0 0 0;
+                                        padding: 2.5vh 0 0 0;
                                         position: relative;
                                         width: 100%;
                                         height: 40%;
@@ -2394,7 +2393,7 @@
                                             
                                             .MainText__Container{
                                                 position: relative;
-                                                width: 80%;
+                                                width: 90%;
                                                 height: 100%;
                                                 display: flex;
                                                 justify-content: flex-start;
@@ -2405,7 +2404,7 @@
                                                     text-transform: uppercase;
                                                     text-align: right;
                                                     span{
-                                                        font-size: 3rem;
+                                                        font-size: 2.4rem;
                                                     }
                                                     .highlighted {
                                                         color: #00F0FF;
@@ -2433,7 +2432,7 @@
                                             p{
                                                 width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.2rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -2476,19 +2475,19 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.6rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1.2rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -2513,15 +2512,15 @@
                                         color: #fff;
                                         
                                         .subText__text{
-                                            margin-left: 10vw;
-                                            width: 80%;
+                                            margin-left: 0vw;
+                                            width: 100%;
                                             height: 60%;
                                             display: flex;
                                             align-items: flex-start;
                                             p{
-                                                width: 50%;
+                                                width: 70%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.2rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -2534,11 +2533,11 @@
                                     }
                                     .MainText{
                                         position: relative;
-                                        width: 100%;
+                                        width: 120%;
                                         height: 50%;
                                         display: flex;
                                         align-items: flex-end;
-                                        padding: 5vh 0 0 0 ;
+                                        padding: 2.5vh 0 0 0 ;
                                         justify-content: flex-start;  
                                         color: #fff;
                                         flex-direction: column;
@@ -2557,9 +2556,9 @@
                                         }
                                         p{
                                             padding-right: 5vw;
-                                            width: 80%;
+                                            width: 100%;
                                             text-align: right;
-                                            font-size: 3rem;
+                                            font-size: 2.4rem;
                                             font-weight: 400;
                                             margin: 0;
                                             text-transform: uppercase;
@@ -2567,7 +2566,7 @@
                                     }
                                     .subText2{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 40%;
                                         display: flex;
                                         align-items: center;
@@ -2580,9 +2579,9 @@
                                             display: flex;
                                             align-items: flex-start;
                                             p{
-                                                width: 50%;
+                                                width: 70%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1.2rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -2615,32 +2614,32 @@
                                 max-height: 250px;
                                 .Header__container{
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: flex-start;
                                     width: 100%;
-                                    height: 80%;
-                                    gap: 0.5rem;
+                                    height: 60%;
+                                    gap: 1rem;
                                     color: #fff;
         
         
                                     h2{
-                                        font-size: 2rem;
+                                        font-size: 1.6rem;
                                         font-weight: 400;
                                         text-align: center;
                                         margin: 0;
-                                        padding-bottom: 2rem;
                                     }
                                     p{
-                                       font-size: 1.5rem; 
+                                       font-size: 1.2rem; 
                                        font-weight: 300;
                                        text-align: left;
                                        margin: 0;
+                                       padding-top: 1.5rem;
                                     }
                                 }
                             }
                             .Values__container{
                                 width: 100%;
-                                height: 75%;
+                                height: 100%;
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -2649,10 +2648,11 @@
                                 .svg__fillc__Ccontainer{
                                     width: 100%;
                                     height: 100%;
+                                    scale: 0.8;
         
                                     svg{
-                                        width: 500px;
-                                        height: 500px;
+                                        width: 400px;
+                                        height: 400px;
                                         position: absolute;
                                         top: 5%;
                                         left: 10%;
@@ -2674,7 +2674,7 @@
                     }
                 }
             } 
-        }        
+        }           
     }
     @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
         .About{
@@ -2689,15 +2689,17 @@
                 right:  calc(5% - 25px );
                 transform: translateY(-50%);
                 z-index: 56;
+                scale: 0.8;
             }
             .button__container {
                 position: fixed; // Change from absolute to fixed
-                bottom: 5%;
+                bottom: 0%;
                 left: 2.5%;
                 z-index: 70;
                 transform-origin: center center;
                 will-change: transform;
                 pointer-events: auto;
+                scale: 0.6;
             }
             .AboutInto{
                 position: relative;
@@ -2751,10 +2753,10 @@
                             justify-content: center;
                             align-items: center;
                             p {
-                                width: 90%;
+                                width: 100%;
                                 text-align:  center;
                                 span {
-                                    font-size: 7rem;
+                                    font-size: 3.5rem;
                                     &.highlightedspan {
                                         color: #00F0FF;
                                     }
@@ -2766,9 +2768,9 @@
             
                     .ImageFixed{
                         position: fixed;
-                        width: 40%;
-                        height: 40%;
-                        top: 35%;
+                        width: 35%;
+                        height: 50%;
+                        top: 25%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 5;
@@ -2856,6 +2858,7 @@
                                     width: 100%;
                                     height: 100%;
                                     z-index: 2;
+                                    scale: 0.9;
             
                                     .Header{
                                         padding: 0 5%;
@@ -2880,14 +2883,14 @@
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.6rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1.2rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -2900,10 +2903,10 @@
                                         }
                                     }
                                     .MainText{
-                                        padding: 5vh 0 0 0;
+                                        padding: 2.5vh 0 0 0;
                                         position: relative;
                                         width: 100%;
-                                        height: 40%;
+                                        height: 70%;
                                         display: flex;
                                         align-items: flex-end;
                                         justify-content: flex-start;  
@@ -2928,7 +2931,7 @@
                                             
                                             .MainText__Container{
                                                 position: relative;
-                                                width: 80%;
+                                                width: 90%;
                                                 height: 100%;
                                                 display: flex;
                                                 justify-content: flex-start;
@@ -2939,7 +2942,7 @@
                                                     text-transform: uppercase;
                                                     text-align: right;
                                                     span{
-                                                        font-size: 3rem;
+                                                        font-size: 1.8rem;
                                                     }
                                                     .highlighted {
                                                         color: #00F0FF;
@@ -2967,7 +2970,7 @@
                                             p{
                                                 width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -2992,6 +2995,7 @@
                                     width: 100%;
                                     height: 100%;
                                     z-index: 3;
+                                    scale: 0.9;
             
                                     .Header{
                                         padding: 0 5%;
@@ -3010,19 +3014,19 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.6rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1.2rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -3047,15 +3051,15 @@
                                         color: #fff;
                                         
                                         .subText__text{
-                                            margin-left: 10vw;
-                                            width: 80%;
+                                            margin-left: 0vw;
+                                            width: 100%;
                                             height: 60%;
                                             display: flex;
                                             align-items: flex-start;
                                             p{
-                                                width: 50%;
+                                                width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -3068,11 +3072,12 @@
                                     }
                                     .MainText{
                                         position: relative;
-                                        width: 100%;
-                                        height: 50%;
+                                        width: 120%;
+                                        height: 90%;
+                                        margin-top: 2.5vh;
                                         display: flex;
                                         align-items: flex-end;
-                                        padding: 5vh 0 0 0 ;
+                                        padding: 2.5vh 0 0 0 ;
                                         justify-content: flex-start;  
                                         color: #fff;
                                         flex-direction: column;
@@ -3091,9 +3096,9 @@
                                         }
                                         p{
                                             padding-right: 5vw;
-                                            width: 80%;
+                                            width: 100%;
                                             text-align: right;
-                                            font-size: 3rem;
+                                            font-size: 1.8rem;
                                             font-weight: 400;
                                             margin: 0;
                                             text-transform: uppercase;
@@ -3101,8 +3106,8 @@
                                     }
                                     .subText2{
                                         position: relative;
-                                        width: 80%;
-                                        height: 40%;
+                                        width: 100%;
+                                        height: 20%;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center; 
@@ -3114,9 +3119,9 @@
                                             display: flex;
                                             align-items: flex-start;
                                             p{
-                                                width: 50%;
+                                                width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 1rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -3149,32 +3154,32 @@
                                 max-height: 250px;
                                 .Header__container{
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: flex-start;
                                     width: 100%;
-                                    height: 80%;
-                                    gap: 0.5rem;
+                                    height: 60%;
+                                    gap: 1rem;
                                     color: #fff;
         
         
                                     h2{
-                                        font-size: 2rem;
+                                        font-size: 1.4rem;
                                         font-weight: 400;
                                         text-align: center;
                                         margin: 0;
-                                        padding-bottom: 2rem;
                                     }
                                     p{
-                                       font-size: 1.5rem; 
+                                       font-size: 1rem; 
                                        font-weight: 300;
                                        text-align: left;
                                        margin: 0;
+                                       padding-top: 1.5rem;
                                     }
                                 }
                             }
                             .Values__container{
                                 width: 100%;
-                                height: 75%;
+                                height: 100%;
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -3183,10 +3188,11 @@
                                 .svg__fillc__Ccontainer{
                                     width: 100%;
                                     height: 100%;
+                                    scale: 0.75;
         
                                     svg{
-                                        width: 500px;
-                                        height: 500px;
+                                        width: 250px;
+                                        height: 250px;
                                         position: absolute;
                                         top: 5%;
                                         left: 10%;
@@ -3208,7 +3214,7 @@
                     }
                 }
             } 
-        }        
+        }          
     }
     @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
         .About{
@@ -3223,15 +3229,17 @@
                 right:  calc(5% - 25px );
                 transform: translateY(-50%);
                 z-index: 56;
+                scale: 0.8;
             }
             .button__container {
                 position: fixed; // Change from absolute to fixed
-                bottom: 5%;
+                bottom: 0%;
                 left: 2.5%;
                 z-index: 70;
                 transform-origin: center center;
                 will-change: transform;
                 pointer-events: auto;
+                scale: 0.6;
             }
             .AboutInto{
                 position: relative;
@@ -3285,10 +3293,10 @@
                             justify-content: center;
                             align-items: center;
                             p {
-                                width: 90%;
+                                width: 100%;
                                 text-align:  center;
                                 span {
-                                    font-size: 7rem;
+                                    font-size: 2.5rem;
                                     &.highlightedspan {
                                         color: #00F0FF;
                                     }
@@ -3300,9 +3308,9 @@
             
                     .ImageFixed{
                         position: fixed;
-                        width: 40%;
+                        width: 35%;
                         height: 40%;
-                        top: 35%;
+                        top: 25%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 5;
@@ -3390,6 +3398,7 @@
                                     width: 100%;
                                     height: 100%;
                                     z-index: 2;
+                                    scale: 0.9;
             
                                     .Header{
                                         padding: 0 5%;
@@ -3414,14 +3423,14 @@
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -3434,10 +3443,10 @@
                                         }
                                     }
                                     .MainText{
-                                        padding: 5vh 0 0 0;
+                                        padding: 2.5vh 0 0 0;
                                         position: relative;
                                         width: 100%;
-                                        height: 40%;
+                                        height: 70%;
                                         display: flex;
                                         align-items: flex-end;
                                         justify-content: flex-start;  
@@ -3462,7 +3471,7 @@
                                             
                                             .MainText__Container{
                                                 position: relative;
-                                                width: 80%;
+                                                width: 90%;
                                                 height: 100%;
                                                 display: flex;
                                                 justify-content: flex-start;
@@ -3473,7 +3482,7 @@
                                                     text-transform: uppercase;
                                                     text-align: right;
                                                     span{
-                                                        font-size: 3rem;
+                                                        font-size: 1.4rem;
                                                     }
                                                     .highlighted {
                                                         color: #00F0FF;
@@ -3501,7 +3510,7 @@
                                             p{
                                                 width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 0.8rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -3526,6 +3535,7 @@
                                     width: 100%;
                                     height: 100%;
                                     z-index: 3;
+                                    scale: 0.9;
             
                                     .Header{
                                         padding: 0 5%;
@@ -3544,19 +3554,19 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             height: 80%;
-                                            gap: 0.5rem;
+                                            gap: 1rem;
                                             color: #fff;
             
             
                                             h2{
-                                                font-size: 2rem;
+                                                font-size: 1.4rem;
                                                 font-weight: 400;
                                                 text-align: center;
                                                 margin: 0;
                                                 padding-bottom: 2rem;
                                             }
                                             p{
-                                               font-size: 1.5rem; 
+                                               font-size: 1rem; 
                                                font-weight: 300;
                                                text-align: left;
                                                margin: 0;
@@ -3581,15 +3591,15 @@
                                         color: #fff;
                                         
                                         .subText__text{
-                                            margin-left: 10vw;
-                                            width: 80%;
+                                            margin-left: 0vw;
+                                            width: 100%;
                                             height: 60%;
                                             display: flex;
                                             align-items: flex-start;
                                             p{
-                                                width: 50%;
+                                                width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 0.8rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -3602,11 +3612,12 @@
                                     }
                                     .MainText{
                                         position: relative;
-                                        width: 100%;
-                                        height: 50%;
+                                        width: 120%;
+                                        height: 90%;
+                                        margin-top: 2.5vh;
                                         display: flex;
                                         align-items: flex-end;
-                                        padding: 5vh 0 0 0 ;
+                                        padding: 2.5vh 0 0 0 ;
                                         justify-content: flex-start;  
                                         color: #fff;
                                         flex-direction: column;
@@ -3625,9 +3636,9 @@
                                         }
                                         p{
                                             padding-right: 5vw;
-                                            width: 80%;
+                                            width: 100%;
                                             text-align: right;
-                                            font-size: 3rem;
+                                            font-size: 1.4rem;
                                             font-weight: 400;
                                             margin: 0;
                                             text-transform: uppercase;
@@ -3635,8 +3646,8 @@
                                     }
                                     .subText2{
                                         position: relative;
-                                        width: 80%;
-                                        height: 40%;
+                                        width: 100%;
+                                        height: 20%;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center; 
@@ -3648,9 +3659,9 @@
                                             display: flex;
                                             align-items: flex-start;
                                             p{
-                                                width: 50%;
+                                                width: 100%;
                                                 margin: 0;
-                                                font-size: 1.5rem;
+                                                font-size: 0.8rem;
                                                 font-weight: 300;
                                             }
                                         }
@@ -3683,32 +3694,32 @@
                                 max-height: 250px;
                                 .Header__container{
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: flex-start;
                                     width: 100%;
-                                    height: 80%;
+                                    height: 60%;
                                     gap: 0.5rem;
                                     color: #fff;
         
         
                                     h2{
-                                        font-size: 2rem;
+                                        font-size: 1.2rem;
                                         font-weight: 400;
                                         text-align: center;
                                         margin: 0;
-                                        padding-bottom: 2rem;
                                     }
                                     p{
-                                       font-size: 1.5rem; 
+                                       font-size: 0.8rem; 
                                        font-weight: 300;
                                        text-align: left;
                                        margin: 0;
+                                       padding-top: 1rem;
                                     }
                                 }
                             }
                             .Values__container{
                                 width: 100%;
-                                height: 75%;
+                                height: 100%;
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -3717,10 +3728,11 @@
                                 .svg__fillc__Ccontainer{
                                     width: 100%;
                                     height: 100%;
+                                    scale: 0.7;
         
                                     svg{
-                                        width: 500px;
-                                        height: 500px;
+                                        width: 250px;
+                                        height: 250px;
                                         position: absolute;
                                         top: 5%;
                                         left: 10%;
@@ -3742,6 +3754,6 @@
                     }
                 }
             } 
-        }        
+        }            
     }
 }

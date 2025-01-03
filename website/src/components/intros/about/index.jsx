@@ -35,7 +35,7 @@ export default function AboutInto( ){
     const imageAnimX = useTransform(
         scrollYProgress,
         [0, 0.35, 0.45 , 0.55, 0.65, 1],
-        ["-50%", "-50%", "-100%", "-100%", "-250%", "-250%"]
+        ["-50%", "-50%", "-100%", "-100%", "-350%", "-350%"]
     )
     const imageAnimScale = useTransform(
         scrollYProgress,
@@ -128,7 +128,7 @@ export default function AboutInto( ){
                     <div className="cover"/>
                     <Image src='/assets/aboutBackground.png' alt="background-photo" fill={true}/>
                     <div className="mainHeader">
-                        <PageHeading text="JSME TU PRO VÁS UŽ PŘES <span>JEDNU DEKÁDU</span>"/>
+                        <PageHeading text="JSME TU PRO VÁS UŽ PŘES<br/><span>JEDNU DEKÁDU</span>"/>
                     </div>
                     <motion.div className="ImageFixed"
                         style={{

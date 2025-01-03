@@ -48,9 +48,6 @@ const icons = [
     { name: "mainWeb", src: "/thumbsUp.png" }
 ];
 
-//WIP: zde udělat taky recenze, akorát vše pro tohoto člověka - potom i ještě pro druhého na jiné stránce
-//: info je na hlavní stránce
-
 export default function ContactForm({ scroll, name }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
     const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 })

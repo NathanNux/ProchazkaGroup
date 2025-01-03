@@ -1,172 +1,1238 @@
-.Collage{
-    width: 100vw;
-    min-height: 600vh;
-    position: relative;
-    background-color: #04444C;
-    .ProgressBar__container__wrapper{
-        position: sticky;
-        width: 100%;
-        height: 100vh;
-        top: 10%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        .ProgressBar__container {
-            width: 100%;
-            height: 100%;
-            .Collage__progressBar {
-                .Collage__progressBar_div {
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                gap: 1rem;
-            
-                .Collage__progressBar__Container {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-            
-                    .circle {
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    border: #04444C 1px solid;
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    overflow: hidden;
-            
-                    .circle__inner {
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
-                        background-color: #00F0FF;
-                    }
-                    }
-            
-                    .segment {
-                        width: 5px;
-                        height: 50px;
-                        border: #04444C 1px solid;
-                        overflow: hidden;
-                        border-radius: 25%;
-                        transform: rotate(180deg);
+                justify-content: center;
                 
-                        .segment__inner {
-                            width: 100%;
-                            height: 100%;
-                            background-color: #00F0FF;
+                .ProgressBar__container {
+                    width: 100%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: #04444C 1px solid;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                    
+                            .circle__inner {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background-color: #00F0FF;
+                            }
+                            }
+                    
+                            .segment {
+                                width: 5px;
+                                height: 50px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
                         }
                     }
-                }
-                }
+                }     
             }
-        }     
-    }
-
-    .content__wrapper{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-        overflow: hidden;
-        gap: 50vh;
-
-        .content__container{
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            padding: 5vh 5vw;
-            gap: 10vw;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-
-            .top__devider{
+        
+            .content__wrapper{
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 90%;
-                height: 2px;
-                background-color: #5E758D;
-            }
-
-            .bottom__devider{
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 90%;
-                height: 2px;
-                background-color: #5E758D;
-            }
-
-            .content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                color: #fff;
-                position: relative;
-                width: 45%;
+                width: 100%;
                 height: 100%;
-                padding: 10vh 0;
-                gap: 10vh;
-            
-                // Even items (using correct selector)
-                &:nth-child(even) {
-                    flex-direction: column-reverse;
-                    .contains__text {
-                        align-items: flex-start;
-                        text-align: right;
-                    }
-                }
-            
-                // Base styles for all items
-                .contains {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
                     width: 100%;
-                    height: 50%;
+                    min-height: 100vh;
                     display: flex;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
+                    justify-content: center;
                     align-items: center;
-                    flex-direction: column;
-                    justify-content: center;
-                    .contains__header{
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
                         display: flex;
-                        width: 70%;
+                        flex-direction: column;
                         align-items: center;
-                        gap: 0.5rem;
-
-                        h2{
-                            font-size: 1.8rem;
-                            font-weight: 800;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
                         }
-                        p{
-                            font-size: 3rem;
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 70%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 3rem;
+                                }
+        
+                                h3{
+                                    font-size: 1.5rem;
+                                }
+                            }
                         }
-
-                        h3{
-                            font-size: 1.5rem;
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 2.5rem;
+                                text-transform: uppercase;
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
-                .contains__text {
+                .ProgressBar__container {
                     width: 100%;
-                    height: 50%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: #04444C 1px solid;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                    
+                            .circle__inner {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background-color: #00F0FF;
+                            }
+                            }
+                    
+                            .segment {
+                                width: 5px;
+                                height: 50px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }     
+            }
+        
+            .content__wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
+                    width: 100%;
+                    min-height: 100vh;
                     display: flex;
-                    align-items: flex-end;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
                     justify-content: center;
-
-                    p{
-                        font-size: 2.5rem;
-                        text-transform: uppercase;
+                    align-items: center;
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
+                        }
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 80%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 3rem;
+                                }
+        
+                                h3{
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 2.2rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .ProgressBar__container {
+                    width: 100%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: #04444C 1px solid;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                    
+                            .circle__inner {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background-color: #00F0FF;
+                            }
+                            }
+                    
+                            .segment {
+                                width: 5px;
+                                height: 50px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }     
+            }
+        
+            .content__wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
+                    width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
+                        }
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 80%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 3rem;
+                                }
+        
+                                h3{
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 2.2rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .ProgressBar__container {
+                    width: 100%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: #04444C 1px solid;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                    
+                            .circle__inner {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background-color: #00F0FF;
+                            }
+                            }
+                    
+                            .segment {
+                                width: 5px;
+                                height: 50px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }     
+            }
+        
+            .content__wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
+                    width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
+                        }
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 80%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1.6rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 2.5rem;
+                                }
+        
+                                h3{
+                                    font-size: 1.3rem;
+                                }
+                            }
+                        }
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 2rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .ProgressBar__container {
+                    width: 100%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: #04444C 1px solid;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                    
+                            .circle__inner {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background-color: #00F0FF;
+                            }
+                            }
+                    
+                            .segment {
+                                width: 5px;
+                                height: 50px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }     
+            }
+        
+            .content__wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
+                    width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
+                        }
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 90%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 2rem;
+                                }
+        
+                                h3{
+                                    font-size: 1.1rem;
+                                }
+                            }
+                        }
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 1.8rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .ProgressBar__container {
+                    width: 100%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                border: #04444C 1px solid;
+                                cursor: pointer;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                overflow: hidden;
+                    
+                                .circle__inner {
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                    
+                            .segment {
+                                width: 3px;
+                                height: 40px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }     
+            }
+        
+            .content__wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
+                    width: 100%;
+                    min-height: 150vh;
+                    display: flex;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
+                        }
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1.2rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 1.6rem;
+                                }
+        
+                                h3{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 1.4rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+        .Collage{
+            width: 100vw;
+            min-height: 600vh;
+            position: relative;
+            background-color: #04444C;
+            .ProgressBar__container__wrapper{
+                position: sticky;
+                width: 100%;
+                height: 100vh;
+                top: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .ProgressBar__container {
+                    width: 100%;
+                    height: 100%;
+                    .Collage__progressBar {
+                        .Collage__progressBar_div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    
+                        .Collage__progressBar__Container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .circle {
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                border: #04444C 1px solid;
+                                cursor: pointer;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                overflow: hidden;
+                    
+                            .circle__inner {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                background-color: #00F0FF;
+                            }
+                            }
+                    
+                            .segment {
+                                width: 3px;
+                                height: 40px;
+                                border: #04444C 1px solid;
+                                overflow: hidden;
+                                border-radius: 25%;
+                                transform: rotate(180deg);
+                        
+                                .segment__inner {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #00F0FF;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }     
+            }
+        
+            .content__wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                gap: 50vh;
+        
+                .content__container{
+                    width: 100%;
+                    min-height: 150vh;
+                    display: flex;
+                    padding: 5vh 5vw;
+                    gap: 10vw;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+        
+                    .top__devider{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .bottom__devider{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 90%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: #fff;
+                        position: relative;
+                        width: 45%;
+                        height: 100%;
+                        padding: 10vh 0;
+                        gap: 10vh;
+                    
+                        // Even items (using correct selector)
+                        &:nth-child(even) {
+                            flex-direction: column-reverse;
+                            .contains__text {
+                                align-items: flex-start;
+                                text-align: right;
+                            }
+                        }
+                    
+                        // Base styles for all items
+                        .contains {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            .contains__header{
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                gap: 0.5rem;
+        
+                                h2{
+                                    font-size: 1rem;
+                                    font-weight: 800;
+                                }
+                                p{
+                                    font-size: 1.4rem;
+                                }
+        
+                                h3{
+                                    font-size: 0.8rem;
+                                }
+                            }
+                        }
+                        
+                        .contains__text {
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+        
+                            p{
+                                font-size: 1.2rem;
+                                text-transform: uppercase;
+                            }
+                        }
                     }
                 }
             }
