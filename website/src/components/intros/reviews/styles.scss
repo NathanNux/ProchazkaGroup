@@ -26,7 +26,7 @@
                     top: 40%;
                     right: 2.5%;
                     transform: translateY(-50%);
-                    h1{
+                    p{
                     font-size: 4.5rem;
                     font-weight: 500;
                     text-transform: uppercase;
@@ -1039,6 +1039,773 @@
                 bottom: 10%;
                 left: 2.5%;
                 scale: 0.6;
+            }
+        }
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    @media only screen and (min-width: 1000px) {
+        .ReviewsIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .ReviewsIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 50%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            font-size: 3.5rem;
+                            color: #00F0FF;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: calc(100% / 3); 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 110%;
+                            }
+                            &:nth-of-type(3){
+                                width: 140%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        position: relative;
+                        color: #fff;
+                        .background{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            z-index: -1;
+                        }
+                        .onViewLogo{
+                            width: 35vw;
+                        }
+                        .stats__container{
+                            width: 60vw;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 2.5vw;
+                            
+                            .stat{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 1rem;
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+            }
+        }
+    }
+    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
+        .ReviewsIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .ReviewsIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 50%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            font-size: 2.5rem;
+                            color: #00F0FF;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: calc(100% / 3); 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 100%;
+                            }
+                            &:nth-of-type(3){
+                                width: 130%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        position: relative;
+                        color: #fff;
+                        .background{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            z-index: -1;
+                        }
+                        .onViewLogo{
+                            width: 35vw;
+                            scale: 0.9;
+                        }
+                        .stats__container{
+                            width: 60vw;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 2.5vw;
+                            
+                            .stat{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 1rem;
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .button__container{
+                position: absolute;
+                bottom: 10%;
+                left: 2.5%;
+                scale: 0.9;
+            }
+        }
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .ReviewsIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .ReviewsIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 50%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.2;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            font-size: 2rem;
+                            color: #00F0FF;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: calc(100% / 3); 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 100%;
+                            }
+                            &:nth-of-type(3){
+                                width: 130%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        position: relative;
+                        color: #fff;
+                        .background{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            z-index: -1;
+                        }
+                        .onViewLogo{
+                            width: 50vw;
+                            scale: 0.7;
+                            p{
+                                white-space: nowrap;
+                            }
+                            h3{
+                                white-space: nowrap;
+                            }
+                        }
+                        .stats__container{
+                            width: 60vw;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 1.5vw;
+                            scale: 0.8;
+                            
+                            .stat{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 0.5rem;
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .button__container{
+                position: absolute;
+                bottom: 5%;
+                left: 2.5%;
+                scale: 0.7;
+            }
+        }
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .ReviewsIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .ReviewsIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 50%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            font-size: 1.8rem;
+                            color: #00F0FF;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: calc(100% / 3); 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 100%;
+                            }
+                            &:nth-of-type(3){
+                                width: 130%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        position: relative;
+                        color: #fff;
+                        .background{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            z-index: -1;
+                        }
+                        .onViewLogo{
+                            width: 60vw;
+                            scale: 0.7;
+                            p{
+                                white-space: nowrap;
+                            }
+                            h3{
+                                white-space: nowrap;
+                            }
+                        }
+                        .stats__container{
+                            width: 60vw;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 0.5vw;
+                            scale: 1;
+                            
+                            .stat{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 0rem;
+                                p{
+                                    font-size: 1.6rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                                img{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .button__container{
+                position: absolute;
+                bottom: 5%;
+                left: 2.5%;
+                scale: 0.7;
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .ReviewsIntro{
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        
+            .ReviewsIntro__Wrapper{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #fff;
+                will-change: transform, opacity;
+        
+                .Heading{
+                    z-index: 3;
+                    position: absolute;
+                    top: 40%;
+                    right: 2.5%;
+                    transform: translateY(-50%);
+                    p{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 1.5;
+                        margin: 0;
+                        color: #fff;
+                        z-index: 3;
+                        span{
+                            font-size: 1.8rem;
+                            color: #00F0FF;
+                        }
+                    }
+                }
+                
+                .cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #050A10;
+                    opacity: 0.45;
+                    z-index: 1;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+                .rect__container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    z-index: 2;
+                    .rect__Wrapper{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 60%;
+                        .rect{
+                            height: calc(100% / 3); 
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            border-radius: 35px 0 0 0;
+                            will-change: transform, opacity;
+                            margin: 0;
+        
+                            &:nth-of-type(1){
+                                width: 55%;
+                            }
+                            &:nth-of-type(2){
+                                width: 100%;
+                            }
+                            &:nth-of-type(3){
+                                width: 130%;
+                            }
+                        }
+                    }
+                
+                    .rect__bottom{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        position: relative;
+                        color: #fff;
+                        .background{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #050A10;
+                            opacity: 0.65;
+                            z-index: -1;
+                        }
+                        .onViewLogo{
+                            width: 60vw;
+                            scale: 0.7;
+                            p{
+                                white-space: nowrap;
+                            }
+                            h3{
+                                white-space: nowrap;
+                            }
+                        }
+                        .stats__container{
+                            width: 60vw;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 0.5vw;
+                            scale: 1;
+                            
+                            .stat{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 0rem;
+                                p{
+                                    font-size: 1.6rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                }
+                                img{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .button__container{
+                position: absolute;
+                bottom: 5%;
+                left: 2.5%;
+                scale: 0.7;
             }
         }
     }

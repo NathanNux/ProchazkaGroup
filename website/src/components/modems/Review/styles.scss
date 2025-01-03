@@ -1,4 +1,4 @@
-@media (min-aspect-ratio: 1/1) { //1600:900, 1440:900, 1280:720, ipadmini - na šířku,iphone12pro-na šířku, iphonese-našířku
+@media (min-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1730px) {
         .ReviewsList{
             min-height: 200vh;
@@ -2320,5 +2320,1690 @@
                 }
             }
         }
+    }
+}
+@media (max-aspect-ratio: 1/1) {
+    @media only screen and (min-width: 1000px) {
+        .ReviewsList{
+            min-height: 150vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #fff;
+            padding-top: 5vh;
+            padding-bottom: 25vh;
+            overflow: hidden;
+            color: #050A10;
+            .ReviewsList__header{
+                width: 100%;
+                height: 15vh;
+                margin-bottom: 5vh;
+                margin-top: 5vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+        
+                .devider{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+        
+                .header{
+                    width: 70%;
+                    display: flex;
+                    padding-left: 10%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 0.5rem;
+                    padding-bottom: 1.5rem;
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    p{
+                        padding-top: 1.5rem;
+                        width: 60%;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    .devider__header{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                }
+        
+                .mainText{
+                    position: absolute;
+                    right: 5%;
+                    top: 35%;
+                    width: 40%;
+                    
+                    h2{
+                       font-size: 3rem;
+                       font-weight: 400;
+                       color: #050A10;
+                       margin: 0; 
+                       text-align: right;
+                    }
+                }
+            }
+        
+            .ReviewsList__menu{
+                width: 100%;
+                padding: 0 5%;
+                height: 25vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+        
+                .devider__menu{
+                    position: absolute;
+                    bottom: -5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+                .menu__controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    .menu__buttons{
+                        display: flex;
+                        gap: 0.5rem;
+                        .button{
+                            .Small__button_container{
+                                width: 150px;
+                                height: 50px;
+                                a{
+                                    pointer-events: none;
+                                    p{
+                                        font-size: 1.5rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .searchBar{
+                        display: flex;
+                        width: 40vw;
+        
+                        svg{
+                            width: 35px;
+                            height: 35px;
+                            stroke: #050A10;
+                        }
+                        // Override Tailwind base styles
+                        *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+                            
+                            border-width: 0 !important;
+                            border-style: none !important;
+                            border-color: transparent !important;
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+        
+                .addReviews{
+                    position: absolute;
+                    top: 30%;
+                    right: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-bottom: 1rem;
+                    .devider__rev{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 45%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                    .controls{
+                        width: 40%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 2rem;
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                        .button{
+                            .Svg__button_container{
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .ReviewsList__Reviews{
+                min-height: 100vh;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 2vh;
+        
+                .review__item{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-direction: row;
+        
+                    .devider__item{
+                        position: absolute;
+                        bottom: 0;
+                        left: -15%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        opacity: 0.4;
+                    }
+        
+                    .context{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 1rem;
+        
+                        .Header{
+                            height: 10%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            margin-bottom: 2%;
+                            p{
+                                height: 100%;
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                            h3{
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                        .message{
+                            padding-left: 2vw;
+                            p{
+                                margin: 0;
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                                color: #050A10
+                            }
+                        }
+                    }
+        
+                    .ratings{
+                        width: 60%;
+                        padding-bottom: 2.5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end; 
+                        flex-direction: row;
+                        gap: 3rem;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                            color: #050A10;
+                        }
+                        .buttons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            p{
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                    }
+        
+                    &:nth-child(even) {
+                        flex-direction: row-reverse;
+                  
+                        .context {
+                          align-items: flex-end;
+                          text-align: right;
+                  
+                          .Header {
+                            flex-direction: row;
+                          }
+                  
+                          .message {
+                            padding-left: 0;
+                            padding-right: 2vw;
+                          }
+                        }
+                  
+                        .ratings {
+                          justify-content: flex-end;
+                          flex-direction: row-reverse;
+                          .buttons {
+                            flex-direction: row;
+                          }
+                        }
+                  
+                        .devider__item {
+                          left: auto;
+                          right: -15%;
+                        }
+                    } 
+                }
+            }
+        
+            .showMore__button{
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+        
+                .Small__button_container{
+                    width: 200px;
+                    height: 75px;
+                    pointer-events: none;
+                    a{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
+        .ReviewsList{
+            min-height: 150vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #fff;
+            padding-top: 5vh;
+            padding-bottom: 25vh;
+            overflow: hidden;
+            color: #050A10;
+            .ReviewsList__header{
+                width: 100%;
+                height: 15vh;
+                margin-bottom: 15vh;
+                margin-top: 5vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+        
+                .devider{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+        
+                .header{
+                    width: 90%;
+                    display: flex;
+                    padding-left: 10%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 0.5rem;
+                    padding-bottom: 1.5rem;
+                    h3{
+                        font-size: 1.8rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    p{
+                        padding-top: 1rem;
+                        width: 50%;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    .devider__header{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                }
+        
+                .mainText{
+                    position: absolute;
+                    right: 5%;
+                    top: 60%;
+                    width: 50%;
+                    
+                    h2{
+                       font-size: 2.5rem;
+                       font-weight: 400;
+                       color: #050A10;
+                       margin: 0; 
+                       text-align: right;
+                    }
+                }
+            }
+        
+            .ReviewsList__menu{
+                width: 100%;
+                padding: 0 5%;
+                height: 25vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+        
+                .devider__menu{
+                    position: absolute;
+                    bottom: -5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+                .menu__controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    .menu__buttons{
+                        display: flex;
+                        gap: 0.5rem;
+                        .button{
+                            .Small__button_container{
+                                width: 150px;
+                                height: 50px;
+                                a{
+                                    pointer-events: none;
+                                    p{
+                                        font-size: 1.5rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .searchBar{
+                        display: flex;
+                        width: 40vw;
+        
+                        svg{
+                            width: 35px;
+                            height: 35px;
+                            stroke: #050A10;
+                        }
+                        // Override Tailwind base styles
+                        *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+                            
+                            border-width: 0 !important;
+                            border-style: none !important;
+                            border-color: transparent !important;
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+        
+                .addReviews{
+                    position: absolute;
+                    top: 30%;
+                    right: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-bottom: 1rem;
+                    .devider__rev{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 45%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                    .controls{
+                        width: 40%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 2rem;
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                        .button{
+                            .Svg__button_container{
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .ReviewsList__Reviews{
+                min-height: 100vh;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 2vh;
+        
+                .review__item{
+                    width: 100%;
+                    height: 25vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-direction: row;
+        
+                    .devider__item{
+                        position: absolute;
+                        bottom: 0;
+                        left: -15%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        opacity: 0.4;
+                    }
+        
+                    .context{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 1rem;
+        
+                        .Header{
+                            height: 10%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            margin-bottom: 0%;
+                            p{
+                                height: 25%;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                            h3{
+                                height: 100%;
+                                font-size: 1.6rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                        .message{
+                            padding-left: 2vw;
+                            p{
+                                margin: 0;
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                color: #050A10
+                            }
+                        }
+                    }
+        
+                    .ratings{
+                        width: 60%;
+                        padding-bottom: 2.5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end; 
+                        flex-direction: row;
+                        gap: 3rem;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                            color: #050A10;
+                        }
+                        .buttons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            p{
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                    }
+        
+                    &:nth-child(even) {
+                        flex-direction: row-reverse;
+                  
+                        .context {
+                          align-items: flex-end;
+                          text-align: right;
+                  
+                          .Header {
+                            flex-direction: row;
+                          }
+                  
+                          .message {
+                            padding-left: 0;
+                            padding-right: 2vw;
+                          }
+                        }
+                  
+                        .ratings {
+                          justify-content: flex-end;
+                          flex-direction: row-reverse;
+                          .buttons {
+                            flex-direction: row;
+                          }
+                        }
+                  
+                        .devider__item {
+                          left: auto;
+                          right: -15%;
+                        }
+                    } 
+                }
+            }
+        
+            .showMore__button{
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+        
+                .Small__button_container{
+                    width: 200px;
+                    height: 75px;
+                    pointer-events: none;
+                    a{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .ReviewsList{
+            min-height: 150vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #fff;
+            padding-top: 5vh;
+            padding-bottom: 25vh;
+            overflow: hidden;
+            color: #050A10;
+            .ReviewsList__header{
+                width: 100%;
+                height: 25vh;
+                margin-bottom: 15vh;
+                margin-top: 5vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+        
+                .devider{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+        
+                .header{
+                    width: 90%;
+                    display: flex;
+                    padding-left: 10%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 0.5rem;
+                    padding-bottom: 1.5rem;
+                    h3{
+                        font-size: 1.4rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    p{
+                        padding-top: 1rem;
+                        width: 80%;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    .devider__header{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                }
+        
+                .mainText{
+                    position: absolute;
+                    right: 5%;
+                    top: 100%;
+                    width: 80%;
+                    
+                    h2{
+                       font-size: 2rem;
+                       font-weight: 400;
+                       color: #050A10;
+                       margin: 0; 
+                       text-align: right;
+                    }
+                }
+            }
+        
+            .ReviewsList__menu{
+                width: 100%;
+                padding: 0 5%;
+                height: 25vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+        
+                .devider__menu{
+                    position: absolute;
+                    bottom: -5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+                .menu__controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .menu__buttons{
+                        display: flex;
+                        gap: 0.5rem;
+                        .button{
+                            .Small__button_container{
+                                width: 120px;
+                                height: 50px;
+                                a{
+                                    pointer-events: none;
+                                    p{
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .searchBar{
+                        display: none;
+                        width: 40vw;
+        
+                        svg{
+                            width: 35px;
+                            height: 35px;
+                            stroke: #050A10;
+                        }
+                        // Override Tailwind base styles
+                        *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+                            
+                            border-width: 0 !important;
+                            border-style: none !important;
+                            border-color: transparent !important;
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+        
+                .addReviews{
+                    position: absolute;
+                    top: 30%;
+                    right: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-bottom: 1rem;
+                    .devider__rev{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 85%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                    .controls{
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 1rem;
+                        flex-direction: row-reverse;
+                        padding-right: 1rem;
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                        .button{
+                            .Svg__button_container{
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .ReviewsList__Reviews{
+                min-height: 100vh;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 2vh;
+        
+                .review__item{
+                    width: 100%;
+                    height: 65vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-direction: column;
+        
+                    .devider__item{
+                        position: absolute;
+                        bottom: 0;
+                        left: -15%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        opacity: 0.4;
+                    }
+        
+                    .context{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 1rem;
+        
+                        .Header{
+                            height: 10%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            margin-bottom: 0%;
+                            p{
+                                height: 60%;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                margin: 0;
+                                color: #050A10;
+                                white-space: nowrap;
+                            }
+                            h3{
+                                height: 100%;
+                                font-size: 1.6rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                                white-space: nowrap;
+
+                            }
+                        }
+                        .message{
+                            padding-left: 2vw;
+                            p{
+                                margin: 0;
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                color: #050A10
+                            }
+                        }
+                    }
+        
+                    .ratings{
+                        width: 60%;
+                        padding-bottom: 2.5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end; 
+                        flex-direction: row;
+                        gap: 3rem;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                            color: #050A10;
+                            white-space: nowrap;
+
+                        }
+                        .buttons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            p{
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                    }
+        
+                    &:nth-child(even) {
+                        flex-direction: column;
+                  
+                        .context {
+                          align-items: flex-end;
+                          text-align: right;
+                  
+                          .Header {
+                            flex-direction: row;
+                          }
+                  
+                          .message {
+                            padding-left: 0;
+                            padding-right: 2vw;
+                          }
+                        }
+                  
+                        .ratings {
+                            width: 100%;
+                          justify-content: flex-end;
+                          flex-direction: row-reverse;
+                          .buttons {
+                            flex-direction: row;
+                          }
+                        }
+                  
+                        .devider__item {
+                          left: auto;
+                          right: -15%;
+                        }
+                    } 
+                }
+            }
+        
+            .showMore__button{
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+        
+                .Small__button_container{
+                    width: 200px;
+                    height: 75px;
+                    pointer-events: none;
+                    a{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .ReviewsList{
+            min-height: 150vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #fff;
+            padding-top: 5vh;
+            padding-bottom: 25vh;
+            overflow: hidden;
+            color: #050A10;
+            .ReviewsList__header{
+                width: 100%;
+                height: 25vh;
+                margin-bottom: 15vh;
+                margin-top: 5vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+        
+                .devider{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+        
+                .header{
+                    width: 90%;
+                    display: flex;
+                    padding-left: 10%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 0.5rem;
+                    padding-bottom: 1.5rem;
+                    h3{
+                        font-size: 1.4rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    p{
+                        padding-top: 1rem;
+                        width: 80%;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    .devider__header{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                }
+        
+                .mainText{
+                    position: absolute;
+                    right: 5%;
+                    top: 100%;
+                    width: 80%;
+                    
+                    h2{
+                       font-size: 2rem;
+                       font-weight: 400;
+                       color: #050A10;
+                       margin: 0; 
+                       text-align: right;
+                    }
+                }
+            }
+        
+            .ReviewsList__menu{
+                width: 100%;
+                padding: 0 5%;
+                height: 25vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+        
+                .devider__menu{
+                    position: absolute;
+                    bottom: -5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+                .menu__controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .menu__buttons{
+                        display: flex;
+                        gap: 0.5rem;
+                        .button{
+                            .Small__button_container{
+                                width: 120px;
+                                height: 50px;
+                                a{
+                                    pointer-events: none;
+                                    p{
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .searchBar{
+                        display: none;
+                        width: 40vw;
+        
+                        svg{
+                            width: 35px;
+                            height: 35px;
+                            stroke: #050A10;
+                        }
+                        // Override Tailwind base styles
+                        *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+                            
+                            border-width: 0 !important;
+                            border-style: none !important;
+                            border-color: transparent !important;
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+        
+                .addReviews{
+                    position: absolute;
+                    top: 30%;
+                    right: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-bottom: 1rem;
+                    .devider__rev{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 85%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                    .controls{
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 1rem;
+                        flex-direction: row-reverse;
+                        padding-right: 1rem;
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                        .button{
+                            .Svg__button_container{
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .ReviewsList__Reviews{
+                min-height: 100vh;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 2vh;
+        
+                .review__item{
+                    width: 100%;
+                    height: 65vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-direction: column;
+        
+                    .devider__item{
+                        position: absolute;
+                        bottom: 0;
+                        left: -15%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        opacity: 0.4;
+                    }
+        
+                    .context{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 1rem;
+        
+                        .Header{
+                            height: 10%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            margin-bottom: 0%;
+                            p{
+                                height: 60%;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                margin: 0;
+                                color: #050A10;
+                                white-space: nowrap;
+                            }
+                            h3{
+                                height: 100%;
+                                font-size: 1.6rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                                white-space: nowrap;
+
+                            }
+                        }
+                        .message{
+                            padding-left: 2vw;
+                            p{
+                                margin: 0;
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                color: #050A10
+                            }
+                        }
+                    }
+        
+                    .ratings{
+                        width: 60%;
+                        padding-bottom: 2.5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end; 
+                        flex-direction: row;
+                        gap: 3rem;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                            color: #050A10;
+                            white-space: nowrap;
+
+                        }
+                        .buttons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            p{
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                    }
+        
+                    &:nth-child(even) {
+                        flex-direction: column;
+                  
+                        .context {
+                          align-items: flex-end;
+                          text-align: right;
+                  
+                          .Header {
+                            flex-direction: row;
+                          }
+                  
+                          .message {
+                            padding-left: 0;
+                            padding-right: 2vw;
+                          }
+                        }
+                  
+                        .ratings {
+                            width: 100%;
+                          justify-content: flex-end;
+                          flex-direction: row-reverse;
+                          .buttons {
+                            flex-direction: row;
+                          }
+                        }
+                  
+                        .devider__item {
+                          left: auto;
+                          right: -15%;
+                        }
+                    } 
+                }
+            }
+        
+            .showMore__button{
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+        
+                .Small__button_container{
+                    width: 200px;
+                    height: 75px;
+                    pointer-events: none;
+                    a{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .ReviewsList{
+            min-height: 150vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #fff;
+            padding-top: 5vh;
+            padding-bottom: 25vh;
+            overflow: hidden;
+            color: #050A10;
+            .ReviewsList__header{
+                width: 100%;
+                height: 25vh;
+                margin-bottom: 15vh;
+                margin-top: 5vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+        
+                .devider{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+        
+                .header{
+                    width: 90%;
+                    display: flex;
+                    padding-left: 10%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 0.5rem;
+                    padding-bottom: 1.5rem;
+                    h3{
+                        font-size: 1.4rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    p{
+                        padding-top: 1rem;
+                        width: 80%;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        color: #050A10
+                    }
+                    .devider__header{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                }
+        
+                .mainText{
+                    position: absolute;
+                    right: 5%;
+                    top: 100%;
+                    width: 80%;
+                    
+                    h2{
+                       font-size: 2rem;
+                       font-weight: 400;
+                       color: #050A10;
+                       margin: 0; 
+                       text-align: right;
+                    }
+                }
+            }
+        
+            .ReviewsList__menu{
+                width: 100%;
+                padding: 0 5%;
+                height: 45vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+        
+                .devider__menu{
+                    position: absolute;
+                    bottom: -5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 2px;
+                    background-color: #050A10;
+                }
+                .menu__controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .menu__buttons{
+                        display: flex;
+                        gap: 0.5rem;
+                        .button{
+                            .Small__button_container{
+                                width: 120px;
+                                height: 50px;
+                                a{
+                                    pointer-events: none;
+                                    p{
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .searchBar{
+                        display: none;
+                        width: 40vw;
+        
+                        svg{
+                            width: 35px;
+                            height: 35px;
+                            stroke: #050A10;
+                        }
+                        // Override Tailwind base styles
+                        *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+                            
+                            border-width: 0 !important;
+                            border-style: none !important;
+                            border-color: transparent !important;
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+        
+                .addReviews{
+                    position: absolute;
+                    top: 30%;
+                    right: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-bottom: 1rem;
+                    .devider__rev{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 85%;
+                        height: 2px;
+                        background-color: #050A10;
+                    }
+                    .controls{
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 1rem;
+                        flex-direction: row-reverse;
+                        padding-right: 1rem;
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                        .button{
+                            .Svg__button_container{
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .ReviewsList__Reviews{
+                min-height: 100vh;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 2vh;
+        
+                .review__item{
+                    width: 100%;
+                    height: 65vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-direction: column;
+        
+                    .devider__item{
+                        position: absolute;
+                        bottom: 0;
+                        left: -15%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        opacity: 0.4;
+                    }
+        
+                    .context{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 1rem;
+        
+                        .Header{
+                            height: 10%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            margin-bottom: 0%;
+                            p{
+                                height: 60%;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                margin: 0;
+                                color: #050A10;
+                                white-space: nowrap;
+                            }
+                            h3{
+                                height: 100%;
+                                font-size: 1.6rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                                white-space: nowrap;
+
+                            }
+                        }
+                        .message{
+                            padding-left: 2vw;
+                            p{
+                                margin: 0;
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                color: #050A10
+                            }
+                        }
+                    }
+        
+                    .ratings{
+                        width: 60%;
+                        padding-bottom: 2.5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end; 
+                        flex-direction: row;
+                        gap: 3rem;
+                        p{
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin: 0;
+                            color: #050A10;
+                            white-space: nowrap;
+
+                        }
+                        .buttons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            p{
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                                margin: 0;
+                                color: #050A10;
+                            }
+                        }
+                    }
+        
+                    &:nth-child(even) {
+                        flex-direction: column;
+                  
+                        .context {
+                          align-items: flex-end;
+                          text-align: right;
+                  
+                          .Header {
+                            flex-direction: row;
+                          }
+                  
+                          .message {
+                            padding-left: 0;
+                            padding-right: 2vw;
+                          }
+                        }
+                  
+                        .ratings {
+                            width: 100%;
+                          justify-content: flex-end;
+                          flex-direction: row-reverse;
+                          .buttons {
+                            flex-direction: row;
+                          }
+                        }
+                  
+                        .devider__item {
+                          left: auto;
+                          right: -15%;
+                        }
+                    } 
+                }
+            }
+        
+            .showMore__button{
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5vh 0 0 0;
+        
+                .Small__button_container{
+                    width: 200px;
+                    height: 75px;
+                    pointer-events: none;
+                    a{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }  
     }
 }

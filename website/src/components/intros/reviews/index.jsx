@@ -99,7 +99,7 @@ export default function ReviewsIntro () {
                     animate='enter'
                     variants={introText}
                 >
-                    <PageHeading text="BUDUJEME PRO LIDI <br/> STABILNÍ A KVALITNÍ <br/> FINANČNÍ PORADENSTVÍ <br/> UŽ PŘES <span>JEDNU DEKÁDU</span>" />
+                    <PageHeading text="BUDUJEME PRO LIDI<br/>STABILNÍ A KVALITNÍ<br/>FINANČNÍ PORADENSTVÍ<br/>UŽ PŘES<span>JEDNU DEKÁDU</span>" />
                 </motion.div>
                 
                 <div className="cover"/>
