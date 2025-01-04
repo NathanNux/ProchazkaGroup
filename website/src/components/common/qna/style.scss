@@ -1158,3 +1158,854 @@
     }
         
 }
+@media (max-aspect-ratio: 1/1) {
+    @media only screen and (min-width: 1000px) {
+        .QNA{
+            width: 100vw;
+            min-height: 90vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50px;
+            color: #050505;
+            position: relative;
+            gap: 15%;
+            overflow: hidden;
+            color: #050A10;
+            .QNA__Intro{
+                width: 90%;
+                height: 30vh;
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                color: #050A10;
+                z-index: 2;
+        
+                .QNA__MainText{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 100%;
+                        
+                        .MainText__Container{
+                            p{
+                                margin: 0;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 3.4rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .QNA__Header{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 40%;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    
+        
+                    .QNA__Header__container{
+                        position: absolute;
+                        bottom: -25%;
+                        left: 0;
+                        display: flex;
+                        gap: 0.5rem;
+        
+                        h2{
+                            padding-bottom: 2rem;
+                            font-size: 2rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+        
+                        p{
+                            padding-top: 1rem;
+                            font-size: 1.5rem;
+                            margin: 0;
+                        }
+        
+                    }
+                    .devider{
+                        position: absolute;
+                        left: 0;
+                        bottom: -30%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #050505;
+                    }
+                }
+            }
+        
+            .QNA__wrapper{
+                width: 90%;
+                margin: calc(35vh + 10%) auto 5% auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #050505;
+                gap: 0.5rem;
+                z-index: 1;
+        
+                .QNA__item{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: #04444C;
+                    border-radius: 25px;
+                    padding: 1rem 2.5rem;
+        
+                    .QNA__item__header{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 0.25rem 0;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            color: #fff;
+                            margin: 0;
+                        }
+        
+                        .QNA__item__header__icon{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-left: #fff 1px solid;
+                            padding: 0.5rem
+                        }
+                    }
+        
+                    .QNA__item__content{
+                        overflow: hidden;
+                        color: #fff;
+                        margin: 0;
+                        .devider{
+                            width: 90%;
+                            height: 2px;
+                            background-color: #fff;
+                            opacity: 0.12;
+                        }
+                        p{
+                            width: 90%;
+                            margin: 0;
+                            padding: 1rem 0 0 0;
+                            font-size: 1.2rem;
+                            font-weight: 300;
+        
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
+        .QNA{
+            width: 100vw;
+            min-height: 90vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50px;
+            color: #050505;
+            position: relative;
+            gap: 15%;
+            overflow: hidden;
+            color: #050A10;
+            .QNA__Intro{
+                width: 90%;
+                height: 30vh;
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                color: #050A10;
+                z-index: 2;
+        
+                .QNA__MainText{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 100%;
+                        
+                        .MainText__Container{
+                            p{
+                                margin: 0;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 2.4rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .QNA__Header{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 50%;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 10%;
+                    
+        
+                    .QNA__Header__container{
+                        position: absolute;
+                        bottom: -25%;
+                        left: 0;
+                        display: flex;
+                        gap: 0.5rem;
+        
+                        h2{
+                            padding-bottom: 1.8rem;
+                            font-size: 2rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+        
+                        p{
+                            padding-top: 1rem;
+                            font-size: 1.3rem;
+                            margin: 0;
+                        }
+        
+                    }
+                    .devider{
+                        position: absolute;
+                        left: 0;
+                        bottom: -30%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #050505;
+                    }
+                }
+            }
+        
+            .QNA__wrapper{
+                width: 90%;
+                margin: calc(35vh + 10%) auto 5% auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #050505;
+                gap: 0.5rem;
+                z-index: 1;
+        
+                .QNA__item{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: #04444C;
+                    border-radius: 25px;
+                    padding: 1rem 2.5rem;
+        
+                    .QNA__item__header{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 0.25rem 0;
+        
+                        h3{
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                            color: #fff;
+                            margin: 0;
+                        }
+        
+                        .QNA__item__header__icon{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-left: #fff 1px solid;
+                            padding: 0.5rem;
+                            img{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+        
+                    .QNA__item__content{
+                        overflow: hidden;
+                        color: #fff;
+                        margin: 0;
+                        .devider{
+                            width: 90%;
+                            height: 2px;
+                            background-color: #fff;
+                            opacity: 0.12;
+                        }
+                        p{
+                            width: 90%;
+                            margin: 0;
+                            padding: 1rem 0 0 0;
+                            font-size: 1rem;
+                            font-weight: 300;
+        
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .QNA{
+            width: 100vw;
+            min-height: 90vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50px;
+            color: #050505;
+            position: relative;
+            gap: 15%;
+            overflow: hidden;
+            color: #050A10;
+            .QNA__Intro{
+                width: 90%;
+                height: 30vh;
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                color: #050A10;
+                z-index: 2;
+        
+                .QNA__MainText{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 100%;
+                        
+                        .MainText__Container{
+                            p{
+                                margin: 0;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 2rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .QNA__Header{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 60%;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 20%;
+                    
+        
+                    .QNA__Header__container{
+                        position: absolute;
+                        bottom: -25%;
+                        left: 0;
+                        display: flex;
+                        gap: 0.5rem;
+        
+                        h2{
+                            padding-bottom: 1.4rem;
+                            font-size: 2rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+        
+                        p{
+                            padding-top: 1rem;
+                            font-size: 1rem;
+                            margin: 0;
+                        }
+        
+                    }
+                    .devider{
+                        position: absolute;
+                        left: 0;
+                        bottom: -30%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #050505;
+                    }
+                }
+            }
+        
+            .QNA__wrapper{
+                width: 90%;
+                margin: calc(35vh + 10%) auto 5% auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #050505;
+                gap: 0.5rem;
+                z-index: 1;
+        
+                .QNA__item{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: #04444C;
+                    border-radius: 25px;
+                    padding: 1rem 2.5rem;
+        
+                    .QNA__item__header{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 0.25rem 0;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                            color: #fff;
+                            margin: 0;
+                        }
+        
+                        .QNA__item__header__icon{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-left: #fff 1px solid;
+                            padding: 0.5rem;
+                            img{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+        
+                    .QNA__item__content{
+                        overflow: hidden;
+                        color: #fff;
+                        margin: 0;
+                        .devider{
+                            width: 90%;
+                            height: 2px;
+                            background-color: #fff;
+                            opacity: 0.12;
+                        }
+                        p{
+                            width: 90%;
+                            margin: 0;
+                            padding: 1rem 0 0 0;
+                            font-size: 1rem;
+                            font-weight: 300;
+        
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .QNA{
+            width: 100vw;
+            min-height: 90vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50px;
+            color: #050505;
+            position: relative;
+            gap: 15%;
+            overflow: hidden;
+            color: #050A10;
+            .QNA__Intro{
+                width: 90%;
+                height: 30vh;
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                color: #050A10;
+                z-index: 2;
+        
+                .QNA__MainText{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 100%;
+                        
+                        .MainText__Container{
+                            p{
+                                margin: 0;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 1.8rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .QNA__Header{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 70%;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 20%;
+                    
+        
+                    .QNA__Header__container{
+                        position: absolute;
+                        bottom: -25%;
+                        left: 0;
+                        display: flex;
+                        gap: 0.5rem;
+        
+                        h2{
+                            padding-bottom: 1rem;
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+        
+                        p{
+                            padding-top: 1rem;
+                            font-size: 1rem;
+                            margin: 0;
+                        }
+        
+                    }
+                    .devider{
+                        position: absolute;
+                        left: 0;
+                        bottom: -30%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #050505;
+                    }
+                }
+            }
+        
+            .QNA__wrapper{
+                width: 90%;
+                margin: calc(35vh + 10%) auto 5% auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #050505;
+                gap: 0.5rem;
+                z-index: 1;
+        
+                .QNA__item{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: #04444C;
+                    border-radius: 25px;
+                    padding: 1rem 1.5rem;
+        
+                    .QNA__item__header{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 0.25rem 0;
+                        gap: 2rem;
+        
+                        h3{
+                            font-size: 1rem;
+                            font-weight: 300;
+                            color: #fff;
+                            margin: 0;
+                        }
+        
+                        .QNA__item__header__icon{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-left: #fff 1px solid;
+                            padding: 0.5rem;
+                            img{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+        
+                    .QNA__item__content{
+                        overflow: hidden;
+                        color: #fff;
+                        margin: 0;
+                        .devider{
+                            width: 90%;
+                            height: 2px;
+                            background-color: #fff;
+                            opacity: 0.12;
+                        }
+                        p{
+                            width: 90%;
+                            margin: 0;
+                            padding: 1rem 0 0 0;
+                            font-size: 0.9rem;
+                            font-weight: 300;
+        
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 330px) and (max-width: 380px) and (min-height: 650px) {
+        .QNA{
+            width: 100vw;
+            min-height: 90vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50px;
+            color: #050505;
+            position: relative;
+            gap: 15%;
+            overflow: hidden;
+            color: #050A10;
+            .QNA__Intro{
+                width: 90%;
+                height: 30vh;
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                color: #050A10;
+                z-index: 2;
+        
+                .QNA__MainText{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 100%;
+                        
+                        .MainText__Container{
+                            p{
+                                margin: 0;
+                                text-transform: uppercase;
+                                span{
+                                    font-size: 1.4rem;
+                                }
+                                .highlighted {
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .QNA__Header{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 70%;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 20%;
+                    
+        
+                    .QNA__Header__container{
+                        position: absolute;
+                        bottom: -25%;
+                        left: 0;
+                        display: flex;
+                        gap: 0.5rem;
+        
+                        h2{
+                            padding-bottom: 1rem;
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+        
+                        p{
+                            padding-top: 0.5rem;
+                            font-size: 1rem;
+                            margin: 0;
+                        }
+        
+                    }
+                    .devider{
+                        position: absolute;
+                        left: 0;
+                        bottom: -30%;
+                        width: 120%;
+                        height: 2px;
+                        background-color: #050505;
+                    }
+                }
+            }
+        
+            .QNA__wrapper{
+                width: 90%;
+                margin: calc(35vh + 10%) auto 5% auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #050505;
+                gap: 0.5rem;
+                z-index: 1;
+        
+                .QNA__item{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: #04444C;
+                    border-radius: 25px;
+                    padding: 1rem 1.5rem;
+        
+                    .QNA__item__header{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 0.25rem 0;
+                        gap: 2rem;
+        
+                        h3{
+                            font-size: 1rem;
+                            font-weight: 300;
+                            color: #fff;
+                            margin: 0;
+                        }
+        
+                        .QNA__item__header__icon{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-left: #fff 1px solid;
+                            padding: 0.5rem;
+                            img{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+        
+                    .QNA__item__content{
+                        overflow: hidden;
+                        color: #fff;
+                        margin: 0;
+                        .devider{
+                            width: 90%;
+                            height: 2px;
+                            background-color: #fff;
+                            opacity: 0.12;
+                        }
+                        p{
+                            width: 90%;
+                            margin: 0;
+                            padding: 1rem 0 0 0;
+                            font-size: 0.9rem;
+                            font-weight: 300;
+        
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
