@@ -8,6 +8,7 @@ import { useRef } from "react";
 
 export default function Benefit() {
     const sectionRef = useRef()
+    // WIP: after all responsive design, create a variation of the text string to create a better responsive design
 
     const { scrollYProgress } = useScroll({
         target: sectionRef,
