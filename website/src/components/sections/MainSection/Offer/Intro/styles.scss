@@ -1005,11 +1005,11 @@
                 background-color: #5E758D;
             }
             .IntroOffer__header{
-                height: 15%;
-                width: 50%;
+                height: 25%;
+                width: 90%;
                 position: relative;
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 justify-content: flex-start;
                 padding-left: 5vw;
                 padding-bottom: 5vh;
@@ -1034,7 +1034,7 @@
         
                 .devider{
                     position: absolute;
-                    bottom: 5%;
+                    bottom: 25%;
                     left: 10%;
                     width: 200%;
                     height: 2px;
@@ -1049,13 +1049,13 @@
                 align-items: flex-start;
                 justify-content: flex-start;
                 padding-left: 5vw;
-                padding-top: 0vh;
+                padding-top: 2.5vh;
                 .MainTextV3__Main{
                     width: 80vw;
                     height: 100%;
         
                     span{
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                     }
                 }
             }
@@ -1067,6 +1067,7 @@
                 height: 40vh;
                 border-radius: 25px;
                 overflow: hidden;
+                display: none;
         
                 img{
                     object-fit: cover;
@@ -1074,20 +1075,240 @@
             }
         
             .IntroOffer__subText{
-                width: 80%;
+                width: 90%;
                 height: 40%;
                 display: flex;
                 align-items: flex-end;
-                justify-content: flex-start;
+                justify-content: flex-end;
                 .subtext__div{
                     width: 100%;
                     display: flex;
                     align-items: flex-start;
-                    justify-content: flex-start;
+                    justify-content: flex-end;
                     p{
-                        width: 60%;
+                        width: 80%;
                         text-align: right;
                         font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .IntroOffer{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 5vh 0vw 20vh 0vw;
+            overflow: hidden;
+        
+        
+            .divider{
+                position: absolute;
+                bottom: -5%;
+                left: 0;
+                width: 90%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+            .IntroOffer__header{
+                height: 25%;
+                width: 90%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                .header__wrapper{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.8rem;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+                    p{
+                        padding-top: 1rem;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 25%;
+                    left: 10%;
+                    width: 200%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+            }
+        
+            .IntroOffer__MainText{
+                width: 100%;
+                height: 50%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-left: 5vw;
+                padding-top: 2.5vh;
+                .MainTextV3__Main{
+                    width: 80vw;
+                    height: 100%;
+        
+                    span{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .IntroOffer__image__container{
+                position: absolute;
+                top: 45%;
+                right: 2.5%;
+                width: 45vw;
+                height: 40vh;
+                border-radius: 25px;
+                overflow: hidden;
+                display: none;
+        
+                img{
+                    object-fit: cover;
+                }
+            }
+        
+            .IntroOffer__subText{
+                width: 90%;
+                height: 40%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                .subtext__div{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    p{
+                        width: 80%;
+                        text-align: right;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .IntroOffer{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 5vh 0vw 20vh 0vw;
+            overflow: hidden;
+        
+        
+            .divider{
+                position: absolute;
+                bottom: -5%;
+                left: 0;
+                width: 90%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+            .IntroOffer__header{
+                height: 25%;
+                width: 90%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                .header__wrapper{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+                    p{
+                        padding-top: 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+        
+                .devider{
+                    position: absolute;
+                    bottom: 25%;
+                    left: 10%;
+                    width: 200%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+            }
+        
+            .IntroOffer__MainText{
+                width: 100%;
+                height: 60%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-left: 5vw;
+                padding-top: 5vh;
+                .MainTextV3__Main{
+                    width: 90vw;
+                    height: 100%;
+        
+                    span{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            .IntroOffer__image__container{
+                position: absolute;
+                top: 45%;
+                right: 2.5%;
+                width: 45vw;
+                height: 40vh;
+                border-radius: 25px;
+                overflow: hidden;
+                display: none;
+        
+                img{
+                    object-fit: cover;
+                }
+            }
+        
+            .IntroOffer__subText{
+                width: 90%;
+                height: 40%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                .subtext__div{
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    p{
+                        width: 90%;
+                        text-align: right;
+                        font-size: 1rem;
                         font-weight: 400;
                     }
                 }

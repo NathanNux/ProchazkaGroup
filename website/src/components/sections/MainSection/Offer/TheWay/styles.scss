@@ -3794,9 +3794,10 @@
                     align-items: center;
                     flex-direction: column;
                     color: #050A10;
+                    gap: 2.5rem;
                     .Graph__wrapper{
                         width: 100%;
-                        height: 50%;
+                        height: 40%;
                         position: relative;
                         display: flex;
                         align-items: center;
@@ -3811,7 +3812,7 @@
                             justify-content: center;
                             align-items: center;
                             .Graph__content{
-                                width: 60%;
+                                width: 90%;
                                 height: 100%;
                                 display: flex;
                                 align-items: flex-start;
@@ -3880,7 +3881,7 @@
                                 width: 30%;
                                 height: 100%;
                                 position: relative;
-                                display: flex;
+                                display: none;
                                 align-items: center;
                                 justify-content: center;
                                 flex-direction: column;
@@ -3929,7 +3930,7 @@
                     .Graph__Values{
                         position: relative;
                         width: 100%;
-                        height: 35%;
+                        height: 50%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -3952,7 +3953,7 @@
                                 background-color: #5E758D;
                             }
                             h2{
-                                font-size: 1.8rem;
+                                font-size: 1.6rem;
                                 font-weight: 400;
                                 text-align: left;
                                 text-transform: uppercase;
@@ -3972,8 +3973,8 @@
                             justify-content: space-evenly; 
                             gap: 2.5vw;
                             .Graph__Values__Card__item{
-                                width: 47.5%;
-                                height: 50%;
+                                width: 87.5%;
+                                height: 30%;
                                 border: #00F0FF 3px solid;
                                 border-radius: 25px;
                                 padding: 1em 1.5rem;
@@ -4030,7 +4031,7 @@
                         width: 50%;
                         height: 90%;
                         position: relative;
-                        display: flex;
+                        display: none;
                         align-items: flex-start;
                         justify-content: flex-start;
                         flex-direction: column;
@@ -4081,11 +4082,11 @@
                         align-items: flex-end;
                         justify-content: center;
                         flex-direction: column;
-                        padding-right: 10vw;
+                        padding-right: 5vw;
             
                         .main__text{
                             width: 100%;
-                            height: 60%;
+                            height: 70%;
                             position: relative;
                             display: flex;
                             justify-content: flex-end;
@@ -4118,15 +4119,849 @@
                         }
             
                         .sub__text{
-                            width: 100%;
-                            height: 20%;
+                            width: 90%;
+                            height: 40%;
                             display: flex;
-                            align-items: flex-start;
+                            align-items: center;
                             justify-content: flex-end;
             
                             p{
                                 text-align: right;
                                 font-size: 1.2rem;
+                                font-weight: 400;
+                                margin: 0;
+            
+                                span{
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .GraphTheWay{
+            position: relative;
+            width: 100vw;
+            height: 350vh;
+            background-color: #04444C;
+            color: #050A10;
+        
+        
+            .Graph__header{
+                width: 95%;
+                height: 15%;
+                padding-top: 10vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: column;
+                .MainTextV3__Main{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    .MainText__Container{
+                        position: relative;
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        flex-direction: column;
+                        p{
+                            margin: 0;
+                            text-transform: uppercase;
+                            text-align: center;
+                            span{
+                                font-size: 1.8rem;
+                            }
+                            .highlighted {
+                                color: #00F0FF;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    height: 2px;
+                    width: 90%;
+                    background-color: #5E758D;
+        
+                }
+            }
+            .sticky__wrapper{
+                height: 100vh;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                overflow: hidden;
+                .MainSection__wrapper{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: #050A10;
+                    gap: 2.5rem;
+                    .Graph__wrapper{
+                        width: 100%;
+                        height: 40%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .Graph__wrapper__container{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .Graph__content{
+                                width: 90%;
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: center;
+                                flex-direction: column;
+                                position: relative;
+                                padding: 0 0vw;
+                                gap: 5vh;
+                                .Graph__content__header{
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    gap: 0.5rem;
+                                    color: #fff;
+                                    
+                                    h3{
+                                      font-size: 1.6rem;
+                                      font-weight: 400;
+                                      margin: 0;  
+                                      padding-bottom: 2.5rem;
+                                    }
+                                    p{
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                        margin: 0;  
+                                        padding-top: 1rem;
+                                    }
+                                }
+                
+                                .Graph__content__graph{
+                                    width: 100%;
+                                    height: 60%;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 1rem;
+                
+                                    .recharts-responsive-container{
+                                        .recharts-wrapper{
+                                            .recharts-surface{
+                                                .recharts-yAxis{
+                                                    text{
+                                                        transform: translate(10px, 5px);
+                                                        tspan{
+                                                            
+                                                        }
+                                                    }
+                                                }
+                                                .recharts-layer{
+                                                    .recharts-cartesian-axis-ticks{
+                                                       width: 90%;
+                                                        .recharts-cartesian-axis-tick{
+                                                            
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                
+                            .Anim__content{
+                                width: 30%;
+                                height: 100%;
+                                position: relative;
+                                display: none;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                
+                                .Anim__content__header{
+                                    width: 100%;
+                                    height: 15%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    gap: 0.5rem;
+                                    color: #fff;
+                                    
+                                    h3{
+                                      font-size: 1.8rem;
+                                      font-weight: 400;
+                                      margin: 0;  
+                                      padding-bottom: 0rem;
+                                    }
+                                    p{
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                        margin: 0;  
+                                        padding-top: 1.5rem;
+                                    }
+                
+                
+                                }
+                                .Anim__content__anim{
+                                    height: 65%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: relative;
+                                    .loop__anim__main{
+                                        width: 50%;
+                                        height: 50%;
+                                        scale: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                
+                    .Graph__Values{
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding: 5vh 0;
+                        color: #fff;
+                        gap: 1.5rem;
+                
+                        .Graph__Values__header{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            padding: 0 5vw;
+                            .devider{
+                                width: 100%;
+                                height: 2px;
+                                background-color: #5E758D;
+                            }
+                            h2{
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                text-align: left;
+                                text-transform: uppercase;
+                                margin: 0;
+                            }
+                        }
+                
+                        .Graph__Values__Cards{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 5vw;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-evenly; 
+                            gap: 2.5vw;
+                            .Graph__Values__Card__item{
+                                width: 95%;
+                                height: 30%;
+                                border: #00F0FF 3px solid;
+                                border-radius: 25px;
+                                padding: 1em 1.5rem;
+                                display: flex;
+                                gap: 0.75rem;
+                
+                                h3{ 
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    font-weight: 800;
+                                }
+                
+                                p{
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    padding-top: 1rem;
+                                    text-transform: uppercase;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .SubSection__wrapper{
+                    position: absolute;
+                    padding-top: 10vh;
+                    left: 100%;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    color: #050A10;
+                    
+            
+                    .devider{
+                        position: absolute;
+                        top: 5%;
+                        left: -5%;
+                        width: 145%;
+                        height: 2px;
+                        background-color: #5E758D;
+            
+                        &:nth-of-type(2){
+                            top: 85%;
+                            left: 0%;
+                            width: 95%;
+                        }
+                    }
+            
+                    .Anim__content{
+                        width: 50%;
+                        height: 90%;
+                        position: relative;
+                        display: none;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        flex-direction: column;
+            
+                        .Anim__content__header{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                            gap: 0.5rem;
+                            
+                            h3{
+                              font-size: 2rem;
+                              font-weight: 400;
+                              margin: 0;  
+                              padding-bottom: 0rem;
+                            }
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                margin: 0;  
+                                padding-top: 1.5rem;
+                            }
+            
+            
+                        }
+                        .Anim__content__anim{
+                            height: 55%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .loop__anim__main{
+                                width: 50%;
+                                height: 50%;
+                                scale: 1;
+                            }
+                        }
+                    }
+            
+                    .text__content{
+                        width: 100%;
+                        position: relative;
+                        height: 80%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding-right: 5vw;
+            
+                        .main__text{
+                            width: 100%;
+                            height: 70%;
+                            position: relative;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+            
+                            p{
+                                text-align: right;
+                                text-transform: uppercase;
+                                font-size: 1.8rem;
+                                font-weight: 400;
+        
+                                .span{
+                                    
+                                }
+                            }
+            
+                            .divider{
+                                width: 80%;
+                                height: 2px;
+                                position: absolute;
+                                bottom: 5%;
+                                right: 0;
+                                background-color: #5E758D;
+            
+                                &:nth-of-type(2){
+                                    bottom: 95%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+            
+                        .sub__text{
+                            width: 90%;
+                            height: 40%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+            
+                            p{
+                                text-align: right;
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                margin: 0;
+            
+                                span{
+                                    color: #00F0FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .GraphTheWay{
+            position: relative;
+            width: 100vw;
+            height: 350vh;
+            background-color: #04444C;
+            color: #050A10;
+        
+        
+            .Graph__header{
+                width: 95%;
+                height: 15%;
+                padding-top: 10vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: column;
+                .MainTextV3__Main{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    .MainText__Container{
+                        position: relative;
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        flex-direction: column;
+                        p{
+                            margin: 0;
+                            text-transform: uppercase;
+                            text-align: center;
+                            span{
+                                font-size: 1.8rem;
+                            }
+                            .highlighted {
+                                color: #00F0FF;
+                            }
+                        }
+                    }
+                }
+        
+                .devider{
+                    height: 2px;
+                    width: 90%;
+                    background-color: #5E758D;
+        
+                }
+            }
+            .sticky__wrapper{
+                height: 100vh;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                overflow: hidden;
+                .MainSection__wrapper{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: #050A10;
+                    gap: 5rem;
+                    .Graph__wrapper{
+                        width: 100%;
+                        height: 30%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .Graph__wrapper__container{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .Graph__content{
+                                width: 90%;
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: center;
+                                flex-direction: column;
+                                position: relative;
+                                padding: 0 0vw;
+                                gap: 5vh;
+                                .Graph__content__header{
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    gap: 0.5rem;
+                                    color: #fff;
+                                    
+                                    h3{
+                                      font-size: 1.4rem;
+                                      font-weight: 400;
+                                      margin: 0;  
+                                      padding-bottom: 2.5rem;
+                                    }
+                                    p{
+                                        font-size: 1rem;
+                                        font-weight: 400;
+                                        margin: 0;  
+                                        padding-top: 1rem;
+                                    }
+                                }
+                
+                                .Graph__content__graph{
+                                    width: 100%;
+                                    height: 60%;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 1rem;
+                
+                                    .recharts-responsive-container{
+                                        .recharts-wrapper{
+                                            .recharts-surface{
+                                                .recharts-yAxis{
+                                                    text{
+                                                        transform: translate(10px, 5px);
+                                                        tspan{
+                                                            
+                                                        }
+                                                    }
+                                                }
+                                                .recharts-layer{
+                                                    .recharts-cartesian-axis-ticks{
+                                                       width: 90%;
+                                                        .recharts-cartesian-axis-tick{
+                                                            
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                
+                            .Anim__content{
+                                width: 30%;
+                                height: 100%;
+                                position: relative;
+                                display: none;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                
+                                .Anim__content__header{
+                                    width: 100%;
+                                    height: 15%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    gap: 0.5rem;
+                                    color: #fff;
+                                    
+                                    h3{
+                                      font-size: 1.8rem;
+                                      font-weight: 400;
+                                      margin: 0;  
+                                      padding-bottom: 0rem;
+                                    }
+                                    p{
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                        margin: 0;  
+                                        padding-top: 1.5rem;
+                                    }
+                
+                
+                                }
+                                .Anim__content__anim{
+                                    height: 65%;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: relative;
+                                    .loop__anim__main{
+                                        width: 50%;
+                                        height: 50%;
+                                        scale: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                
+                    .Graph__Values{
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding: 5vh 0;
+                        color: #fff;
+                        gap: 1.5rem;
+                
+                        .Graph__Values__header{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            padding: 0 5vw;
+                            .devider{
+                                width: 100%;
+                                height: 2px;
+                                background-color: #5E758D;
+                            }
+                            h2{
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                text-align: left;
+                                text-transform: uppercase;
+                                margin: 0;
+                            }
+                        }
+                
+                        .Graph__Values__Cards{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 5vw;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-evenly; 
+                            gap: 2.5vw;
+                            .Graph__Values__Card__item{
+                                width: 95%;
+                                height: 30%;
+                                border: #00F0FF 3px solid;
+                                border-radius: 25px;
+                                padding: 0.5em 1.5rem;
+                                display: flex;
+                                gap: 0.75rem;
+                
+                                h3{ 
+                                    font-size: 1.2rem;
+                                    margin: 0;
+                                    font-weight: 800;
+                                }
+                
+                                p{
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    padding-top: 0.5rem;
+                                    text-transform: uppercase;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .SubSection__wrapper{
+                    position: absolute;
+                    padding-top: 10vh;
+                    left: 100%;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    color: #050A10;
+                    
+            
+                    .devider{
+                        position: absolute;
+                        top: 5%;
+                        left: -5%;
+                        width: 145%;
+                        height: 2px;
+                        background-color: #5E758D;
+            
+                        &:nth-of-type(2){
+                            top: 85%;
+                            left: 0%;
+                            width: 95%;
+                        }
+                    }
+            
+                    .Anim__content{
+                        width: 50%;
+                        height: 90%;
+                        position: relative;
+                        display: none;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        flex-direction: column;
+            
+                        .Anim__content__header{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                            gap: 0.5rem;
+                            
+                            h3{
+                              font-size: 2rem;
+                              font-weight: 400;
+                              margin: 0;  
+                              padding-bottom: 0rem;
+                            }
+                            p{
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                margin: 0;  
+                                padding-top: 1.5rem;
+                            }
+            
+            
+                        }
+                        .Anim__content__anim{
+                            height: 55%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            .loop__anim__main{
+                                width: 50%;
+                                height: 50%;
+                                scale: 1;
+                            }
+                        }
+                    }
+            
+                    .text__content{
+                        width: 100%;
+                        position: relative;
+                        height: 80%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding-right: 5vw;
+            
+                        .main__text{
+                            width: 100%;
+                            height: 70%;
+                            position: relative;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+            
+                            p{
+                                text-align: right;
+                                text-transform: uppercase;
+                                font-size: 1.4rem;
+                                font-weight: 400;
+        
+                                .span{
+                                    
+                                }
+                            }
+            
+                            .divider{
+                                width: 80%;
+                                height: 2px;
+                                position: absolute;
+                                bottom: 5%;
+                                right: 0;
+                                background-color: #5E758D;
+            
+                                &:nth-of-type(2){
+                                    bottom: 95%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+            
+                        .sub__text{
+                            width: 90%;
+                            height: 40%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+            
+                            p{
+                                text-align: right;
+                                font-size: 1rem;
                                 font-weight: 400;
                                 margin: 0;
             

@@ -1314,8 +1314,9 @@
     @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
         .Sales{
             padding-top: 15vh;
+            margin-bottom: 10vh;
             width: 100vw;
-            height: 100vh;
+            height: 120vh;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -1344,13 +1345,13 @@
                     gap: 0.5rem;
         
                     h3{
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         font-weight: 800;
                         margin: 0;
                     }
         
                     p{
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                         font-weight: 400;
                         margin: 0;
                         padding-top: 1rem;
@@ -1378,7 +1379,7 @@
                         height: 70%;
         
                         span{
-                            font-size: 1.8rem;
+                            font-size: 1.6rem;
                         }
                     }
                 }
@@ -1430,16 +1431,306 @@
             }
             .Logo__container{
                 width: 100%;
-                height: 45%;
+                height: 35%;
         
                 display: flex;
                 flex-direction: column;
         
         
                 .subtext{
-                    width: 60%;
+                    width: 70%;
                     padding-left: 5vw;
-                    font-size: 2rem;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    margin: 0;
+                    border-bottom: #5E758D 2px solid;
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .Sales{
+            padding-top: 15vh;
+            margin-bottom: 10vh;
+            width: 100vw;
+            height: 140vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 90%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 15%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 5%;
+                    right: -40%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: 10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 30%;
+                right: 7.5%;
+                display: none;
+            }
+            .Logo__container{
+                width: 100%;
+                height: 35%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 70%;
+                    padding-left: 5vw;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    margin: 0;
+                    border-bottom: #5E758D 2px solid;
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .Sales{
+            padding-top: 15vh;
+            margin-bottom: 10vh;
+            width: 100vw;
+            height: 160vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+        
+            .Content__Sales{
+                position: relative;
+                width: 90%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 5vw;
+                gap: 5vh;
+        
+                .Header{
+                    width: 100%;
+                    height: 15%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 800;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+        
+                    .divider{
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20%;
+                    }
+                }
+        
+                .Main__Text{
+                    width: 110%;
+                    height: 65%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 70%;
+        
+                        span{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+        
+                .Button__container{
+                    position: absolute;
+                    width: 160%;
+                    height: 25%;
+                    bottom: 5%;
+                    right: -10%;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+        
+                    .button{
+                        position: absolute;
+                        top: 10%;
+                        left: 30%;
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+            }
+        
+            .Image__container{
+                position: absolute;
+                top: 30%;
+                right: 7.5%;
+                display: none;
+            }
+            .Logo__container{
+                width: 100%;
+                height: 35%;
+        
+                display: flex;
+                flex-direction: column;
+        
+        
+                .subtext{
+                    width: 70%;
+                    padding-left: 5vw;
+                    font-size: 1.6rem;
                     font-weight: 400;
                     margin: 0;
                     border-bottom: #5E758D 2px solid;

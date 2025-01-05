@@ -1353,6 +1353,7 @@
             position: relative;
             display: flex;
             justify-content: space-evenly;
+            flex-direction: column;
             padding: 10vh 0vw 5vh 0vw;
             gap: 5vw;
             background-color: #04444C;
@@ -1360,30 +1361,31 @@
             overflow: hidden;
         
             .Header{
-                width: 50%;
+                width: 100%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: flex-start;
                 gap: 1rem;
+                padding: 0 0 0 5vw;
         
                 .Index{
-                    width: 100%;
-                    height: 10%;
+                    width: 80%;
+                    height: 20%;
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-start;
                     gap: 0.5rem;
         
                     h3{
-                        font-size: 1.7rem;
+                        font-size: 1.4rem;
                         font-weight: 900;
                         margin: 0;
                     }
         
                     p{
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                         font-weight: 300;
                         margin: 0;
                         padding-top: 1rem;
@@ -1397,7 +1399,7 @@
                 }
         
                 .MainText{
-                    width: 110%;
+                    width: 95%;
                     height: 50%;
                     position: relative;
                     display: flex;
@@ -1413,7 +1415,7 @@
                             p{
                                 width: 100%;
                                 span{
-                                    font-size: 1.8rem;
+                                    font-size: 1.4rem;
                                 }
                             }
                         }
@@ -1421,15 +1423,18 @@
                 }
                 .Button__container{
                     width: 100%;
-                    height: 40%;
+                    height: 70%;
                     position: relative;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
         
                     .divider{
                         position: absolute;
-                        top: 40%;
+                        top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         width: 130%;
@@ -1438,7 +1443,8 @@
                     }
                     .button{
                         position: absolute;
-                        top: 20%;
+                        top: 40%;
+                        left: 35%;
                         transform: translate(-50%, -50%);
                         z-index: 70;
                         .Round__button_container{
@@ -1457,7 +1463,7 @@
             }
         
             .Details{
-                width: 30%;
+                width: 100%;
                 height: 80%;
                 display: flex;
                 flex-direction: column;
@@ -1466,6 +1472,10 @@
                 gap: 5vh;
         
                 .Image__container{
+                    position: absolute;
+                    top: 65%;
+                    left: 80%;
+                    transform: translate(-50%, -50%);
                     width: 100%;
                     height: 70%;
                     display: flex;
@@ -1473,8 +1483,8 @@
                     justify-content: center;
         
                     .Custom__image__container{
-                        width: calc(60vw * 0.6);
-                        height: 40vw
+                        width: calc(90vw * 0.6);
+                        height: 70vw
                     }
                 }
         
@@ -1496,4 +1506,325 @@
             }
         }
     }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .Benefit{
+            width: 100vw;
+            height: 130vh;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding: 10vh 0vw 5vh 0vw;
+            gap: 5vw;
+            background-color: #04444C;
+            color: #fff;
+            overflow: hidden;
+        
+            .Header{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 1rem;
+                padding: 0 0 0 5vw;
+        
+                .Index{
+                    width: 80%;
+                    height: 20%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .devider{
+                    width: 100%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .MainText{
+                    width: 95%;
+                    height: 50%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        height: 100%;
+                        align-items: center;
+                        .MainText__Container{
+                            align-items: flex-start;
+                            width: 100%;
+                            p{
+                                width: 100%;
+                                span{
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .Button__container{
+                    width: 100%;
+                    height: 70%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 130%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .button{
+                        position: absolute;
+                        top: 40%;
+                        left: 35%;
+                        transform: translate(-50%, -50%);
+                        z-index: 70;
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }      
+                    }
+                    
+                }
+            }
+        
+            .Details{
+                width: 100%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                gap: 5vh;
+        
+                .Image__container{
+                    position: absolute;
+                    top: 65%;
+                    left: 80%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    .Custom__image__container{
+                        width: calc(90vw * 0.6);
+                        height: 70vw
+                    }
+                }
+        
+                .subText{
+                    width: 170%;
+                    height: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0 2.5vw 0 0;
+        
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .Benefit{
+            width: 100vw;
+            height: 160vh;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding: 10vh 0vw 5vh 0vw;
+            gap: 5vw;
+            background-color: #04444C;
+            color: #fff;
+            overflow: hidden;
+        
+            .Header{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 1rem;
+                padding: 0 0 0 5vw;
+        
+                .Index{
+                    width: 80%;
+                    height: 20%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .devider{
+                    width: 100%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .MainText{
+                    width: 95%;
+                    height: 50%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        height: 100%;
+                        align-items: center;
+                        .MainText__Container{
+                            align-items: flex-start;
+                            width: 100%;
+                            p{
+                                width: 100%;
+                                span{
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .Button__container{
+                    width: 100%;
+                    height: 70%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+        
+                    .divider{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 130%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .button{
+                        position: absolute;
+                        top: 40%;
+                        left: 35%;
+                        transform: translate(-50%, -50%);
+                        z-index: 70;
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }      
+                    }
+                    
+                }
+            }
+        
+            .Details{
+                width: 100%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                gap: 5vh;
+        
+                .Image__container{
+                    position: absolute;
+                    top: 65%;
+                    left: 80%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    .Custom__image__container{
+                        width: calc(90vw * 0.6);
+                        height: 70vw
+                    }
+                }
+        
+                .subText{
+                    width: 90%;
+                    height: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0 2.5vw 0 0;
+        
+                    p{
+                        font-size: 1rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    
 }

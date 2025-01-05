@@ -1439,52 +1439,53 @@
     @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
         .Benefits{
             width: 100vw;
-            height: 110vh;
+            height: 120vh;
             padding: 10vh 0vw 0 2.5vw;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20vw;
+            flex-direction: column;
+            gap: 5vw;
             overflow: hidden;
             color: #050A10;
             
         
             .cards__container{
-                width: 40%;
-                height: 100%;
-                padding-top: 30vh;
+                width: 100%;
+                height: 40%;
+                padding-top: 0vh;
                 margin-left: 0vw;
                 position: relative;
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
         
                 .top__devider{
                     position: absolute;
-                    top: 10%;
+                    top: -5%;
                     right: -50%;
                     width: 300%;
                     height: 2px;
                     background-color: #5E758D;
                 }
                 .card__wrapper{
-                    width: 110%;
-                    height: 25%;
+                    width: 90%;
+                    height: 100%;
                     position: relative;
                     display: flex;
-                    justify-content: flex-start;
+                    justify-content: center;
                     .card{
                         width: 120%;
                         height: 75%;
                         display: flex;
-                        justify-content: flex-start;
+                        justify-content: center;
                         align-items: flex-start;
                         border-radius: 25px;
                         border: #00F0FF 2px solid;
-                        padding: 1rem 0.5rem;
-                        gap: 1rem;
+                        padding: 0.5rem 1rem;
+                        gap: 0.5rem;
         
                         h3{
                             font-size: 1.8rem;
@@ -1493,7 +1494,7 @@
                         }
                         p{
                             padding-top: 1rem;
-                            font-size: 1.2rem;
+                            font-size: 1.3rem;
                             font-weight: 400;
                             margin: 0;
                         }
@@ -1507,26 +1508,26 @@
                         background-color: #5E758D;
                     }
                     &:nth-of-type(3){
-                        margin-right: 5vw;
+                        margin-right: 0vw;
                     }  
                     &:nth-of-type(4){
-                        margin-right: 10vw;
+                        margin-right: 0vw;
                     }     
                 }
                
             }
         
             .text__container{
-                width: 40%;
-                height: 100%;
+                width: 100%;
+                height: 40%;
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
                 flex-direction: column;
         
                 .header{
-                    width: 100%;
-                    height: 20%;
+                    width: 80%;
+                    height: 50%;
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-start;
@@ -1547,8 +1548,8 @@
                 }
         
                 .subtext{
-                    width: 180%;
-                    height: 20%;
+                    width: 100%;
+                    height: 80%;
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-end;
@@ -1573,6 +1574,333 @@
                     height: 30%;
                     gap: 0.5rem;
                     margin-right: 0vw;
+                    display: none !important;
+                    h4{
+                        white-space: nowrap;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                    }
+                    p{
+                        margin: 0;
+                        padding-top: 0.5rem;
+                        font-size: 1rem;
+                        width: 100%;
+                    }
+                }
+        
+            }
+            .divider{
+                position: absolute;
+                bottom: 5%;
+                right: 0;
+                width: 95%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+        }
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .Benefits{
+            width: 100vw;
+            height: 160vh;
+            padding: 10vh 0vw 0 2.5vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5vw;
+            overflow: hidden;
+            color: #050A10;
+            
+        
+            .cards__container{
+                width: 100%;
+                height: 40%;
+                padding-top: 0vh;
+                margin-left: 0vw;
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: flex-start;
+        
+                .top__devider{
+                    position: absolute;
+                    top: -5%;
+                    right: -50%;
+                    width: 300%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+                .card__wrapper{
+                    width: 90%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    .card{
+                        width: 120%;
+                        height: 75%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        border-radius: 25px;
+                        border: #00F0FF 2px solid;
+                        padding: 0.5rem 1rem;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                        p{
+                            padding-top: 1rem;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+                    .devider{
+                        position: absolute;
+                        bottom: 15%;
+                        right: -85%;
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    &:nth-of-type(3){
+                        margin-right: 0vw;
+                    }  
+                    &:nth-of-type(4){
+                        margin-right: 0vw;
+                    }     
+                }
+               
+            }
+        
+            .text__container{
+                width: 100%;
+                height: 40%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+        
+                .header{
+                    width: 80%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+                    color: #050A10;
+        
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .subtext{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding-right: 5vw;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 50%;
+            
+                        p{
+                            text-align: right;
+                            span{
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+        
+                }
+        
+                .story{
+                    width: 100%;
+                    height: 30%;
+                    gap: 0.5rem;
+                    margin-right: 0vw;
+                    display: none !important;
+                    h4{
+                        white-space: nowrap;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                    }
+                    p{
+                        margin: 0;
+                        padding-top: 0.5rem;
+                        font-size: 1rem;
+                        width: 100%;
+                    }
+                }
+        
+            }
+            .divider{
+                position: absolute;
+                bottom: 5%;
+                right: 0;
+                width: 95%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .Benefits{
+            width: 100vw;
+            height: 200vh;
+            padding: 10vh 0vw 0 2.5vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5vw;
+            overflow: hidden;
+            color: #050A10;
+            
+        
+            .cards__container{
+                width: 100%;
+                height: 40%;
+                padding-top: 0vh;
+                margin-left: 0vw;
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: flex-start;
+        
+                .top__devider{
+                    position: absolute;
+                    top: -5%;
+                    right: -50%;
+                    width: 300%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+                .card__wrapper{
+                    width: 90%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    .card{
+                        width: 120%;
+                        height: 75%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        border-radius: 25px;
+                        border: #00F0FF 2px solid;
+                        padding: 0.5rem 1rem;
+                        gap: 0.5rem;
+        
+                        h3{
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                        p{
+                            padding-top: 1rem;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+                    .devider{
+                        position: absolute;
+                        bottom: 15%;
+                        right: -85%;
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    &:nth-of-type(3){
+                        margin-right: 0vw;
+                    }  
+                    &:nth-of-type(4){
+                        margin-right: 0vw;
+                    }     
+                }
+               
+            }
+        
+            .text__container{
+                width: 100%;
+                height: 40%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+        
+                .header{
+                    width: 80%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+                    color: #050A10;
+        
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .subtext{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    padding-right: 5vw;
+        
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 50%;
+            
+                        p{
+                            text-align: right;
+                            span{
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+        
+                }
+        
+                .story{
+                    width: 100%;
+                    height: 30%;
+                    gap: 0.5rem;
+                    margin-right: 0vw;
+                    display: none !important;
                     h4{
                         white-space: nowrap;
                         font-size: 1.4rem;
