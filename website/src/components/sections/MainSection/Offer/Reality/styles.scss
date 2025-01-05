@@ -1252,7 +1252,7 @@
             color: #fff;
         
             .Graph__container{
-                height: 50%;
+                height: 40%;
                 width: 100%;
                 display: flex;
                 align-items: flex-start;
@@ -1267,7 +1267,7 @@
                     align-items: flex-start;
                     gap: 0.5rem;
                     h3{
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         white-space: nowrap;
                         font-weight: 600;
                     }
@@ -1275,12 +1275,12 @@
                         margin: 0;
                         padding-top: 0.25rem;
                         width: 75%;
-                        font-size: 1.2rem;
+                        font-size: 1.1rem;
                     }
                 }
                 .graph__wrapper{
                     width: 80%;
-                    height: 60%;
+                    height: 50%;
                     position: relative;
                     display: flex;
                     align-items: center;
@@ -1331,7 +1331,7 @@
         
             .Text__container{
                 width: 80%;
-                height: 30%;
+                height: 40%;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
@@ -1356,15 +1356,15 @@
                         background-color: #5E758D;
                     }
                     h3{
-                        font-size: 2.4rem;
+                        font-size: 2rem;
                         font-weight: 800;
                         margin: 0;
                         color: #00F0FF;
                     }
         
                     p{
-                        width: 60%;
-                        font-size: 1.4rem;
+                        width: 65%;
+                        font-size: 1.3rem;
                         font-weight: 400;
                         margin: 0;
                         padding-top: 2rem;
@@ -1392,4 +1392,161 @@
             }
         }
     }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .Reality{
+            width: 100vw;
+            height: 120vh;
+            padding: 10vh 0 0 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0vw;
+            overflow: hidden;
+            background-color: #04444C;
+            color: #fff;
+        
+            .Graph__container{
+                height: 40%;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 5vw;
+                .header__text{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    h3{
+                        font-size: 1.6rem;
+                        white-space: nowrap;
+                        font-weight: 600;
+                    }
+                    p{
+                        margin: 0;
+                        padding-top: 0.25rem;
+                        width: 75%;
+                        font-size: 1.1rem;
+                    }
+                }
+                .graph__wrapper{
+                    width: 80%;
+                    height: 50%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+            
+                    .recharts-responsive-container{
+                        .recharts-wrapper{
+                            .recharts-surface{
+                                .recharts-yAxis{
+                                    text{
+                                        transform: translate(10px, 5px);
+                                        tspan{
+                                            
+                                        }
+                                    }
+                                }
+                                .recharts-layer{
+                                    .recharts-cartesian-axis-ticks{
+                                        width: 90%;
+                                        .recharts-cartesian-axis-tick{
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .addText{
+                    width: 100%;
+                    height: 10%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 5vw;
+                    gap: 0.5rem;
+                    h3{
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+        
+            .Text__container{
+                width: 80%;
+                height: 40%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: nowrap;
+        
+                .Text__wrapper{
+                    width: 100%;
+                    height: 30%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    .divider{
+                        width: 105%;
+                        height: 2px;
+                        position: absolute;
+                        bottom: 10%;
+                        right: 0;
+                        background-color: #5E758D;
+                    }
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin: 0;
+                        color: #00F0FF;
+                    }
+        
+                    p{
+                        width: 65%;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 2rem;
+                    }
+        
+                    &:nth-of-type(1){
+                        width: 70%;
+                    }
+                    &:nth-of-type(2){
+                        width: 85%;
+                    }
+                    &:nth-of-type(3){
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .divider{
+                position: absolute;
+                bottom: 15%;
+                right: -5%;
+                width: 90%;
+                height: 2px;
+                background-color: #5E758D;
+            }
+        }
+    }
+    
 }

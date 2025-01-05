@@ -1227,13 +1227,13 @@
                     gap: 0.5rem;
         
                     h3{
-                        font-size: 2rem;
+                        font-size: 1.7rem;
                         font-weight: 900;
                         margin: 0;
                     }
         
                     p{
-                        font-size: 1.5rem;
+                        font-size: 1.4rem;
                         font-weight: 300;
                         margin: 0;
                         padding-top: 1rem;
@@ -1259,11 +1259,11 @@
                         align-items: center;
                         .MainText__Container{
                             align-items: flex-start;
-                            width: 95%;
+                            width: 100%;
                             p{
                                 width: 100%;
                                 span{
-                                    font-size: 2.4rem;
+                                    font-size: 1.8rem;
                                 }
                             }
                         }
@@ -1292,11 +1292,11 @@
                         transform: translate(-50%, -50%);
                         z-index: 70;
                         .Round__button_container{
-                            width: 200px;
-                            height: 200px;
+                            width: 150px;
+                            height: 150px;
                             a{
                                 p{
-                                    font-size: 1.5rem;
+                                    font-size: 1.4rem;
                                     line-height: 1.2;
                                 }
                             }
@@ -1329,7 +1329,7 @@
                 }
         
                 .subText{
-                    width: 140%;
+                    width: 170%;
                     height: 40%;
                     display: flex;
                     align-items: center;
@@ -1337,7 +1337,157 @@
                     padding: 0 2.5vw 0 0;
         
                     p{
-                        font-size: 1.2rem;
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .Benefit{
+            width: 100vw;
+            height: 110vh;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10vh 0vw 5vh 0vw;
+            gap: 5vw;
+            background-color: #04444C;
+            color: #fff;
+            overflow: hidden;
+        
+            .Header{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 1rem;
+        
+                .Index{
+                    width: 100%;
+                    height: 10%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.7rem;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+        
+                    p{
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .devider{
+                    width: 100%;
+                    height: 2px;
+                    background-color: #5E758D;
+                }
+        
+                .MainText{
+                    width: 110%;
+                    height: 50%;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+        
+                    .MainTextV3__Main{
+                        height: 100%;
+                        align-items: center;
+                        .MainText__Container{
+                            align-items: flex-start;
+                            width: 100%;
+                            p{
+                                width: 100%;
+                                span{
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .Button__container{
+                    width: 100%;
+                    height: 40%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+        
+                    .divider{
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 130%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .button{
+                        position: absolute;
+                        top: 20%;
+                        transform: translate(-50%, -50%);
+                        z-index: 70;
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }      
+                    }
+                    
+                }
+            }
+        
+            .Details{
+                width: 30%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                gap: 5vh;
+        
+                .Image__container{
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    .Custom__image__container{
+                        width: calc(60vw * 0.6);
+                        height: 40vw
+                    }
+                }
+        
+                .subText{
+                    width: 170%;
+                    height: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0 2.5vw 0 0;
+        
+                    p{
+                        font-size: 1.1rem;
                         font-weight: 300;
                         margin: 0;
                         text-align: right;

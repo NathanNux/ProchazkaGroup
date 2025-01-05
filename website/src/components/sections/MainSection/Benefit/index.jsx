@@ -9,7 +9,7 @@ import { useRef } from "react";
 export default function Benefit() {
     const sectionRef = useRef()
     // WIP: after all responsive design, create a variation of the text string to create a better responsive design
-
+    // WIP: Create a text for main text and sub text based on viewport width for tablets and mobiles
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ['start end', 'end start'],

@@ -500,7 +500,7 @@
                 transform: translateY(-50%);
                 z-index: 60;
                 .Custom__image__container{
-                    width: 50vw;
+                    width: 60vw;
                     height: 30vh;
                 }
             }
@@ -515,13 +515,80 @@
                 align-items: flex-end;
                 gap: 5vh;
                 .MainTextV3__Main{
-                    width: 85%;
+                    width: 95%;
                     height: 50%;
         
                     p{
                         text-align: right;
                         span{
-                            font-size: 2.2rem;
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+                .divider{
+                    position: absolute;
+                    right: -10%;
+                    width: 110%;
+                    height: 2px;
+                    background-color: #5E758D;
+                    top: -30%;
+        
+                    &:nth-of-type(2){
+                        top: 30%;
+                        right: 5%;
+                        display: block;
+                    }
+                    
+                    &:nth-of-type(4){
+                        bottom: -30%;
+                        top: auto;
+                        right: 5%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .BecomeAclient{
+            width: 100vw;
+            height: 80vh;
+            padding: 20vh 5vw;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            .Image__container{
+                position: absolute;
+                top: 80%;
+                left: 7.5%;
+                transform: translateY(-50%);
+                z-index: 60;
+                .Custom__image__container{
+                    width: 60vw;
+                    height: 30vh;
+                }
+            }
+        
+            .Texts{
+                width: 100%;
+                height: 80%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                gap: 5vh;
+                .MainTextV3__Main{
+                    width: 95%;
+                    height: 50%;
+        
+                    p{
+                        text-align: right;
+                        span{
+                            font-size: 1.8rem;
                         }
                     }
                 }

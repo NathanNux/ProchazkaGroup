@@ -498,7 +498,7 @@
     @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
         .Statbar{
             width: 100vw;
-            height: 25vh;
+            height: 35vh;
             position: relative;
             display: flex;
             flex-direction: row;
@@ -522,7 +522,7 @@
             }
         
             .data__item{
-                width: 30%;
+                width: 40%;
                 height: 40%;
                 display: flex;
                 flex-direction: column;
@@ -535,7 +535,7 @@
                     justify-content: center;
         
                     h1{
-                        font-size: 3rem;
+                        font-size: 2.4rem;
                         font-weight: 600;
                         margin: 0;
                         color: #00F0FF;
@@ -551,7 +551,7 @@
         
                 p{
                     color: #fff;
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                     font-weight: 300;
                     margin: 0;
                 }

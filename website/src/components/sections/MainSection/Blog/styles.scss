@@ -1268,7 +1268,7 @@
     @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
         .Blog{
             width: 100vw;
-            height: 90vh;
+            height: 100vh;
             position: relative;
             display: flex;
             align-items: flex-end;
@@ -1279,14 +1279,17 @@
             .image__container{
                 position: absolute;
                 left: 5%;
-                top: 20%;
+                top: 45%;
                 width: 40%;
                 height: 50%;
-        
+                .Custom__image__container{
+                    width: 40vw;
+                    height: 22vw;
+                }
             }
         
             .Content__wrapper{
-                width: 60%;
+                width: 90%;
                 height: 100%;
                 display: flex;
                 position: relative;
@@ -1298,19 +1301,19 @@
         
                 .header{
                     width: 70%;
-                    height: 30%;
+                    height: 20%;
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-end;
                     gap: 0.5rem;
         
                     h3{
-                        font-size: 2rem;
+                        font-size: 1.8rem;
                         font-weight: 900;
                         margin: 0;
                     }
                     p{
-                        font-size: 1.5rem;
+                        font-size: 1.4rem;
                         font-weight: 400;
                         margin: 0;
                         padding-top: 1rem;
@@ -1321,7 +1324,7 @@
                     position: absolute;
                     width: 100%;
                     height: 35%;
-                    top: 5%;
+                    top: 0%;
                     right: 0;
                     display: flex;
                     align-items: center;
@@ -1375,7 +1378,7 @@
                         height: 100%;
         
                         span{
-                            font-size: 2.2rem;
+                            font-size: 2rem;
                         }
                     }
                 }
@@ -1406,7 +1409,167 @@
                     padding: 0 0 0 10vw;
         
                     p{
-                        font-size: 2.4rem;
+                        font-size: 2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .Blog{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #fff;
+            overflow: hidden;
+            .image__container{
+                position: absolute;
+                left: 5%;
+                top: 45%;
+                width: 40%;
+                height: 50%;
+                .Custom__image__container{
+                    width: 40vw;
+                    height: 22vw;
+                }
+            }
+        
+            .Content__wrapper{
+                width: 90%;
+                height: 100%;
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-start;
+                padding: 0 10vw 0 0;
+                gap: 5vh;
+        
+                .header{
+                    width: 70%;
+                    height: 20%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    gap: 0.5rem;
+        
+                    h3{
+                        font-size: 1.8rem;
+                        font-weight: 900;
+                        margin: 0;
+                    }
+                    p{
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 1rem;
+                    }
+                }
+        
+                .button__container{
+                    position: absolute;
+                    width: 100%;
+                    height: 35%;
+                    top: 0%;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+        
+                    .button{
+                        position: absolute;
+                        top: 25%;
+                        right: 80%;
+                        transform: translateY(-50%);
+                        z-index: 70;
+        
+                        .Round__button_container{
+                            width: 150px;
+                            height: 150px;
+        
+                            a{
+                                p{
+                                    line-height: 1.2;
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        width: 100%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                }
+        
+                .main__Text{
+                    width: 100%;
+                    height: 40%;
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+        
+                    .devider{
+                        position: absolute;
+                        bottom: -30%;
+                        right: -10%;
+                        width: 200%;
+                        height: 2px;
+                        background-color: #5E758D;
+                    }
+                    .MainTextV3__Main{
+                        width: 100%;
+                        height: 100%;
+        
+                        span{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        
+            .logos__wrapper{
+                height: 35%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                margin-bottom: 10vh;
+                .devider__wrapper{
+                    width: 95%;
+                    height: 2px;
+                    background-color: #5E758D;
+                    &:nth-of-type(3){
+                        width: 90%;
+                    }
+                }
+        
+                .header{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    height: 30%;
+                    padding: 0 0 0 10vw;
+        
+                    p{
+                        font-size: 2rem;
                         font-weight: 400;
                         margin: 0;
                     }

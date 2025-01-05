@@ -5,10 +5,10 @@ const nextConfig = {
   experimental: {
     reactCompiler: true,
   },
-  i18n: {
-    locales: ["cs"],
-    defaultLocale: "cs",
-  },
+  // i18n: {
+  //   locales: ["cs"],
+  //   defaultLocale: "cs",
+  // },
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'styles')],
   },
@@ -19,9 +19,9 @@ const nextConfig = {
   // Enable static optimization
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
-  }
+  },
   // Enable static export
-  // output: 'export',
+  output: 'export',
 };
 
 export default nextConfig;
