@@ -171,11 +171,11 @@ export default function BenefitRewards() {
 
     // Scroll handling with useCallback
     const handleScroll = useCallback(() => {
-        console.log('sectionScroll.current:', sectionScroll.current);
-        console.log('isVisible.current:', isVisible.current);
-        console.log('isSnapping.current:', isSnapping.current);
-        console.log('snapActive.current:', snapActive.current);
-        console.log('peakPoints:', peakPoints);
+        // console.log('sectionScroll.current:', sectionScroll.current);
+        // console.log('isVisible.current:', isVisible.current);
+        // console.log('isSnapping.current:', isSnapping.current);
+        // console.log('snapActive.current:', snapActive.current);
+        // console.log('peakPoints:', peakPoints);
         if (!sectionScroll?.current || !isVisible.current || isSnapping.current || !snapActive.current || !peakPoints || peakPoints.length === 0) return;
         
         clearTimeout(scrollTimeout.current);

@@ -2,10 +2,31 @@ import ONViewLogo from "@/components/anim/LogoAnims/onView";
 import PageHeading from "@/components/anim/TextAnims/PageHeading";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function IntroPageBenefit() {
     const sectionRef = useRef(null);
+    const [windowDimensions, setWindowDimensions] = useState({
+        width: 0,
+        height: 0
+    });
+    //WIP: Fix the main header to have a better responsive design, to brake it in half for tablets and phones
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        };
+        
+        // Initial dimensions
+        handleResize();
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ['start start', 'end start'],
@@ -14,13 +35,17 @@ export default function IntroPageBenefit() {
     const height = useTransform(
         scrollYProgress,
         [0,1],
-        ['140vh','100vh']
+        windowDimensions.width >= 1000 && windowDimensions.height > windowDimensions.width
+            ? ['120vh','100vh']
+            : ['140vh','100vh']
     );
 
     const borderRadiusValue = useTransform(
         scrollYProgress,
         [0, 0.9, 1],
-        ['45%', "0%", '0%']
+        windowDimensions.width >= 1000 && windowDimensions.height > windowDimensions.width
+            ? ['30%', "0%", '0%']
+            : ['45%', "0%", '0%']
     );
 
     return(

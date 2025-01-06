@@ -97,7 +97,7 @@ export default function ContactBenefit() {
                     const fetchedData = await fetchPeople() // Načtení dat ze supabase
                     const updatedPeople = staticPeople.map(person => {
                         const fetchedPerson = fetchedData.find(p => p.name === person.name)
-                        console.log(fetchedPerson)
+                        // console.log(fetchedPerson)
                         return {
                             ...person,
                             moto: fetchedPerson?.moto ?? person.moto,
@@ -107,14 +107,14 @@ export default function ContactBenefit() {
                         }
                     })
                     setPeopleData(updatedPeople)
-                    console.log(updatedPeople)
+                    // console.log(updatedPeople)
                 } catch (error) {
                     toast({
                         title: "Chyba!",
                         description: "Nepodařilo se načíst data.",
                         variant: "destructive"
                     })
-                    console.log(error)
+                    // console.log(error)
                 }
             }
             loadPeopleData()

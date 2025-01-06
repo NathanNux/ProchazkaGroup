@@ -261,3 +261,43 @@
         }
     }
 }
+
+@media (max-aspect-ratio: 1/1) {
+    @media only screen and (min-width: 1000px) {
+        .BenefitProgramKeyFrames{
+            display: flex;
+            width: 100vw;
+            height: 800vh;
+            background-color: #fff;
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 50;
+            flex-direction: column;
+            color: #050A10;
+        
+            .devider{
+                width: 100%;
+                height: 100vh;
+            }
+        
+            .BenefitProgramKeyFramesImage{
+                position: fixed;
+                will-change: transform;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                top: calc(50% - 10vh);
+                left: calc(50% - 15vw);
+                width: 30vw;
+                height: 25vh;
+                z-index: 5;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 320/415;
+                }
+            }
+        }
+    }
+}

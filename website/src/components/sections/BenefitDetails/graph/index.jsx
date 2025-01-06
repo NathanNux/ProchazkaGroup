@@ -44,7 +44,7 @@ export default function Graph() {
                                 showXAxis={true}
                                 startEndOnly={isMobile}
                                 fill='solid'
-                                ariaLabel="Graf finančního růstu"
+                                aria-label="Graf finančního růstu"
                             />
                         </div>
                     </div>

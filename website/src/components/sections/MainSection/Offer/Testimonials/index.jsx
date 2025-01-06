@@ -48,7 +48,7 @@ export default function Testimonials () {
                     )
                     setReviews(validData)
                 }
-                console.log('Reviews:', data)
+                // console.log('Reviews:', data)
             } catch (error) {
                 console.error('Error loading reviews:', error)
                 setReviews(testimonials) // Fallback na statická data

@@ -37,7 +37,7 @@ export const useContactForm = () => {
     }
 
     const handleSubmit = async () => {
-        console.log('Form submission started with:', formData)
+        // console.log('Form submission started with:', formData)
         setLoading(true)
 
         const validation = validateForm()

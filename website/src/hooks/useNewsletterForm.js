@@ -21,7 +21,7 @@ export const useNewsletterForm = () => {
     }
 
     const handleSubmit = async () => {
-        console.log('Form submission attempted with:', formData)
+        // console.log('Form submission attempted with:', formData)
         setLoading(true)
         setError(null)
 

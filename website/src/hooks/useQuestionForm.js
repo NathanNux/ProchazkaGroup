@@ -32,7 +32,7 @@ export const useQuestionForm = () => {
     }
 
     const handleSubmit = async () => {
-        console.log('Feedback form submission started with:', formData)
+        // console.log('Feedback form submission started with:', formData)
         setLoading(true)
 
         const validation = validateForm()

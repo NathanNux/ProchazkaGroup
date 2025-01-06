@@ -95,7 +95,7 @@ export default function ReviewsList() {
 
     const addLike = async (reviewId) => {
         try {
-            console.log('Adding like to review:', reviewId)
+            // console.log('Adding like to review:', reviewId)
             // Získání IP adresy
             const userIP = await getIPAddress()
             if (!userIP) throw new Error('Nepodařilo se získat IP adresu')
