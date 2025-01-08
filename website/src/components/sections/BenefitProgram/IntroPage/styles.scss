@@ -778,7 +778,7 @@
                         padding: 0;
                         text-align: center;
                         span {
-                            font-size: 8rem;
+                            font-size: 4rem;
                             text-transform: uppercase;
                             &.highlightedspan {
                                 color: #00F0FF;
@@ -788,15 +788,16 @@
                     }
                 }
                 .Logo{
-                    width: 80%;
+                    width: 100%;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     color: #fff;
         
                     .onViewLogo{
+                        width: 75vw;
                         justify-content: flex-start;
-                        scale: 1.2;
+                        scale: 0.9;
                     }
                 }
             }
