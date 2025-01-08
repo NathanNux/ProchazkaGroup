@@ -36,7 +36,7 @@ export default function IntroPageBenefit() {
         scrollYProgress,
         [0,1],
         windowDimensions.width >= 1000 && windowDimensions.height > windowDimensions.width
-            ? ['120vh','100vh']
+            ? ['120vh','90vh']
             : ['140vh','100vh']
     );
 

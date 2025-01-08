@@ -642,4 +642,164 @@
             }
         } 
     }
+    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
+        .IntroPageBenefit{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #04444C;
+            width: 100vw;
+            overflow: hidden;
+            z-index: 2;
+            color: #050A10;
+            .background-image{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 1920/1081;
+            }
+        
+            .cover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #050A10;
+                opacity: 0.55;
+            }
+        
+            .text{
+                position: absolute;
+                top: 50vh;
+                left: 50vw;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 50vh;
+                .PageHeading__Container {
+                    position: relative;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    p {
+                        width: 100%;
+                        font-weight: 300;
+                        font-style: italic;
+                        letter-spacing: 0.75rem;
+                        color: #fff;
+                        text-transform: uppercase;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        span {
+                            font-size: 8rem;
+                            text-transform: uppercase;
+                            &.highlightedspan {
+                                color: #00F0FF;
+                                transition: color 0.2s ease;
+                            }
+                        }
+                    }
+                }
+                .Logo{
+                    width: 80%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: #fff;
+        
+                    .onViewLogo{
+                        justify-content: flex-start;
+                        scale: 1.2;
+                    }
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+        .IntroPageBenefit{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #04444C;
+            width: 100vw;
+            overflow: hidden;
+            z-index: 2;
+            color: #050A10;
+            .background-image{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 1920/1081;
+            }
+        
+            .cover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #050A10;
+                opacity: 0.55;
+            }
+        
+            .text{
+                position: absolute;
+                top: 50vh;
+                left: 50vw;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 50vh;
+                .PageHeading__Container {
+                    position: relative;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    p {
+                        width: 100%;
+                        font-weight: 300;
+                        font-style: italic;
+                        letter-spacing: 0.75rem;
+                        color: #fff;
+                        text-transform: uppercase;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        span {
+                            font-size: 8rem;
+                            text-transform: uppercase;
+                            &.highlightedspan {
+                                color: #00F0FF;
+                                transition: color 0.2s ease;
+                            }
+                        }
+                    }
+                }
+                .Logo{
+                    width: 80%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: #fff;
+        
+                    .onViewLogo{
+                        justify-content: flex-start;
+                        scale: 1.2;
+                    }
+                }
+            }
+        } 
+    }
 }

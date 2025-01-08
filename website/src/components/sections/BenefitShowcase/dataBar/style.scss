@@ -434,7 +434,7 @@
     @media only screen and (min-width: 1000px) {
         .DataBar{
             width: 100vw;
-            height: 25vh;
+            height: 20vh;
             position: relative;
             display: flex;
             flex-direction: row;
@@ -458,7 +458,7 @@
             }
         
             .data__item{
-                width: 30%;
+                width: 25%;
                 height: 40%;
                 display: flex;
                 flex-direction: column;

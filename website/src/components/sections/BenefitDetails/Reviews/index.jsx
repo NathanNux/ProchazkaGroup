@@ -4,60 +4,67 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Reviews() {
     const [currentBatch, setCurrentBatch] = useState(0);
-    const batchSize = 3;
+    const [batchSize, setBatchSize] = useState(3); // Default to 3
     const totalBatches = Math.ceil(Benefitreviews.length / batchSize);
-    const container = useRef(null)
-    const [windowWidth, setWindowWidth] = useState(0)
+    const container = useRef(null);
+    const [dimensions, setDimensions] = useState({
+        width: 0,
+        height: 0,
+        isLandscape: false
+    });
+    
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            setDimensions({
+                width,
+                height,
+                isLandscape: width/height >= 1
+            });
 
+            // Update batchSize based on dimensions
+            setBatchSize(
+                width >= 750 && width <= 990 && height >= 950 
+                    ? 2  // Show 2 reviews for tablet portrait
+                    : 3  // Default 3 reviews
+            );
+        };
+        
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['start 0.8', 'end end']
     });
-
-    useEffect(() => {
-        setWindowWidth(window.innerWidth)
-        
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth)
-        }
-        
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
-
+    
     const containerHeight = useTransform(
         scrollYProgress,
         [0, 0.2, 0.3, 1],
-        windowWidth >= 600 && windowWidth <= 790 
-            ? ['80vh', '110vh', '220vh', '220vh']
-            : windowWidth >= 800 && windowWidth <= 960 
-                ? ['70vh', '100vh', '200vh', '200vh']
-                : windowWidth >= 960 && windowWidth <= 1240
-                    ? ['60vh', '90vh', '180vh', '180vh']  // Added 960px viewport
-                    : windowWidth >= 1260 && windowWidth <= 1420 
-                        ? ['40vh', '70vh', '120vh', '120vh']
-                        : ['30vh', '60vh', '100vh', '100vh']
-    );
-    
-    useEffect(() => {
-        const handleResize = () => {
-            containerHeight.set(
-                window.innerWidth >= 600 && window.innerWidth <= 790
-                    ? ['50vh', '80vh', '180vh', '180vh']
-                    : window.innerWidth >= 800 && window.innerWidth <= 960
-                        ? ['50vh', '80vh', '140vh', '140vh']
-                        : window.innerWidth >= 960 && window.innerWidth <= 1240
-                            ? ['50vh', '70vh', '100vh', '100vh']  // Added 960px viewport
-                            : window.innerWidth >= 1260 && window.innerWidth <= 1420 
+        dimensions.isLandscape 
+            ? dimensions.width >= 600 && dimensions.width <= 790 
+                ? ['80vh', '110vh', '220vh', '220vh']
+                : dimensions.width >= 800 && dimensions.width <= 960 
+                    ? ['70vh', '100vh', '200vh', '200vh']
+                    : dimensions.width >= 960 && dimensions.width <= 1240
+                        ? ['60vh', '90vh', '180vh', '180vh']
+                        : dimensions.width >= 1260 && dimensions.width <= 1420 
+                            ? ['40vh', '70vh', '120vh', '120vh']
+                            : dimensions.width >= 1420 && dimensions.width <= 1730
                                 ? ['40vh', '70vh', '120vh', '120vh']
-                                : ['30vh', '60vh', '100vh', '100vh']
-            );
-        };
-    
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [containerHeight]);
+                                : dimensions.width > 1730
+                                    ? ['40vh', '70vh', '120vh', '120vh']
+                                    : ['30vh', '60vh', '80vh', '80vh']
+            : dimensions.width >= 750 && dimensions.width <= 990 && dimensions.height >= 950
+                ? ['50vh', '80vh', '120vh', '120vh']  // New viewport check
+                : dimensions.width >= 1000
+                    ? ['30vh', '60vh', '100vh', '100vh']
+                    : ['30vh', '60vh', '80vh', '80vh']
+    );
 
     const opacity = useTransform(
         scrollYProgress,
