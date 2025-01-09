@@ -1,5 +1,4 @@
-//WIP: iphone12 a se je třeba dodělat
-@media (min-aspect-ratio: 1/1) { //1600:900, 1440:900, 1280:720, ipadmini - na šířku,iphone12pro-na šířku, iphonese-našířku
+@media (min-aspect-ratio: 1/1) { 
     @media only screen and (min-width: 1730px) {
         .ContactForm{
             width: 100vw;
@@ -3885,7 +3884,7 @@
             }
         }
     }
-    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 950px) {
+    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 900px) {
         .ContactForm{
             width: 100vw;
             height: 130vh;
@@ -4377,7 +4376,7 @@
             }
         }
     }
-    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 890px) {
+    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 800px) {
         .ContactForm{
             width: 100vw;
             height: 140vh;
@@ -4872,7 +4871,7 @@
             }
         }
     }
-    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 700px) {
         .ContactForm{
             width: 100vw;
             height: 140vh;
@@ -5367,7 +5366,7 @@
             }
         }
     }
-    @media only screen and (min-width: 330px) and (max-width: 380px) and (min-height: 650px) {
+    @media only screen and (min-width: 330px) and (max-width: 380px) and (min-height: 600px) {
         .ContactForm{
             width: 100vw;
             height: 200vh;
