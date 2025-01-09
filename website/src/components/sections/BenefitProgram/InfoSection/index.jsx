@@ -1,20 +1,50 @@
 import SubText from "@/components/anim/TextAnims/SubText";
 import { motion, useTransform } from "framer-motion"
 import Image from "next/image";
-import { forwardRef,} from "react";
+import { forwardRef, useEffect, useState } from "react";
 
 const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
 
+    const [dimensions, setDimensions] = useState({
+        width: 0,
+        height: 0,
+        isLandscape: false
+    });
+
     const firstContent = useTransform(
         scroll,
-        [0, 0.35, 0.4 , 1],
+        [0, 0.35, 0.4, 1],
         [1, 1, 0, 0]
-    )
+    );
+
     const headerMove = useTransform(
         scroll,
         [0, 0.5, 0.6, 1],
-        ['0vw', '0vw', '-50vw', '-50vw']
+        dimensions.isLandscape
+            ? ['0vw', '0vw', '-50vw', '-50vw']  // Landscape mode
+            : dimensions.width >= 740
+                ? ['0vw', '0vw', '-50vw', '-50vw']  // Portrait mode above 740px
+                : ['0vw', '0vw', '-20vw', '-20vw']  // Default
     );
+    
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const isLandscape = width/height >= 1;
+            
+            setDimensions({
+                width,
+                height,
+                isLandscape
+            });
+        };
+    
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const secondContent = useTransform(
         scroll,
         [0, 0.35, 0.4 , 0.55, 0.6, 1],

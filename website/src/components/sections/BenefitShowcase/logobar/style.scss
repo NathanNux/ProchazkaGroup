@@ -505,11 +505,119 @@
         
             .header{
                 height: 25%;
-                width: 50%;
+                width: 80%;
                 padding: 0 5vw;
                 color: #fff;
                 .heading{
-                    font-size: 2.4rem;
+                    font-size: 2rem;
+        
+                }
+            }
+        
+            .Logos__logobar{
+                width: 100%;
+                height: 85%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: #5E758D;
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .LogoBar{
+            width: 100vw;
+            height: 40vh;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            padding: 5vh 0;
+            z-index: 2;
+            background-color: #04444C;
+        
+        
+            .header{
+                height: 25%;
+                width: 80%;
+                padding: 0 5vw;
+                color: #fff;
+                .heading{
+                    font-size: 2rem;
+        
+                }
+            }
+        
+            .Logos__logobar{
+                width: 100%;
+                height: 85%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                .Rolling__icons{
+                    padding: 0;
+                    .Rolling_icons_container{
+                        &:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+        
+                .devider{
+                    width: 90%;
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: #5E758D;
+                }
+            }
+        } 
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .LogoBar{
+            width: 100vw;
+            height: 40vh;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            padding: 5vh 0;
+            z-index: 2;
+            background-color: #04444C;
+        
+        
+            .header{
+                height: 25%;
+                width: 80%;
+                padding: 0 5vw;
+                color: #fff;
+                .heading{
+                    font-size: 2rem;
         
                 }
             }

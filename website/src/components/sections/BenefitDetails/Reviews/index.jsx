@@ -23,12 +23,14 @@ export default function Reviews() {
                 height,
                 isLandscape: width/height >= 1
             });
-
+    
             // Update batchSize based on dimensions
             setBatchSize(
-                width >= 750 && width <= 990 && height >= 950 
-                    ? 2  // Show 2 reviews for tablet portrait
-                    : 3  // Default 3 reviews
+                width <= 740 
+                    ? 1  // Show 1 review for mobile
+                    : width >= 750 && width <= 990 && height >= 950 
+                        ? 2  // Show 2 reviews for tablet portrait
+                        : 3  // Default 3 reviews
             );
         };
         
@@ -60,10 +62,12 @@ export default function Reviews() {
                                     ? ['40vh', '70vh', '120vh', '120vh']
                                     : ['30vh', '60vh', '80vh', '80vh']
             : dimensions.width >= 750 && dimensions.width <= 990 && dimensions.height >= 950
-                ? ['50vh', '80vh', '120vh', '120vh']  // New viewport check
+                ? ['50vh', '80vh', '120vh', '120vh']
                 : dimensions.width >= 1000
                     ? ['30vh', '60vh', '100vh', '100vh']
-                    : ['30vh', '60vh', '80vh', '80vh']
+                    : dimensions.width >= 400 && dimensions.width <= 740
+                        ? ['40vh', '70vh', '120vh', '120vh']
+                        : ['30vh', '60vh', '80vh', '80vh']
     );
 
     const opacity = useTransform(

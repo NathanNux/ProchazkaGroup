@@ -360,10 +360,84 @@
                 will-change: transform;
                 backface-visibility: hidden;
                 transform-style: preserve-3d;
-                top: calc(50% - 15vh);
-                left: calc(50% - 15vw);
-                width: 30vw;
-                height: 30vh;
+                top: calc(50% - 5vh);
+                left: calc(50% - 20vw);
+                width: 40vw;
+                height: 25vh;
+                z-index: 5;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 320/415;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 750px) {
+        .BenefitProgramKeyFrames{
+            display: flex;
+            width: 100vw;
+            height: 800vh;
+            background-color: #fff;
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 50;
+            flex-direction: column;
+            color: #050A10;
+        
+            .devider{
+                width: 100%;
+                height: 100vh;
+            }
+        
+            .BenefitProgramKeyFramesImage{
+                position: fixed;
+                will-change: transform;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                top: calc(50% - 10vh);
+                left: calc(50% - 20vw);
+                width: 40vw;
+                height: 25vh;
+                z-index: 5;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 320/415;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 650px) {
+        .BenefitProgramKeyFrames{
+            display: flex;
+            width: 100vw;
+            height: 800vh;
+            background-color: #fff;
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 50;
+            flex-direction: column;
+            color: #050A10;
+        
+            .devider{
+                width: 100%;
+                height: 100vh;
+            }
+        
+            .BenefitProgramKeyFramesImage{
+                position: fixed;
+                will-change: transform;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                top: calc(50% - 10vh);
+                left: calc(50% - 20vw);
+                width: 40vw;
+                height: 25vh;
                 z-index: 5;
                 img{
                     width: 100%;
