@@ -5389,7 +5389,7 @@
                                 gap: 0.5rem;
         
                                 label{
-                                    width: 15%;
+                                    width: 20%;
                                     font-size: 1.4rem;
                                     white-space: nowrap;
                                 }
@@ -5409,7 +5409,15 @@
                                     resize: none;
                                     display: flex;
                                     line-height: 1.5;
-                                    padding: 2.5rem 0 0 2rem;
+                                    padding: 0rem 0 0 1rem;
+                                    text-indent: 0; // Reset any default text indent
+                                    vertical-align: middle; // Align text vertically
+                                    padding-top: 1.5rem; // Match placeholder position
+
+                                    &::placeholder {
+                                        margin: 0;
+                                        display: block;
+                                    }
                                     
                                     // Remove default focus highlight
                                     -webkit-tap-highlight-color: transparent;
@@ -5441,7 +5449,7 @@
                                     color: #fff;
                                     opacity: 0.6;
                                     font-size: 1rem;
-                                    margin-left: 1rem;
+                                    margin-left: 0rem;
                             
                                     &::placeholder {
                                         color: #fff;
@@ -5970,7 +5978,7 @@
                                 gap: 0.5rem;
         
                                 label{
-                                    width: 15%;
+                                    width: 25%;
                                     font-size: 1.4rem;
                                     white-space: nowrap;
                                 }
@@ -5990,7 +5998,15 @@
                                     resize: none;
                                     display: flex;
                                     line-height: 1.5;
-                                    padding: 2.5rem 0 0 2rem;
+                                    padding: 0rem 0 0 0rem;
+                                    -moz-text-align-vertical: middle; // Firefox support
+                                    -webkit-text-align-vertical: middle; // Webkit support
+                                    
+                                    &::placeholder {
+                                        margin: 0;
+                                        display: block;
+                                        transform: translateY(50%);
+                                    }
                                     
                                     // Remove default focus highlight
                                     -webkit-tap-highlight-color: transparent;
@@ -6022,7 +6038,7 @@
                                     color: #fff;
                                     opacity: 0.6;
                                     font-size: 1rem;
-                                    margin-left: 1rem;
+                                    margin-left: 0rem;
                             
                                     &::placeholder {
                                         color: #fff;
@@ -6069,7 +6085,7 @@
                             align-items: center;
                             flex-direction: column;
                             width: 92.5%;
-                            height: 20%;
+                            height: 50%;
                             padding-left: 5%;
                             .form__devider{
                                 width: 100%;
@@ -6105,7 +6121,7 @@
                                     width: 50%;
                                     height: 100%;
                                     display: flex;
-                                    align-items: flex-end;
+                                    align-items: center;
                                     justify-content: flex-start;
                                     position: relative;
                                     .name{
@@ -6120,7 +6136,6 @@
                                             margin: 0;
                                             font-size: 1rem;
                                             font-weight: 400;
-                                            padding-bottom: 0.25rem;
                                         }
                                     }
                                 }
@@ -6136,8 +6151,8 @@
                                     .person__menu{
                                         position: absolute;
                                         top: 100%;
-                                        left: -450%;
-                                        width: 600%;
+                                        left: -200%;
+                                        width: 400%;
                                         display: flex;
                                         align-items: flex-start;
                                         justify-content: flex-start;
@@ -6178,7 +6193,7 @@
                 .header{
                     height: 15%;
                     width: 95%;
-                    display: flex;
+                    display: none;
                     justify-content: center;
                     align-items: flex-start;
                     gap: 0.5rem;
@@ -6197,7 +6212,7 @@
                 }
                 .cta{
                     width: 100%;
-                    height: 15%;
+                    height: 35%;
                     position: relative;
                     display: flex;
                     justify-content: flex-end;
@@ -6497,7 +6512,7 @@
         
             .CheckUpForm{
                 width: 100%;
-                height: 95%;
+                height: 85%;
         
                 .form{
                     width: 100%;
@@ -6550,7 +6565,7 @@
                                 gap: 0.5rem;
         
                                 label{
-                                    width: 15%;
+                                    width: 25%;
                                     font-size: 1.4rem;
                                     white-space: nowrap;
                                 }
@@ -6570,7 +6585,12 @@
                                     resize: none;
                                     display: flex;
                                     line-height: 1.5;
-                                    padding: 2.5rem 0 0 2rem;
+                                    padding: 0rem 0 0 0rem;
+                                    &::placeholder {
+                                        margin: 0;
+                                        display: block;
+                                        transform: translateY(50%);
+                                    }
                                     
                                     // Remove default focus highlight
                                     -webkit-tap-highlight-color: transparent;
@@ -6602,7 +6622,7 @@
                                     color: #fff;
                                     opacity: 0.6;
                                     font-size: 1rem;
-                                    margin-left: 1rem;
+                                    margin-left: 0rem;
                             
                                     &::placeholder {
                                         color: #fff;
@@ -6758,7 +6778,7 @@
                 .header{
                     height: 15%;
                     width: 95%;
-                    display: flex;
+                    display: none;
                     justify-content: center;
                     align-items: flex-start;
                     gap: 0.5rem;
@@ -6777,7 +6797,7 @@
                 }
                 .cta{
                     width: 100%;
-                    height: 15%;
+                    height: 35%;
                     position: relative;
                     display: flex;
                     justify-content: flex-end;
