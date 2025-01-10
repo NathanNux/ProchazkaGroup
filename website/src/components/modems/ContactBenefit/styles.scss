@@ -3726,7 +3726,7 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 140vh;
+            height: 160vh;
             background: #04444C;
             display: flex;
             flex-direction: row-reverse;
@@ -3913,7 +3913,7 @@
                             }
                         }
                         .header{
-                            display: flex;
+                            display: none;
                             align-items: center;
                             justify-content: center;
                             position: relative;
@@ -3938,7 +3938,7 @@
         
                         .person__container{
                             position: relative;
-                            width: 40%;
+                            width: 70%;
                             height: 100%;
                             .name{
                                 position: absolute;
@@ -4160,7 +4160,7 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 140vh;
+            height: 190vh;
             background: #04444C;
             display: flex;
             flex-direction: row-reverse;
@@ -4347,7 +4347,7 @@
                             }
                         }
                         .header{
-                            display: flex;
+                            display: none;
                             align-items: center;
                             justify-content: center;
                             position: relative;
@@ -4372,7 +4372,7 @@
         
                         .person__container{
                             position: relative;
-                            width: 40%;
+                            width: 70%;
                             height: 100%;
                             .name{
                                 position: absolute;
@@ -4568,6 +4568,7 @@
                         font-size: 1.3rem;
                         font-weight: 400;
                         margin: 0;
+                        text-align: right;
                     }
                     .devider__vertical{
                         width: 2px;
@@ -4594,7 +4595,7 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 140vh;
+            height: 220vh;
             background: #04444C;
             display: flex;
             flex-direction: row-reverse;
@@ -4781,7 +4782,7 @@
                             }
                         }
                         .header{
-                            display: flex;
+                            display: none;
                             align-items: center;
                             justify-content: center;
                             position: relative;
@@ -4806,7 +4807,7 @@
         
                         .person__container{
                             position: relative;
-                            width: 40%;
+                            width: 70%;
                             height: 100%;
                             .name{
                                 position: absolute;

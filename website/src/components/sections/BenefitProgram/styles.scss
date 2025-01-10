@@ -361,9 +361,9 @@
                 backface-visibility: hidden;
                 transform-style: preserve-3d;
                 top: calc(50% - 5vh);
-                left: calc(50% - 20vw);
-                width: 40vw;
-                height: 25vh;
+                left: calc(50% - 15vw);
+                width: 30vw;
+                height: 20vh;
                 z-index: 5;
                 img{
                     width: 100%;
@@ -397,9 +397,9 @@
                 will-change: transform;
                 backface-visibility: hidden;
                 transform-style: preserve-3d;
-                top: calc(50% - 10vh);
-                left: calc(50% - 20vw);
-                width: 40vw;
+                top: calc(50% - 5vh);
+                left: calc(50% - 15vw);
+                width: 30vw;
                 height: 25vh;
                 z-index: 5;
                 img{
@@ -434,10 +434,10 @@
                 will-change: transform;
                 backface-visibility: hidden;
                 transform-style: preserve-3d;
-                top: calc(50% - 10vh);
-                left: calc(50% - 20vw);
-                width: 40vw;
-                height: 25vh;
+                top: calc(50% - 5vh);
+                left: calc(50% - 10vw);
+                width: 20vw;
+                height: 20vh;
                 z-index: 5;
                 img{
                     width: 100%;

@@ -67,7 +67,11 @@ export default function Reviews() {
                     ? ['30vh', '60vh', '100vh', '100vh']
                     : dimensions.width >= 400 && dimensions.width <= 740
                         ? ['40vh', '70vh', '120vh', '120vh']
-                        : ['30vh', '60vh', '80vh', '80vh']
+                        : dimensions.width >= 380 && dimensions.width <= 390 && dimensions.height >= 650
+                            ? ['40vh', '70vh', '140vh', '140vh']
+                            : dimensions.width >= 320 && dimensions.width <= 380 && dimensions.height >= 500
+                                ? ['40vh', '70vh', '160vh', '160vh']
+                                : ['30vh', '60vh', '80vh', '80vh']
     );
 
     const opacity = useTransform(

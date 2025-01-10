@@ -3685,7 +3685,7 @@
     @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 700px) {
         .BenefitReminder{
             width: 100vw;
-            height: 100vh;
+            height: 120vh;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -4107,7 +4107,7 @@
     @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 650px) {
         .BenefitReminder{
             width: 100vw;
-            height: 120vh;
+            height: 140vh;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -4529,7 +4529,7 @@
     @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 500px) {
         .BenefitReminder{
             width: 100vw;
-            height: 120vh;
+            height: 160vh;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -4587,13 +4587,13 @@
                 }
         
                 .Header{
-                    width: 75%;
+                    width: 85%;
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
                     justify-content: flex-end;
                     position: absolute;
-                    bottom: 15%;
+                    bottom: -5%;
                     right: 0%;
                     .Header__wrapper{
                         display: flex;
