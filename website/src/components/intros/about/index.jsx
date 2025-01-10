@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import RotatingButton from "@/components/ui/stickyButtons/buttons/RotatingButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
@@ -26,11 +26,27 @@ const draw = {
 export default function AboutInto( ){
     const introRef = useRef(null)
     const mainContentRef = useRef(null);
+    const [dimensions, setDimensions] = useState({
+        width: 0,
+        height: 0
+    });
     const { scrollYProgress } = useScroll({
         target: mainContentRef,
         offset: [ 'start end', 'end end']
     })
     const rotation = useMemo(() => [0, 120, 240], []);
+    useEffect(() => {
+        const handleResize = () => {
+            setDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        };
+        
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const imageAnimX = useTransform(
         scrollYProgress,
@@ -59,10 +75,13 @@ export default function AboutInto( ){
         [ 0.65, 1],
         [ 0, 1] 
     )
+
     const buttonOpacity2 = useTransform(
         scrollYProgress,
-        [ 0.65, 1],
-        [ 1, 0] 
+        dimensions.width <= 740 
+            ? [0.1, 0.45]  // Mobile breakpoints
+            : [0.65, 1],    // Desktop breakpoints
+        [1, 0]             // Opacity values
     )
 
     const introAnim = {

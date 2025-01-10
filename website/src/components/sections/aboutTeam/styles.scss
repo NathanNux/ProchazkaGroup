@@ -2719,8 +2719,9 @@
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
+                    padding-top: 10vh;
                     z-index: 1;
         
                     .AboutTeam__MainInfo__header {
@@ -2733,7 +2734,7 @@
                         position: relative;
                         .AboutTeam__MainInfo__header__container{
                             display: flex;
-                            align-items: center;
+                            align-items: flex-start;
                             justify-content: flex-start;
                             width: 100%;
                             height: 100%;
@@ -2762,7 +2763,7 @@
         
                         .AboutTeam__MainInfo__text {
                             display: flex;
-                            align-items: center;
+                            align-items: flex-start;
                             justify-content: flex-start;
                             width: 100%;
                             height: 50%;
@@ -2797,7 +2798,7 @@
                     }
         
                     .AboutTeam__MainInfo__icons__container {
-                        display: flex;
+                        display: none;
                         justify-content: center;
                         align-items: flex-start;
                         width: 100%;
@@ -3023,8 +3024,9 @@
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
+                    padding-top: 10vh;
                     z-index: 1;
         
                     .AboutTeam__MainInfo__header {
@@ -3101,7 +3103,7 @@
                     }
         
                     .AboutTeam__MainInfo__icons__container {
-                        display: flex;
+                        display: none;
                         justify-content: center;
                         align-items: flex-start;
                         width: 100%;
@@ -3174,7 +3176,7 @@
                             width: 90%;
                             padding-right: 2rem;
                             padding-bottom: 2rem;
-                            font-size: 1.4rem;
+                            font-size: 1.2rem;
                             margin: 0;
                             text-transform: uppercase;
                             text-align: right;
@@ -3184,7 +3186,7 @@
         
                 .AboutTeam__Collage {
                     position: absolute;
-                    top: 50%;
+                    top: 55%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     width: 80%;
@@ -3196,8 +3198,8 @@
         
                     .AboutTeam__Collage__pics {
                         position: relative;
-                        width: 70vw;
-                        height: 70vw;
+                        width: 60vw;
+                        height: 60vw;
                         border-radius: 50%;
                         overflow: hidden;
         
@@ -3222,8 +3224,8 @@
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width: 72.5vw;
-                        height: 72.5vw;
+                        width: 62.5vw;
+                        height: 62.5vw;
                         border-radius: 50%;
                         pointer-events: none;
                     
@@ -3232,8 +3234,8 @@
                         $circle-size: 15px; // Diameter of each circle
                         $segment-length: 15vw; // Length of each segment
                         $segment-height: 4px; // Thickness of each segment
-                        $radius: 38.25vw; // Distance from center to the start of segments/circles
-                        $radius-segments: 36.25vw; // Distance from center to the start of segments/circles
+                        $radius: 33.25vw; // Distance from center to the start of segments/circles
+                        $radius-segments: 31.25vw; // Distance from center to the start of segments/circles
                         $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
                     
                         // Position Circles
@@ -3327,8 +3329,9 @@
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
+                    padding-top: 10vh;
                     z-index: 1;
         
                     .AboutTeam__MainInfo__header {
@@ -3405,7 +3408,7 @@
                     }
         
                     .AboutTeam__MainInfo__icons__container {
-                        display: flex;
+                        display: none;
                         justify-content: center;
                         align-items: flex-start;
                         width: 100%;
@@ -3478,7 +3481,7 @@
                             width: 90%;
                             padding-right: 2rem;
                             padding-bottom: 2rem;
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                             margin: 0;
                             text-transform: uppercase;
                             text-align: right;
@@ -3488,7 +3491,7 @@
         
                 .AboutTeam__Collage {
                     position: absolute;
-                    top: 50%;
+                    top: 55%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     width: 80%;
