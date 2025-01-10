@@ -442,6 +442,9 @@
     }
 }
 
+//WIP: On every phone screen size needs to be adjusted, it has smaller viewport heights, on every mobile and tablet devices. 
+//WIP: Rolling icons component needs to be adjust for mobile and tablet devices.
+//WIP: All animations based on useEffect with viewport height and width needs to be adjusted for mobile and tablet devices. Devices have smaller viewport heights and widths then written.
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
         .Transition__main{
