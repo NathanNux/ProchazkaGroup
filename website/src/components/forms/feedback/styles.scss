@@ -3449,9 +3449,9 @@
     @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 700px) {
         .FeedbackForm{
             width: 100vw;
-            height: 200vh;
+            height: 220vh;
             position: absolute;
-            bottom: 5%;
+            bottom: 0%;
             left: 0;
             display: flex;
             align-items: center;
@@ -3836,13 +3836,13 @@
     @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 650px) {
         .FeedbackForm{
             width: 100vw;
-            height: 200vh;
+            height: 280vh;
             position: absolute;
-            bottom: 5%;
+            bottom: 15%;
             left: 0;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             background-color: #04444C;
             flex-direction: column;
             padding: 0 5vw;
@@ -3854,8 +3854,9 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 flex-direction: column;
+                padding-top: 10vh;
         
                 .form{
                     width: 100%;
@@ -4064,7 +4065,7 @@
         
                 .CTA{
                     position: absolute;
-                    bottom: 20%;
+                    bottom: 35%;
                     left: 0;
                     width: 100%;
                     display: flex;
@@ -4101,7 +4102,7 @@
                 .bottom__footer{
                     width: 100%;
                     height: 20%;
-                    bottom: 0%;
+                    bottom: 15%;
                     left: 0;
                     position: absolute;
                     display: flex;
@@ -4170,7 +4171,9 @@
             .map__wrapper{
                 width: 100%;
                 height: 30%;
-                position: relative;
+                bottom: 20%;
+                left: 0;
+                position: absolute;
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
@@ -4223,7 +4226,7 @@
     @media only screen and (min-width: 330px) and (max-width: 380px) and (min-height: 500px) {
         .FeedbackForm{
             width: 100vw;
-            height: 200vh;
+            height: 250vh;
             position: absolute;
             bottom: 5%;
             left: 0;
