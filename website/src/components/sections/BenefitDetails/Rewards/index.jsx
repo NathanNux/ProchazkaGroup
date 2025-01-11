@@ -10,6 +10,7 @@ export default function BenefitRewards() {
     const scrollTimeout = useRef(null);
     const isSnapping = useRef(false);
     const isVisible = useRef(false);
+    const [passedLastPoint, setPassedLastPoint] = useState(false);
 
     const snapActive = useRef(false);
 
@@ -170,13 +171,9 @@ export default function BenefitRewards() {
     ]
 
     // Scroll handling with useCallback
+    // Modify handleScroll callback
     const handleScroll = useCallback(() => {
-        // console.log('sectionScroll.current:', sectionScroll.current);
-        // console.log('isVisible.current:', isVisible.current);
-        // console.log('isSnapping.current:', isSnapping.current);
-        // console.log('snapActive.current:', snapActive.current);
-        // console.log('peakPoints:', peakPoints);
-        if (!sectionScroll?.current || !isVisible.current || isSnapping.current || !snapActive.current || !peakPoints || peakPoints.length === 0) return;
+        if (!sectionScroll?.current || !isVisible.current || isSnapping.current || !snapActive.current || !peakPoints) return;
         
         clearTimeout(scrollTimeout.current);
         scrollTimeout.current = setTimeout(() => {
@@ -186,47 +183,61 @@ export default function BenefitRewards() {
             const rect = element.getBoundingClientRect();
             const sectionScrollProgress = -rect.top / (rect.height - window.innerHeight);
             
-            // Find closest peak point
-            let closestPeak = peakPoints[0];
-            let closestIndex = 0;
-            let minDistance = Math.abs(sectionScrollProgress - peakPoints[0]);
+            // Check if we've passed the last point
+            if (sectionScrollProgress > peakPoints[peakPoints.length - 1]) {
+                setPassedLastPoint(true);
+                return; // Exit early - no more snapping
+            }
 
-            peakPoints.forEach((peak, index) => {
-                const distance = Math.abs(sectionScrollProgress - peak);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestPeak = peak;
-                    closestIndex = index;
-                }
-            });
+            // Reset passed last point state if we're before last point
+            if (sectionScrollProgress < peakPoints[peakPoints.length - 1]) {
+                setPassedLastPoint(false);
+            }
 
-            const snapThreshold = 0.05 / points;
-            if (minDistance > snapThreshold) {
-                isSnapping.current = true;
-                setActiveIndex(closestIndex);
+            // Only continue with snapping if we haven't passed last point
+            if (!passedLastPoint) {
+                // ...existing closest peak finding logic...
+                let closestPeak = peakPoints[0];
+                let closestIndex = 0;
+                let minDistance = Math.abs(sectionScrollProgress - peakPoints[0]);
 
-                const targetScroll = window.scrollY + (closestPeak - sectionScrollProgress) * (rect.height - window.innerHeight);
-
-                animate(window.scrollY, targetScroll, {
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 40,
-                    mass: 0.5,
-                    bounce: 0,
-                    onComplete: () => {
-                        isSnapping.current = false;
-                    },
-                    onUpdate: (value) => {
-                        window.scrollTo({
-                            top: value,
-                            behavior: 'auto'
-                        });
-                    },
-                    velocity: scrollYProgress.getVelocity(),
+                peakPoints.forEach((peak, index) => {
+                    const distance = Math.abs(sectionScrollProgress - peak);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestPeak = peak;
+                        closestIndex = index;
+                    }
                 });
+
+                const snapThreshold = 0.05 / points;
+                if (minDistance > snapThreshold) {
+                    isSnapping.current = true;
+                    setActiveIndex(closestIndex);
+
+                    const targetScroll = window.scrollY + (closestPeak - sectionScrollProgress) * (rect.height - window.innerHeight);
+
+                    animate(window.scrollY, targetScroll, {
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 40,
+                        mass: 0.5,
+                        bounce: 0,
+                        onComplete: () => {
+                            isSnapping.current = false;
+                        },
+                        onUpdate: (value) => {
+                            window.scrollTo({
+                                top: value,
+                                behavior: 'auto'
+                            });
+                        },
+                        velocity: scrollYProgress.getVelocity(),
+                    });
+                }
             }
         }, 50);
-    }, [peakPoints, points, scrollYProgress]);
+    }, [peakPoints, points, scrollYProgress, passedLastPoint]);
 
     // Intersection observer effect
     // Update useEffect to set isVisible.current

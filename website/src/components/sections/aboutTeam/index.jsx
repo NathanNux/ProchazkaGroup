@@ -12,6 +12,7 @@ export default function AboutTeam() {
     const scrollTimeout = useRef(null);
     const isSnapping = useRef(false);
     const isVisible = useRef(false);
+    const [passedLastPoint, setPassedLastPoint] = useState(false);
 
     const snapActive = useRef(false);
 
