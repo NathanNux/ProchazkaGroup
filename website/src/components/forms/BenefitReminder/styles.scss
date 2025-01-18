@@ -220,10 +220,11 @@
                                         position: relative;
                                         width: 80%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -623,10 +624,11 @@
                                         position: relative;
                                         width: 80%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -706,26 +708,27 @@
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
-        
+                                    gap: 1rem;
+
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3.5rem;
+                                            font-size: 3rem;
                                             margin: 0;
                                         }
                                     }
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3.5rem;
+                                            font-size: 3rem;
                                             margin: 0;
                                         }
                                     }
@@ -1026,10 +1029,11 @@
                                         position: relative;
                                         width: 80%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -1109,11 +1113,12 @@
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -1128,7 +1133,7 @@
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -1437,10 +1442,11 @@
                                         position: relative;
                                         width: 80%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -1520,11 +1526,12 @@
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -1539,7 +1546,7 @@
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -1848,10 +1855,11 @@
                                         position: relative;
                                         width: 80%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 0%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -1931,11 +1939,12 @@
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -1950,7 +1959,7 @@
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -2257,12 +2266,13 @@
         
                                     .person__container{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 0%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -2298,9 +2308,9 @@
         
                                         .person__menu{
                                             position: absolute;
-                                            top: 80%;
-                                            left: 0%;
-                                            width: 500%;
+                                            top: 120%;
+                                            left: -250%;
+                                            width: 700%;
                                             display: flex;
                                             align-items: flex-start;
                                             justify-content: flex-start;
@@ -2342,11 +2352,12 @@
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -2361,7 +2372,7 @@
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -2668,12 +2679,13 @@
         
                                     .person__container{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 0%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -2709,9 +2721,9 @@
         
                                         .person__menu{
                                             position: absolute;
-                                            top: 80%;
-                                            left: 0%;
-                                            width: 500%;
+                                            top: 120%;
+                                            left: -300%;
+                                            width: 700%;
                                             display: flex;
                                             align-items: flex-start;
                                             justify-content: flex-start;
@@ -2726,7 +2738,7 @@
                                             .menu__list{
                                                 width: 100%;
                                                 li{
-                                                    font-size: 1.4rem;
+                                                    font-size: 1.2rem;
                                                                                     cursor: pointer;
                                                     padding:  0.75rem 2.5rem;
                                                     width: 100%;
@@ -2965,8 +2977,7 @@
                 justify-content: center;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 10;
-                z-index: 2;
+                z-index: 56;
         
                 .BenefitReminder__Personal__choice{
                     position: relative;
@@ -3083,12 +3094,13 @@
         
                                     .person__container{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -3168,26 +3180,27 @@
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3.5rem;
+                                            font-size: 3rem;
                                             margin: 0;
                                         }
                                     }
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3.5rem;
+                                            font-size: 3rem;
                                             margin: 0;
                                         }
                                     }
@@ -3370,8 +3383,7 @@
                 justify-content: center;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 10;
-                z-index: 2;
+                z-index: 56;
         
                 .BenefitReminder__Personal__choice{
                     position: relative;
@@ -3488,12 +3500,13 @@
         
                                     .person__container{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -3783,8 +3796,7 @@
                 justify-content: center;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 10;
-                z-index: 2;
+                z-index: 56;
         
                 .BenefitReminder__Personal__choice{
                     position: relative;
@@ -3909,12 +3921,13 @@
         
                                     .person__container{
                                         position: relative;
-                                        width: 80%;
+                                        width: 100%;
                                         height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
                                         .name{
-                                            position: absolute;
-                                            top: 0%;
-                                            left: 0;
+                                            position: relative;
                                             width: 100%;
                                             height: 100%;
                                             display: flex;
@@ -3951,8 +3964,8 @@
                                         .person__menu{
                                             position: absolute;
                                             top: 80%;
-                                            left: -150%;
-                                            width: 400%;
+                                            left: -250%;
+                                            width: 460%;
                                             display: flex;
                                             align-items: flex-start;
                                             justify-content: flex-start;
@@ -4205,8 +4218,7 @@
                 justify-content: center;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 10;
-                z-index: 2;
+                z-index: 56;
         
                 .BenefitReminder__Personal__choice{
                     position: relative;
@@ -4373,8 +4385,8 @@
                                         .person__menu{
                                             position: absolute;
                                             top: 80%;
-                                            left: -150%;
-                                            width: 400%;
+                                            left: -350%;
+                                            width: 500%;
                                             display: flex;
                                             align-items: flex-start;
                                             justify-content: flex-start;
@@ -4627,8 +4639,7 @@
                 justify-content: center;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 10;
-                z-index: 2;
+                z-index: 56;
         
                 .BenefitReminder__Personal__choice{
                     position: relative;
@@ -4795,8 +4806,8 @@
                                         .person__menu{
                                             position: absolute;
                                             top: 80%;
-                                            left: -150%;
-                                            width: 400%;
+                                            left: -350%;
+                                            width: 500%;
                                             display: flex;
                                             align-items: flex-start;
                                             justify-content: flex-start;

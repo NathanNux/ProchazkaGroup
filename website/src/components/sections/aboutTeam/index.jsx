@@ -3,7 +3,7 @@
 import { icons } from "@/constants/pages/reviews";
 import { useScroll, useTransform, motion, animate } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState, useMemo, useCallback, useLayoutEffect } from "react";
+import { useRef, useState, useMemo, useCallback, useLayoutEffect, useEffect } from "react";
 
 
 export default function AboutTeam() {
@@ -13,6 +13,20 @@ export default function AboutTeam() {
     const isSnapping = useRef(false);
     const isVisible = useRef(false);
     const [passedLastPoint, setPassedLastPoint] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
+        const checkTouch = () => {
+            return (
+                'ontouchstart' in window ||
+                (window.navigator && window.navigator.maxTouchPoints > 0) ||
+                (window.navigator && window.navigator.msMaxTouchPoints > 0)
+            );
+        };
+        setIsTouchDevice(checkTouch());
+    }, []);
 
     const snapActive = useRef(false);
 
@@ -176,109 +190,172 @@ export default function AboutTeam() {
         },
     ]
     // Enhanced snap detection and animation
+    // Updated handleScroll
     const handleScroll = useCallback(() => {
-        if (!sectionScroll?.current || !isVisible.current || isSnapping.current || !snapActive.current || !peakPoints || peakPoints.length === 0) return;
-        
-        clearTimeout(scrollTimeout.current);
-        scrollTimeout.current = setTimeout(() => {
-            const element = sectionScroll.current;
-            if (!element) return;
-    
-            const rect = element.getBoundingClientRect();
-            const sectionScrollProgress = -rect.top / (rect.height - window.innerHeight);
+        try {
+            // Safety checks
+            if (!sectionScroll?.current || 
+                !isVisible?.current || 
+                isSnapping?.current || 
+                !snapActive?.current || 
+                !peakPoints || 
+                peakPoints.length === 0 || 
+                typeof window === 'undefined') return;
             
-            let closestPeak = peakPoints[0];
-            let closestIndex = 0;
-            let minDistance = Math.abs(sectionScrollProgress - peakPoints[0]);
-    
-            peakPoints.forEach((peak, index) => {
-                const distance = Math.abs(sectionScrollProgress - peak);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestPeak = peak;
-                    closestIndex = index;
-                }
-            });
-    
-            // Reduced threshold for more responsive snapping
-            const snapThreshold = 0.03 / points; 
-            
-            if (minDistance > snapThreshold) {
-                isSnapping.current = true;
-                setActiveIndex(closestIndex);
-    
-                const targetScroll = window.scrollY + (closestPeak - sectionScrollProgress) * (rect.height - window.innerHeight);
-    
-                animate(window.scrollY, targetScroll, {
-                    type: "spring",
-                    stiffness: 300, // Reduced stiffness for smoother animation
-                    damping: 30, // Reduced damping
-                    mass: 0.8, // Increased mass for more stability
-                    bounce: 0,
-                    onComplete: () => {
-                        isSnapping.current = false;
-                    },
-                    onUpdate: (value) => {
-                        window.scrollTo({
-                            top: value,
-                            behavior: 'auto'
-                        });
-                    },
-                    velocity: scrollYProgress.getVelocity() * 0.5, // Reduced velocity influence
-                });
+            // Clear existing timeout
+            if (scrollTimeout?.current) {
+                clearTimeout(scrollTimeout.current);
             }
-        }, 30); // Reduced timeout for faster response
-    }, [peakPoints, points, scrollYProgress]);
+            
+            // Set timeout duration based on device
+            const timeoutDuration = isTouchDevice ? 1000 : 50;
+            
+            scrollTimeout.current = setTimeout(() => {
+                const element = sectionScroll.current;
+                if (!element) return;
+    
+                // Calculate scroll progress
+                const rect = element.getBoundingClientRect();
+                const sectionScrollProgress = -rect.top / (rect.height - window.innerHeight);
+                
+                // Validate scroll progress
+                if (isNaN(sectionScrollProgress) || !isFinite(sectionScrollProgress)) return;
+                
+                // Check last point
+                if (sectionScrollProgress > peakPoints[peakPoints.length - 1]) {
+                    setPassedLastPoint(true);
+                    return;
+                }
+    
+                // Reset on scroll up
+                if (sectionScrollProgress < peakPoints[peakPoints.length - 1]) {
+                    setPassedLastPoint(false);
+                }
+    
+                // Continue only if not passed last point
+                if (!passedLastPoint) {
+                    let closestPeak = peakPoints[0];
+                    let closestIndex = 0;
+                    let minDistance = Math.abs(sectionScrollProgress - peakPoints[0]);
+    
+                    // Find closest peak
+                    peakPoints.forEach((peak, index) => {
+                        const distance = Math.abs(sectionScrollProgress - peak);
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            closestPeak = peak;
+                            closestIndex = index;
+                        }
+                    });
+    
+                    // Adjust threshold based on device
+                    const snapThreshold = isTouchDevice ? 0.1 / points : 0.03 / points;
+                    
+                    // Animate if beyond threshold
+                    if (minDistance > snapThreshold) {
+                        isSnapping.current = true;
+                        setActiveIndex(closestIndex);
+    
+                        const targetScroll = window.scrollY + 
+                            (closestPeak - sectionScrollProgress) * 
+                            (rect.height - window.innerHeight);
+    
+                        let animation = animate(window.scrollY, targetScroll, {
+                            type: "spring",
+                            stiffness: isTouchDevice ? 200 : 400,
+                            damping: isTouchDevice ? 40 : 30,
+                            mass: isTouchDevice ? 1 : 0.5,
+                            bounce: 0,
+                            onComplete: () => {
+                                isSnapping.current = false;
+                            },
+                            onUpdate: (value) => {
+                                window.scrollTo({
+                                    top: value,
+                                    behavior: 'auto'
+                                });
+                            },
+                            velocity: scrollYProgress.getVelocity() * (isTouchDevice ? 0.3 : 1),
+                        });
+    
+                        // Cleanup animation on component unmount
+                        return () => {
+                            if (animation) animation.stop();
+                        };
+                    }
+                }
+            }, timeoutDuration);
+        } catch (error) {
+            console.error('Scroll handler error:', error);
+            isSnapping.current = false;
+            snapActive.current = false;
+        }
+    }, [
+        peakPoints, 
+        points, 
+        scrollYProgress, 
+        isTouchDevice, 
+        passedLastPoint,
+        setActiveIndex, 
+        setPassedLastPoint
+    ]);
 
     useLayoutEffect(() => {
+        if (typeof window === 'undefined') return;
+
         const element = sectionScroll.current;
         if (!element) return;
-    
+        
+        let rafId;
+        let observerTimeout;
+        
         const observer = new IntersectionObserver(
             (entries) => {
                 const [entry] = entries;
                 
-                // Use clientY instead of boundingRect for more reliable position detection
                 const elementTop = entry.boundingClientRect.top;
                 const elementBottom = entry.boundingClientRect.bottom;
                 const windowHeight = window.innerHeight;
                 
-                // Expand the active zone to improve reliability
-                const topThreshold = windowHeight * 0.1; // 10% from top
-                const bottomThreshold = windowHeight * 0.9; // 90% from top
+                const topThreshold = windowHeight * 0.1;
+                const bottomThreshold = windowHeight * 0.9;
                 
                 const isWithinThreshold = 
                     elementTop <= topThreshold && 
                     elementBottom >= bottomThreshold;
-    
+
                 isVisible.current = entry.isIntersecting;
                 snapActive.current = isWithinThreshold;
             },
             { 
-                rootMargin: "-10% 0px -10% 0px", // Tighter margin
-                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] // More granular thresholds
+                rootMargin: "-10% 0px -10% 0px",
+                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
             }
         );
-    
+
         observer.observe(element);
-    
-        // Debounced scroll handler
-        let scrollTimeout;
+
         const handleScrollDebounced = () => {
-            if (scrollTimeout) window.cancelAnimationFrame(scrollTimeout);
+            if (rafId) cancelAnimationFrame(rafId);
             
-            scrollTimeout = window.requestAnimationFrame(() => {
-                handleScroll();
+            rafId = requestAnimationFrame(() => {
+                if (!isSnapping.current) handleScroll();
             });
         };
-    
+
         window.addEventListener("scroll", handleScrollDebounced, { passive: true });
-    
+
         return () => {
-            observer.unobserve(element);
+            if (rafId) cancelAnimationFrame(rafId);
+            if (observerTimeout) clearTimeout(observerTimeout);
+            if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+            if (observer) observer.disconnect();
+            
             window.removeEventListener("scroll", handleScrollDebounced);
-            window.cancelAnimationFrame(scrollTimeout);
-            clearTimeout(scrollTimeout.current);
+            
+            isVisible.current = false;
+            snapActive.current = false;
+            isSnapping.current = false;
         };
     }, [handleScroll]);
 

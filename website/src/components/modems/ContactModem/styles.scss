@@ -5563,8 +5563,8 @@
         
                                     .person__menu{
                                         position: absolute;
-                                        top: 150%;
-                                        left: -350%;
+                                        top: 100%;
+                                        left: -400%;
                                         width: 500%;
                                         display: flex;
                                         align-items: flex-start;
@@ -6105,10 +6105,11 @@
                                    width: 50%;
                                    height: 100%;
                                    padding: 0; 
+                                   display: flex;
                                    align-items: flex-start;
                                    justify-content: flex-start;
                                     p{
-                                        font-size: 1.4rem;
+                                        font-size: 1.2rem;
                                         white-space: nowrap;
                                     }
                                    .index{
@@ -6151,8 +6152,8 @@
                                     .person__menu{
                                         position: absolute;
                                         top: 100%;
-                                        left: -200%;
-                                        width: 400%;
+                                        left: -400%;
+                                        width: 500%;
                                         display: flex;
                                         align-items: flex-start;
                                         justify-content: flex-start;
@@ -6736,8 +6737,8 @@
                                     .person__menu{
                                         position: absolute;
                                         top: 100%;
-                                        left: -450%;
-                                        width: 600%;
+                                        left: -200%;
+                                        width: 400%;
                                         display: flex;
                                         align-items: flex-start;
                                         justify-content: flex-start;

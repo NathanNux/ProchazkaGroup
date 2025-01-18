@@ -24,6 +24,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 80%;
@@ -295,6 +296,39 @@
                         }
                     }
                 }
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0;
+                    right: -150%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
                 
             }
         
@@ -305,8 +339,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -367,36 +402,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -424,6 +429,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 80%;
@@ -511,18 +517,19 @@
                                     }
                                 }
                                 .Reviews_stats{
-                                    width: 80%;
+                                    width: 100%;
                                     height: 60%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -537,7 +544,7 @@
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -703,6 +710,39 @@
                         }
                     }
                 }
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0;
+                    right: -150%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
                 
             }
         
@@ -713,8 +753,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -775,36 +816,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -812,12 +823,12 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 110vh;
+            height: 100vh;
             background: #04444C;
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            padding: 5vh 2.5vw 5vh 2.5vw; 
+            padding: 0vh 2.5vw 0vh 2.5vw; 
             overflow: hidden;
             color: #fff;  
             margin-bottom: 15vh;  
@@ -832,6 +843,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -919,18 +931,19 @@
                                     }
                                 }
                                 .Reviews_stats{
-                                    width: 80%;
+                                    width: 100%;
                                     height: 60%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -945,7 +958,7 @@
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
@@ -1112,6 +1125,39 @@
                         }
                     }
                 }
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0;
+                    right: -150%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
                 
             }
         
@@ -1122,8 +1168,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -1184,36 +1231,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -1241,6 +1258,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -1328,42 +1346,43 @@
                                     }
                                 }
                                 .Reviews_stats{
-                                    width: 80%;
+                                    width: 100%;
                                     height: 60%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.8rem;
+                                            font-size: 2.4rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.8rem;
-                                            height: 2.8rem;
+                                            width: 2.4rem;
+                                            height: 2.4rem;
                                         }
                                     }
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.8rem;
+                                            font-size: 2.4rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.8rem;
-                                            height: 2.8rem;
+                                            width: 2.4rem;
+                                            height: 2.4rem;
                                         }
                                     }
                                 }
@@ -1524,7 +1543,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0;
+                    right: -150%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -1534,8 +1585,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -1596,36 +1648,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.4rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.3rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -1633,12 +1655,12 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 110vh;
+            height: 120vh;
             background: #04444C;
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            padding: 5vh 2.5vw 5vh 2.5vw; 
+            padding: 0vh 2.5vw 0vh 2.5vw; 
             overflow: hidden;
             color: #fff;  
             margin-bottom: 5vh;  
@@ -1653,6 +1675,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -1697,9 +1720,11 @@
                             width: 100%;
                             height: 100%;
                             display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
                             .Contact__Personal__choice__image__container{
                                 width: 50%;
-                                height: 100%;
+                                height: 80%;
             
                                 .Contact__Personal__choice__image{
                                     width: 20vw;
@@ -1721,61 +1746,62 @@
                             .Contact__Personal__choice__Data__container{
                                 position: relative;
                                 width: 80%;
-                                height: 100%;
+                                height: 80%;
                                 display: flex;
                                 flex-direction: column;
                                 align-items: flex-start;
-                                justify-content: flex-start;
+                                justify-content: flex-end;
                                 .Moto{
                                     height: 40%;
                                     width: 100%;
                                     display: flex;
                                     align-items: center;
-                                    justify-content: flex-start;
+                                    justify-content: flex-end;
                                     padding: 0 0 0 10%;
                                     p{
-                                        font-size: 1.2rem;
+                                        font-size: 1rem;
                                         width: 80%;
                                         text-align: left;
                                     }
                                 }
                                 .Reviews_stats{
-                                    width: 80%;
-                                    height: 60%;
+                                    width: 120%;
+                                    height: 50%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.4rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.4rem;
-                                            height: 2.4rem;
+                                            width: 2rem;
+                                            height: 2rem;
                                         }
                                     }
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.4rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.4rem;
-                                            height: 2.4rem;
+                                            width: 2rem;
+                                            height: 2rem;
                                         }
                                     }
                                 }
@@ -1791,6 +1817,8 @@
                         bottom: 5%;
                         left: 0;
                         display: flex;
+                        align-items: center;
+                        justify-content: space-between;
         
                         .devider{
                             position: absolute;
@@ -1807,6 +1835,7 @@
                             }
                         }
                         .header{
+                            height: 100%;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -1936,7 +1965,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0;
+                    right: -150%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -1946,8 +2007,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -2008,38 +2070,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            width: 80px;
-                            height: 80px;
-                            a{
-                                p{
-                                    font-size: 1.1rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -2067,10 +2097,11 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 90%;
-                    height: 20%;
+                    height: 30%;
                     display: flex;
                     gap: 0.5rem;
                     align-items: flex-start;
@@ -2139,57 +2170,58 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: flex-start;
-                                justify-content: flex-start;
+                                justify-content: center;
                                 .Moto{
                                     height: 40%;
-                                    width: 100%;
+                                    width: 120%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     p{
-                                        font-size: 1.2rem;
+                                        font-size: 1rem;
                                         width: 80%;
                                         text-align: left;
                                     }
                                 }
                                 .Reviews_stats{
-                                    width: 80%;
-                                    height: 60%;
+                                    width: 100%;
+                                    height: 40%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
                                     padding: 0 0 0 10%;
                                     position: relative;
+                                    gap: 1rem;
         
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.4rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.4rem;
-                                            height: 2.4rem;
+                                            width: 2rem;
+                                            height: 2rem;
                                         }
                                     }
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.4rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.4rem;
-                                            height: 2.4rem;
+                                            width: 2rem;
+                                            height: 2rem;
                                         }
                                     }
                                 }
@@ -2205,6 +2237,8 @@
                         bottom: 5%;
                         left: 0;
                         display: flex;
+                        align-items: center;
+                        justify-content: space-between;
         
                         .devider{
                             position: absolute;
@@ -2225,6 +2259,7 @@
                             align-items: center;
                             justify-content: center;
                             position: relative;
+                            height: 100%;
                             .index{
                                 height: 100%;
                                 display: flex;
@@ -2259,8 +2294,8 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: flex-start;
-                                padding-left: 2rem;
-                                padding-top: 0.5rem;
+                                padding-left: 1rem;
+                                padding-top: 0rem;
         
                                 p{
                                     font-size: 1.2rem;
@@ -2350,7 +2385,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0;
+                    right: -100%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -2360,8 +2427,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -2422,38 +2490,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            width: 80px;
-                            height: 80px;
-                            a{
-                                p{
-                                    font-size: 1.1rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -2461,7 +2497,7 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 200vh;
+            height: 220vh;
             background: #04444C;
             display: flex;
             align-items: center;
@@ -2472,7 +2508,7 @@
             margin-bottom: 5vh;  
         
             .Contact__Personal{
-                width: 60vw;
+                width: 100vw;
                 height: 100%;
                 position: relative;
                 display: flex;
@@ -2481,10 +2517,11 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
+                z-index: 80;
         
                 .Contact__Personal__header{
                     width: 90%;
-                    height: 20%;
+                    height: 30%;
                     display: flex;
                     gap: 0.5rem;
                     align-items: flex-start;
@@ -2526,12 +2563,12 @@
                             height: 100%;
                             display: flex;
                             .Contact__Personal__choice__image__container{
-                                width: 50%;
+                                width: 40%;
                                 height: 100%;
             
                                 .Contact__Personal__choice__image{
-                                    width: 20vw;
-                                    height: 20vw;
+                                    width: 25vw;
+                                    height: 25vw;
                                     border-radius: 50%;
                                     background-color: #fff;
                                     position: relative;
@@ -2548,12 +2585,12 @@
                             }
                             .Contact__Personal__choice__Data__container{
                                 position: relative;
-                                width: 80%;
+                                width: 100%;
                                 height: 100%;
                                 display: flex;
                                 flex-direction: column;
                                 align-items: flex-start;
-                                justify-content: flex-start;
+                                justify-content: center;
                                 .Moto{
                                     height: 40%;
                                     width: 100%;
@@ -2569,7 +2606,7 @@
                                 }
                                 .Reviews_stats{
                                     width: 80%;
-                                    height: 60%;
+                                    height: 40%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: flex-start;
@@ -2579,31 +2616,31 @@
                                     .ThumsUp{
                                         display: flex;
                                         width: 40%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.4rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.4rem;
-                                            height: 2.4rem;
+                                            width: 2rem;
+                                            height: 2rem;
                                         }
                                     }
                                     .Comments{
                                         display: flex;
                                         width: 50%;
-                                        gap: 1rem;
+                                        gap: 0.5rem;
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 2.4rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
-                                            width: 2.4rem;
-                                            height: 2.4rem;
+                                            width: 2rem;
+                                            height: 2rem;
                                         }
                                     }
                                 }
@@ -2703,8 +2740,8 @@
                             .person__menu{
                                 position: absolute;
                                 top: 100%;
-                                left: -200%;
-                                width: 500%;
+                                left: -100%;
+                                width: 200%;
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: flex-start;
@@ -2764,13 +2801,47 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: -10%;
+                    right: 0%;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.2rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
-                position: relative;
-                width: 55vw;
-                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100vw;
+                height: 85%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -2796,7 +2867,7 @@
                 }
         
                 .Contact__CTA__buttons{
-                    width: 100%;
+                    width: 80%;
                     height: 15%;
                     display: flex;
                     justify-content: flex-end;
@@ -2836,38 +2907,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            width: 80px;
-                            height: 80px;
-                            a{
-                                p{
-                                    font-size: 1.1rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -2901,6 +2940,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
+                z-index: 80;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -3120,8 +3160,8 @@
                             .person__menu{
                                 position: absolute;
                                 top: 80%;
-                                left: -20%;
-                                width: 300%;
+                                left: -50%;
+                                width: 200%;
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: flex-start;
@@ -3184,7 +3224,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: -5%;
+                    left: 0;
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -3258,39 +3330,6 @@
                         background-color: #5E758D;
                     }
                 }
-                .Contact__CTA__optional{
-                    position: absolute;
-                    bottom: 5%;
-                    left: 0;
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -3298,7 +3337,7 @@
         .Contact{
             position: relative;
             width: 100vw;
-            height: 140vh;
+            height: 120vh;
             background: #04444C;
             display: flex;
             flex-direction: row-reverse;
@@ -3320,6 +3359,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
+                z-index: 80;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -3547,8 +3587,8 @@
                             .person__menu{
                                 position: absolute;
                                 top: 80%;
-                                left: -20%;
-                                width: 300%;
+                                left: -50%;
+                                width: 200%;
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: flex-start;
@@ -3611,7 +3651,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: -10%;
+                    left: -20%;
+                    width: 150%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -3686,39 +3758,6 @@
                         z-index: 0;
                     }
                 }
-                .Contact__CTA__optional{
-                    position: absolute;
-                    bottom: 10%;
-                    left: 100%;
-                    width: 100%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.5rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -3748,6 +3787,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
+                z-index: 80;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -3861,7 +3901,7 @@
                                         align-items: center;
                                         justify-content: flex-end;
                                         p{
-                                            font-size: 3rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
@@ -3876,7 +3916,7 @@
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
@@ -3897,6 +3937,7 @@
                         top: 35%;
                         right: 0;
                         display: flex;
+                        z-index:  200;
         
                         .devider{
                             position: absolute;
@@ -4043,7 +4084,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0%;
+                    left: -5%;
+                    width: 150%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -4120,39 +4193,6 @@
                         z-index: 0;
                     }
                 }
-                .Contact__CTA__optional{
-                    position: absolute;
-                    bottom: 0%;
-                    left: 30%;
-                    width: 150%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.3rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -4182,6 +4222,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -4295,7 +4336,7 @@
                                         align-items: center;
                                         justify-content: flex-end;
                                         p{
-                                            font-size: 3rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
@@ -4310,7 +4351,7 @@
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
@@ -4477,87 +4518,10 @@
                         }
                     }
                 }
-                
-            }
-        
-            .Contact__CTA{
-                position: absolute;
-                top: 10vh;
-                left: 5%;
-                width: 50vw;
-                height: 80%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 5%;
-        
-                .Contact__CTA__Header{
-                    height: 40%;
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-start;
-                    margin-bottom: 0vh;
-                    
-                    p{
-                        position: absolute;
-                        width: 190%;
-                        top: -5%;
-                        left: -5%;
-                        text-align: left;
-                        margin: 0;
-                        font-size: 1.2rem;
-                    }
-                }
-        
-                .Contact__CTA__buttons{
-                    width: 100%;
-                    height: 15%;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    position: relative;
-                    gap: 5rem;
-        
-                    .Contact__CTA__buttons__container{
-                        position: absolute;
-                        left: 70%;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-                        gap: 5rem;
-                        
-                        .Svg__button_container{
-                            width: 110px;
-                            height: 110px;
-                             
-                            .Svg__button_subcontainer{
-                                 img{
-                                    width: 50px;
-                                    height: 50px; 
-                                 }
-                            }
-                        }
-                    }
-        
-                    .devider{
-                        position: absolute;
-                        width: 200%;
-                        height: 2px;
-                        top: 50%;
-                        left: 0;
-                        transform: translateY(-50%);
-                        background-color: #5E758D;
-                        z-index: 0;
-                    }
-                }
                 .Contact__CTA__optional{
                     position: absolute;
                     bottom: 0%;
-                    left: 30%;
+                    left: -10%;
                     width: 150%;
                     height: 20%;
                     display: flex;
@@ -4589,6 +4553,83 @@
                     }
                 }
             }
+        
+            .Contact__CTA{
+                position: absolute;
+                top: 10vh;
+                left: 5%;
+                width: 50vw;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 5%;
+                z-index: 1;
+        
+                .Contact__CTA__Header{
+                    height: 40%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    margin-bottom: 0vh;
+                    
+                    p{
+                        position: absolute;
+                        width: 190%;
+                        top: -5%;
+                        left: -5%;
+                        text-align: left;
+                        margin: 0;
+                        font-size: 1.2rem;
+                    }
+                }
+        
+                .Contact__CTA__buttons{
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: relative;
+                    gap: 5rem;
+        
+                    .Contact__CTA__buttons__container{
+                        position: absolute;
+                        left: 70%;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5rem;
+                        
+                        .Svg__button_container{
+                            width: 110px;
+                            height: 110px;
+                             
+                            .Svg__button_subcontainer{
+                                 img{
+                                    width: 50px;
+                                    height: 50px; 
+                                 }
+                            }
+                        }
+                    }
+        
+                    .devider{
+                        position: absolute;
+                        width: 200%;
+                        height: 2px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background-color: #5E758D;
+                        z-index: 0;
+                    }
+                }
+            }
         }
     }
     @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 500px) {
@@ -4617,6 +4658,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
+                z-index: 2;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -4730,7 +4772,7 @@
                                         align-items: center;
                                         justify-content: flex-end;
                                         p{
-                                            font-size: 3rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
@@ -4745,7 +4787,7 @@
                                         align-items: center;
                                         justify-content: flex-start;
                                         p{
-                                            font-size: 3rem;
+                                            font-size: 2rem;
                                             margin: 0;
                                         }
                                         img{
@@ -4766,6 +4808,7 @@
                         top: 35%;
                         right: 0;
                         display: flex;
+                        z-index: 100;
         
                         .devider{
                             position: absolute;
@@ -4912,7 +4955,39 @@
                         }
                     }
                 }
-                
+                .Contact__CTA__optional{
+                    position: absolute;
+                    bottom: 0%;
+                    left: -20%;
+                    width: 150%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .infoText{
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .devider__vertical{
+                        width: 2px;
+                        height: 25%;
+                        background-color: #fff;
+                        margin-right: 1rem;
+                    }
+                    .Button{
+                        .Round__button_container{
+                            a{
+                                p{
+                                    font-size: 1.4rem;
+                                    margin: 0;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         
             .Contact__CTA{
@@ -4926,6 +5001,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
+                z-index: 1;
         
                 .Contact__CTA__Header{
                     height: 40%;
@@ -4987,39 +5063,6 @@
                         transform: translateY(-50%);
                         background-color: #5E758D;
                         z-index: 0;
-                    }
-                }
-                .Contact__CTA__optional{
-                    position: absolute;
-                    bottom: 0%;
-                    left: 30%;
-                    width: 150%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    .infoText{
-                        font-size: 1.3rem;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .devider__vertical{
-                        width: 2px;
-                        height: 25%;
-                        background-color: #fff;
-                        margin-right: 1rem;
-                    }
-                    .Button{
-                        .Round__button_container{
-                            a{
-                                p{
-                                    font-size: 1.4rem;
-                                    margin: 0;
-                                    line-height: 1.2;
-                                }
-                            }
-                        }
                     }
                 }
             }

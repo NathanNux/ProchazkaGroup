@@ -48,6 +48,8 @@ const menuVariants = {
     }
 }
 
+//WIP: Add a map component to show the location of business
+//WIP: add optimiser for all devices so the anims are smooth
 export default function ContactBenefit() {
     const [peopleData, setPeopleData] = useState(staticPeople) // Přidáno
     const [ isOpen, setIsOpen ] = useState(false)
@@ -331,6 +333,13 @@ export default function ContactBenefit() {
                         <CopyText text='+420 777 898 157' type='phone'/>
                     </div>
                 </div>
+                <div className="Contact__CTA__optional">
+                    <p className="infoText">Jste více tradiční?</p>
+                    <div className="devider__vertical"/>
+                    <div className="Button" onClick={() => setIsOpen(true)}>
+                        <RoundButton href='' text='Použít E-mail' disableLink={true}/>
+                    </div>
+                </div>
             </div>
 
             <div className="Contact__CTA">
@@ -348,14 +357,6 @@ export default function ContactBenefit() {
                         </div>
                     </div>
                     <div className="devider"/>
-                </div>
-
-                <div className="Contact__CTA__optional">
-                    <p className="infoText">Jste více tradiční?</p>
-                    <div className="devider__vertical"/>
-                    <div className="Button" onClick={() => setIsOpen(true)}>
-                        <RoundButton href='' text='Použít E-mail' disableLink={true}/>
-                    </div>
                 </div>
             </div>
             <AnimatePresence mode="wait">

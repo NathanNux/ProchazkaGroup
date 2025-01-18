@@ -174,8 +174,6 @@ export default function Contact() {
         }
     }
 
-
-
     return (
         <section className="ContactMain" ref={sectionRef}>
             <div className="Contact__Personal">
@@ -371,7 +369,7 @@ export default function Contact() {
                             <p className="infoText">Jste více tradiční?</p>
                             <div className="devider__vertical"/>
                             <div className="Button" onClick={() => setIsOpen(true)}>
-                                <RoundButton href='/' text='Použít E-mail' />
+                                <RoundButton href='#' text='Použít E-mail' disableLink={true}/>
                             </div>
                         </div>
                         <div className="Contact__Personal__addInfo">

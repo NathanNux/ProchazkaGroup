@@ -3921,7 +3921,6 @@
     }
 }
 
-//WIP: here as example when the person-choice component is overlapping the buttons 
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
         .ContactMain{
@@ -5016,7 +5015,7 @@
                             }
                             .Contact__Personal__choice__Data__container{
                                 position: relative;
-                                width: 50%;
+                                width: 90%;
                                 height: 100%;
                                 display: flex;
                                 flex-direction: column;
@@ -5088,6 +5087,7 @@
                         bottom: 5%;
                         left: 0;
                         display: flex;
+                        justify-content: space-between;
         
                         .devider{
                             position: absolute;
@@ -5130,6 +5130,7 @@
         
                         .person__container{
                             position: relative;
+                            display: none;
                             width: 40%;
                             height: 100%;
         
@@ -5525,7 +5526,7 @@
                             }
                             .Contact__Personal__choice__Data__container{
                                 position: relative;
-                                width: 50%;
+                                width: 90%;
                                 height: 100%;
                                 display: flex;
                                 flex-direction: column;
@@ -5597,6 +5598,7 @@
                         bottom: 5%;
                         left: 0;
                         display: flex;
+                        justify-content: space-between;
         
                         .devider{
                             position: absolute;
@@ -5641,6 +5643,7 @@
                             position: relative;
                             width: 40%;
                             height: 100%;
+                            display: none;
         
                             .name{
                                 position: absolute;
@@ -6034,7 +6037,7 @@
                             }
                             .Contact__Personal__choice__Data__container{
                                 position: relative;
-                                width: 50%;
+                                width: 90%;
                                 height: 100%;
                                 display: flex;
                                 flex-direction: column;
@@ -6106,6 +6109,8 @@
                         bottom: 5%;
                         left: 0;
                         display: flex;
+                        justify-content: space-between;
+
         
                         .devider{
                             position: absolute;
@@ -6150,6 +6155,7 @@
                             position: relative;
                             width: 40%;
                             height: 100%;
+                            display: none;
         
                             .name{
                                 position: absolute;
