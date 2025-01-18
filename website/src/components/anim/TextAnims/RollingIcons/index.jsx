@@ -48,6 +48,8 @@ const RollingLogos = ({ baseVelocity = 100, childrenCount, Scroll }) => {
                             width={200}
                             height={150}
                             style={{ objectFit: 'contain' }}
+                            quality={60}
+                            loading='lazy'
                         />
                     </div>
                 )})}
