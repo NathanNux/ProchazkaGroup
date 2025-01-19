@@ -86,6 +86,9 @@ export default function ReviewsIntro () {
     
     return (
         <section className="ReviewsIntro">
+            <div className="header">
+                <h2>η</h2>
+            </div>
             <motion.div 
                 className="ReviewsIntro__Wrapper"
                 initial="initial"

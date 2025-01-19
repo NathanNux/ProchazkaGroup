@@ -7,17 +7,22 @@
     justify-content: flex-end;
     background-color: #fff;
     flex-direction: column;
-
-    .Index{
+    .header{
         position: fixed;
-        top: 2.5%;
-        left: 2.5%;
+        top: 0;
+        left: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 60;
+        gap: 1rem;
         mix-blend-mode: difference;
-        color: #fff;
+        
         h2{
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 1.5rem;
             margin: 0;
+            color: #fff;
         }
     }
 

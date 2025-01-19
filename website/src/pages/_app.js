@@ -6,6 +6,7 @@ import { LoadProvider } from "@/context/LoadProvider";
 import { CursorRefProvider } from "@/context/CursorRefProvider";
 import Transition from "@/components/anim/Transition";
 import { Toaster } from "@/components/ui/toaster";
+import { PerformanceProvider } from "@/context/PerformanceProvider";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -33,13 +34,15 @@ export default function App({ Component, pageProps }) {
 
 
   return (
-    <LoadProvider>
-      <CursorRefProvider>
+    <PerformanceProvider>
+      <LoadProvider>
+        <CursorRefProvider>
           <Transition> 
             <Component {...pageProps} />
             <Toaster />
           </Transition>
-      </CursorRefProvider>
-    </LoadProvider>
+        </CursorRefProvider>
+      </LoadProvider>
+    </PerformanceProvider>
   );
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function BlogPostIntro() {
     return (
         <section className="BlogPostIntro">
-            <div className="Index">
+            <div className="header">
                 <h2>η</h2>
             </div>
             <div className="bakcground_image">

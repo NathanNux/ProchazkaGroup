@@ -68,6 +68,9 @@ export default function MainIntro () {
     
     return (
         <section className="MainIntro">
+            <div className="header">
+                <h2>η</h2>
+            </div>
             <motion.div 
                 className="MainIntro__Wrapper"
                 initial="initial"

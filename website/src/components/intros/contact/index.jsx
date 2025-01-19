@@ -18,6 +18,9 @@ export default function ContactIntro({name, number, moto, databaseName, icons}) 
     const points = TestPeople.length
     return (
         <section className="ContactIntro" ref={sectionRef}>
+            <div className="headerPage">
+                <h2>η</h2>
+            </div>
             <div className="background__img">
                 <Image 
                     src='/assets/reviewsBackground.webp' 

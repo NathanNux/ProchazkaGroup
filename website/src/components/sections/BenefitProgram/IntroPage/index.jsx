@@ -58,6 +58,9 @@ export default function IntroPageBenefit() {
                 borderBottomRightRadius: borderRadiusValue,
             }}
         > 
+            <div className="header">
+                <h2>η</h2>
+            </div>
             <Image 
                 src="/background/benefit.webp" 
                 alt="Benefit Program Intro Page" 
