@@ -24,30 +24,30 @@ export const StatbarData = [
 export const deals = [
     {
         number: '01',
-        content: 'Ušetříme Vám min. 500,- hned<br/>po první schůzce,'
+        content: 'Ušetříme Vám min. 500,- hned po první schůzce,'
     },
     {
         number: '02',
-        content: 'Hned druhý den začneme, do<br/>5 dnů vyřešíme a zavoláme'
+        content: 'Hned druhý den začneme, do 5 dnů vyřešíme a zavoláme'
     },
     {
         number: '03',
-        content: 'Nevyžadujeme žádné skryté<br/>smlouvy'
+        content: 'Nevyžadujeme žádné skryté smlouvy'
     }
 ]
 
 export const quarentees = [
     {
         number: '01',
-        content: 'A když ne, dáme 500,- Vám<br/>ve slevách, nebo v hotovosti'
+        content: 'A když ne, dáme 500,- Vám ve slevách, nebo v hotovosti'
     },
     {
         number: '02',
-        content: 'Zpoždění? dáme vám naši<br/>limitovanou slevu k tomu'
+        content: 'Zpoždění? dáme vám naši limitovanou slevu k tomu'
     },
     {
         number: '03',
-        content: 'Ale jsme upřímní s naši<br/>pomocí, takže choďte na čas.'
+        content: 'Ale jsme upřímní s naši pomocí, takže choďte na čas.'
     }
 ]
 

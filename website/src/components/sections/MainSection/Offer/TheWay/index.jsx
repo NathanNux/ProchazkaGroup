@@ -100,7 +100,7 @@ export default function TheWay() {
                                         <h3>
                                             {number}
                                         </h3>
-                                        <SubText text={text}/>
+                                        <p>{text}</p>
                                     </div>
                                 )
                             })}

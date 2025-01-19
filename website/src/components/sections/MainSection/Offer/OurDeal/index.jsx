@@ -70,7 +70,7 @@ export default function OurDeal() {
                                 <h3>
                                     {number}
                                 </h3>
-                                <SubText initialColor="#050A10" text={content}/>
+                                <p>{content}</p>
                             </div>
                         )
                     })}
@@ -85,7 +85,7 @@ export default function OurDeal() {
                                 <h3>
                                     {number}
                                 </h3>
-                                <SubText initialColor="#050A10" text={content}/>
+                                <p>{content}</p>
                             </div>
                         )
                     })}  

@@ -40,7 +40,11 @@ export default function Reality() {
             <div className="Graph__container">
                 <div className="header__text">
                     <h3>δ |</h3>
-                    <SubText initialColor="#fff" secondaryColor="#00F0FF" text='Představte si, že každá rodina na tomhle grafu, <br/><span>[kde jsou reální lidé]</span> má a bude mít neskutečný stres, dilema a radost života jim úplně zmizí. <br/>Opravdu chcete zapadnout mezi ně?'/>
+                    <p>
+                        Představte si, že každá rodina na tomhle grafu, <br/>
+                        <span>[kde jsou reální lidé]</span> má a bude mít neskutečný stres, dilema a radost života jim úplně zmizí. <br/>
+                        Opravdu chcete zapadnout mezi ně?
+                    </p>
                 </div>
                 <div className="graph__wrapper">
                     <AreaChart
