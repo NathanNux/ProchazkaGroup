@@ -343,8 +343,6 @@ export default function Contact() {
                                         priority={false}
                                         loading="lazy"
                                         quality={60}
-                                        placeholder="blur"
-                                        blurDataURL="data:image/svg"
                                     />
                                 </motion.div>
                             </motion.button>

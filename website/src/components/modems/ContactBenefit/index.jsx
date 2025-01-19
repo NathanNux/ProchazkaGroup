@@ -325,8 +325,6 @@ export default function ContactBenefit() {
                                         quality={60}
                                         loading="lazy"
                                         priority={false}
-                                        placeholder="blur"
-                                        blurDataURL="data:image/svg"
                                     />
                                 </motion.div>
                             </motion.button>

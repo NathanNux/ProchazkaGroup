@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @media (min-aspect-ratio: 1/1) {
     @media only screen and ( min-width: 1730px) {
         .BenefitRewards {
@@ -500,12 +502,14 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 15px; // Diameter of each circle
-                        $segment-length: 10vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 21.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 15px;
+                        $segment-length: 10vw;
+                        $segment-height: 4px;
+                        $radius: 21.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -518,15 +522,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -542,25 +547,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -787,12 +792,14 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 15px; // Diameter of each circle
-                        $segment-length: 10vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 21.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 15px;
+                        $segment-length: 10vw;
+                        $segment-height: 4px;
+                        $radius: 21.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -805,15 +812,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -829,25 +837,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -1074,12 +1082,14 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 15px; // Diameter of each circle
-                        $segment-length: 10vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 18.75vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 15px;
+                        $segment-length: 10vw;
+                        $segment-height: 4px;
+                        $radius: 18.75vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -1092,15 +1102,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -1116,25 +1127,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -1361,12 +1372,14 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 15px; // Diameter of each circle
-                        $segment-length: 10vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 18.75vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 15px;
+                        $segment-length: 10vw;
+                        $segment-height: 4px;
+                        $radius: 18.75vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -1379,15 +1392,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -1403,25 +1417,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -1648,12 +1662,14 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 15px; // Diameter of each circle
-                        $segment-length: 10vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 18.75vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 15px;
+                        $segment-length: 10vw;
+                        $segment-height: 4px;
+                        $radius: 18.75vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -1666,15 +1682,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -1690,25 +1707,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -1935,12 +1952,14 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 15px; // Diameter of each circle
-                        $segment-length: 10vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 18.75vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 15px;
+                        $segment-length: 10vw;
+                        $segment-height: 4px;
+                        $radius: 18.75vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -1953,15 +1972,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -1977,25 +1997,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -2225,13 +2245,15 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 20px; // Diameter of each circle
-                        $segment-length: 15vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 32.25vw; // Distance from center to the start of segments/circles
-                        $radius-segments: 31.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 20px;
+                        $segment-length: 15vw;
+                        $segment-height: 4px;
+                        $radius: 32.25vw;
+                        $radius-segments: 31.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -2244,15 +2266,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -2268,25 +2291,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius-segments) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius-segments)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -2513,13 +2536,15 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 20px; // Diameter of each circle
-                        $segment-length: 15vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 32.25vw; // Distance from center to the start of segments/circles
-                        $radius-segments: 31.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 20px;
+                        $segment-length: 15vw;
+                        $segment-height: 4px;
+                        $radius: 32.25vw;
+                        $radius-segments: 31.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -2532,15 +2557,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -2556,25 +2582,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius-segments) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius-segments)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -2801,13 +2827,15 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 20px; // Diameter of each circle
-                        $segment-length: 15vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 37.25vw; // Distance from center to the start of segments/circles
-                        $radius-segments: 36.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 20px;
+                        $segment-length: 15vw;
+                        $segment-height: 4px;
+                        $radius: 37.25vw;
+                        $radius-segments: 36.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -2820,15 +2848,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -2844,25 +2873,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius-segments) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius-segments)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -3089,13 +3118,15 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 20px; // Diameter of each circle
-                        $segment-length: 15vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 37.25vw; // Distance from center to the start of segments/circles
-                        $radius-segments: 36.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 20px;
+                        $segment-length: 15vw;
+                        $segment-height: 4px;
+                        $radius: 37.25vw;
+                        $radius-segments: 36.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -3108,15 +3139,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -3132,25 +3164,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius-segments) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius-segments)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }
@@ -3377,13 +3409,15 @@
                         pointer-events: none;
                     
                         // SCSS Variables
-                        $num-points: 8; // Number of segments/circles
-                        $circle-size: 20px; // Diameter of each circle
-                        $segment-length: 15vw; // Length of each segment
-                        $segment-height: 4px; // Thickness of each segment
-                        $radius: 37.25vw; // Distance from center to the start of segments/circles
-                        $radius-segments: 36.25vw; // Distance from center to the start of segments/circles
-                        $angle-per-point: -360deg / $num-points; // Negative for clockwise rotation
+                        $num-points: 8;
+                        $circle-size: 20px;
+                        $segment-length: 15vw;
+                        $segment-height: 4px;
+                        $radius: 37.25vw;
+                        $radius-segments: 36.25vw;
+                    
+                        // Using calc() for division
+                        $angle-per-point: calc(-360deg / #{$num-points});
                     
                         // Position Circles
                         @for $i from 1 through $num-points {
@@ -3396,15 +3430,16 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%)
-                                        rotate($angle-per-point * ($i - 1) - 90deg)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) - 90deg))
                                         translate($radius)
-                                        rotate(-$angle-per-point * ($i - 1)); // Adjust final rotation for correct orientation
+                                        rotate(calc(-1 * #{$angle-per-point} * (#{$i} - 1)));
                                 z-index: 2;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
@@ -3420,25 +3455,25 @@
                                 width: $segment-length;
                                 height: $segment-height;
                                 border: #5E758D 1px solid;
-                                border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                border-radius: calc(#{$segment-height} / 2);
                                 top: 50%;
                                 left: 50%;
-                                // Offset by half of $angle-per-point to place the segment between circles
-                                transform: translate(-50%, -50%) // Center origin for correct alignment
-                                        rotate($angle-per-point * ($i - 1) + ($angle-per-point / 2) - 90deg) // Adjusted for clockwise direction
-                                        translate($radius-segments) // Move along the radius
-                                        rotate(90deg); // Make the segment tangent to the circular path
-                                transform-origin: center; // Rotate around the center point
+                                transform: translate(-50%, -50%)
+                                        rotate(calc(#{$angle-per-point} * (#{$i} - 1) + (#{$angle-per-point} / 2) - 90deg))
+                                        translate($radius-segments)
+                                        rotate(90deg);
+                                transform-origin: center;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 overflow: hidden;
-                                div{
+                                
+                                div {
                                     width: 100%;
                                     height: 100%;
                                     background-color: #04444C;
-                                    border-radius: $segment-height / 2; // Rounded ends for a pill shape
+                                    border-radius: calc(#{$segment-height} / 2);
                                 }
                             }
                         }

@@ -123,8 +123,6 @@ export default function TestimonialsMain () {
                                                     priority={false}
                                                     quality={60}
                                                     loading="lazy"
-                                                    placeholder="blur"
-                                                    blurDataURL="data:image/svg"
                                                 />
                                             </button>
                                             <p>|</p>
@@ -137,8 +135,6 @@ export default function TestimonialsMain () {
                                                     priority={false}
                                                     quality={60}
                                                     loading="lazy"
-                                                    placeholder="blur"
-                                                    blurDataURL="data:image/svg"
                                                 />
                                             </button>
                                             </div>

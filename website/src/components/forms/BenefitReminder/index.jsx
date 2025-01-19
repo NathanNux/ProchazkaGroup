@@ -206,8 +206,6 @@ export default function BenefitReminder() {
                                                                 quality={60}
                                                                 priority={false}
                                                                 loading="lazy"
-                                                                placeholder="blur"
-                                                                blurDataURL="data:image/svg"
                                                             />
                                                         </motion.div>
                                                     </motion.button>

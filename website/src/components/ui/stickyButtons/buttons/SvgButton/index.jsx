@@ -97,8 +97,6 @@ export default function SVGButton({ src, altText, onClick }) {
                             priority={false} 
                             quality={80} 
                             loading="lazy"
-                            placeholder="blur"
-                            blurDataURL="data:image/svg"
                         />
                     </div>
             </motion.div>

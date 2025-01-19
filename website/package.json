@@ -24,6 +24,7 @@
     "@tremor/react": "^3.18.6",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
+    "babel-loader": "^9.2.1",
     "babel-plugin-react-compiler": "^19.0.0-beta-b2e8e9c-20241220",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
