@@ -200,7 +200,17 @@ export default function FeedbackForm({ scroll }) {
                 <div className="map__container">
                     <div className="Header">
                         <p>Kde nás najdete | mapa</p>
-                        <Image  src='/svg/mapIcon.svg' alt='map_icon' width={35} height={35}/>
+                        <Image  
+                            src='/svg/mapIcon.svg'
+                            alt='map_icon' 
+                            width={35} 
+                            height={35}
+                            quality={60}
+                            loading='lazy'
+                            placeholder='blur'
+                            blurDataURL='data:image/svg'
+                            priority={false}
+                        />
                     </div>
                     <div className="Map">
                         <div  className="Map__div"/>

@@ -145,7 +145,16 @@ export default function AboutInto( ){
                         <h2>η</h2>
                     </div>
                     <div className="cover"/>
-                    <Image src='/assets/aboutBackground.png' alt="background-photo" fill={true}/>
+                    <Image 
+                        src='/assets/aboutBackground.webp' 
+                        alt="background-photo" 
+                        fill={true}
+                        sizes="100vw"
+                        priority={true}
+                        quality={100}
+                        placeholder="blur"
+                        blurDataURL="data:image/webp"
+                    />
                     <div className="mainHeader">
                         <PageHeading text="JSME TU PRO VÁS UŽ PŘES<br/><span>JEDNU DEKÁDU</span>"/>
                     </div>
@@ -155,7 +164,16 @@ export default function AboutInto( ){
                             scale: imageAnimScale
                         }}
                     >
-                        <Image  src='/assets/aboutPhoto.png' alt="team_photo" fill={true}/>
+                        <Image  
+                            src='/assets/aboutPhoto.webp' 
+                            alt="team_photo" 
+                            fill={true}
+                            sizes="50vw"
+                            priority={true}
+                            quality={100}
+                            placeholder="blur"
+                            blurDataURL="data:image/webp"
+                        />
                     </motion.div>
                 </div>
             </motion.section>

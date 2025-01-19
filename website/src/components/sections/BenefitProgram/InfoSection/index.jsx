@@ -182,7 +182,16 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                     style={{x: coverMove}}
                 >
                     <div  className="cover"/>
-                    <Image  src='/assets/backgroundSection.png' alt='background__section' fill={true}/>
+                    <Image  
+                        src='/assets/backgroundSection.webp' 
+                        alt='background__section' 
+                        fill={true}
+                        sizes="100vw"
+                        quality={100}
+                        priority={true}
+                        placeholder="blur"
+                        blurDataURL="data:image/webp"
+                    />
                     <div className="mainHeader">
                         <SubText initialColor="#fff" text={'JDE O VYTVOŘENÍ NĚČEHO, CO<br/> VYDRŽÍ GENERACE—VĚTŠÍ<br/> NEŽ MY, VĚTŠÍ NEŽ VY,<br/> VYTVOŘÍME TRVALÝ DOPAD'}/>
                     </div>

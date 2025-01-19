@@ -1,8 +1,10 @@
 // index.jsx
 
+import Magnetic from "@/components/anim/Magnetic";
 import { icons } from "@/constants/pages/reviews";
 import { useScroll, useTransform, motion, animate } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState, useMemo, useCallback, useLayoutEffect, useEffect } from "react";
 
 
@@ -80,7 +82,7 @@ export default function AboutTeam() {
             name: "John Doe",
             number: '01',
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            src: "/svg/tree.png",
+            src: "/svg/tree.webp",
             alt: "profile_pic1",
             photo1: '/assets/reviewsBackground.png',
             altText1: 'asset1',
@@ -122,7 +124,7 @@ export default function AboutTeam() {
             name: "Jane Doe",
             number: '04',
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                src: "/svg/tree.png",
+                src: "/svg/tree.webp",
             alt: "profile_pic1",
             photo1: '/assets/reviewsBackground.png',
             altText1: 'asset1',
@@ -178,7 +180,7 @@ export default function AboutTeam() {
             name: "Jane Doe",
             number: '08',
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            src: "/svg/tree.png",
+            src: "/svg/tree.webp",
             alt: "profile_pic1",
             photo1: '/assets/reviewsBackground.png',
             altText1: 'asset1',
@@ -387,18 +389,20 @@ export default function AboutTeam() {
                     </div>
                     <div className="AboutTeam__MainInfo__icons__container">
                         <div className="AboutTeam__MainInfo__icons">
-                            {icons.map((icon, i) => (
-                                <div key={i} className="AboutTeam__MainInfo__icon">
-                                    <Image
-                                        src={icon.src}
-                                        alt={icon.name}
-                                        width={30}
-                                        height={30}
-                                        priority
-                                        quality={100}
-                                    />
-                                </div>
-                            ))}
+                            {icons.map((icon, i) => {
+                                const IconComponent = icon.src;
+                                return (
+                                    <Magnetic key={`magnetic-${icon.name}`} sensitivity={0.1}>
+                                        <Link href={icon.href}>
+                                            <IconComponent 
+                                                size={40}
+                                                aria-label={icon.name}
+                                                className="social__icon"
+                                            />
+                                        </Link>
+                                    </Magnetic>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
@@ -428,7 +432,17 @@ export default function AboutTeam() {
                                 className="AboutTeam__Collage__pic"
                                 style={{ opacity: person.imageAnim }}
                             >
-                                <Image src={person.src} alt={person.alt} fill={true}/>
+                                <Image 
+                                    src={person.src} 
+                                    alt={person.alt}
+                                    fill={true}
+                                    sizes="50vw"
+                                    quality={100}
+                                    priority={false}
+                                    loading="lazy"
+                                    placeholder="blur"
+                                    blurDataURL="data:image/webp"
+                                />
                             </motion.div>
                         ))}
                     </div>

@@ -103,7 +103,16 @@ export default function ReviewsIntro () {
                 </motion.div>
                 
                 <div className="cover"/>
-                <Image src='/assets/reviewsBackground.png' alt="background" fill={true}/>
+                <Image 
+                    src='/assets/reviewsBackground.webp' 
+                    alt="background" 
+                    fill={true}
+                    sizes="100vw"
+                    quality={100}
+                    priority={true}
+                    placeholder="blur"
+                    blurDataURL="data:image/webp"
+                />
                 <div className="rect__container">
                     <div className="rect__Wrapper">
                         {Array.from({length: 3}, (_, i) => (
@@ -126,7 +135,17 @@ export default function ReviewsIntro () {
                                 return(
                                     <div className="stat" key={i}>
                                         <p>{number}</p>
-                                        <Image src={src} alt={alt} width={50} height={50}/>
+                                        <Image 
+                                            src={src} 
+                                            alt={alt} 
+                                            width={50} 
+                                            height={50}
+                                            quality={60}
+                                            loading='lazy'
+                                            placeholder='blur'
+                                            blurDataURL='data:image/svg'
+                                            priority={false}
+                                        />
                                     </div>
                                 )
                             })}

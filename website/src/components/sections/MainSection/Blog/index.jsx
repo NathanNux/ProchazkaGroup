@@ -24,7 +24,7 @@ export default function Blog () {
     return (
         <div className="Blog">
             <div className="image__container">
-                <CustomImage src='/assets/reviewsBackground.png' altText='about-image'/>
+                <CustomImage src='/assets/reviewsBackground.webp' altText='about-image'/>
             </div>
             <div className="Content__wrapper">
                 <div className="header">

@@ -184,7 +184,17 @@ export default function ContactBenefit() {
                                                 exit={{ opacity: 0, x: -100 }}
                                                 transition={{ duration: 0.2 }}
                                             >
-                                                <Image src={peopleData[activeIndex].src} alt={peopleData[activeIndex].alt} fill={true}/>
+                                                <Image 
+                                                    src={peopleData[activeIndex].src} 
+                                                    alt={peopleData[activeIndex].alt} 
+                                                    fill={true}
+                                                    sizes="50vw"
+                                                    quality={100}
+                                                    priority={false}
+                                                    loading="lazy"
+                                                    placeholder="blur"
+                                                    blurDataURL="data:image/webp"
+                                                />
                                             </motion.div>
                                         </AnimatePresence>
                                     </div>
@@ -218,7 +228,17 @@ export default function ContactBenefit() {
                                                     }}
                                                 >
                                                     <p>{peopleData[activeIndex].likes}</p>
-                                                    <Image  src='/svg/thumbsup.svg' alt="thumbsUp_icon" width={50} height={50}/> 
+                                                    <Image  
+                                                        src='/svg/thumbsup.svg' 
+                                                        alt="thumbsUp_icon" 
+                                                        width={50} 
+                                                        height={50}
+                                                        priority={false}
+                                                        quality={60}
+                                                        loading="lazy"
+                                                        placeholder="blur"
+                                                        blurDataURL="data:image/svg"
+                                                    /> 
                                                 </motion.div>
                                             </AnimatePresence>
 
@@ -235,7 +255,17 @@ export default function ContactBenefit() {
                                                     }}
                                                 >
                                                     <p>{peopleData[activeIndex].reviews}</p>
-                                                    <Image  src='/svg/comment.svg' alt="reviews__icon" width={50} height={50}/> 
+                                                    <Image  
+                                                        src='/svg/comment.svg' 
+                                                        alt="reviews__icon" 
+                                                        width={50} 
+                                                        height={50}
+                                                        priority={false}
+                                                        quality={60}
+                                                        loading="lazy"
+                                                        placeholder="blur"
+                                                        blurDataURL="data:image/svg"
+                                                    /> 
                                                 </motion.div>
                                             </AnimatePresence>
                                         </div>
@@ -287,7 +317,17 @@ export default function ContactBenefit() {
                                     transition={{ duration: 0.2 }}
                                     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
-                                    <Image src='/svg/arrow-left.svg' alt="arrow" width={30} height={30} />
+                                    <Image 
+                                        src='/svg/arrow-left.svg' 
+                                        alt="arrow"
+                                        width={30} 
+                                        height={30} 
+                                        quality={60}
+                                        loading="lazy"
+                                        priority={false}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/svg"
+                                    />
                                 </motion.div>
                             </motion.button>
 

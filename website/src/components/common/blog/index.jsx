@@ -6,6 +6,8 @@ import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
 import SmallButton from "@/components/ui/stickyButtons/buttons/SmallButton";
+import Link from "next/link";
+import Magnetic from "@/components/anim/Magnetic";
 
 
 
@@ -36,7 +38,17 @@ function BlogHeader () {
                             <h3>
                                 {time || data}
                             </h3>
-                            <Image src={src2} alt={alt} width={30} height={30}/>
+                            <Image 
+                                src={src2} 
+                                alt={alt} 
+                                width={30} 
+                                height={30} 
+                                loading="lazy" 
+                                quality={50} 
+                                priority={false}
+                                placeholder="blur"
+                                blurDataURL="data:image/svg"
+                            />
                         </div>
                     )
                 })}
@@ -386,9 +398,20 @@ function CommentForm () {
                         Sdílejte jim to! Ať o tohle nepřijdou!</p>
                     </div>
                     <div className="icons">
-                        {icons.map((icon, i) => (
-                            <Image src={icon.src} alt={icon.name} key={`icons${i}`} width={50} height={50}/>
-                        ))}
+                        {icons.map((icon, i) => {
+                            const IconComponent = icon.src;
+                            return (
+                                <Magnetic key={`magnetic-${icon.name}`} sensitivity={0.1}>
+                                    <Link href={icon.href}>
+                                        <IconComponent 
+                                            size={40}
+                                            aria-label={icon.name}
+                                            className="social__icon"
+                                        />
+                                    </Link>
+                                </Magnetic>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
@@ -475,7 +498,7 @@ function CommentsList() {
                         return (
                             <div className="stat" key={`stat${i}`}>
                                 <p>{data}</p>
-                                {data && <Image src={src2} alt={alt} width={50} height={50}/>}
+                                {data && <Image src={src2} alt={alt} width={50} height={50} quality={50} priority={false} loading="lazy"placeholder="blur" blurDataURL="data:image/svg"/>}
                             </div>
                         )
                     })}
@@ -511,7 +534,7 @@ function CommentsList() {
 
                                     <div className="comment__header__likes">
                                         <h3>{likes}</h3>
-                                        <Image src='/svg/thumbsUpblack.svg' alt="thumbsUp-icon" width={30} height={30}/>
+                                        <Image src='/svg/thumbsUpblack.svg' alt="thumbsUp-icon" width={30} height={30} quality={50} priority={false} loading="lazy" placeholder="blur" blurDataURL="data:image/svg"/>
                                         <SVGButton src='/svg/thumbsUp.svg' altText='thumbsUp-icon'/>
                                     </div>
                                 </div>

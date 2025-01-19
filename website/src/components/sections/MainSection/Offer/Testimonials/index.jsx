@@ -129,7 +129,7 @@ export default function Testimonials () {
                 </motion.div>
             </div>
             <div className="image__container">
-                <CustomImage src='/assets/reviewsBackground.png' altText='about-image'/>
+                <CustomImage src='/assets/reviewsBackground.webp' altText='about-image'/>
             </div> 
             <div className="Testimonials__Carousel__container">
                 <div className="Testimonials__Carousel__subContainer">
@@ -175,11 +175,31 @@ export default function Testimonials () {
                                             </p>
                                             <div className="Testimonials__Carousel__container__item__header__controls">
                                             <button onClick={() => handlePrev(idx)}>
-                                                <Image src="/svg/arrow-left.svg" alt="Arrow Left" width={20} height={20} />
+                                                <Image 
+                                                    src="/svg/arrow-left.svg" 
+                                                    alt="Arrow Left" 
+                                                    width={20} 
+                                                    height={20}
+                                                    priority={false}
+                                                    quality={60}
+                                                    loading="lazy"
+                                                    placeholder="blur"
+                                                    blurDataURL="data:image/svg"
+                                                />
                                             </button>
                                             <p>|</p>
                                             <button onClick={() => handleNext(idx)}>
-                                                <Image src="/svg/arrow-right.svg" alt="Arrow Right" width={20} height={20} />
+                                                <Image 
+                                                    src="/svg/arrow-right.svg" 
+                                                    alt="Arrow Right" 
+                                                    width={20} 
+                                                    height={20} 
+                                                    priority={false}
+                                                    quality={60}
+                                                    loading="lazy"
+                                                    placeholder="blur"
+                                                    blurDataURL="data:image/svg"
+                                                />
                                             </button>
                                             </div>
                                         </div>

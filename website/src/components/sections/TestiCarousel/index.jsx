@@ -115,11 +115,31 @@ export default function TestimonialsMain () {
                                             </p>
                                             <div className="TestimonialsMain__Carousel__container__item__header__controls">
                                             <button onClick={() => handlePrev(idx)}>
-                                                <Image src="/svg/arrow-left.svg" alt="Arrow Left" width={25} height={25} />
+                                                <Image 
+                                                    src="/svg/arrow-left.svg" 
+                                                    alt="Arrow Left" 
+                                                    width={25} 
+                                                    height={25} 
+                                                    priority={false}
+                                                    quality={60}
+                                                    loading="lazy"
+                                                    placeholder="blur"
+                                                    blurDataURL="data:image/svg"
+                                                />
                                             </button>
                                             <p>|</p>
                                             <button onClick={() => handleNext(idx)}>
-                                                <Image src="/svg/arrow-right.svg" alt="Arrow Right" width={25} height={25} />
+                                                <Image 
+                                                    src="/svg/arrow-right.svg" 
+                                                    alt="Arrow Right" 
+                                                    width={25} 
+                                                    height={25} 
+                                                    priority={false}
+                                                    quality={60}
+                                                    loading="lazy"
+                                                    placeholder="blur"
+                                                    blurDataURL="data:image/svg"
+                                                />
                                             </button>
                                             </div>
                                         </div>

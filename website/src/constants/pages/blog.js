@@ -1,3 +1,11 @@
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaLinkedinIn, 
+  FaTwitter, 
+  FaYoutube,
+  FaGlobe
+} from 'react-icons/fa';
 export const BlogData = [
     {
         time: '10min',
@@ -90,7 +98,7 @@ export const BlogPostData = [
           
           Remember, building an emergency fund takes time. Start small and be consistent in your savings efforts to achieve long-term financial security.`,
       alt: 'image_1',
-      src: '/assets/reviewsBackground.png',
+      src: '/assets/reviewsBackground.webp',
       styles: {
         // Add any custom styles here
       },
@@ -392,11 +400,10 @@ export const comments = [
 
 
 export const icons = [
-  // WIP: Add any custom icons here
-    { name: "facebook", src: "/thumbsUp.png" },
-    { name: "instagram", src: "/thumbsUp.png" },
-    { name: "linkedin", src: "/thumbsUp.png" },
-    { name: "twitter", src: "/thumbsUp.png" },
-    { name: "youtube", src: "/thumbsUp.png" },
-    { name: "mainWeb", src: "/thumbsUp.png" }
+  { name: "facebook", src: FaFacebookF, href: "https://www.facebook.com" },
+  { name: "instagram", src: FaInstagram, href: "https://www.instagram.com" },
+  { name: "linkedin", src: FaLinkedinIn, href: "https://www.linkedin.com" },
+  { name: "twitter", src: FaTwitter, href: "https://www.twitter.com" },
+  { name: "youtube", src: FaYoutube, href: "https://www.youtube.com" },
+  { name: "mainWeb", src: FaGlobe, href: "https://www.prochazkagroup.cz" }
 ];

@@ -89,7 +89,17 @@ export default function SVGButton({ src, altText, onClick }) {
             <motion.div transformTemplate={template} onClick={onClick} ref={buttonRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Svg__button_container'>
                 <div ref={ButtonBoundsRef} className='Svg__button_Bounds'></div>
                     <div className="Svg__button_subcontainer" ref={textRef}>
-                        <Image src={src} alt={altText} width={25} height={25}/>
+                        <Image 
+                            src={src} 
+                            alt={altText} 
+                            width={25} 
+                            height={25}
+                            priority={false} 
+                            quality={80} 
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL="data:image/svg"
+                        />
                     </div>
             </motion.div>
         </Magnetic>

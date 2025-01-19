@@ -1,14 +1,15 @@
 //NOTE:FeedBack and contact are switched
 
+import Magnetic from "@/components/anim/Magnetic";
 import SubText from "@/components/anim/TextAnims/SubText";
 import ContactForm from "@/components/forms/contact";
-import { icons } from "@/constants/pages/reviews";
 import { people, TestPeople } from "@/constants/people";
 import { useScroll } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
-export default function ContactIntro({name, number, moto, databaseName}) {
+export default function ContactIntro({name, number, moto, databaseName, icons}) {
     const sectionRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -18,7 +19,17 @@ export default function ContactIntro({name, number, moto, databaseName}) {
     return (
         <section className="ContactIntro" ref={sectionRef}>
             <div className="background__img">
-                <Image src='/assets/reviewsBackground.png' alt='background_image' fill={true}style={{ objectFit: 'cover'}}/>
+                <Image 
+                    src='/assets/reviewsBackground.webp' 
+                    alt='background_image' 
+                    fill={true}
+                    style={{ objectFit: 'cover'}}
+                    sizes="100vw"
+                    quality={100}
+                    priority={true}
+                    placeholder="blur"
+                    blurDataURL="data:image/webp"
+                />
             </div>
             <div className="cover"/>
             <div className="ContactIntro__wrapper">
@@ -39,19 +50,20 @@ export default function ContactIntro({name, number, moto, databaseName}) {
                     </div>
                     <div className="ContactIntro__MainInfo__icons__container">
                         <div className="ContactIntro__MainInfo__icons">
-                            {icons.map((icon, i) => (
-                                <div key={i} className="ContactIntro__MainInfo__icon">
-                                    <Image
-                                        src={icon.src}
-                                        alt={icon.name}
-                                        width={50}  // Increased from 39
-                                        height={56} // Increased from 44
-                                        priority
-                                        quality={100}
-                                        sizes="56px"
-                                    />
-                                </div>
-                            ))}
+                            {icons.map((icon, i) => {
+                                const IconComponent = icon.src;
+                                return (
+                                    <Magnetic key={`magnetic-${icon.name}`} sensitivity={0.1}>
+                                        <Link href={icon.href}>
+                                            <IconComponent 
+                                                size={40}
+                                                aria-label={icon.name}
+                                                className="social__icon"
+                                            />
+                                        </Link>
+                                    </Magnetic>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
@@ -73,12 +85,14 @@ export default function ContactIntro({name, number, moto, databaseName}) {
                     <div className="ContactIntro__Collage__pics">
                         <div className="ContactIntro__Collage__pic">
                         <Image 
-                            src="/svg/tree.png" 
+                            src="/svg/tree.webp" 
                             alt="profile_pic1" 
                             fill={true}
                             quality={100}
-                            priority
+                            priority={true}
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            placeholder="blur"
+                            blurDataURL="data:image/webp"
                             className="object-cover w-full h-full"
                         />
                         </div>

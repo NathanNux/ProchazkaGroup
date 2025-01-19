@@ -242,107 +242,107 @@ export const chartDataTheWay = [
 
 export const partnersIcons = [
     {
-        src: '/logos/Allianz.png',
+        src: '/logos/Allianz.webp',
         alt: 'Allianz'
     },
     {
-        src: '/logos/Amundi.png',
+        src: '/logos/Amundi.webp',
         alt: 'Amundi'
     },
     {
-        src: '/logos/arts.jpg',
+        src: '/logos/arts.webp',
         alt: 'Arts'
     },
     {
-        src: '/logos/AXA.png',
+        src: '/logos/AXA.webp',
         alt: 'AXA'
     },
     {
-        src: '/logos/ceskapojis.png',
+        src: '/logos/ceskapojis.webp',
         alt: 'Ceska Pojisovna'
     },
     {
-        src: '/logos/Conseq.png',
+        src: '/logos/Conseq.webp',
         alt: 'Conseq'
     },
     {
-        src: '/logos/cp_invest.jpeg',
+        src: '/logos/cp_invest.webp',
         alt: 'CP Invest'
     },
     {
-        src: '/logos/cpp.png',
+        src: '/logos/cpp.webp',
         alt: 'CPP'
     },
     {
-        src: '/logos/csob.png',
+        src: '/logos/csob.webp',
         alt: 'CSOB'
     },
     {
-        src: '/logos/csobpenzpoj.png',
+        src: '/logos/csobpenzpoj.webp',
         alt: 'CSOB Penzpoj'
     },
     {
-        src: '/logos/csobstavebnisporitelna.png',
+        src: '/logos/csobstavebnisporitelna.webp',
         alt: 'CSOB Stavebni Sporitelna',
     },
     {
-        src: '/logos/das.jpg',
+        src: '/logos/das.webp',
         alt: 'DAS'
     },
     {
-        src: '/logos/gcp.jpg',
+        src: '/logos/gcp.webp',
         alt: 'GPC'
     },
     {
-        src: '/logos/gpenzspor.png',
+        src: '/logos/gpenzspor.webp',
         alt: 'GPenzSpor'
     },
     {
-        src: '/logos/hypotecnibanka.jpg',
+        src: '/logos/hypotecnibanka.webp',
         alt: 'Hypotecni Banka'
     },
     {
-        src: '/logos/ING.jpg',
+        src: '/logos/ING.webp',
         alt: 'ING'
     },
     {
-        src: '/logos/KB.png',
+        src: '/logos/KB.webp',
         alt: 'KB'
     },
     {
-        src: '/logos/kbpenzijni.png',
+        src: '/logos/kbpenzijni.webp',
         alt: 'KB Penzijni'
     },
     {
-        src: '/logos/Komercnipojistovna.jpg',
+        src: '/logos/Komercnipojistovna.webp',
         alt: 'Komercni Pojistovna'
     },
     {
-        src: '/logos/kooperativa.png',
+        src: '/logos/kooperativa.webp',
         alt: 'Kooperativa'
     },
     {
-        src: '/logos/Mbank.jpg',
+        src: '/logos/Mbank.webp',
         alt: 'Mbank'
     },
     {
-        src: '/logos/metlife.png',
+        src: '/logos/metlife.webp',
         alt: 'Metlife'
     },
     {
-        src: '/logos/modrapyr.png',
+        src: '/logos/modrapyr.webp',
         alt: 'Modra Pyramida'
     },
     {
-        src: '/logos/monetamb.jpg',
+        src: '/logos/monetamb.webp',
         alt: 'Moneta MB'
     },
     {
-        src: '/logos/monetastavbspor.jpg',
+        src: '/logos/monetastavbspor.webp',
         alt: 'Moneta Stavebni Sporitelna'
     },
     {
-        src: '/logos/penzceskapoj.jpg',
+        src: '/logos/penzceskapoj.webp',
         alt: 'Penz Ceska Poj'
     },
     {
@@ -350,27 +350,27 @@ export const partnersIcons = [
         alt: 'Penzijni Ceska Sporitelna'
     },
     {
-        src: '/logos/reifbank.png',
+        src: '/logos/reifbank.webp',
         alt: 'Reif Bank'
     },
     {
-        src: '/logos/reifstavbspor.png',
+        src: '/logos/reifstavbspor.webp',
         alt: 'Reif Stavebni Sporitelna'
     },
     {
-        src: '/logos/stavebni_sporitelna_cs.jpg',
+        src: '/logos/stavebni_sporitelna_cs.webp',
         alt: 'Stavebni Sporitelna Ceska'
     },
     {
-        src: '/logos/unicreditbank.jpg',
+        src: '/logos/unicreditbank.webp',
         alt: 'Unicredit Bank'
     },
     {
-        src: '/logos/uniqua.jpeg', 
+        src: '/logos/uniqua.webp', 
         alt: 'Uniqua'
     },
     {
-        src: '/logos/youplus.png',
+        src: '/logos/youplus.webp',
         alt: 'You Plus'
     }
 ]

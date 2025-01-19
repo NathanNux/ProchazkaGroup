@@ -42,8 +42,6 @@ const menuVariants = {
         }
     }
 }
-//WIP: Nahradit Jména Jménama z databáze
-
 export default function BenefitReminder() {
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ currentIndex, setCurrentIndex ] = useState(0)
@@ -149,7 +147,17 @@ export default function BenefitReminder() {
                                                     exit={{ opacity: 0, x: -100 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
-                                                    <Image src={peopleData[activeIndex].src} alt={peopleData[activeIndex].alt} fill={true}/>
+                                                    <Image 
+                                                        src={peopleData[activeIndex].src} 
+                                                        alt={peopleData[activeIndex].alt} 
+                                                        fill={true}
+                                                        sizes="50vw"
+                                                        priority={false}
+                                                        quality={80}
+                                                        loading="lazy"
+                                                        placeholder="blur"
+                                                        blurDataURL="data:image/webp"
+                                                    />
                                                 </motion.div>
                                                 </AnimatePresence>
                                                 
@@ -190,7 +198,17 @@ export default function BenefitReminder() {
                                                             transition={{ duration: 0.2 }}
                                                             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                                         >
-                                                            <Image src='/svg/arrow-left.svg' alt="arrow" width={30} height={30} />
+                                                            <Image 
+                                                                src='/svg/arrow-left.svg' 
+                                                                alt="arrow" 
+                                                                width={30} 
+                                                                height={30} 
+                                                                quality={60}
+                                                                priority={false}
+                                                                loading="lazy"
+                                                                placeholder="blur"
+                                                                blurDataURL="data:image/svg"
+                                                            />
                                                         </motion.div>
                                                     </motion.button>
 
@@ -238,7 +256,17 @@ export default function BenefitReminder() {
                                                         }}
                                                     >
                                                         <p>{peopleData[activeIndex].likes}</p>
-                                                        <Image  src='/svg/thumbsupblack.svg' alt="thumbsUp_icon" width={50} height={50}/> 
+                                                        <Image  
+                                                            src='/svg/thumbsupblack.svg' 
+                                                            alt="thumbsUp_icon" 
+                                                            width={50} 
+                                                            height={50}
+                                                            priority={false}
+                                                            quality={60}
+                                                            loading="lazy"
+                                                            placeholder="blur"
+                                                            blurDataURL="data:image/svg"
+                                                        /> 
                                                     </motion.div>
                                                 </AnimatePresence>
 
@@ -255,7 +283,17 @@ export default function BenefitReminder() {
                                                         }}
                                                     >
                                                         <p>{peopleData[activeIndex].reviews}</p>
-                                                        <Image  src='/svg/commentblack.svg' alt="review__icon" width={50} height={50}/> 
+                                                        <Image  
+                                                            src='/svg/commentblack.svg' 
+                                                            alt="review__icon" 
+                                                            width={50} 
+                                                            height={50}
+                                                            priority={false}
+                                                            quality={60}
+                                                            loading="lazy"
+                                                            placeholder="blur"
+                                                            blurDataURL="data:image/webp"
+                                                        /> 
                                                     </motion.div>
                                                 </AnimatePresence>
                                             </div>
@@ -280,7 +318,17 @@ export default function BenefitReminder() {
                 <h2>?</h2>
                 <p>Nejste našimi Klienty?</p>
                 <div className="svg__container">
-                    <Image src='/svg/ArrowDown.svg' alt="arrow-down" height={60} width={30}/>
+                    <Image 
+                        src='/svg/ArrowDown.svg' 
+                        alt="arrow-down" 
+                        height={60} 
+                        width={30}
+                        priority={false}
+                        quality={60}
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/svg"
+                    />
                 </div>
             </div>   
         </section>

@@ -26,7 +26,16 @@ export default function BenefitProgramKeyframes() {
                     x: headerMove,
                 }}
             >
-                <Image  src='/assets/small-tree.png' alt="small-tree" fill={true}/>
+                <Image  
+                    src='/assets/small-tree.webp' 
+                    alt="small-tree" 
+                    fill={true}
+                    sizes="50vw"
+                    quality={100}
+                    priority={true}
+                    placeholder="blur"
+                    blurDataURL="data:image/webp"
+                />
             </motion.div>
             <div className="devider" />
             <InfoBenefitS ref={sectionRef} scroll={scrollYProgress}/>

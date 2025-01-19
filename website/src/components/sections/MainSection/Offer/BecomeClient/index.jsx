@@ -5,7 +5,7 @@ export default function BecomeAclient() {
     return(
         <div className="BecomeAclient">
             <div className="Image__container">
-                <CustomImage src='/assets/reviewsBackground.png' altText='about-image'/>
+                <CustomImage src='/assets/reviewsBackground.webp' altText='about-image'/>
             </div>
             
             <div className="Texts">

@@ -50,6 +50,8 @@ const RollingLogos = ({ baseVelocity = 100, childrenCount, Scroll }) => {
                             style={{ objectFit: 'contain' }}
                             quality={60}
                             loading='lazy'
+                            placeholder="blur"
+                            blurDataURL="data:image/webp"
                         />
                     </div>
                 )})}

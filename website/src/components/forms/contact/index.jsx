@@ -1,6 +1,5 @@
 import { motion, useTransform } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import MyButton from "@/components/ui/stickyButtons/buttons/MyButton";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import ONViewLogo from "@/components/anim/LogoAnims/onView";
@@ -11,8 +10,12 @@ import CopyText from "@/components/ui/copyText";
 import GetChars from "@/components/common/navbar/body/getChars";
 import { supabase } from "@/hooks/supabaseClient";
 import { useFetchDatabase } from "@/hooks/useFetchDatabase";
+import { icons } from "@/constants/pages/blog";
+import Magnetic from "@/components/anim/Magnetic";
 
 //NOTE:FeedBack and contact are switched
+
+//WIP: adjust responsive desing icons array in components where they are located
 
 const FooterLinks = [
     {
@@ -37,16 +40,6 @@ const FooterLinks = [
     },
     
 ]
-
-const icons = [
-    //WIP: add icons here
-    { name: "facebook", src: "/thumbsUp.png" },
-    { name: "instagram", src: "/thumbsUp.png" },
-    { name: "linkedin", src: "/thumbsUp.png" },
-    { name: "twitter", src: "/thumbsUp.png" },
-    { name: "youtube", src: "/thumbsUp.png" },
-    { name: "mainWeb", src: "/thumbsUp.png" }
-];
 
 export default function ContactForm({ scroll, name }) {
     const top = useTransform(scroll, [0, 1], ['5%', '45%'])
@@ -257,18 +250,20 @@ export default function ContactForm({ scroll, name }) {
                                 Co takhle kdyby jste dali info i ostatním, zni fér ne?</p>
                             </div>
                             <div className="links">
-                                {icons.map((icon, i) => (
-                                <div key={i} className="link__container">
-                                    <Image
-                                        src={icon.src}
-                                        alt={icon.name}
-                                        width={50}
-                                        height={50}
-                                        priority
-                                        quality={100}
-                                    />
-                                </div>
-                            ))}
+                                {icons.map((icon, i) => {
+                                    const IconComponent = icon.src;
+                                    return (
+                                        <Magnetic key={`magnetic-${icon.name}`} sensitivity={0.1}>
+                                            <Link href={icon.href}>
+                                                <IconComponent 
+                                                    size={40}
+                                                    aria-label={icon.name}
+                                                    className="social__icon"
+                                                />
+                                            </Link>
+                                        </Magnetic>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

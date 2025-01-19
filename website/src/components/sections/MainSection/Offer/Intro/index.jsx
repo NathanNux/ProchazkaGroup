@@ -21,7 +21,16 @@ export default function IntroOffer(){
                 <SubText initialColor="#050A10" className={'subtext__div'} text={'Každý den, kdy vaše dluhy rostou nebo<br/>inflace roste, ztrácíte peníze, které<br/> už nikdy neuvidíte.'}/>
             </div>
             <div className="IntroOffer__image__container">
-                <Image src='/assets/reviewsBackground.png' alt='about-image' fill={true}/>
+                <Image 
+                    src='/assets/reviewsBackground.webp' 
+                    alt='about-image' 
+                    fill={true}
+                    sizes="100vw"
+                    priority={true}
+                    quality={100}
+                    placeholder="blur"
+                    blurDataURL="data:image/webp"
+                />
             </div>
         </div>
     )

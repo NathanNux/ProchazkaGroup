@@ -69,7 +69,7 @@ export default function Collage() {
         {
             name: 'Annual Company Meeting',
             time: '2023-11-15',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Annual Company Meeting',
             text: 'Join us for the annual company meeting where we discuss the achievements of the past year and plans for the future.',
             circleAnim: circleProgress0,
@@ -78,7 +78,7 @@ export default function Collage() {
         {
             name: 'Team Building Retreat',
             time: '2023-12-05',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Team Building Retreat',
             text: 'A weekend retreat focused on team-building activities to strengthen collaboration and communication among team members.',
             circleAnim: circleProgress0,
@@ -87,7 +87,7 @@ export default function Collage() {
         {
             name: 'Product Launch Event',
             time: '2024-01-20',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Product Launch Event',
             text: 'Be the first to see our new product line at the official launch event. Exciting presentations and demos await!',
             circleAnim: circleProgress1,
@@ -96,7 +96,7 @@ export default function Collage() {
         {
             name: 'Quarterly Financial Review',
             time: '2024-02-10',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Quarterly Financial Review',
             text: 'An in-depth review of the company’s financial performance over the last quarter, followed by a Q&A session.',
             circleAnim: circleProgress1,
@@ -105,7 +105,7 @@ export default function Collage() {
         {
             name: 'Team Building Workshop',
             time: '2024-03-15',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Team Building Workshop',
             text: 'Interactive workshops designed to enhance team dynamics and problem-solving skills through fun and engaging activities.',
             circleAnim: circleProgress2,
@@ -114,7 +114,7 @@ export default function Collage() {
         {
             name: 'Customer Appreciation Day',
             time: '2024-04-25',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Customer Appreciation Day',
             text: 'A special event to thank our loyal customers with exclusive offers, giveaways, and a chance to meet the team.',
             circleAnim: circleProgress2,
@@ -123,7 +123,7 @@ export default function Collage() {
         {
             name: 'Leadership Training Program',
             time: '2024-05-10',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Leadership Training Program',
             text: 'A comprehensive training program aimed at developing leadership skills among our employees.',
             circleAnim: circleProgress3,
@@ -132,7 +132,7 @@ export default function Collage() {
         {
             name: 'Summer Picnic',
             time: '2024-06-20',
-            photo: '/assets/reviewsBackground.png',
+            photo: '/assets/reviewsBackground.webp',
             alt: 'Summer Picnic',
             text: 'A fun-filled day at the park with games, food, and activities for employees and their families.',
             circleAnim: circleProgress3,

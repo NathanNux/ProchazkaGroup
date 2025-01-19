@@ -88,7 +88,18 @@ export default function CustomImage({ src, altText }) {
         <Magnetic sensitivity='0.01'>
             <motion.div transformTemplate={template} ref={imageContainerRef} style={{scaleX: scale.x, scaleY: scale.y}} className='Custom__image__container'>
                 <div ref={ImageBoundsRef} className='Custom__image__Bounds'></div>
-                    <Image ref={imageRef} src={src} alt={altText} fill={true} sizes="true" priority/>
+                    <Image 
+                        ref={imageRef} 
+                        src={src} 
+                        alt={altText} 
+                        fill={true} 
+                        sizes="50vw" 
+                        priority={false} 
+                        quality={80} 
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/webp"
+                    />
             </motion.div>
         </Magnetic>
     )

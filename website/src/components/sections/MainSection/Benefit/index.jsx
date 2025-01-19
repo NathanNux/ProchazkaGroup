@@ -43,7 +43,7 @@ export default function Benefit() {
             <div className="Details">
                 <div className="Image__container"
                 >
-                    <CustomImage altText='benefit__image' src='/assets/reviewsBackground.png'/>
+                    <CustomImage altText='benefit__image' src='/assets/reviewsBackground.webp'/>
                 </div>
                 <div className="subText">
                     <SubText initialColor="#fff" text={'Ať už chcete splatit hypotéku, zajistit lepší<br/>budoucnost pro děti, nebo si dopřát něco<br/>navíc. Benefit program vám k tomu pomůže.<br/>Prostě doporučte, a sledujte, jak roste<br/>nejen váš úspěch, ale i jejich díky Vám.'}/>

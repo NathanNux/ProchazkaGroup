@@ -26,7 +26,16 @@ export default function Content() {
             </div>
             <div className="Image__wrapper">
                 <div className="Image__container">
-                    <Image src='/assets/small-tree.png' alt='small_tree' fill={true} quality={100} priority={true}/>
+                    <Image 
+                        src='/assets/small-tree.webp' 
+                        alt='small_tree' 
+                        fill={true} 
+                        sizes="50vw"
+                        quality={100} 
+                        priority={true}
+                        placeholder="blur"
+                        blurDataURL="data:image/webp"
+                    />
                 </div>
             </div>
             

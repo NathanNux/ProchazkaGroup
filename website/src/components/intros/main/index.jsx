@@ -85,7 +85,16 @@ export default function MainIntro () {
                 </motion.div>
                 
                 <div className="cover"/>
-                <Image src='/assets/mainBackground.png' alt="background" fill={true}/>
+                <Image 
+                    src='/assets/mainBackground.webp' 
+                    alt="background" 
+                    fill={true} 
+                    priority={true} 
+                    quality={90}
+                    sizes="100vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/webp"
+                />
                 <div className="rect__container">
                     <div className="rect__Wrapper">
                         {Array.from({length: 3}, (_, i) => (

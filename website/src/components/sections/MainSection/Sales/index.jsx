@@ -41,7 +41,7 @@ export default function Sales() {
                 </div>
             </div>
             <div className="Image__container">
-                <CustomImage altText='Sales-image' src='/assets/reviewsBackground.png'/>
+                <CustomImage altText='Sales-image' src='/assets/reviewsBackground.webp'/>
             </div>
             <div className="Logo__container">
                 <SubText className={'subtext'} initialColor="#050A10" text={'NAŠI PARTNEŘI:'}/>

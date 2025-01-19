@@ -1,14 +1,14 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 
-import picture1 from '../../../../public/assets/aboutBackground.png'
+import picture1 from '../../../../public/assets/aboutBackground.webp'
 import picture2 from '../../../../public/svg/house.webp'
 import picture3 from '../../../../public/svg/rock.webp'
-import picture4 from '../../../../public/svg/tree.webp'
+import picture4 from '../../../../public/svg/tree2.webp'
 import picture5 from '../../../../public/svg/water.webp'
-import picture6 from '../../../../public/svg/tree.png'
-import picture7 from '../../../../public/assets/reviewsBackground.png'
-import picture8 from '../../../../public/assets/mainBackground.png'
+import picture6 from '../../../../public/svg/tree.webp'
+import picture7 from '../../../../public/assets/reviewsBackground.webp'
+import picture8 from '../../../../public/assets/mainBackground.webp'
 import picture9 from '../../../../public/svg/cactus.webp'
 import Image from "next/image"
 
@@ -76,7 +76,17 @@ export default function ParallaxExpanf() {
                         return (
                             <motion.div key={index} style={{ scale }} className="image__wrapper">
                                 <div className="image__container">
-                                    <Image src={src} alt="image" fill={true} placeholder="blur" style={{ zIndex: `${index}`}}/>
+                                    <Image 
+                                        src={src} 
+                                        alt="image" 
+                                        fill={true} 
+                                        sizes="50vw"
+                                        quality={100}
+                                        priority={false}
+                                        loading="lazy"
+                                        placeholder="blur" 
+                                        blurDataURL="data:image/webp"
+                                        style={{ zIndex: `${index}`}}/>
                                 </div>
                             </motion.div>
                         )

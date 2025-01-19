@@ -76,7 +76,7 @@ export default function QNA() {
                                 animate={{ rotate: openStates[index] ? 90 : 0 }}
                                 onClick={() => toggleQNA(index)}
                             >
-                                <Image src='/assets/QNA.png' alt='icon' width={25} height={25}/>
+                                <Image src='/assets/QNA.png' alt='icon' width={25} height={25} priority={false} quality={60} loading="lazy" placeholder="blur" blurDataURL="data:image/png"/>
                             </motion.div>
                         </motion.div>
                         <AnimatePresence initial={false}>

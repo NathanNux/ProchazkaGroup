@@ -4,6 +4,23 @@ import Cursor from "@/components/common/navbar/cursor"
 import ContactIntro from "@/components/intros/contact"
 import { useFetchDatabase } from "@/hooks/useFetchDatabase"
 import { useEffect, useState } from "react"
+import { 
+    FaFacebookF, 
+    FaInstagram, 
+    FaLinkedinIn, 
+    FaTwitter, 
+    FaYoutube,
+    FaGlobe
+} from 'react-icons/fa';
+
+export const icons = [
+  { name: "facebook", src: FaFacebookF, href: "https://www.facebook.com" },
+  { name: "instagram", src: FaInstagram, href: "https://www.instagram.com" },
+  { name: "linkedin", src: FaLinkedinIn, href: "https://www.linkedin.com" },
+  { name: "twitter", src: FaTwitter, href: "https://www.twitter.com" },
+  { name: "youtube", src: FaYoutube, href: "https://www.youtube.com" },
+  { name: "mainWeb", src: FaGlobe, href: "https://www.prochazkagroup.cz" }
+];
 
 export default function PersonFeebackPage1() {
 
@@ -93,7 +110,7 @@ export default function PersonFeebackPage1() {
             <main lang="cs">
                 <Cursor />
                 <Navbar />
-                <ContactIntro name={personData.name} moto={personData.moto} number={personData.number} databaseName={personData.databaseName}/>
+                <ContactIntro name={personData.name} moto={personData.moto} number={personData.number} databaseName={personData.databaseName} icons={icons}/>
             </main>
         </>
     )

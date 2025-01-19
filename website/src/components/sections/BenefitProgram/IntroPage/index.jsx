@@ -59,14 +59,15 @@ export default function IntroPageBenefit() {
             }}
         > 
             <Image 
-                src="/background/benefit.png" 
+                src="/background/benefit.webp" 
                 alt="Benefit Program Intro Page" 
                 fill={true}
                 priority={true}
                 quality={100}
                 sizes="100vw"
+                placeholder="blur"
+                blurDataURL="data:image/webp"
                 className="background-image"
-
             />
             <div className="cover"/>
             <div className="text">

@@ -22,7 +22,7 @@ export default function About() {
     return(
         <div className="About__Section">
             <div className="image__container">
-                <CustomImage src='/assets/reviewsBackground.png' altText='about-image'/>
+                <CustomImage src='/assets/reviewsBackground.webp' altText='about-image'/>
             </div>
             <div className="Text__container">
                 <div className="header">

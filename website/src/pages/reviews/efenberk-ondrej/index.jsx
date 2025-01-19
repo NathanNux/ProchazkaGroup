@@ -4,6 +4,20 @@ import Cursor from "@/components/common/navbar/cursor"
 import ContactIntro from "@/components/intros/contact"
 import { useFetchDatabase } from "@/hooks/useFetchDatabase"
 import { useEffect, useState } from "react"
+import { 
+    FaFacebookF, 
+    FaInstagram, 
+    FaLinkedinIn, 
+    FaTwitter, 
+} from 'react-icons/fa';
+
+export const icons = [
+    //WIP: Every person should have their own social media links and kinds of social media
+  { name: "facebook", src: FaFacebookF, href: "https://www.facebook.com" },
+  { name: "instagram", src: FaInstagram, href: "https://www.instagram.com" },
+  { name: "linkedin", src: FaLinkedinIn, href: "https://www.linkedin.com" },
+  { name: "twitter", src: FaTwitter, href: "https://www.twitter.com" },
+];
 
 export default function PersonFeebackPage2() {
     const {fetchClovek} = useFetchDatabase()
@@ -88,7 +102,7 @@ export default function PersonFeebackPage2() {
             <main lang="cs">
                 <Cursor />
                 <Navbar />
-                <ContactIntro name={personData.name} moto={personData.moto} number={personData.number} databaseName={personData.databaseName}/>
+                <ContactIntro name={personData.name} moto={personData.moto} number={personData.number} databaseName={personData.databaseName} icons={icons}/>
             </main>
         </>
     )

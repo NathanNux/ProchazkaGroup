@@ -1,3 +1,12 @@
+import { 
+    FaFacebookF, 
+    FaInstagram, 
+    FaLinkedinIn, 
+    FaTwitter, 
+    FaYoutube,
+    FaGlobe
+} from 'react-icons/fa';
+
 export const stats = [
     {
         name: 'clients',
@@ -6,7 +15,7 @@ export const stats = [
     },
     {
         name: 'likes',
-        src: '/thumbsUp.svg',
+        src: '/svg/thumbsup.svg',
         alt: 'clients_icon'
     },
     {
@@ -125,11 +134,11 @@ export const WebsiteReviews = [
 
 
 export const icons = [
-    // WIP: add icons here as objects
-    { name: "facebook", src: "/thumbsUp.png" },
-    { name: "instagram", src: "/thumbsUp.png" },
-    { name: "linkedin", src: "/thumbsUp.png" },
-    { name: "twitter", src: "/thumbsUp.png" },
-    { name: "youtube", src: "/thumbsUp.png" },
-    { name: "mainWeb", src: "/thumbsUp.png" }
+    //WIP: this needs to be redone - every person will have different icons and social media
+  { name: "facebook", src: FaFacebookF, href: "https://www.facebook.com" },
+  { name: "instagram", src: FaInstagram, href: "https://www.instagram.com" },
+  { name: "linkedin", src: FaLinkedinIn, href: "https://www.linkedin.com" },
+  { name: "twitter", src: FaTwitter, href: "https://www.twitter.com" },
+  { name: "youtube", src: FaYoutube, href: "https://www.youtube.com" },
+  { name: "mainWeb", src: FaGlobe, href: "https://www.prochazkagroup.cz" }
 ];

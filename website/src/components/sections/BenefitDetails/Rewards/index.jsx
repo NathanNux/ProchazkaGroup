@@ -75,11 +75,11 @@ export default function BenefitRewards() {
             name: "John Doe",
             number: '01',
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            src: "/svg/tree.png",
+            src: "/svg/tree.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity0,
             circleAnim: circleProgress0,
@@ -91,9 +91,9 @@ export default function BenefitRewards() {
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             src: "/svg/cactus.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity1,
             circleAnim: circleProgress1,
@@ -105,9 +105,9 @@ export default function BenefitRewards() {
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             src: "/svg/house.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity2,
             circleAnim: circleProgress2,
@@ -117,11 +117,11 @@ export default function BenefitRewards() {
             name: "Jane Doe",
             number: '04',
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                src: "/svg/tree.png",
+                src: "/svg/tree.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity3,
             circleAnim: circleProgress3,
@@ -133,9 +133,9 @@ export default function BenefitRewards() {
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             src: "/svg/rock.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity4,
             circleAnim: circleProgress4,
@@ -147,9 +147,9 @@ export default function BenefitRewards() {
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             src: "/svg/tree.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity5,
             circleAnim: circleProgress5,
@@ -161,9 +161,9 @@ export default function BenefitRewards() {
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             src: "/svg/water.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity6,
             circleAnim: circleProgress6,
@@ -173,11 +173,11 @@ export default function BenefitRewards() {
             name: "Jane Doe",
             number: '08',
             moto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            src: "/svg/tree.png",
+            src: "/svg/tree.webp",
             alt: "profile_pic1",
-            photo1: '/assets/reviewsBackground.png',
+            photo1: '/assets/reviewsBackground.webp',
             altText1: 'asset1',
-            photo2: '/assets/reviewsBackground.png',
+            photo2: '/assets/reviewsBackground.webp',
             altText2: 'asset2',
             imageAnim: imageOpacity7,
             circleAnim: circleProgress7,
@@ -367,7 +367,16 @@ export default function BenefitRewards() {
                                         opacity: person.imageAnim
                                     }}
                                 >
-                                    <Image src={person.photo1} alt={person.altText1} fill={true}/>
+                                    <Image 
+                                        src={person.photo1} 
+                                        alt={person.altText1} 
+                                        fill={true}
+                                        sizes="50vw"
+                                        priority={false}
+                                        quality={100}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/webp"
+                                    />
                                 </motion.div>
                             )
                         })}
@@ -387,7 +396,16 @@ export default function BenefitRewards() {
                                         opacity: person.imageAnim
                                     }}
                                 >
-                                    <Image src={person.photo2} alt={person.altText2} fill={true}/>
+                                    <Image 
+                                        src={person.photo2} 
+                                        alt={person.altText2} 
+                                        fill={true}
+                                        sizes="50vw"
+                                        priority={false}
+                                        quality={100}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/webp"
+                                    />
                                 </motion.div>
                             )
                         })}
@@ -412,7 +430,16 @@ export default function BenefitRewards() {
                                     opacity: person.imageAnim
                                 }}
                             >
-                                <Image src={person.src} alt={person.alt} fill={true}/>
+                                <Image 
+                                    src={person.src} 
+                                    alt={person.alt} 
+                                    fill={true}
+                                    quality={100}
+                                    priority={false}
+                                    sizes="50vw"
+                                    placeholder="blur"
+                                    blurDataURL="data:image/webp"
+                                />
                             </motion.div>
                         ))}
                     </div>

@@ -17,7 +17,17 @@ export default function OurDeal() {
                     <div className="header">
                         <h3>ψ</h3>
                         <p>Takže jdeme k věci: Tady jsou naše výsledky, dobrý ne?</p>
-                        <Image src='/svg/trophy.svg' alt="trophy_icon" width={50} height={50}/>
+                        <Image 
+                            src='/svg/trophy.svg' 
+                            alt="trophy_icon" 
+                            width={50} 
+                            height={50}
+                            priority={false}
+                            quality={60}
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL="data:image/svg"
+                        />
                     </div>
                     <div className="devider"/>
                     <div className="stats__wrapper">
