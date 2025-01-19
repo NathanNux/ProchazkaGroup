@@ -12,7 +12,7 @@ export default function Reviews() {
         height: 0,
         isLandscape: false
     });
-    
+    //WIP: Příklad použití useEffect pro responzivní design
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
