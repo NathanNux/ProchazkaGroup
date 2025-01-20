@@ -41,7 +41,7 @@ export default function Blog () {
                 <div className="button__container">
                     <motion.div 
                         className="button" 
-                        style={shouldReduceAnimations ? { x: -200 } : { x }}
+                        style={shouldReduceAnimations ? { x: 200 } : { x }}
                     >
                         <RoundButton href='/blog' text='Chci Víc'/>
                     </motion.div>
