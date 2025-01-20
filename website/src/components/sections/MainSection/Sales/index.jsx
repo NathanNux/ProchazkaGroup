@@ -40,7 +40,7 @@ export default function Sales() {
                 <div className="Button__container">
                     <motion.div 
                         className="button" 
-                        style={shouldReduceAnimations ? { x: -100 } : { x }}
+                        style={shouldReduceAnimations ? { x: -50 } : { x }}
                     >
                         <RoundButton href='/nabidky' text='Zobrazit Slevy'/>
                     </motion.div>

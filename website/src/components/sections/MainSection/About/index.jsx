@@ -43,7 +43,7 @@ export default function About() {
                     <SubText initialColor="#050A10" className={'add__Text'} text={'Každý den přicházíme s řešeními, která našim<br/>klientům otevírají nové možnosti, a vytváříme<br/>hodnotu, která přetrvává.'}/>
                     <motion.div 
                         className="button" 
-                        style={shouldReduceAnimations ? { x: -100 } : { x }}
+                        style={shouldReduceAnimations ? { x: 200 } : { x }}
                     >
                         <RoundButton href="/o-nas" text="náš tým"/>
                     </motion.div>
