@@ -3,6 +3,7 @@ import { animate, transform, useMotionValue, motion, useScroll, useVelocity, use
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Magnetic from "@/components/anim/Magnetic";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 export default function RotatingButton({ href, text }) {
     const { registerRef, unregisterRef } = useCursorRef();
@@ -10,6 +11,9 @@ export default function RotatingButton({ href, text }) {
     const buttonRef = useRef(null);
     const textRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false);
+
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
     
     const { scrollY } = useScroll();
     const BaseVelocity = 50;
@@ -33,6 +37,11 @@ export default function RotatingButton({ href, text }) {
 
     useAnimationFrame((t, delta) => {
         if (!isAnimating.current) return;
+        if (shouldReduceAnimations) {
+            // Simple constant rotation for low-performance devices
+            CurrentRotation.set(CurrentRotation.get() + (BaseVelocity * 0.01));
+            return;
+        }
     
         let moveBy = directionFactor.current * BaseVelocity * (delta / 1000);
     
@@ -85,8 +94,10 @@ export default function RotatingButton({ href, text }) {
     }, [boundsHovered, scale.x, scale.y, buttonRef]);
 
     const manageBoundsHover = () => {
-        setBoundsHovered(true);
-        isAnimating.current = false; // Completely stop animation
+        if (!shouldReduceAnimations) {
+            setBoundsHovered(true);
+            isAnimating.current = false;
+        }
     };
     
     const manageBoundsLeave = () => {

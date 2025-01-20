@@ -50,6 +50,9 @@ const menuVariants = {
 //WIP: Nahradit Jména Jménama z databáze
 
 export default function Contact() {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const [ isOpen, setIsOpen ] = useState(false)
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ currentIndex, setCurrentIndex ] = useState(0)
@@ -385,14 +388,14 @@ export default function Contact() {
                         <div className="Contact__CTA__buttons__container">
                             <motion.div 
                                 className="cta__button"
-                                style={{ x: phoneX }}
+                                style={shouldReduceAnimations ? { x: -125 } : { x: phoneX }}
                                 onClick={handleCopyName}
                             >
                                 <SVGButton src='/svg/phoneIcon.svg' altText='CallIcon' />
                             </motion.div>
                             <motion.div 
                                 className="cta__button"
-                                style={{ x: messageX }}
+                                style={shouldReduceAnimations ? { x: -50 } : { x: messageX }}
                                 onClick={handleMessage}
                             >
                                 <SVGButton src='/svg/MessageIcon.svg' altText='TextIcon' />

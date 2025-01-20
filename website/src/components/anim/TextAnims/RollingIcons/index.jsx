@@ -1,9 +1,13 @@
 import { partnersIcons } from '@/constants/mainpage';
+import { usePerformance } from '@/context/PerformanceProvider';
 import { motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity, wrap } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 
 const RollingLogos = ({ baseVelocity = 100, childrenCount, Scroll }) => {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const BaseX = useMotionValue(0);
     const scrollVelocity = useVelocity(Scroll);
     const smoothVelocity = useSpring(scrollVelocity, {
@@ -23,6 +27,11 @@ const RollingLogos = ({ baseVelocity = 100, childrenCount, Scroll }) => {
 
     const directionFactor = useRef(1);
     useAnimationFrame((t, delta) => {
+        if (shouldReduceAnimations) {
+            // Simple constant movement for low-performance devices
+            BaseX.set(BaseX.get() + (directionFactor.current * baseVelocity * (delta / 1000)));
+            return;
+        }
         let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
         if(velocityFactor.get() < 0) {

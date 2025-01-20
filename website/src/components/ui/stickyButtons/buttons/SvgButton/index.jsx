@@ -3,6 +3,7 @@ import { animate, transform, useMotionValue, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Magnetic from "@/components/anim/Magnetic";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 export default function SVGButton({ src, altText, onClick }) {
     const { registerRef, unregisterRef } = useCursorRef();
@@ -10,6 +11,9 @@ export default function SVGButton({ src, altText, onClick }) {
     const buttonRef = useRef(null);
     const textRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false); 
+
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
 
     const scale = {
         x: useMotionValue(1),
@@ -22,6 +26,8 @@ export default function SVGButton({ src, altText, onClick }) {
     }
 
     const manageMouseMove = useCallback((e) => {
+        if (shouldReduceAnimations) return;
+
         const { clientX, clientY } = e;
         const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = buttonRef.current.getBoundingClientRect();
 
@@ -40,7 +46,9 @@ export default function SVGButton({ src, altText, onClick }) {
     }, [boundsHovered, scale.x, scale.y, buttonRef]);
 
     const manageBoundsHover = () => {
-        setBoundsHovered(true);
+        if (!shouldReduceAnimations) {
+            setBoundsHovered(true);
+        }
     };
 
     const manageBoundsLeave = () => {

@@ -8,6 +8,9 @@ import { useRef } from "react";
 
 
 export default function Sales() {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const sectionRef = useRef()
 
     const { scrollYProgress } = useScroll({
@@ -34,7 +37,10 @@ export default function Sales() {
                     <MainText initialColor={'#050A10'} secondaryColor={'#FF5733'} text={'<span>VYJEDNALI JSME</span> PRO NAŠE KLIENTY<br />SLEVY A SKVĚLÉ NABÍDKY TAKY MIMO<br />NAŠÍ OBLAST, ABYSTE UŠETŘILI<br /><span>I U KAŽDODENNÍCH POTŘEB.</span>'}/>
                 </div>
                 <div className="Button__container">
-                    <motion.div className="button" style={{ x }}>
+                    <motion.div 
+                        className="button" 
+                        style={shouldReduceAnimations ? { x: -100 } : { x }}
+                    >
                         <RoundButton href='/nabidky' text='Zobrazit Slevy'/>
                     </motion.div>
                     <div className="divider"/>

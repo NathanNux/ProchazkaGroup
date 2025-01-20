@@ -4,9 +4,13 @@ import SubText from "@/components/anim/TextAnims/SubText";
 import MainText from "@/components/anim/TextAnims/MainText";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 
 export default function Benefit() {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const sectionRef = useRef()
     // WIP: after all responsive design, create a variation of the text string to create a better responsive design
     // WIP: Create a text for main text and sub text based on viewport width for tablets and mobiles
@@ -34,7 +38,10 @@ export default function Benefit() {
                 </div>
                 <div className="Button__container">
                     <div className="divider"/>
-                    <motion.div className="button" style={{ x }}>
+                    <motion.div 
+                        className="button" 
+                        style={shouldReduceAnimations ? { x: -100 } : { x }}
+                    >
                         <RoundButton href='/benefit-program' text='Zobrazit Program'/>
                     </motion.div>
                 </div>

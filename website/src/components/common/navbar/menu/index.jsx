@@ -11,6 +11,9 @@ export default function Menu({menu, setMenu}) {
     const textRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false); 
 
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     
     const textChange = {
         initial: {
@@ -37,6 +40,8 @@ export default function Menu({menu, setMenu}) {
     }
 
     const manageMouseMove = useCallback((e) => {
+        if (shouldReduceAnimations) return;
+
         const { clientX, clientY } = e;
         const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = menuRef.current.getBoundingClientRect();
 
@@ -55,7 +60,9 @@ export default function Menu({menu, setMenu}) {
     }, [boundsHovered, scale.x, scale.y, menuRef]);
 
     const manageBoundsHover = () => {
-        setBoundsHovered(true);
+        if (!shouldReduceAnimations) {
+            setBoundsHovered(true);
+        }
     };
 
     const manageBoundsLeave = () => {

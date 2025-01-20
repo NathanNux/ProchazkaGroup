@@ -4,9 +4,13 @@ import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 
 export default function About() {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const sectionRef = useRef()
 
     const { scrollYProgress } = useScroll({
@@ -37,7 +41,10 @@ export default function About() {
                 </div>
                 <div className="Button__container">
                     <SubText initialColor="#050A10" className={'add__Text'} text={'Každý den přicházíme s řešeními, která našim<br/>klientům otevírají nové možnosti, a vytváříme<br/>hodnotu, která přetrvává.'}/>
-                    <motion.div className="button" style={{ x }}>
+                    <motion.div 
+                        className="button" 
+                        style={shouldReduceAnimations ? { x: -100 } : { x }}
+                    >
                         <RoundButton href="/o-nas" text="náš tým"/>
                     </motion.div>
                     <div className="devider"/>

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 import Magnetic from "@/components/anim/Magnetic";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 export default function SmallButton({ href, text }) {
     const { registerRef, unregisterRef } = useCursorRef();
@@ -11,6 +12,9 @@ export default function SmallButton({ href, text }) {
     const buttonRef = useRef(null);
     const textRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false); 
+
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
 
     const scale = {
         x: useMotionValue(1),
@@ -24,6 +28,8 @@ export default function SmallButton({ href, text }) {
     }
 
     const manageMouseMove = useCallback((e) => {
+        if (shouldReduceAnimations) return;
+
         const { clientX, clientY } = e;
         const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = buttonRef.current.getBoundingClientRect();
 
@@ -44,7 +50,9 @@ export default function SmallButton({ href, text }) {
     }, [boundsHovered, scale.x, scale.y, buttonRef]);
 
     const manageBoundsHover = () => {
-        setBoundsHovered(true);
+        if (!shouldReduceAnimations) {
+            setBoundsHovered(true);
+        }
     };
 
     const manageBoundsLeave = () => {

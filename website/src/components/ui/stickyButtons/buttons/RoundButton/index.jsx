@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Magnetic from "@/components/anim/Magnetic";
 import { useRouter } from "next/navigation";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 export default function RoundButton({ href, text, disableLink, onClick }) {
     const { registerRef, unregisterRef } = useCursorRef();
@@ -12,6 +13,9 @@ export default function RoundButton({ href, text, disableLink, onClick }) {
     const textRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false); 
     const router = useRouter();
+
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
 
     const handleClick = (e) => {
         if (onClick) {
@@ -35,6 +39,8 @@ export default function RoundButton({ href, text, disableLink, onClick }) {
     }
 
     const manageMouseMove = useCallback((e) => {
+        if (shouldReduceAnimations) return;
+
         const { clientX, clientY } = e;
         const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = buttonRef.current.getBoundingClientRect();
 
@@ -53,7 +59,9 @@ export default function RoundButton({ href, text, disableLink, onClick }) {
     }, [boundsHovered, scale.x, scale.y, buttonRef]);
 
     const manageBoundsHover = () => {
-        setBoundsHovered(true);
+        if (!shouldReduceAnimations) {
+            setBoundsHovered(true);
+        }
     };
 
     const manageBoundsLeave = () => {

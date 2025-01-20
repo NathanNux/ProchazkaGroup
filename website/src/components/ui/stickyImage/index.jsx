@@ -3,6 +3,7 @@ import { animate, transform, useMotionValue, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Magnetic from "@/components/anim/Magnetic";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 export default function CustomImage({ src, altText }) {
     const { registerRef, unregisterRef } = useCursorRef();
@@ -10,6 +11,10 @@ export default function CustomImage({ src, altText }) {
     const imageContainerRef = useRef(null);
     const imageRef = useRef(null);
     const [boundsHovered, setBoundsHovered] = useState(false); 
+
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
 
     const scale = {
         x: useMotionValue(1),
@@ -22,6 +27,8 @@ export default function CustomImage({ src, altText }) {
     }
 
     const manageMouseMove = useCallback((e) => {
+        if (shouldReduceAnimations) return;
+
         const { clientX, clientY } = e;
         const { top: topBounds, left: leftBounds, width: widthBounds, height: heightBounds } = imageContainerRef.current.getBoundingClientRect();
 
@@ -40,7 +47,9 @@ export default function CustomImage({ src, altText }) {
     }, [boundsHovered, scale.x, scale.y, imageContainerRef]);
 
     const manageBoundsHover = () => {
-        setBoundsHovered(true);
+        if (!shouldReduceAnimations) {
+            setBoundsHovered(true);
+        }
     };
 
     const manageBoundsLeave = () => {

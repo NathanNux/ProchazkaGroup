@@ -31,6 +31,9 @@ const rectVariants = {
 
 
 export default function Reality() {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const [ isMobile, setIsMobile ] = useState(false)
     useOnWindowResize(() => {
         setIsMobile(window.innerWidth < 910)
@@ -73,9 +76,9 @@ export default function Reality() {
             </div>
             <motion.div 
                 className="Text__container"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
+                variants={shouldReduceAnimations ? {} : containerVariants}
+                initial={shouldReduceAnimations ? { opacity: 1 } : "hidden"}
+                whileInView={shouldReduceAnimations ? {} : "visible"}
                 viewport={{ once: false, margin: "-100px" }}
             >
                 {dataR.map((data, i) => {
@@ -84,7 +87,8 @@ export default function Reality() {
                         <motion.div 
                             className="Text__wrapper" 
                             key={i}
-                            variants={rectVariants}
+                            variants={shouldReduceAnimations ? {} : rectVariants}
+                            initial={shouldReduceAnimations ? { opacity: 1, x: 0 } : {}}
                         >
                             <div className="divider"/>
                             <h3>{rate}</h3>

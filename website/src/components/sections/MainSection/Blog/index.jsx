@@ -8,6 +8,9 @@ import { useScroll, useTransform, motion } from "framer-motion";
 
 
 export default function Blog () {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const sectionRef = useRef()
 
     const { scrollYProgress } = useScroll({
@@ -36,7 +39,10 @@ export default function Blog () {
                     </p>
                 </div>
                 <div className="button__container">
-                    <motion.div className="button" style={{ x }}>
+                    <motion.div 
+                        className="button" 
+                        style={shouldReduceAnimations ? { x: -100 } : { x }}
+                    >
                         <RoundButton href='/blog' text='Chci Víc'/>
                     </motion.div>
                     <div className="devider"/>
