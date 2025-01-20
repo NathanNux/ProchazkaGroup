@@ -1,4 +1,5 @@
 import { useGlobalContext } from "@/context/LoadProvider";
+import { usePerformance } from "@/context/PerformanceProvider";
 import { animate, useMotionValue, useTransform, motion } from "framer-motion";
 import { useEffect, useRef  } from "react";
 
@@ -106,6 +107,9 @@ const IntroLogo = {
 }
 
 export default function Preloader({ staggers, number }) {
+    //Performance
+    const { shouldReduceAnimations } = usePerformance();
+
   const { runTime, setFirstLoad, preloaderRun } = useGlobalContext();
   const hasAnimated = useRef(false);
 
@@ -117,66 +121,82 @@ export default function Preloader({ staggers, number }) {
   const Counting = useTransform(count, Math.round);
   const CountingWithPercent = useTransform(Counting, (latest) => `${latest}%`);
 
-  useEffect(() => {
-        if (hasAnimated.current) return 
-        let controls;
-        let pathControls;
+    useEffect(() => {
+    if (hasAnimated.current) return;
+    let controls;
+    let pathControls;
 
-        // I want also the time to be random 
-        // need to make it random so I need an array of numbers and it needs to be incremental, so I need to sort it
-        const randomFloats = Array.from({ length: staggers }, () => Math.random() * number)
-        .sort((a, b) => a - b)
-        .concat(number);
+    // Reduce staggers for mobile
+    const actualStaggers = shouldReduceAnimations ? Math.min(staggers, 3) : staggers;
 
-       const scaledRandomFloats = randomFloats.map((item) => item / number);
-        //then I need the random delays to simulate lag
-        const randomDelays = Array.from({ length: staggers }, () => Math.random())
-        .sort((a, b) => a - b)
-        .concat(1);
+    // Optimize random calculations
+    const randomFloats = Array.from(
+        { length: actualStaggers }, 
+        () => Math.random() * number
+    )
+    .sort((a, b) => a - b)
+    .concat(number);
 
-        const times = randomDelays.map((delay) => delay / randomDelays[randomDelays.length - 1]);
-        // Start the animation when the component is in view
-        controls = animate(count, randomFloats, {
-        duration: runTime,
+    const scaledRandomFloats = randomFloats.map((item) => item / number);
+
+    // Simplified delays for mobile
+    const randomDelays = Array.from(
+        { length: actualStaggers }, 
+        () => shouldReduceAnimations ? Math.random() * 0.5 : Math.random()
+    )
+    .sort((a, b) => a - b)
+    .concat(1);
+
+    const times = randomDelays.map(
+        (delay) => delay / randomDelays[randomDelays.length - 1]
+    );
+
+    // Optimized counter animation
+    controls = animate(count, randomFloats, {
+        duration: shouldReduceAnimations ? runTime * 0.7 : runTime,
         times: times,
         ease: "linear",
         onComplete: () => {
             setFirstLoad(false);
             hasAnimated.current = true;
         }
-        },)
+    });
 
-        pathControls = animate(pathLength, scaledRandomFloats, {
-            duration: runTime,
-            times: times,
-            ease: "linear",
-            onComplete: () => {
-                setFirstLoad(false);
-                hasAnimated.current = true;
-
-            }
-        },)
-
-        return () => {
-            if(controls) {
-                controls.stop();
-            }
-            if(pathControls) {
-                pathControls.stop();
-            }
+    // Optimized path animation
+    pathControls = animate(pathLength, scaledRandomFloats, {
+        duration: shouldReduceAnimations ? runTime * 0.7 : runTime,
+        times: times,
+        ease: "linear",
+        onComplete: () => {
+            setFirstLoad(false);
+            hasAnimated.current = true;
         }
-    }, [ number, staggers, runTime, setFirstLoad, count, pathLength]);
+    });
+
+    return () => {
+        controls?.stop();
+        pathControls?.stop();
+    };
+    }, [number, staggers, runTime, setFirstLoad, count, pathLength, shouldReduceAnimations]);
 
   return (
     <motion.div className="Preloader__Main" variants={intro} initial='initial' exit='exit'>
       <div className="Preloader__Background"></div>
       <div className="Preloader__Loading__Line">
-        <motion.svg className="Preloader__Loading__Line__SVG">
-          <defs>
-            <filter id="blur-filter">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" />
-            </filter>
-          </defs>
+        <motion.svg 
+            className="Preloader__Loading__Line__SVG"
+            style={{
+                willChange: 'transform',
+                transform: 'translateZ(0)',
+            }}
+        >
+            {!shouldReduceAnimations && (
+                <defs>
+                    <filter id="blur-filter">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation={shouldReduceAnimations ? "1" : "2.5"} />
+                    </filter>
+                </defs>
+            )}
           <motion.circle
             cx="50%"
             cy="50%"
@@ -186,6 +206,8 @@ export default function Preloader({ staggers, number }) {
             filter="url(#blur-filter)"
             style={{ 
                 pathLength: pathLength,
+                willChange: 'transform',
+                transform: 'translateZ(0)',
             }}
           />
         </motion.svg>
@@ -215,6 +237,8 @@ export default function Preloader({ staggers, number }) {
             filter="url(#shadow-filter)"
             style={{ 
                 pathLength: pathLength,
+                willChange: 'transform',
+                transform: 'translateZ(0)',
             }}
           />
         </motion.svg>

@@ -1,7 +1,10 @@
+import { usePerformance } from '@/context/PerformanceProvider';
 import { motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity, wrap } from 'framer-motion';
 import { useRef } from 'react';
 
 const RollingParagraph = ({ text, baseVelocity = 100, childrenCount, Scroll }) => {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
     //we need to set the basedX to the position on X
     const BaseX = useMotionValue(0);
     // then since I have that I need to use onScroll to get the scroll position
@@ -36,16 +39,16 @@ const RollingParagraph = ({ text, baseVelocity = 100, childrenCount, Scroll }) =
         let moveBy = directionFactor.current * baseVelocity * (delta / 1000); // that is the speed of the scroll in pixels per second
 
         // now I need to move the text based on the direction and the moveBy value
-        if(velocityFactor.get() < 0) {
-            directionFactor.current = -1;
-        } else if (velocityFactor.get() > 0) {
-            directionFactor.current = 1;
+        if (!shouldReduceAnimations) {
+            if(velocityFactor.get() < 0) {
+                directionFactor.current = -1;
+            } else if (velocityFactor.get() > 0) {
+                directionFactor.current = 1;
+            }
+            // if the direction is 1 then we move the text by the moveBy value that means we are scrolling down
+            // if the direction is -1 then we move the text by the moveBy value that means we are scrolling up
+            moveBy += directionFactor.current * moveBy * velocityFactor.get();
         }
-
-        // if the direction is 1 then we move the text by the moveBy value that means we are scrolling down
-        // if the direction is -1 then we move the text by the moveBy value that means we are scrolling up
-
-        moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
         // this calculates the distance and the speed of the scroll based on the velocity of the scroll to move the component faster or slower based on the scroll velocity so on how fast you are scrollling up or down
         // the += is the same as moveBy = moveBy + directionFactor.current + moveBy * velocityFactor.get(); just shorter

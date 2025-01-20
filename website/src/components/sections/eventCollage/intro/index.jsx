@@ -1,15 +1,27 @@
+import { usePerformance } from "@/context/PerformanceProvider";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
 export default function IntroCollage() {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ["start start", "end end"],
     });
 
-    const pathLength = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-    const x = useTransform(scrollYProgress, [0, 1], [3000, -6000]);
+    const pathLength = useTransform(
+        scrollYProgress,
+        [0, 1],
+        shouldReduceAnimations ? [0.8, 1] : [0.5, 1]
+    );
+    const x = useTransform(
+        scrollYProgress,
+        [0, 1], 
+        shouldReduceAnimations ? [300, -600] : [3000, -6000]
+    );
 
     return (
         <div className="IntroCollage" ref={container}>
@@ -19,6 +31,10 @@ export default function IntroCollage() {
                     <motion.svg
                         className="sticky__Loading__Line__SVG"
                         viewBox="0 0 100 100"
+                        style={{
+                            willChange: 'transform',
+                            transform: 'translateZ(0)',
+                        }}
                     >
                         <defs>
                             <filter id="blur-filter">
@@ -34,6 +50,8 @@ export default function IntroCollage() {
                             filter="url(#blur-filter)"
                             style={{
                                 pathLength: pathLength,
+                                willChange: 'transform',
+                                transform: 'translateZ(0)',
                             }}
                         />
                     </motion.svg>
@@ -82,6 +100,8 @@ export default function IntroCollage() {
                                 height: "100vh",
                                 position: "absolute",
                                 right: 0,
+                                willChange: 'transform',
+                                transform: 'translateZ(0)',
                             }}
                         >
                             {/* use correct path */}
@@ -89,6 +109,8 @@ export default function IntroCollage() {
                         <motion.p className="filled-text"
                             style={{
                                 x,
+                                willChange: 'transform',
+                                transform: 'translateZ(0)',
                             }}
                         >
                             JSME TU PRO VÁS | UŽ PŘES JEDNU DEKÁDU
@@ -96,6 +118,8 @@ export default function IntroCollage() {
                         <motion.p className="outlined-text"
                             style={{
                                 x,
+                                willChange: 'transform',
+                                transform: 'translateZ(0)',
                             }}
                         >
                             JSME TU PRO VÁS | UŽ PŘES JEDNU DEKÁDU

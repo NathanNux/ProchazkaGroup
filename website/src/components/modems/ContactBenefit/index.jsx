@@ -1,15 +1,16 @@
 
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton"
 import SVGButton from "@/components/ui/stickyButtons/buttons/SvgButton"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import ContactModem from "../ContactModem"
 import SubText from "@/components/anim/TextAnims/SubText"
 import { people as staticPeople} from "@/constants/people"
 import CopyText from "@/components/ui/copyText"
 import { useToast } from "@/hooks/use-toast"
 import { useFetchDatabase } from "@/hooks/useFetchDatabase"
+import { usePerformance } from "@/context/PerformanceProvider"
 
 
 const itemVariants = {
@@ -58,6 +59,32 @@ export default function ContactBenefit() {
     const [previewIndex, setPreviewIndex] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
     const { toast } = useToast()
+
+    const { shouldReduceAnimations } = usePerformance();
+    const sectionRef = useRef();
+    
+    const { scrollYProgress: phoneScrollProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end 0.7'],
+    });
+
+    const { scrollYProgress: messageScrollProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end 0.7'],
+    });
+
+    const phoneX = useTransform(
+        phoneScrollProgress,
+        [0, 0.5, 1], 
+        [400, -100, -200]
+    );
+
+    const messageX = useTransform(
+        messageScrollProgress,
+        [0, 0.6, 1],
+        [500, -50, -150]
+    );
+
     
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
@@ -155,7 +182,7 @@ export default function ContactBenefit() {
     }
 
     return (
-        <section className="Contact">
+        <section className="Contact" ref={sectionRef}>
             <div className="Contact__Personal">
                 <div className="Contact__Personal__header">
                     <h3>
@@ -387,12 +414,18 @@ export default function ContactBenefit() {
 
                 <div className="Contact__CTA__buttons">
                     <div className="Contact__CTA__buttons__container">
-                        <div onClick={handleCopyName}>
+                        <motion.div 
+                            style={shouldReduceAnimations ? { x: -100 } : { x: phoneX }}
+                            onClick={handleCopyName}
+                        >
                             <SVGButton src='/svg/phoneIcon.svg' altText='CallIcon' />
-                        </div>
-                        <div onClick={handleMessage}>
+                        </motion.div>
+                        <motion.div
+                            style={shouldReduceAnimations ? { x: -100 } : { x: messageX }}
+                            onClick={handleMessage}
+                        >
                             <SVGButton src='/svg/messageIcon.svg' altText='TextIcon' />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="devider"/>
                 </div>

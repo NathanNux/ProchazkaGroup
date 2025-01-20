@@ -1,3 +1,4 @@
+import { usePerformance } from "@/context/PerformanceProvider";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -16,7 +17,25 @@ const parseText = (text) => {
     });
 };
 
+const parseWords = (text) => {
+    return text.split(/(<br\/>|<span>.*?<\/span>)/).filter(Boolean).map(segment => {
+        if (segment === '<br/>') {
+            return { type: 'break' };
+        } else if (segment.startsWith('<span>')) {
+            return {
+                type: 'text',
+                content: segment.replace(/<\/?span>/g, '').split(' '),
+                highlighted: true
+            };
+        }
+        return { type: 'text', content: segment.split(' '), highlighted: false };
+    });
+};
+
 export default function SubText({text, className, initialColor = "#fff", secondaryColor = "#00F0FF"}) {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+    
     const ref = useRef(null);
     const lastAnimatedIndex = useRef(0);
     const isAnimatingOut = useRef(false);
@@ -33,6 +52,46 @@ export default function SubText({text, className, initialColor = "#fff", seconda
             lastAnimatedIndex.current = 0;
         }
     }, [isInView]);
+    if (shouldReduceAnimations) {
+        const words = parseWords(text);
+        return (
+            <div ref={ref} className={className}>
+                <motion.p>
+                    {words.map((segment, i) => 
+                        segment.type === 'break' ? (
+                            <br key={`br-${i}`} />
+                        ) : (
+                            segment.content.map((word, j) => (
+                                <motion.span
+                                    key={`word-${i}-${j}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={isInView ? {
+                                        opacity: 1,
+                                        y: 0
+                                    } : {
+                                        opacity: 0,
+                                        y: 10
+                                    }}
+                                    transition={{
+                                        duration: 0.2,
+                                        delay: j * 0.1,
+                                        ease: "easeOut",
+                                    }}
+                                    style={{
+                                        display: 'inline-block',
+                                        marginRight: '0.25em',
+                                        color: segment.highlighted ? secondaryColor : initialColor
+                                    }}
+                                >
+                                    {word}
+                                </motion.span>
+                            ))
+                        )
+                    )}
+                </motion.p>
+            </div>
+        );
+    }
 
     // Updated segments parsing
     const segments = parseText(text);
