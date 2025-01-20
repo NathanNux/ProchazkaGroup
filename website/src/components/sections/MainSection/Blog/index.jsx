@@ -1,10 +1,10 @@
 import CustomImage from "@/components/ui/stickyImage";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import MainText from "@/components/anim/TextAnims/MainText";
-import SubText from "@/components/anim/TextAnims/SubText";
 import RollingIcons from "@/components/anim/TextAnims/RollingIcons";
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { usePerformance } from "@/context/PerformanceProvider";
 
 
 export default function Blog () {

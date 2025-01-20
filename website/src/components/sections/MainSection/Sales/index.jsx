@@ -3,6 +3,7 @@ import RollingIcons from "@/components/anim/TextAnims/RollingIcons";
 import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
+import { usePerformance } from "@/context/PerformanceProvider";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 

@@ -1,5 +1,6 @@
 import Magnetic from "@/components/anim/Magnetic";
 import { useCursorRef } from "@/context/CursorRefProvider";
+import { usePerformance } from "@/context/PerformanceProvider";
 import { useMotionValue, motion, animate, transform } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 

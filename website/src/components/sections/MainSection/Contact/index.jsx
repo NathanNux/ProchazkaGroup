@@ -11,6 +11,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { useFetchDatabase } from "@/hooks/useFetchDatabase"
+import { usePerformance } from "@/context/PerformanceProvider"
 
 const itemVariants = {
     open: {

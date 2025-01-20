@@ -4,6 +4,7 @@ import { useOnWindowResize } from "@/hooks/useOnWindowResize"
 import { AreaChart } from "@tremor/react"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { usePerformance } from "@/context/PerformanceProvider"
 
 const containerVariants = {
     hidden: {},
