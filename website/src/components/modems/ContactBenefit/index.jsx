@@ -415,13 +415,13 @@ export default function ContactBenefit() {
                 <div className="Contact__CTA__buttons">
                     <div className="Contact__CTA__buttons__container">
                         <motion.div 
-                            style={shouldReduceAnimations ? { x: -100 } : { x: phoneX }}
+                            style={shouldReduceAnimations ? { x: 0 } : { x: phoneX }}
                             onClick={handleCopyName}
                         >
                             <SVGButton src='/svg/phoneIcon.svg' altText='CallIcon' />
                         </motion.div>
                         <motion.div
-                            style={shouldReduceAnimations ? { x: -100 } : { x: messageX }}
+                            style={shouldReduceAnimations ? { x: 0 } : { x: messageX }}
                             onClick={handleMessage}
                         >
                             <SVGButton src='/svg/messageIcon.svg' altText='TextIcon' />
