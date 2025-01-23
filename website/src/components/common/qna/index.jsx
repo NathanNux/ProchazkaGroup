@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion"
 import Image from "next/image"
 import { useState, useRef } from "react"
 import GetChars from "../navbar/body/getChars"
+import { usePerformance } from "@/context/PerformanceProvider"
 
 const contentVariants = {
     open: {
@@ -99,9 +100,18 @@ export default function QNA() {
         </section>
     )
 }
-
+const parseWords = (text) => {
+    return text.split(/(<br\/>)/).map((segment, index) => {
+        return segment === '<br/>' ? 
+            { type: 'break' } : 
+            { type: 'text', content: segment.split(' ') };
+    });
+};
 
 function SubText({text, className}) {
+    // Performance
+    const { shouldReduceAnimations } = usePerformance();
+
     const ref = useRef(null);
     const isInView = useInView(ref, {
         margin: "-2% 0px -2% 0px",
@@ -123,6 +133,45 @@ function SubText({text, className}) {
         }
         return acc;
     }, []);
+    if (shouldReduceAnimations) {
+        const words = parseWords(text);
+        return (
+            <div ref={ref} className={className}>
+                <motion.p>
+                    {words.map((segment, i) => 
+                        segment.type === 'break' ? (
+                            <br key={`br-${i}`} />
+                        ) : (
+                            segment.content.map((word, j) => (
+                                <motion.span
+                                    key={`word-${i}-${j}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={isInView ? {
+                                        opacity: 1,
+                                        y: 0
+                                    } : {
+                                        opacity: 0,
+                                        y: 10
+                                    }}
+                                    transition={{
+                                        duration: 0.2,
+                                        delay: j * 0.1,
+                                        ease: "easeOut",
+                                    }}
+                                    style={{
+                                        display: 'inline-block',
+                                        marginRight: '0.25em'
+                                    }}
+                                >
+                                    {word}
+                                </motion.span>
+                            ))
+                        )
+                    )}
+                </motion.p>
+            </div>
+        );
+    }
 
     return (
         <div ref={ref} className={className}>

@@ -7,6 +7,9 @@ import { CursorRefProvider } from "@/context/CursorRefProvider";
 import Transition from "@/components/anim/Transition";
 import { Toaster } from "@/components/ui/toaster";
 import { PerformanceProvider } from "@/context/PerformanceProvider";
+import CookiesBar from "@/components/modems/Cookies";
+import CookiesBanner from "@/components/modems/CookiesModem";
+import { CookiesProvider } from "@/context/CookiesProvider";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -34,15 +37,18 @@ export default function App({ Component, pageProps }) {
 
 
   return (
-    <PerformanceProvider>
-      <LoadProvider>
-        <CursorRefProvider>
-          <Transition> 
-            <Component {...pageProps} />
-            <Toaster />
-          </Transition>
-        </CursorRefProvider>
-      </LoadProvider>
-    </PerformanceProvider>
+    <CookiesProvider>
+      <PerformanceProvider>
+        <LoadProvider>
+          <CursorRefProvider>
+            <Transition> 
+              <CookiesBar />
+              <Component {...pageProps} />
+              <Toaster />
+            </Transition>
+          </CursorRefProvider>
+        </LoadProvider>
+      </PerformanceProvider>
+    </CookiesProvider>
   );
 }

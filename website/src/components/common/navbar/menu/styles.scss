@@ -166,7 +166,7 @@
             }
         } 
     }
-    @media only screen and (min-width: 600px ) and (max-width: 795px) and (min-height: 300px) and (max-height: 387px) {
+    @media only screen and (min-width: 500px ) and (max-width: 795px) and (min-height: 200px) and (max-height: 389px) {
         .navbar__container{
             .magnetic{
                 z-index: 105; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2
@@ -225,7 +225,7 @@
 }
 
 @media ( max-aspect-ratio: 1/1){
-    @media only screen and (max-width: 500px ) {
+    @media only screen and (max-width: 600px ) {
         .navbar__container{
             .magnetic{
                 z-index: 105; // the menu is in the magnetic element -- needs to have z-index of 3 because the body has 2

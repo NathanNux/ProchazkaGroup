@@ -1,9 +1,8 @@
 //NOTE:FeedBack and contact are switched
 
 import Magnetic from "@/components/anim/Magnetic";
-import SubText from "@/components/anim/TextAnims/SubText";
 import ContactForm from "@/components/forms/contact";
-import { people, TestPeople } from "@/constants/people";
+import { TestPeople } from "@/constants/people";
 import { useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

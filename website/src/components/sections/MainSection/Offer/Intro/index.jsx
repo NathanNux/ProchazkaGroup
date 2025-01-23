@@ -1,6 +1,5 @@
 import MainText from "@/components/anim/TextAnims/MainText";
 import SubText from "@/components/anim/TextAnims/SubText";
-import CustomImage from "@/components/ui/stickyImage";
 import Image from "next/image";
 
 export default function IntroOffer(){

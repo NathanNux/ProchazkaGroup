@@ -17,8 +17,8 @@ export default function MainIntro () {
         enter: {
             scale: 1,
             transition: {
-                delay: firstLoad ?  4.5 : 0.5,
-                duration: 0.3,
+                delay: firstLoad ?  3.5 : 0.5,
+                duration: 0.5,
                 ease: [ 0.76, 0, 0.24, 1],
             }
         }
@@ -31,7 +31,7 @@ export default function MainIntro () {
         enter: () => ({
             x: '0%',
             transition:{
-                delay: firstLoad ? 4.5 + (i * 0.2) : 0.5 + (i * 0.2),
+                delay: firstLoad ? 3.6 + (i * 0.2) : 0.5 + (i * 0.2),
                 duration: 1.5,
                 ease: [ 0.76, 0, 0.24, 1],
             }
@@ -46,7 +46,7 @@ export default function MainIntro () {
             opacity: 1,
             x: '0%',
             transition: {
-                delay: firstLoad ? 5.3 : 1.3,
+                delay: firstLoad ? 4.2 : 1.3,
                 duration: 1,
                 ease: [ 0.76, 0, 0.24, 1],
             }
@@ -59,7 +59,7 @@ export default function MainIntro () {
         enter: {
             y: '0%',
             transition: {
-                delay: firstLoad ? 5.4 : 0.9,
+                delay: firstLoad ? 4 : 0.9,
                 duration: 1,
                 ease: [ 0.76, 0, 0.24, 1],
             }

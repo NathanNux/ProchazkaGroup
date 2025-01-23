@@ -5,7 +5,12 @@
 @use '../components/common/navbar/menu/styles.scss' as navbarMenu;
 //QNA
 @use '../components/common/qna/style.scss' as qna;
-
+//cookies
+@use '../components/modems/Cookies/styles.scss' as cookiesBar;
+//cookies page
+@use '../components/sections/CookiesPage/styles.scss' as cookiesPage;
+// Terms and services page
+@use '../components/sections/TermsPage/styles.scss' as termsPage;
 //Footer
 @use '../components/common/footer/styles.scss' as footer;
 //BlogPost
@@ -27,7 +32,6 @@
 
 // text animations
 @use '../components/anim/TextAnims/MainText/styles.scss' as mainText;
-@use '../components/anim/TextAnims/SubText/styles.scss';
 @use '../components/anim/TextAnims/PageHeading/styles.scss'as pageHeading;
 @use '../components/anim/TextAnims/RollingText/styles.scss' as rollingText;
 @use '../components/anim/TextAnims/RollingIcons/styles.scss' as rollingIcons;

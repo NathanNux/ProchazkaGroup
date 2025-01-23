@@ -52,7 +52,7 @@ export const NavLinks = [
 
 export const NavAddLinks = [
     {
-        href: '/privacy-policy',
+        href: '/ochrana-soukromi',
         text: 'Ochrana osobních údajů'
     },
     {

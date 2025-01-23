@@ -4,6 +4,7 @@ import SubText from "@/components/anim/TextAnims/SubText";
 import RoundButton from "@/components/ui/stickyButtons/buttons/RoundButton";
 import CustomImage from "@/components/ui/stickyImage";
 import { projects } from "@/constants/nabidkypage";
+import { usePerformance } from "@/context/PerformanceProvider";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -49,6 +50,9 @@ export default function ClipPathPage() {
 
 
 const Galery = ({ number, title, description, href, src, alt, text }) => {
+    //Performace 
+    const { shouldReduceAnimations } = usePerformance();
+
     const sectionRef = useRef();
 
     const { scrollYProgress } = useScroll({
@@ -108,7 +112,7 @@ const Galery = ({ number, title, description, href, src, alt, text }) => {
                 <SubText initialColor="#050A10" className={'ClipPathPage__Galery__Content__p'} text={text} />
                 <div className="ClipPathPage__Galery__Content__Button">
                     <motion.div
-                        style={{ x }}
+                    style={shouldReduceAnimations ? { x: -50 } : { x }}
                     >   
                         <RoundButton href={href} text="Více informací" />
                     </motion.div>

@@ -24,7 +24,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 2;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 80%;
@@ -341,7 +341,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-                z-index: 1;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -378,6 +378,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 150px;
@@ -429,7 +430,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 2;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 80%;
@@ -792,6 +793,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 150px;
@@ -843,7 +845,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 2;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -1170,7 +1172,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-                z-index: 1;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -1207,6 +1209,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 150px;
@@ -1258,7 +1261,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 2;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -1587,7 +1590,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-                z-index: 1;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -1624,6 +1627,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 125px;
@@ -1675,7 +1679,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 2;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -2009,7 +2013,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-                z-index: 1;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -2046,6 +2050,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 100px;
@@ -2073,7 +2078,7 @@
             }
         }
     }
-    @media only screen and (min-width: 800px ) and (max-width: 950px) and (min-height: 390px) and (max-height: 500px) {
+    @media only screen and (min-width: 701px ) and (max-width: 950px) and (min-height: 280px) and (max-height: 600px) {
         .Contact{
             position: relative;
             width: 100vw;
@@ -2097,7 +2102,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 2;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -2429,7 +2434,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 5%;
-                z-index: 1;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -2466,6 +2471,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 100px;
@@ -2493,7 +2499,7 @@
             }
         }
     }
-    @media only screen and (min-width: 600px ) and (max-width: 790px) and (min-height: 300px) and (max-height: 398px) {
+    @media only screen and (min-width: 500px ) and (max-width: 700px) and (min-height: 200px) and (max-height: 380px) {
         .Contact{
             position: relative;
             width: 100vw;
@@ -2517,7 +2523,7 @@
                 justify-content: flex-start;
                 gap: 3rem;
                 scale: 0.85;
-                z-index: 80;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 90%;
@@ -2847,6 +2853,7 @@
                 align-items: center;
                 justify-content: flex-end;
                 gap: 5%;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 30%;
@@ -2883,6 +2890,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 100px;
@@ -2912,7 +2920,6 @@
     }
 }
 
-//WIP: fix the person menu z-index on all components where it is used 
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
         .Contact{
@@ -2940,7 +2947,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
-                z-index: 80;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -3268,6 +3275,7 @@
                 align-items: center;
                 justify-content: flex-start;
                 gap: 5%;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 40%;
@@ -3296,6 +3304,7 @@
                     align-items: center;
                     position: relative;
                     gap: 5rem;
+                    z-index: 58;
         
                     .Contact__CTA__buttons__container{
                         position: absolute;
@@ -3333,7 +3342,7 @@
             }
         }
     }
-    @media only screen and (min-width: 750px) and (max-width: 990px) and (min-height: 800px) {
+    @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
         .Contact{
             position: relative;
             width: 100vw;
@@ -3359,7 +3368,7 @@
                 justify-content: flex-start;
                 gap: 1rem;
                 scale: 0.85;
-                z-index: 80;
+                z-index: 57;
         
                 .Contact__Personal__header{
                     width: 110%;
@@ -3695,6 +3704,7 @@
                 align-items: center;
                 justify-content: flex-start;
                 gap: 5%;
+                z-index: 56;
         
                 .Contact__CTA__Header{
                     height: 40%;
@@ -3733,6 +3743,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         gap: 5rem;
+                        z-index: 58;
                         
                         .Svg__button_container{
                             width: 150px;
@@ -3761,7 +3772,7 @@
             }
         }
     }
-    @media only screen and (min-width: 400px) and (max-width: 740px) and (min-height: 700px) {
+    @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
         .Contact{
             position: relative;
             width: 100vw;
@@ -4196,7 +4207,7 @@
             }
         }
     }
-    @media only screen and (min-width: 380px) and (max-width: 390px) and (min-height: 650px) {
+    @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
         .Contact{
             position: relative;
             width: 100vw;
@@ -4632,7 +4643,7 @@
             }
         }
     }
-    @media only screen and (min-width: 320px) and (max-width: 380px) and (min-height: 500px) {
+    @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
         .Contact{
             position: relative;
             width: 100vw;
