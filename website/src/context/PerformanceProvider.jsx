@@ -13,7 +13,7 @@ export function PerformanceProvider({ children }) {
         const connection = navigator?.connection;
         if (connection) {
             const checkConnection = () => {
-                setIsSlowNetwork(connection.downlink < 5 || connection.rtt > 100);
+                setIsSlowNetwork(connection.downlink < 5 || connection.rtt > 650);
             };
             checkConnection();
             connection.addEventListener('change', checkConnection);

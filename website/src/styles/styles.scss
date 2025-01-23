@@ -8,9 +8,9 @@
 //cookies
 @use '../components/modems/Cookies/styles.scss' as cookiesBar;
 //cookies page
-
+@use '../components/sections/CookiesPage/styles.scss' as cookiesPage;
 // Terms and services page
-
+@use '../components/sections/TermsPage/styles.scss' as termsPage;
 //Footer
 @use '../components/common/footer/styles.scss' as footer;
 //BlogPost
