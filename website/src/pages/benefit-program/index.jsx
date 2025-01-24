@@ -10,6 +10,8 @@ import BenefitShowcase from "@/components/sections/BenefitShowcase";
 import Head from "next/head";
 
 export default function BenefitProgramPage() {
+    //WIP: rework the texts only here, the page otherwise is in good state. 
+    // The other work is solely relied on the cliet, when this is done, the project can be handed over, there will be only text and small adjustments
     return (
         <>
             <Head>

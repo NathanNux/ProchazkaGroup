@@ -104,13 +104,11 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.2
                                 }}
                             >
-                                <h2>DÁVÁME ZPĚT, ABYCHOM SPOLEČNĚ VYBUDOVALI VÍCE NEŽ JEN FINANČNÍ ÚSPĚCH</h2>
+                                <h2>PŘINESTE ZMĚNU A ZÍSKEJTE ZPĚT</h2>
                                 <p>
                                     Proč to děláme: Už 12 let tvoříme hodnoty, ne jen zisky. Když s vámi
-                                    spolupracujeme, nejde o to, abychom &#39;dostali zaplaceno.&#39; Je to
-                                    o změně, kterou můžeme přinést. Vaše doporučení a příběhy pomáhají růst
-                                    naší vizi a vytvářejí opravdový dopad — a my chceme, aby to bylo stejně
-                                    přínosné pro vás jako pro nás.                                
+                                    spolupracujeme, nejde o to, abychom &#39;dostali zaplaceno.&#39; Představte si, 
+                                    že jste tím, kdo lidem otevírá dveře k finanční jistotě. Vy budujete jejich příběhy - a přitom posilujete svůj vlastní.          
                                 </p> 
                             </motion.div>
                             <motion.div 
@@ -121,11 +119,10 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>BUĎTE HRDINOU OSTATNÍCH A ZÁROVEŇ MĚŇTE ŽIVOT SOBĚ. </h2>
+                                <h2>STAŇTE SE PŘÍKLADEM SVÉHO OKOLÍ</h2>
                                 <p>
-                                    Realita: Není to jen o tom, abyste měli něco jen pro sebe — jde o to zvedat i ostatní, a stát se tím, co jim změní život a vyléčí je finančně.
-                                    Zamyslete se nad tím—co je mocnější než vědět, že vaše činy pomáhají ostatním, zatímco i Vy máte něco pro sebe?
-                                    A tím to nekončí. Zní fér?                            
+                                    Realita: Není to jen o tom, abyste měli něco jen pro sebe — 
+                                    Vaše doporučení je víc než jen gesto. Je to klíč, který zajišťuje lepší život ostatním a vám přináší respekt a výsledky.                     
                                 </p> 
                             </motion.div>
                         </div>
@@ -138,9 +135,9 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>VAŠE ÚSPĚCHY, NAŠE POSLÁNÍ - PŘÍBĚH, KTERÝ PÍŠEME SPOLU</h2>
+                                <h2>CO DOSTANETE VY: ODMĚNY NEJEN FYZIČNÉ</h2>
                                 <p>
-                                  Jak fungujeme: neplatíte nám nic předem. Naše &#39;odměna&#39; není jen plan na konci měsíce, ale naše opravdová odměna je vaše důvěra a výsledky, které společně dosáhneme. Každé doporučení, každá úspěšná spolupráce posiluje naši misi měnit životy skrze finanční svobodu. Chceme, aby tahle spolupráce měla smysl.
+                                  Jak fungujeme: neplatíte nám nic předem. Každý krok, který uděláte, přináší okamžitou hodnotu. Žádné složité podmínky, jen čistý zisk a uznání za váš přínos.
                                 </p>                            
                             </motion.div>
                             <motion.div 
@@ -151,8 +148,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                     delay: 0.5
                                 }}
                             >
-                                <h2>STAČÍ JEDEN KROK A ZAČNETE SBÍRAT REÁLNÉ ODMĚNY.
-                                    ŽÁDNÉ KRAVINY. NENÍ ČAS OTÁLET, ZMĚNA ZAČÍNÁ TEĎ
+                                <h2>REALNÝ DOPAD VE VAŠEM OKOLÍ: NENÍ ČAS OTÁLET, ZMĚNA ZAČÍNÁ TEĎ
                                 </h2>
                                 <p>Co kdyby každý krok, který uděláte, nejen ovlivnil váš život, ale také otevřel dveře někomu jinému? Když přivádíte lidi, doslova měníte životy. Doslova.
                                     Jste to vy, kdo otevírá nové možnosti pro ostatní, zatímco za svůj dopad získáváte odměny — Není tohle skvělé?
@@ -171,6 +167,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                                 </h2>
                                 <p>Tento program je první svého druhu. Nejde o obyčejné body, věrnostní karty nebo nudné benefity. 
                                     Je to o reálných odměnách, které můžete použít ihned, co je dostanete, IHNED.
+                                    ZAJMULI JSME VÁS? ANO? TO JE DOBŘE. KOUKNĚTĚ NÍŽE:
                                 </p> 
                             </motion.div>
                         </div>
@@ -193,7 +190,7 @@ const InfoBenefitS = forwardRef(function InfoBenefitS({ scroll }, ref) {
                         blurDataURL="data:image/webp"
                     />
                     <div className="mainHeader">
-                        <SubText initialColor="#fff" text={'JDE O VYTVOŘENÍ NĚČEHO, CO<br/> VYDRŽÍ GENERACE—VĚTŠÍ<br/> NEŽ MY, VĚTŠÍ NEŽ VY,<br/> VYTVOŘÍME TRVALÝ DOPAD'}/>
+                        <SubText initialColor="#fff" text={'JDE O VYTVOŘENÍ NĚČEHO, CO<br/> VYDRŽÍ GENERACE—VĚTŠÍ<br/> NEŽ MY, VĚTŠÍ NEŽ VY,<br/> SPOLEČNĚ'}/>
                     </div>
                     <div className="subHeader">
                         <h3>01</h3>

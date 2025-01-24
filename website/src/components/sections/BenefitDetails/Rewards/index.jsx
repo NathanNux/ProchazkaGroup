@@ -353,8 +353,9 @@ export default function BenefitRewards() {
                 {/* Main Info Section */}
                 <div className="BenefitRewards__MainInfo">
                     <div className="BenefitRewards__MainInfo__icons__container">
-                       <p>A S KAŽDÝM KROKEM NOVÁ ÚROVEŇ. 
-                       PROČ? - TVRDÍ DŘÍČI </p>
+                       <p>
+                            A S KAŽDÝM KROKEM NOVÁ ÚROVEŇ. 
+                       </p>
                     </div>   
                     <div className="BenefitRewards__MainInfo__header">
                         {people.map((person, i) => {
@@ -412,9 +413,7 @@ export default function BenefitRewards() {
                     </div>
                     <div className="BenefitRewards__SubInfo__Moto">
                         <h2>
-                            MÁTE CHUŤ
-                            BÝT AKTIVNÍMI? TO,
-                            JAK RYCHLE SE NA KONEC DOSTANETE, JE ČISTĚ NA VÁS.
+                            TO, JAK RYCHLE SE NA KONEC DOSTANETE, JE ČISTĚ NA VÁS.
                         </h2>
                     </div>
                 </div>

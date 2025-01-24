@@ -73,8 +73,8 @@ export default function Intro() {
                                 PS:
                             </h3>
                             <p>
-                                Vypadá to jako klasický model? No, popravdě ano, vypadá. 
-                                Ale můžete pomoc a být hrdinou vašich nejbližších. A to zní už úžasně, ne?
+                                Vypadá to jako klasický model? - Přineste nám nové lidi a vy dostanete odměnu, no ano. 
+                                Ale on to v naší branži nikdo nedělá. Chce to změnu, co myslíte?
                             </p>
                         </div>
                         <div className="pss">
@@ -82,7 +82,7 @@ export default function Intro() {
                                 PSS:
                             </h3>
                             <p>
-                                A ano, nám to bere na výdělky z komisí, ale na tom nám nezáleží, my si stojíme na svém - kvalita služeb. 
+                                A ano, nám to bere na výdělky z komisí, ale na tom nám nezáleží, chceme vytvořit, co je společná a nad námi. 
                             </p>
                         </div>
                     </div>

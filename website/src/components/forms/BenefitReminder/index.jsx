@@ -114,7 +114,7 @@ export default function BenefitReminder() {
         <section className="BenefitReminder"> 
             <div className="BenefitReminder__Header">
                 <div className="Main__text">
-                    <MainText initialColor={"#050A10"} secondaryColor={'#00F0FF'} text='NEPŘEDSTAVUJETE JIM JENOM TENTO<br />PROGRAM — <span>OTEVÍRÁTE JIM DVEŘE</span> K<br />LEPŠÍ BUDOUCNOSTI<br />SPOLEČNĚ S NÁMI.'/>
+                    <MainText initialColor={"#050A10"} secondaryColor={'#00F0FF'} text='<span>ZAVOLEJTE NÁM HNED TEĎ! </span><br />OTEVÍRÁTEDVEŘE K <br /> LEPŠÍ BUDOUCNOSTI<br />SPOLEČNĚ S NÁMI.'/>
                 </div>
                 <div className="Header">
                     <div className="Header__wrapper">

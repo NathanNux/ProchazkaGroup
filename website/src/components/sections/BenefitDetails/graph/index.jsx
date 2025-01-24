@@ -20,8 +20,7 @@ export default function Graph() {
                                 ψ
                             </h3>
                             <p>
-                                To, co by Vám bežně zabralo dekády,<br />
-                                s námi dokážete během několika let  
+                                Máte strach, že to není pro Vás? <br /> Takhle začínali i naši nejlepčí klienti
                             </p>
                         </div>
                         <div 
@@ -60,8 +59,9 @@ export default function Graph() {
             <div className="Graph__Values">
                 <div className="Graph__Values__header">
                     <h2>
-                    Průměrný člověk za měsíc a získá 2 000 Kč zpět v poukázkách.
-                    Top 10% V programu získá přes 25 000 Kč už za půl roku.
+                    Průměrný člověk za měsíc a získá 2 000 Kč zpět. <br />
+                    Top 10% V programu získá přes 25 000 Kč už za půl roku.<br/>
+                    Kdo chcete být Vy?
                     </h2>
                 </div>
             </div>
