@@ -46,7 +46,7 @@ export default function Offer() {
                     </motion.div>
                 </motion.div>
             </div>
-            <BecomeAclient />
+            {/* <BecomeAclient /> */}
             <Benefits />
             <TheWay />
             <Requirements />

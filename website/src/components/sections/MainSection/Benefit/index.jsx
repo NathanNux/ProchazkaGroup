@@ -30,7 +30,7 @@ export default function Benefit() {
             <div className="Header">
                 <div className="Index">
                     <h3>01</h3>
-                    <p>Doporučte nás, přiveďte klienta, získejte až 25 000 Kč. Tak jednoduché to je.</p>
+                    <p> Benefit Program. Doporučte nás, přiveďte klienta, získejte až 25 000 Kč. Tak jednoduché to je.</p>
                 </div>
                 <div className="devider"/>
                 <div className="MainText">
